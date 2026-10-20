@@ -1,0 +1,11 @@
+{
+  "name": "maodou-shiny-character-source",
+  "private": true,
+  "version": "1.3.3",
+  "type": "module",
+  "scripts": {
+    "model": "node tools/build-model.mjs",
+    "stage": "node tools/build-model.mjs && node preview-host/stage-pack.mjs",
+    "preview": "node preview-host/serve.mjs --port=4323"
+  }
+}

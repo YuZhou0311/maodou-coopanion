@@ -1,0 +1,17 @@
+{
+  "name": "maodou-native-preview-host",
+  "version": "1.3.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "stage": "node stage-pack.mjs",
+    "test:adapter": "node ../runtime/host-adapter.contract.mjs",
+    "test:words": "node words-contract.mjs",
+    "validate:import": "node validate-native.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "fflate": "0.8.3"
+  }
+}
