@@ -10,6 +10,7 @@ import { createAtlasRenderer } from './atlas-renderer.js';
 import { createAnimator } from './animation.js';
 import { walkingArmPoint } from './arm-walk.js';
 import { applyHoodMaterial } from './hood-material.js';
+import { fairEarShoulder, revealFrontHead } from './hood-geometry.js';
 import { CUSTOM_MOTION_IDS } from './words.js';
 
 const SVG = 'http://www.w3.org/2000/svg', HTML = 'http://www.w3.org/1999/xhtml';
@@ -170,27 +171,33 @@ export async function createPaintedFigure(base, opts) {
   const restEarWidths=Object.fromEntries(['L','R'].map(side=>[side,
     Array.from({length:49},(_,row)=>restEar(side,1,row/48)[0]-restEar(side,0,row/48)[0])
   ]));
-  const headKeys=keyNames.map((key,ki)=>{
+  const paintedHeadKeys=keyNames.map(key=>{
     const pos=new Float32Array(headMesh.count*2),spr=art['head.'+key],box=model.head[key];
     for(let n=0;n<headMesh.count;n++){
       const u=headMesh.st[n*2],v=headMesh.st[n*2+1];
-      if(ki===0){
-        const py=reg.sourceTopY+v*565, px=lerp(leftCurve(py),rightCurve(py),u);
-        pos[n*2]=reg.targetCenterX+(px-reg.sourceCenterX)*reg.scale;
-        pos[n*2+1]=reg.targetTopY+(py-reg.sourceTopY)*reg.scale;
-      }else{
-        const edge=sampleRow(spr,v);
-        // All directional keys end in one common apex, matching the front.
-        // A one-pixel raster cap blended from a zero-width front creates
-        // sub-ULP strips near zero yaw. After Float32 rotation their tiny
-        // triangles can change winding. Coincident apex positions make the
-        // adjacent grid band a real fan without widening or flattening it.
-        const s=(v===0||v===1)?(edge[0]+edge[1])*.5:lerp(edge[0],edge[1],u);
-        pos[n*2]=box[0]+s*box[2];pos[n*2+1]=box[1]+v*box[3];
-      }
+      const edge=sampleRow(spr,v);
+      // The three painted keys use the same contour sampling and one apex
+      // at each end. A one-pixel raster cap must not form tiny strips whose
+      // winding can flip after a Float32 rotation.
+      const s=(v===0||v===1)?(edge[0]+edge[1])*.5:lerp(edge[0],edge[1],u);
+      pos[n*2]=box[0]+s*box[2];pos[n*2+1]=box[1]+v*box[3];
     }
     return pos;
   });
+  const approvedHeadKey=new Float32Array(headMesh.count*2);
+  for(let n=0;n<headMesh.count;n++){
+    const u=headMesh.st[n*2],v=headMesh.st[n*2+1],py=reg.sourceTopY+v*565;
+    approvedHeadKey[n*2]=reg.targetCenterX+(lerp(leftCurve(py),rightCurve(py),u)-reg.sourceCenterX)*reg.scale;
+    approvedHeadKey[n*2+1]=reg.targetTopY+(py-reg.sourceTopY)*reg.scale;
+  }
+  // Frontal registration and both apex positions are retained exactly. Only
+  // the latent head under the ears transitions to its complete painted shape.
+  for(const row of [0,64])for(let col=0;col<=12;col++){
+    const n=(row*13+col)*2;
+    paintedHeadKeys[0][n]=approvedHeadKey[n];paintedHeadKeys[0][n+1]=approvedHeadKey[n+1];
+  }
+  const revealedFrontHead=new Float32Array(approvedHeadKey.length);
+  const headKeys=[revealedFrontHead,paintedHeadKeys[1],paintedHeadKeys[2]];
   const torsoKeys=keyNames.map(key=>{
     const pos=new Float32Array(torsoMesh.count*2),spr=art['torso.'+key],box=model.torso[key];
     for(let n=0;n<torsoMesh.count;n++){
@@ -296,80 +303,10 @@ export async function createPaintedFigure(base, opts) {
     }
     p.vertexAlpha.fill(clamp(alpha));
   }
-  function fairEarShoulder(rows,isLeft,q,keys,state){
-    const gain=smooth(0,.10,q)*(1-smooth(.42,.6,q));
-    if(!gain)return;
-    const a=keys[state.a],b=keys[state.b],stride=13,sign=isLeft?-1:1,col=isLeft?0:12;
-    const top=lerp(a[1],b[1],state.k),bottom=lerp(a[64*stride*2+1],b[64*stride*2+1],state.k);
-    const headAt=y=>{
-      const t=clamp((y-top)/(bottom-top))*64,i=Math.min(63,Math.floor(t)),k=t-i;
-      const ix=(i*stride+col)*2,jx=ix+stride*2;
-      return sign*lerp(lerp(a[ix],a[jx],k),lerp(b[ix],b[jx],k),state.k);
-    };
-    const free=rows.map(r=>({y:r.rawY,out:sign*r.rawX+r.width*.5}));
-    const earAt=y=>{
-      if(y<free[0].y)return -Infinity;
-      if(y>=free.at(-1).y)return free.at(-1).out;
-      let i=0;while(free[i+1].y<y)i++;
-      return lerp(free[i].out,free[i+1].out,(y-free[i].y)/(free[i+1].y-free[i].y));
-    };
-    // The join must cover the entire change from the crown to the free ear.
-    // A fixed short window leaves the hidden head branch visible again below
-    // that window, producing a vertical ledge around 20–25 degrees.
-    const union=y=>Math.max(headAt(y),earAt(y));
-    const y0=lerp(top,bottom,.11);
-    let joinY=lerp(top,bottom,.60),previousY=y0,previousGap=headAt(y0)-earAt(y0);
-    for(let i=1;i<=96;i++){
-      const y=lerp(y0,bottom-1,i/96),gap=headAt(y)-earAt(y);
-      if(previousGap>=0&&gap<0){
-        const k=Number.isFinite(previousGap)?previousGap/(previousGap-gap):1;
-        joinY=lerp(previousY,y,k);
-      }
-      previousY=y;previousGap=gap;
-    }
-    const y1=Math.min(bottom-1,Math.max(lerp(top,bottom,.64),joinY+8)),h=y1-y0;
-    const x0=union(y0),x1=earAt(y1),m0=(union(y0+1)-union(y0-1))*.5,m1=(earAt(y1+1)-earAt(y1-1))*.5;
-    // Bound both tangent handles inside the transition. A quadratic tangent
-    // intersection becomes degenerate when the ear takes over farther down
-    // at larger yaw. This cubic keeps its Y coordinate strictly increasing.
-    const span=Math.max(.01,x1-x0);
-    const h0=Math.min(h*.24,span*.42/Math.max(.02,Math.abs(m0)));
-    const h1=Math.min(h*.24,span*.42/Math.max(.02,Math.abs(m1)));
-    const xs=[x0,x0+m0*h0,x1-m1*h1,x1],ys=[y0,y0+h0,y1-h1,y1];
-    const envelope=y=>{
-      let lo=0,hi=1;
-      for(let i=0;i<18;i++){
-        const mid=(lo+hi)*.5;
-        if(bezier(ys,mid)<y)lo=mid;else hi=mid;
-      }
-      return bezier(xs,(lo+hi)*.5);
-    };
-    const fade=y=>smooth(y0,y0+3,y)*(1-smooth(y1-3,y1,y));
-    // Both meshes meet the same outline. Trim only the head's hidden branch;
-    // do not expand the cheek over the inner ear or add a covering patch.
-    for(let row=0;row<=64;row++){
-      const first=row*stride*2,y=currentHeadRaw[first+1];
-      if(y<y0||y>y1)continue;
-      const delta=Math.min(0,envelope(y)-headAt(y))*gain*fade(y);
-      if(!delta)continue;
-      for(let c=0;c<=12;c++){
-        const n=first+c*2,weight=isLeft?1-c/12:c/12;
-        currentHeadRaw[n]+=sign*delta*weight;
-        const out=transformHead(currentHeadRaw[n],currentHeadRaw[n+1]);
-        head.xy[n]=out[0];head.xy[n+1]=out[1];
-      }
-    }
-    for(const row of rows){
-      const y=row.rawY;if(y<y0||y>y1)continue;
-      const current=sign*row.rawX+row.width*.5;
-      const delta=(envelope(y)-current)*gain*fade(y);
-      row.rawX+=sign*delta*.5;row.width+=delta;
-    }
-  }
   function ears(q,sign,state){
     const near45=[95,107,92,67],near75=[135,130,103,82];
     const far45=[175,203,216,223],far75=[166,181,194,201];
-    const keys=sign<0?headLeftKeys:headKeys,uvs=sign<0?headLeftUV:headUV;
+    const uvs=sign<0?headLeftUV:headUV;
     const rootTurn=smooth(.05,.55,q);
     for(const side of ['L','R']){
       const isLeft=side==='L', near=sign>=0?isLeft:!isLeft, p=isLeft?earL:earR,over=isLeft?frontL:frontR;
@@ -402,7 +339,7 @@ export async function createPaintedFigure(base, opts) {
         const angle=ss*(raise*69+spread*9)*smooth(.015,.47,v)*rad;
         rows.push({rawX:center,rawY:y,x:center,y,width:rowWidth,angle});
       }
-      fairEarShoulder(rows,isLeft,q,keys,state);
+      fairEarShoulder(rows,isLeft,q,currentHeadRaw);
       for(let row=0;row<rows.length;row++){
         const current=rows[row],previous=rows[row-1];
         current.x=current.rawX;current.y=current.rawY;
@@ -434,8 +371,8 @@ export async function createPaintedFigure(base, opts) {
       }
       occlusion[isLeft?'left':'right']=coverage/earMesh.count;
     }
-    // Both shoulder corrections must finish before sampling their shared
-    // head material; this also makes left/right processing order immaterial.
+    // Both shoulders use the same unchanged head geometry when sampling the
+    // shared attachment material.
     for(const side of ['L','R']){
       const p=side==='L'?earL:earR,raw=earRootCoordinates[side];
       for(let n=0;n<earMesh.count;n++)rootMaterial(p,n,raw[n*2],raw[n*2+1],p.rootWeight[n],projectedHeadKeys,uvs,state);
@@ -553,6 +490,7 @@ export async function createPaintedFigure(base, opts) {
       lastYaw=clamp((frame.viewYaw??0)+(pose.yawOffset??0),-1,1);
       const q=Math.abs(lastYaw),sign=lastYaw<0?-1:1,state=interpolateKey(q);
       morph(body,sign<0?torsoLeftKeys:torsoKeys,sign<0?bodyLeftUV:bodyUV,state,transformBody);
+      revealFrontHead(revealedFrontHead,approvedHeadKey,paintedHeadKeys[0],q);
       morph(head,sign<0?headLeftKeys:headKeys,sign<0?headLeftUV:headUV,state,transformHead);
       ears(q,sign,state);
       const handIn=pose.handIn??0;

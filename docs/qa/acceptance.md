@@ -1,117 +1,89 @@
-# v1.3.3 验收记录
+# v1.3.4 验收记录
 
-**最终角色 ZIP、离线预览、头耳转向、交替摆臂与耳动作检查已完成。** 本页依据最终冻结源码的实际报告，分别记录程序检查、有限人工抽样与一次短时性能测量。三份最终浏览器报告均为 `status: complete`、`passed: true`、`sourcesUnchanged: true`。
+**本版修复正面耳根异常暗带和侧转后脑被削平的问题。** 以下结果对应最终 1.3.4 源码、安装包及离线预览。生产源码在实际浏览器检查开始与结束时一致；旧版验收原文保留在 [v1.3.3 历史记录](acceptance-v1.3.3.md)。
 
-报告原有的 `visualPassed: null`、`smoothnessPassed: null` 保持原文。下文的人工审阅结论单独记述，不将其写成自动视觉认证，也不修改报告来扩大通过范围。
-
-## 最终程序检查
+## 本轮程序检查
 
 | 项目 | 实际结果与范围 | 证据 |
 | --- | --- | --- |
-| 原生角色 ZIP | **10/10**；固定的 Coopanion 原生导入器实际读取 ZIP、校验 manifest、解码全部 PNG，在隔离临时目录安装并逐文件读回核对 | [原始 JSON](v1.3.3/native-import.json) |
-| 离线 HTML 构建 | **9/9**；检查源文件与内嵌模型、图集、脚本字节，写出后读回核对。浏览器离线运行另见综合运行项 | [原始 JSON](v1.3.3/standalone-build.json) |
-| 综合运行 | **24/24**；原生 opaque iframe、165 个转向观测、真实鼠标点按/拖拽/甩出/落地、说话嘴型、两种性格、角色完成帧计时与 `file:` 离线预览 | [摘要](v1.3.3/release-verified/summary.json) · [完整原文 gzip](v1.3.3/release-verified/report.json.gz) |
-| 两种性格的左右走跑与耳动作 | **231/231**；2,464 个实际动作 tick，另 192 个停步恢复 tick。覆盖左右走、左右跑、耳朵招手、扇耳、伸展和庆祝；耳动作使用 +22° 方向 | [摘要](v1.3.3/motion-verified/summary.json) · [完整原文 gzip](v1.3.3/motion-verified/report.json.gz) |
-| 向左 22° 的大幅耳动作 | **35/35**；温柔、活泼两种性格的耳朵招手与扇耳，共 578 个实际 tick | [摘要](v1.3.3/shoulder-minus22-verified/summary.json) · [完整原文 gzip](v1.3.3/shoulder-minus22-verified/report.json.gz) |
+| 头耳几何回归 | **通过**；68 个局部连接案例、1,537 个 CPU 动画帧；检查中间角度的后脑圆弧、面积、原绘画截面和局部连接；头耳负面积三角形为 0 | [结果及源码哈希](v1.3.4/cpu-regressions.json) · [检查代码](../../tools/check-hood-geometry.mjs) |
+| 头耳材质回归 | **通过**；9 个固定几何转角样本，覆盖正面、微小转角和侧向；检查共点 UV、零权重顶点坐标，以及几何、alpha、自由耳段权重保持；底层 root material 契约同时通过 | [结果](v1.3.4/cpu-regressions.json) · [检查代码](../../tools/check-hood-material.mjs) |
+| 原生角色 ZIP | **10/10**；固定的上游导入器读取 ZIP、校验 manifest、解码 PNG，实际在隔离临时目录安装并逐文件读回 | [原始 JSON](v1.3.4/native-import.json) |
+| 离线 HTML 构建 | **9/9**；校验内嵌模型、图集、脚本和字体，写出后读回核对 | [原始 JSON](v1.3.4/standalone-build.json) |
+| 综合浏览器运行 | **24/24**；原生 opaque iframe、165 个转向观测、真实鼠标点按/拖拽/甩出/落地、说话嘴型、两种性格及直接打开离线 HTML | [完整原始 JSON](v1.3.4/release-verified/report.json) |
+| 两种性格的耳部动作 | **49/49**；温柔和活泼两种方案的耳朵招手、扇耳、伸展，方向为 +22°，共 1,036 个实际固定步进帧，6 张峰值截图 | [摘要](v1.3.4/ear-motion/summary.json) · [完整原文 gzip](v1.3.4/ear-motion/report.json.gz) |
 
-动作与恢复检查合计 **3,234 帧**：`2,464 + 192 + 578`。每帧以 `1/60 s` 的模拟步长通过原生宿主提交，并在实际 tick 完成后记录状态。这是固定步进检查，不能换算成设备的实时帧率。165 个转向观测和实时计时窗口单独记录，不混入动作帧总数。
+CPU 动画帧与实际浏览器帧是两项独立检查，不相加冒充运行帧数。耳部动作按 `1/60 s` 模拟步长逐帧提交并等待实际 tick 完成，不能由此推算设备的实时帧率。
 
-转向检查包含 −75° 到 +75° 的 151 个整数角度、零点附近的 8 个非零探针，以及约 ±0.75° 材质起步边界附近的 6 个探针。它检查头、身体、双耳的三角形与头部宽度；对应透明 PNG 另保留了 ±20°、21°、22°、23°、25° 等连接处关键画面。
+165 个转向观测包括 −75° 到 +75° 的 151 个整数角度、零点附近 8 个非零探针，以及旧材质起步阈值附近 6 个探针。程序检查头部、身体和双耳的三角形与头部宽度；实际透明截图另外覆盖 ±15°、20°、21°、22°、23°、25°、30°、35°、38°、41°、45°、60°、75° 和正面，重点补上旧版五方向图册未充分反映的中间转角。
 
-动作检查覆盖头、身体、双耳、双臂、双脚八个部件的几何与渲染边界。摆臂检查使用**实际网格的肩点及远端手爪位置**，验证相对肩点的前后交替摆动，以及前后摆动相对于同时抬起的幅度；不再仅凭左右角度符号判断走路姿态。脚步检查读取实际脚网格中心、抬脚量和支撑脚底，验证交叉、同侧手脚反向配合、稳定近远层级及停步恢复。
+耳部动作几何检查覆盖头、身体、双耳、双臂和双脚八个部件。五官三角形不在逐帧检查范围内。几何检查用于阻止明确的折叠和轮廓退化，阴影、遮挡与观感另由实际画面审阅判断。
 
-这些几何和轨迹结果限定于模型空间。它们不证明宿主外层变换下的世界坐标锁足，也不代替手爪是否被耳朵遮挡的实际画面检查。五官网格不在逐三角形检查范围内。
+## 实际画面复核
 
-## 人工画面与动作复核
+[修复前后对照](../../preview/release/v1.3.4/front-and-turning-comparison.png)并列展示 v1.3.3 与 v1.3.4 的正面、向右 30°、向左 30°。在本轮审阅的最终画面中，正面头耳连接原有的灰紫色暗带已消除，侧转时后脑恢复圆润弧线，原先约 20°–40° 的长段削平不再出现。另检查了低角度过渡、±22° 连接、±35° 后脑，以及 45°、75° 的关键方向。
 
-本轮对材质、头耳形状和步态分别进行了人工复核，并查看合并后的实际运行画面。审阅重点包括用户指出的约 22° 头耳外缘、其相邻方向、侧向近耳遮挡，以及左右行走前后摆臂的关键相位和停止恢复。
+![修复前后对照](../../preview/release/v1.3.4/front-and-turning-comparison.png)
 
-在已审阅的最终画面中，原先的局部台阶、向耳根扩散的旧切片暗带，以及材质零权重边界造成的细粉线未再出现。头耳连接保持连续，近侧耳朵仍遮挡相应脸部和身体区域。步态样本中近侧手爪能在腹前出现，远侧手爪随相位遮挡，两只手围绕各自肩点交替前后摆动；双脚可见交错与一抬一落，停步后恢复站姿。
+[关键转角图册](../../preview/release/v1.3.4/turning-key-angles.png)和 [完整角度原图](v1.3.4/release-verified/)提供最终形体、头耳连接及近耳遮挡的实际样本。耳朵招手、扇耳和伸展的峰值图保存在[耳动作目录](v1.3.4/ear-motion/)。
 
-这属于**有限人工抽样通过**，没有逐一审阅所有转向、表情与动作参数组合。原始报告中的自动视觉字段和动作人工审阅字段保持原文；本段与实际截图、片段一起提供人工观察依据。
+图册只编排真实运行截图，并裁切共同透明外边距；没有重绘、补色、锐化或缩放角色像素。旧版基线来自提交 `ec6001d56197ef21498dbd1600482462646fc4b6`，出处见 [基线记录](v1.3.4/baseline/provenance.json)。两版在独立运行中采样，启动时钟和呼吸相位并非逐像素锁定；对照用于判断材质和轮廓，不作为完全相同时刻的像素差分。每张图的来源与 SHA-256 见 [图册索引](../../preview/release/v1.3.4/source-map.json)。
 
-| 画面入口 | 用途 |
-| --- | --- |
-| [约 22° 连接对照](../../preview/release/v1.3.3/join-22-comparison.png) | 查看关键方向及其相邻画面的头耳外缘和材质接合 |
-| [五方向图册](../../preview/release/v1.3.3/turning-five-views.png) | 正面及左右侧向的整体形体与近耳遮挡 |
-| [活泼方案行走图册](../../preview/release/v1.3.3/walking-lively.png) | 左右行走的前后摆臂、脚步交错与耳朵联动 |
-| [温柔方案行走图册](../../preview/release/v1.3.3/walking-gentle.png) · [停步恢复](../../preview/release/v1.3.3/walking-stop.png) | 对照另一动作幅度，以及停止后的落地与手臂恢复 |
-| [活泼方案连续片段](../../preview/release/v1.3.3/walking-lively.mp4) · [温柔方案连续片段](../../preview/release/v1.3.3/walking-gentle.mp4) | 左右行走并排展示，观察整个动作过程 |
+上述结论属于**有限人工画面抽样**。报告原有的 `visualPassed: null`、`smoothnessPassed: null` 保持原文，未改成自动视觉认证；本轮没有逐一审阅所有角度、表情和动作参数组合。
 
-静态图册由实际透明 PNG 排版，只裁切共同透明外边距；角色像素没有重画、补色或锐化。来源见 [图册索引](../../preview/release/v1.3.3/source-map.json) 与 [22° 对照索引](../../preview/release/v1.3.3/join-22-comparison.sources.json)。
+## 交互与离线验证
 
-两个 MP4 **各有 144 帧、时长 2.4 秒**，左右两个方向并排；每个方向包含 2 秒行走与 0.4 秒停步恢复。视频按实际固定步进截图编码，没有插帧或反向拼接，也不把停步片段伪装成无缝循环。完整来源及视频探测结果分别见 [活泼片段索引](../../preview/release/v1.3.3/walking-lively.sources.json) 和 [温柔片段索引](../../preview/release/v1.3.3/walking-gentle.sources.json)。**视频的 60 帧编码率不等于实际设备运行 FPS。**
+综合检查使用真实鼠标输入完成点击 `poke`、拖拽 `grab`、快速释放 `throw`，随后经过 `air` 到达原生 `land`。说话输入实际驱动嘴型，停止后恢复；温柔、活泼两种方案均实际切换。
 
-透明 PNG 与由它们编排的片段显示角色自身渲染结果，不包括宿主外层 SVG 位移、缩放与粒子；综合检查中的 `stage-*.png`、鼠标交互截图另包含完整舞台。
+离线 HTML 以 `file:` 打开，在阻断 HTTP/HTTPS 的条件下完成加载和绘制，HTTP/HTTPS 请求数为 **0**。界面读取到 25 个表情和 28 个动作，内嵌资源与最终暂存角色、模型一致。本轮没有重新逐项运行全部 53 个词条，也没有重新验收左右走跑的全部轨迹；这些实现未改动，历史结果仅对应历史版本。
 
-## 鼠标交互、离线运行与词库
+浏览器使用 Chromium headless shell 和 SwiftShader 软件 WebGL，角色画布为 `640×394`；综合检查显示比例为 `1.35`，耳动作检查为 `0.9`。安装检查在隔离临时目录中完成，运行检查使用固定上游的原生 opaque iframe；没有在用户机器的完整 Electron 桌面、多显示器或所有系统缩放组合中实测。综合报告附有一次约 8 秒的完成帧计时，不作为所有设备稳定 60 FPS 的保证。
 
-最终综合报告重新执行了可信的真实鼠标输入：点击触发原生 `poke`，移动进入 `drag` 并触发 `grab`，快速释放触发 `throw`，随后经过 `air` 到达原生 `land`。报告记录了释放后的落地状态；没有将仅调用角色内部方法等同于真实鼠标测试。
+两份最终运行报告均为 `status: complete`、`passed: true`、`sourcesUnchanged: true`，错误列表为空。报告保留截图读回时的 `GPU stall due to ReadPixels` 警告。
 
-说话输入实际改变嘴型，输入停止后回到休息状态；温柔与活泼方案均实际切换并执行耳朵招手动作。离线 HTML 使用 `file:` 打开，在阻断 HTTP/HTTPS 的条件下完成加载和绘制，未发出 HTTP/HTTPS 请求。内嵌资源与最终暂存角色、模型一致。
+## 源码与发布文件一致性
 
-离线界面读回 **25 个表情、28 个动作**。本版保留全部 53 个词，但本轮**没有重新逐项运行全部 53 个词**。历史逐词采样只支持其原记录版本，不冒充本次结果。
-
-旧版指针生命周期和取消释放的报告仍作为未改动宿主适配器的历史依据。本轮重新执行正常拖拽释放路径，没有重新声称覆盖所有取消、失焦、触摸分支。旧宿主若未发送释放或取消消息，需要按 [host-fix 说明](../../host-fix/README.md) 应用对应补丁；角色包不能补回宿主没有发送的信息。
-
-原生导入在隔离临时目录完成，运行使用固定上游的 opaque iframe。**没有在用户机器的完整 Electron 桌面、多显示器或所有系统缩放组合中实测。**
-
-## 最终短时性能测量
-
-最终综合报告在 **SwiftShader 软件 WebGL** 环境、`640×394` 角色画布、显示比例 `1.35` 下，记录一次约 8 秒的连续转向窗口。下列数字来自角色的**完成帧回调**；页面自身的 rAF 次数另行记录，不用它充当角色 FPS。
-
-| 指标 | 实测 |
-| --- | ---: |
-| 请求计时窗口 | 8 秒 |
-| 角色完成帧样本 | 477 |
-| 首末完成帧间隔 | 7,976.3 ms |
-| 角色完成帧速率 | 59.6768 FPS |
-| 完成帧间隔 P95 | 19.5 ms |
-| 最大单次完成帧间隔 | 38.2 ms |
-
-这是最终冻结版本的一次固定窗口测量，不保证其他 GPU、完整 Electron 宿主或用户设备稳定 60 FPS。原始全部完成帧间隔保存在综合报告的 `sweep.characterFrames` 中；固定步进动作截图和 MP4 不作为该实时性能数值的依据。
-
-三份运行报告没有记录运行错误，并保留了 SwiftShader 的 `GPU stall due to ReadPixels` 截图读回警告，没有删除警告或表述为“零警告”。
-
-## 冻结源码与发布文件
-
-最终运行报告记录以下生产文件，检查开始与结束的哈希一致。完整构建来源见报告中的 `sourcesBefore` / `sourcesAfter`；安装 ZIP 与离线 HTML 的字节数及 SHA-256 见 [dist 文件说明](../../dist/README.md)。
+最终运行前后校验了 15 个生产来源文件。主要变更文件的 SHA-256 如下；完整列表见综合报告的 `sourcesBefore.stage.sourceFiles`，与 `sourcesAfter` 一致。
 
 | 文件 | SHA-256 |
 | --- | --- |
-| `runtime/painted-figure.js` | `3089d30161c744a3f23488764aabe895a7a5741d4013834c2bae3fb77f2ca13c` |
-| `runtime/animation.js` | `7e2df8c2caf219d95f4fdb8108e3151a613abb6fa292fcd09d074f1cd10945e4` |
-| `runtime/arm-walk.js` | `8349e2ac1a9cd0180501544cc8ef62bc3e35d384c907e54bba9dbbdd081324d3` |
-| `runtime/hood-material.js` | `e07c5e3b1664fc22993b9cee9f5e88cda9e57fdff3a35a35347544dbd44aac42` |
-| `runtime/atlas-renderer.js` | `869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace` |
-| `runtime/host-adapter.js` | `e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e` |
-| `pack/model.json` | `acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf` |
+| `runtime/painted-figure.js` | `2f90c2894a5cd60a383603478edf975bd4536139bc6a120fe86555982eeaaba1` |
+| `runtime/hood-geometry.js` | `8e00870c745666d59929589d0fadc0f2887723b5879d3d408b76d6d8d0b7f7d6` |
+| `runtime/hood-material.js` | `bc0ec9bca2fc990d62e01f37b607e5be29916d252a4605a672beefc5ffd00755` |
+| `pack/model.json` | `590820ee4ffc1ffec4bbe7612c0fa2362b0546699648616b9c8eaff429fa9377` |
 | `pack/assets/atlas.png` | `64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108` |
 
-代码契约检查验证输入、状态和数值关系，人工画面与连续片段验证有限样本的观感；两者不互相替代。本页通过结论只对应上述冻结源码及最终报告，不扩展到修复过程中的候选版本。
+安装 ZIP 和离线 HTML 从最终验证过的构建产物复制到 `dist/`，随后逐字节核对。下载、字节数及 SHA-256 见 [dist 文件说明](../../dist/README.md)。
 
-## 公开证据与原文完整性
+## 报告分发与复现
 
-三个大型运行报告使用 **gzip 无损压缩**分发，旁边的 `summary.json` 便于快速查看状态、检查范围和来源哈希。完整分发清单见 [distributed-evidence.json](v1.3.3/distributed-evidence.json)。报告原文的 SHA-256 如下，哈希对象是**解压后的 JSON 原文**：
+公开证据包含 54 张原始 PNG：旧版基线 13 张、最终综合检查 35 张、耳动作 6 张。对照图册单独位于 `preview/release/v1.3.4/`。完整分发路径、字节数及哈希见 [distributed-evidence.json](v1.3.4/distributed-evidence.json)。
 
-| 报告 | 原文字节数 | 原文 SHA-256 |
-| --- | ---: | --- |
-| `release-verified/report.json` | 847,403 | `9a051b2e974e17e85913aad96e3c53b47357937b912770286a0e288f2385f858` |
-| `motion-verified/report.json` | 26,705,728 | `2754a5718f0e372583b9b668aec0581df21ead6cd8eaa32b045b8f0f250d2850` |
-| `shoulder-minus22-verified/report.json` | 5,216,270 | `7beb3eca341f9fff89a5ff3600cd926faf17fcb25ffdf0bddd09a6f4f496524b` |
-
-需要恢复原文时，在相应报告目录执行：
+较大的耳动作报告使用 gzip 无损压缩，原文为 **9,196,464 字节**，原文 SHA-256 为 `155ef96f7d5f15b50c201f0079e9d187fb3a39c03fa07f4e9501448cb96314e4`。解压后即可读取所有逐帧状态：
 
 ```sh
-gzip -dk report.json.gz
-sha256sum report.json
-# macOS 可使用：shasum -a 256 report.json
+gzip -dk docs/qa/v1.3.4/ear-motion/report.json.gz
+sha256sum docs/qa/v1.3.4/ear-motion/report.json
 ```
 
-综合报告和 −22° 耳动作目录保留对应实际 PNG；动作报告目录分发经过选取的原始 PNG。**动作报告记录的 1,162 张截图不表示全部 1,162 张 PNG 都在公开仓库中。** 完整状态与帧数据保留在压缩报告，连续走路及停止过程另由上述 MP4 与逐帧来源索引提供。实际公开的 PNG 路径、数量及哈希以分发清单为准；不将未分发的截图算成仓库文件。
+核心回归与构建入口：
 
-## 历史版本与格式范围
+```sh
+node tools/check-root-material.mjs
+node tools/check-hood-material.mjs
+node tools/check-hood-geometry.mjs
+npm run stage
+node preview-host/validate-native.mjs --build-zip=exports/Maodou-Coopanion-v1.3.4.zip --report=docs/qa/v1.3.4/native-import.json
+node tools/build-standalone.mjs --out=exports/Maodou-Offline-Preview-v1.3.4.html --report=docs/qa/v1.3.4/standalone-build.json
+```
 
-v1.3.2 的报告与[版本说明](../releases/v1.3.2.md)保留为历史证据。该版本交付后，用户继续指出约 22° 的连接畸形、阴影及双臂同开同合，本轮据此修正实现并重新验收。旧版检查结论不能替代本页的 v1.3.3 结果。
+浏览器检查需提供本机可用的 Chromium 路径：
 
-运行格式仍为 **Coopanion manifest 2 / API 2**，采用绘画图集和网格变形，提供约 ±75° 的有限二维转向。不包含 Cubism `moc3`、`model3.json` 或 Editor 工程。安装与构建入口见 [README](../../README.md)，本次实现说明见 [v1.3.3 版本说明](../releases/v1.3.3.md)。
+```sh
+node tools/qa-release.mjs --chromium=/path/to/chromium --software-webgl --scale=1.35 --out=docs/qa/v1.3.4/release-verified --offline=exports/Maodou-Offline-Preview-v1.3.4.html
+node tools/qa-motion-v133.mjs --chromium=/path/to/chromium --software-webgl --scheme=both --only=ear-wave,flap,stretch --gesture-yaw=22 --out=docs/qa/v1.3.4/ear-motion
+```
+
+## 格式与历史范围
+
+运行格式为 **Coopanion manifest 2 / API 2**，使用绘画图集与二维网格变形，提供约 ±75° 的有限转向，不包含完整背视图、360° 模型或 Cubism Editor 工程。本次实现详见 [v1.3.4 版本说明](../releases/v1.3.4.md)，安装入口见 [README](../../README.md)。旧宿主的指针释放修补继续按 [host-fix 说明](../../host-fix/README.md)处理。

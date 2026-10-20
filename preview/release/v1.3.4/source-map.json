@@ -1,0 +1,153 @@
+{
+  "scope": "Unretouched runtime pixels, composited on a neutral background at native resolution. Each run uses the requested native yaw; separate startup clocks are not asserted identical.",
+  "reports": [
+    {
+      "path": "docs/qa/v1.3.4/baseline/report.json",
+      "sha256": "73038c600d00ab119b981c38d3fc85de5eb5941d3b07f825f1d523f09dddaffc",
+      "status": "complete",
+      "passed": null,
+      "sourcesUnchanged": null
+    },
+    {
+      "path": "docs/qa/v1.3.4/release-verified/report.json",
+      "sha256": "e77024c39af6aa664fbec812d739306c829e983fbdab08cdaa2ef9031e53f9c0",
+      "status": "complete",
+      "passed": true,
+      "sourcesUnchanged": true
+    }
+  ],
+  "figures": [
+    {
+      "path": "preview/release/v1.3.4/front-and-turning-comparison.png",
+      "sha256": "85365c76388ed7a2bdb1a3e6f696ca042cf067b998c156ba71f6d38d508b260d",
+      "crop": [
+        122,
+        94,
+        518,
+        370
+      ],
+      "cells": [
+        {
+          "path": "docs/qa/v1.3.4/baseline/yaw-0.png",
+          "sha256": "9a6cdcb15716af4c4b2bba9271c7d555cb12597122c1c3cfd6857d5391c8209e",
+          "angle": 0,
+          "label": "v1.3.3  |  front"
+        },
+        {
+          "path": "docs/qa/v1.3.4/baseline/yaw-30.png",
+          "sha256": "a0f6817c033d461798a7cfc994773a35e137792d51c372d4ca918e590bc8d6d7",
+          "angle": 30,
+          "label": "v1.3.3  |  +30 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/baseline/yaw--30.png",
+          "sha256": "acc42940d96558480e27cb03c53d0331de9a7c2e6f18c13022fbb4e86a4a00ae",
+          "angle": -30,
+          "label": "v1.3.3  |  -30 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-front-0-transparent.png",
+          "sha256": "b7f3179fc4ab31f7d89e8f316a11d22331a1388f55ee7dbc42e27aec4cb7a17a",
+          "angle": 0,
+          "label": "v1.3.4  |  front"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-30-transparent.png",
+          "sha256": "cb4515525a7f4115ad319eb20cb85f85c29e66feabc60d4932767fb5121582aa",
+          "angle": 30,
+          "label": "v1.3.4  |  +30 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-30-transparent.png",
+          "sha256": "ec2af4c60a51ba9a24937799b519964f3234ac0c8858b3631ffd7b10e6bb572b",
+          "angle": -30,
+          "label": "v1.3.4  |  -30 degrees"
+        }
+      ]
+    },
+    {
+      "path": "preview/release/v1.3.4/turning-key-angles.png",
+      "sha256": "61b3a106cd28523387c2794e6c45b4b3c24d20c3271749fb3b4811797afe11b0",
+      "crop": [
+        122,
+        94,
+        518,
+        370
+      ],
+      "cells": [
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-75-transparent.png",
+          "sha256": "f74433275077e4fad90b40b641f70f781c621a0c1b119f9273466e8d6931833e",
+          "angle": -75,
+          "label": "-75 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-45-transparent.png",
+          "sha256": "526776e9fb91fd28d3436106abe5e631d425d90dfbe4e152cd1e844b425770a1",
+          "angle": -45,
+          "label": "-45 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-35-transparent.png",
+          "sha256": "65044df20406e15af94dc8c6c860366b541aa7ac25be678330ea75c4ab9cb1cc",
+          "angle": -35,
+          "label": "-35 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-22-transparent.png",
+          "sha256": "fa7b5654f7eeb0db39f35a75f28373e240d4f62512c64bd8b935c67c33958f13",
+          "angle": -22,
+          "label": "-22 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-left-15-transparent.png",
+          "sha256": "19ebf782e224987f3818460b6cab0ae47bc074865b36703da7788b9d4eb9fab3",
+          "angle": -15,
+          "label": "-15 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-front-0-transparent.png",
+          "sha256": "b7f3179fc4ab31f7d89e8f316a11d22331a1388f55ee7dbc42e27aec4cb7a17a",
+          "angle": 0,
+          "label": "Front"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-15-transparent.png",
+          "sha256": "3691f975e0996cb6255bc67e0741e0f75b13ba889a6f3e2a3dc6cff37154828d",
+          "angle": 15,
+          "label": "+15 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-22-transparent.png",
+          "sha256": "48c98e1b5228d08c229603b79ff4418abcd5f476ebf25375bf525bf0d1cc0c08",
+          "angle": 22,
+          "label": "+22 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-35-transparent.png",
+          "sha256": "9f0b87065c19bdf6ef16fd2979b6d48c5bdb197d3102e8df6366b5387d1ab379",
+          "angle": 35,
+          "label": "+35 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-45-transparent.png",
+          "sha256": "016ffd44d40860ca702331fa0aab44b3b4fc6d83ab2f60c781028e45905e2387",
+          "angle": 45,
+          "label": "+45 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-60-transparent.png",
+          "sha256": "ecefe58693b8e4054a0b120a0cb7c2395f758ed22eb37df1d2a562b400aa0585",
+          "angle": 60,
+          "label": "+60 degrees"
+        },
+        {
+          "path": "docs/qa/v1.3.4/release-verified/angle-right-75-transparent.png",
+          "sha256": "311aa300089f10fe03eb9332c6fa1ee8e2bdeab3b1cef53dde97216edb47c763",
+          "angle": 75,
+          "label": "+75 degrees"
+        }
+      ]
+    }
+  ]
+}

@@ -4,14 +4,15 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
-const [art, approved, ears, featureProfiles] = await Promise.all([
+const [manifest, art, approved, ears, featureProfiles] = await Promise.all([
+  readFile(resolve(root, 'pack/figure.json'), 'utf8').then(JSON.parse),
   readFile(resolve(root, 'pack/art-data.json'), 'utf8').then(JSON.parse),
   readFile(resolve(root, 'runtime/approved-front.json'), 'utf8').then(JSON.parse),
   readFile(resolve(root, 'runtime/approved-front-ears.json'), 'utf8').then(JSON.parse),
   readFile(resolve(root, 'runtime/feature-profiles.json'), 'utf8').then(JSON.parse),
 ]);
 const model = {
-  format: 'maodou-painted-mesh', version: '1.3.3',
+  format: 'maodou-painted-mesh', version: manifest.version,
   coordinates: 'Coopanion logical units; x right, y down, feet at 256. Authored yaw +/-75 degrees.',
   view: [-150, -60, 406, 282], renderEdge: 640,
   headHeightScale: .965,

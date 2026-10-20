@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /** Operator-run release checks. --help never starts a server or browser. */
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
@@ -8,11 +8,11 @@ import { createPreviewServer } from '../preview-host/serve.mjs';
 import { projectRoot, atomicWrite, hashFile } from '../preview-host/pack-tools.mjs';
 
 const HELP = `Usage: node tools/qa-release.mjs [options]
-  --chromium=/path/to/chrome    default /workspace/scratch/4b38f3d3ca52/test-browser/chrome-linux64/chrome
+  --chromium=/path/to/chrome    optional; CHROMIUM_PATH or installed Playwright Chromium otherwise
   --software-webgl             use SwiftShader for WebGL only
   --scale=0.6                  logical display scale
   --out=docs/qa/release-acceptance
-  --offline=exports/Maodou-Offline-Preview-v1.3.3.html
+  --offline=exports/Maodou-Offline-Preview-v<VERSION>.html (default: current manifest version)
 Starts and closes an owned ephemeral local server and an owned test browser.
 Requires current staged assets and a freshly built standalone HTML. It does not
 rebuild or change production files. Dense geometry checks do not certify art;
@@ -29,8 +29,9 @@ for (const arg of process.argv.slice(2)) {
 }
 const scale = Number(options.scale ?? .6);
 if (!(scale > 0 && scale <= 1.5)) throw new Error('Invalid --scale');
+const manifest = JSON.parse(await readFile(resolve(projectRoot, 'pack/figure.json'), 'utf8'));
 const out = resolve(projectRoot, options.out ?? 'docs/qa/release-acceptance');
-const offlineFile = resolve(projectRoot, options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.3.html');
+const offlineFile = resolve(projectRoot, options.offline ?? `exports/Maodou-Offline-Preview-v${manifest.version}.html`);
 await mkdir(out, { recursive: true });
 const reportFile = resolve(out, 'report.json');
 const report = {

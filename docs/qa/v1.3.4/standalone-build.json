@@ -1,0 +1,354 @@
+{
+  "status": "built",
+  "startedAt": "2026-10-20T09:46:42.779Z",
+  "scope": "Build and exact embedded-byte checks only. The local single HTML invokes the same staged character factory with fixed native createPet, but has no opaque iframe boundary.",
+  "browserTested": false,
+  "offlineOpenTested": false,
+  "visualTested": false,
+  "performanceTested": false,
+  "nativeSandbox": false,
+  "checks": [
+    {
+      "name": "Staged native pack matches the current production sources",
+      "passed": true
+    },
+    {
+      "name": "The declared painted atlas is embedded with its production checksum",
+      "passed": true,
+      "details": {
+        "path": "assets/atlas.png",
+        "bytes": 2428978,
+        "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108",
+        "scope": "Original bytes and PNG signature; complete image decode belongs to the runtime/import checks."
+      }
+    },
+    {
+      "name": "Fixed upstream host and kit inputs retain their pinned bytes",
+      "passed": true,
+      "details": {
+        "upstreamCommit": "04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33",
+        "files": 8
+      }
+    },
+    {
+      "name": "Template and styles contain no external resource dependencies",
+      "passed": true
+    },
+    {
+      "name": "Local UI and original native kit bundle into one script",
+      "passed": true,
+      "details": {
+        "esbuildVersion": "0.28.2",
+        "inputs": [
+          "preview-host/vendor/coopanion/web/kit/rig.js",
+          "preview-host/vendor/coopanion/web/kit/body.js",
+          "preview-host/vendor/coopanion/web/i18n/zh.js",
+          "preview-host/vendor/coopanion/web/i18n/en.js",
+          "preview-host/vendor/coopanion/web/i18n.js",
+          "preview-host/vendor/coopanion/web/body-host.js",
+          "preview-host/standalone-app.js"
+        ],
+        "retainedModuleImports": 0,
+        "runtimeModuleLoad": "Only the already-embedded production figure.js is loaded as a same-document Blob module."
+      }
+    },
+    {
+      "name": "Bundled inline program parses without executing a browser",
+      "passed": true
+    },
+    {
+      "name": "Final embedded model, module and assets round-trip to the staged bytes",
+      "passed": true,
+      "details": {
+        "assets": 2,
+        "exactFigureBytes": 139810,
+        "exactModelBytes": 232541
+      }
+    },
+    {
+      "name": "Source and staging hashes remain unchanged through the build",
+      "passed": true
+    },
+    {
+      "name": "The published HTML reads back with exactly the constructed bytes",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "stageReport": {
+    "path": "preview-host/qa/stage-report.json",
+    "sha256": "0800f4dd92fa509c6f3d982b677bdb6756e45558dba27684d056d73638d9a721"
+  },
+  "productionSources": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "942cf819667808ca5fa9cf2ab26e52f1f1f6af7a2a46ed6b3ba7c934ef08c068"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 232541,
+      "sha256": "590820ee4ffc1ffec4bbe7612c0fa2362b0546699648616b9c8eaff429fa9377"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 38972,
+      "sha256": "7e2df8c2caf219d95f4fdb8108e3151a613abb6fa292fcd09d074f1cd10945e4"
+    },
+    {
+      "path": "runtime/arm-walk.js",
+      "bytes": 1208,
+      "sha256": "8349e2ac1a9cd0180501544cc8ef62bc3e35d384c907e54bba9dbbdd081324d3"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 42671,
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "runtime/hood-geometry.js",
+      "bytes": 2713,
+      "sha256": "8e00870c745666d59929589d0fadc0f2887723b5879d3d408b76d6d8d0b7f7d6"
+    },
+    {
+      "path": "runtime/hood-material.js",
+      "bytes": 3034,
+      "sha256": "bc0ec9bca2fc990d62e01f37b607e5be29916d252a4605a672beefc5ffd00755"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 31956,
+      "sha256": "2f90c2894a5cd60a383603478edf975bd4536139bc6a120fe86555982eeaaba1"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    }
+  ],
+  "pack": {
+    "id": "maodou-shiny",
+    "version": "1.3.4",
+    "expressions": 25,
+    "motions": 28,
+    "audioFiles": 0
+  },
+  "uiFont": {
+    "path": "tools/fonts/MaodouPreviewUI.woff2",
+    "bytes": 159544,
+    "sha256": "ff6833e03bbe64b402abf3fdfa6ce2ab5b1930eb78daeeb789d9b5a5598f6763",
+    "license": "SIL Open Font License 1.1",
+    "embedded": true
+  },
+  "output": {
+    "path": "exports/Maodou-Offline-Preview-v1.3.4.html",
+    "bytes": 4433636,
+    "sha256": "6812a227fa23e1e6f03d4c757568a4d5544850529112610ea28b2031504081b5"
+  },
+  "embedded": {
+    "upstreamCommit": "04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33",
+    "figureSha256": "443269112d90c9b9027092447737181e4ddafac33f4208cd51cc375b48ee4a92",
+    "modelSha256": "590820ee4ffc1ffec4bbe7612c0fa2362b0546699648616b9c8eaff429fa9377",
+    "manifestSha256": "942cf819667808ca5fa9cf2ab26e52f1f1f6af7a2a46ed6b3ba7c934ef08c068",
+    "assets": [
+      {
+        "path": "art-data.json",
+        "bytes": 332657,
+        "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+      },
+      {
+        "path": "assets/atlas.png",
+        "bytes": 2428978,
+        "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+      }
+    ],
+    "sourceFiles": [
+      {
+        "path": "pack/art-data.json",
+        "bytes": 332657,
+        "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+      },
+      {
+        "path": "pack/assets/atlas.png",
+        "bytes": 2428978,
+        "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+      },
+      {
+        "path": "pack/figure.js",
+        "bytes": 1032,
+        "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+      },
+      {
+        "path": "pack/figure.json",
+        "bytes": 18557,
+        "sha256": "942cf819667808ca5fa9cf2ab26e52f1f1f6af7a2a46ed6b3ba7c934ef08c068"
+      },
+      {
+        "path": "pack/LICENSE",
+        "bytes": 34524,
+        "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+      },
+      {
+        "path": "pack/model.json",
+        "bytes": 232541,
+        "sha256": "590820ee4ffc1ffec4bbe7612c0fa2362b0546699648616b9c8eaff429fa9377"
+      },
+      {
+        "path": "pack/THIRD_PARTY_NOTICES.md",
+        "bytes": 2204,
+        "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+      },
+      {
+        "path": "runtime/animation.js",
+        "bytes": 38972,
+        "sha256": "7e2df8c2caf219d95f4fdb8108e3151a613abb6fa292fcd09d074f1cd10945e4"
+      },
+      {
+        "path": "runtime/arm-walk.js",
+        "bytes": 1208,
+        "sha256": "8349e2ac1a9cd0180501544cc8ef62bc3e35d384c907e54bba9dbbdd081324d3"
+      },
+      {
+        "path": "runtime/atlas-renderer.js",
+        "bytes": 42671,
+        "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+      },
+      {
+        "path": "runtime/hood-geometry.js",
+        "bytes": 2713,
+        "sha256": "8e00870c745666d59929589d0fadc0f2887723b5879d3d408b76d6d8d0b7f7d6"
+      },
+      {
+        "path": "runtime/hood-material.js",
+        "bytes": 3034,
+        "sha256": "bc0ec9bca2fc990d62e01f37b607e5be29916d252a4605a672beefc5ffd00755"
+      },
+      {
+        "path": "runtime/host-adapter.js",
+        "bytes": 13795,
+        "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+      },
+      {
+        "path": "runtime/painted-figure.js",
+        "bytes": 31956,
+        "sha256": "2f90c2894a5cd60a383603478edf975bd4536139bc6a120fe86555982eeaaba1"
+      },
+      {
+        "path": "runtime/words.js",
+        "bytes": 11276,
+        "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+      }
+    ],
+    "stagedFigurePath": "preview-host/staged/maodou-shiny/figure.js",
+    "nativeSandbox": false,
+    "buildScope": "Exact installed code and assets embedded for a direct local preview."
+  },
+  "builderSources": [
+    {
+      "path": "preview-host/package-lock.json",
+      "bytes": 14820,
+      "sha256": "2b5ba6cc8dac8abd3e36b0abfb76c5cafd2c09aaf6c8556e1261ed4bfb000df5"
+    },
+    {
+      "path": "preview-host/standalone-app.js",
+      "bytes": 15554,
+      "sha256": "41aba061542b823a1a51fe12cb7af53057a7b517565b7b6445cf0ebb6f22f4e0"
+    },
+    {
+      "path": "preview-host/standalone.html",
+      "bytes": 5304,
+      "sha256": "71385c0aafe3beef1cb6f67f4dca60de5a0296cea266a8aafa9d2f072177a0fb"
+    },
+    {
+      "path": "preview-host/style.css",
+      "bytes": 6326,
+      "sha256": "29585a4b0520fdbf47a675869d86d0b187689d448f16a80f104c358edb88f835"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/THIRD_PARTY_NOTICES.md",
+      "bytes": 4759,
+      "sha256": "208f4538f04e5ece0b58b49a1522c922f2e3d45f7632d8bfdb359e550779c2cc"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/body-host.js",
+      "bytes": 13273,
+      "sha256": "d9c1874e21a7888275d4ca4ed044a67b31ca546ca3d97dd798d20f754bcc5e80"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/i18n.js",
+      "bytes": 2711,
+      "sha256": "f885012064a87e15b42f159012b1b66bf0a53f6140b509d5be3559718bda28d0"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/i18n/en.js",
+      "bytes": 5611,
+      "sha256": "f640fb5f12aeae5da632082cbcf92dbe7319f39a7069809f9e6c666db14513c1"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/i18n/zh.js",
+      "bytes": 5387,
+      "sha256": "2f6ccaccf4073cbda5e5355112cd7a1c7d44d9a5180491f3cf8d2101344ca4ef"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/kit/body.js",
+      "bytes": 54240,
+      "sha256": "03520bb81c40465ccf919a540d5a0117081a41a25b965a9762fd888fd9d6751a"
+    },
+    {
+      "path": "preview-host/vendor/coopanion/web/kit/rig.js",
+      "bytes": 10856,
+      "sha256": "a23b1869d1439d8bb234678e71ed61ade882d786653f20ac406559e5724fc0ba"
+    },
+    {
+      "path": "tools/build-standalone.mjs",
+      "bytes": 12825,
+      "sha256": "3ccff1ea692cd527b089d54899b49a67b14aba380afccbbfff2ad93d739c4453"
+    },
+    {
+      "path": "tools/fonts/MaodouPreviewUI.woff2",
+      "bytes": 159544,
+      "sha256": "ff6833e03bbe64b402abf3fdfa6ce2ab5b1930eb78daeeb789d9b5a5598f6763"
+    },
+    {
+      "path": "tools/fonts/OFL.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    }
+  ],
+  "completedAt": "2026-10-20T09:46:42.989Z"
+}

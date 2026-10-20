@@ -1,0 +1,85 @@
+{
+  "version": "1.3.3",
+  "sourceCommit": "ec6001d56197ef21498dbd1600482462646fc4b6",
+  "scope": "Actual native WebGL captures from a separate unchanged v1.3.3 worktree, staged with its original build scripts. Startup clocks are independent of the fixed run.",
+  "files": [
+    {
+      "path": "runtime/painted-figure.js",
+      "sha256": "3089d30161c744a3f23488764aabe895a7a5741d4013834c2bae3fb77f2ca13c"
+    },
+    {
+      "path": "runtime/hood-material.js",
+      "sha256": "e07c5e3b1664fc22993b9cee9f5e88cda9e57fdff3a35a35347544dbd44aac42"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "pack/model.json",
+      "sha256": "acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "tools/qa-focus.mjs",
+      "sha256": "095092e015ec6acaa42c044de9b63b248c6e530ee52d3f2c8cc32245379b4341"
+    }
+  ],
+  "captures": [
+    {
+      "file": "yaw--15.png",
+      "sha256": "b7733d6b419ee8696d5271acddaad3d1d9e8bab50e40dc6991aeaf575cc38416"
+    },
+    {
+      "file": "yaw--22.png",
+      "sha256": "951b7763eacada562b3106392e5f20f485fe566875db485b3a6978d63fb018f4"
+    },
+    {
+      "file": "yaw--30.png",
+      "sha256": "acc42940d96558480e27cb03c53d0331de9a7c2e6f18c13022fbb4e86a4a00ae"
+    },
+    {
+      "file": "yaw--35.png",
+      "sha256": "c88cdb4c9f45bbe92f2e55ff758032497f9aed74f596adba26702d8f29f3ec89"
+    },
+    {
+      "file": "yaw--45.png",
+      "sha256": "515345fa125a01dbdbefe093bdf976433157890e277a0abcfdb398abf56cd740"
+    },
+    {
+      "file": "yaw--75.png",
+      "sha256": "43391245541d4e98abfc02cd41c12bba67cbc226a9bf5f8ea20b5b99a20280d9"
+    },
+    {
+      "file": "yaw-0.png",
+      "sha256": "9a6cdcb15716af4c4b2bba9271c7d555cb12597122c1c3cfd6857d5391c8209e"
+    },
+    {
+      "file": "yaw-15.png",
+      "sha256": "ae5461a315a218e0459771be90ce12f39fb00cda5e59a4b3f820889250b0df2c"
+    },
+    {
+      "file": "yaw-22.png",
+      "sha256": "1f94098e1fbc1486b0776d7c6a7e45b352b113263d4f855ce753f2b2631f7b5c"
+    },
+    {
+      "file": "yaw-30.png",
+      "sha256": "a0f6817c033d461798a7cfc994773a35e137792d51c372d4ca918e590bc8d6d7"
+    },
+    {
+      "file": "yaw-35.png",
+      "sha256": "b85b7616145defd107fdf1ab108003833ad9735ff377f858774be7588de34969"
+    },
+    {
+      "file": "yaw-45.png",
+      "sha256": "bc6903b6acf4840aae9d4e1907b9d8cf4bc542a2e87cca3b570cf24877ae9293"
+    },
+    {
+      "file": "yaw-75.png",
+      "sha256": "65af1511c6811f4fc4122eb0be584039d4dd44bd562444f53bf1f056c9802f8d"
+    }
+  ]
+}

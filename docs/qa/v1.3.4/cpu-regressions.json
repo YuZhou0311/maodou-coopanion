@@ -1,0 +1,60 @@
+{
+  "scope": "CPU geometry and material contracts. Rendering and actual native playback are recorded separately.",
+  "checkedAt": "2026-10-20T09:47:47.522208+00:00",
+  "passed": true,
+  "sources": [
+    {
+      "path": "runtime/painted-figure.js",
+      "sha256": "2f90c2894a5cd60a383603478edf975bd4536139bc6a120fe86555982eeaaba1"
+    },
+    {
+      "path": "runtime/hood-geometry.js",
+      "sha256": "8e00870c745666d59929589d0fadc0f2887723b5879d3d408b76d6d8d0b7f7d6"
+    },
+    {
+      "path": "runtime/hood-material.js",
+      "sha256": "bc0ec9bca2fc990d62e01f37b607e5be29916d252a4605a672beefc5ffd00755"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "runtime/animation.js",
+      "sha256": "7e2df8c2caf219d95f4fdb8108e3151a613abb6fa292fcd09d074f1cd10945e4"
+    },
+    {
+      "path": "pack/model.json",
+      "sha256": "590820ee4ffc1ffec4bbe7612c0fa2362b0546699648616b9c8eaff429fa9377"
+    }
+  ],
+  "results": [
+    {
+      "command": [
+        "node",
+        "tools/check-hood-geometry.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"scope\":\"CPU geometry only; rendered silhouette and material still require actual captures\",\"localCases\":68,\"frames\":1537,\"sourceShapeFrames\":1064,\"maxSourceShapeError\":0.000007782872529560336,\"maxDepartureFromHiddenFront\":9.395862579345703,\"maxRearInwardDent\":0.03072357177734375,\"minimumRearArcBulge\":0.7917022705078125,\"minimumHeadAreaRatio\":0.9558410337279604,\"maxEarOutset\":4.317876843326971,\"maxVisibleOutset\":0.9339973263232082,\"negativeHeadOrEarTriangles\":0,\"mirroredLocalGeometry\":true}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tools/check-hood-material.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "Hood material regression passed: front attachment, 9 fixed-geometry yaw samples, shared UVs, zero-weight coordinates, and geometry/alpha/free-ear invariance.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tools/check-root-material.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "Root material batch contract passed: defaults, shared UVs, alpha/mask invariance, updates, validation, and recovery.",
+      "stderr": ""
+    }
+  ]
+}

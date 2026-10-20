@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 // Actual native render views for visual review; no synthetic pose drawings.
-import {mkdir,writeFile} from 'node:fs/promises';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {createRequire} from 'node:module';
 import {createPreviewServer} from '../preview-host/serve.mjs';
+import {projectRoot} from '../preview-host/pack-tools.mjs';
 const opts=Object.fromEntries(process.argv.slice(2).map(a=>{const i=a.indexOf('=');return [a.slice(2,i),a.slice(i+1)]}));
-const out=resolve(opts.out??'docs/qa/v1.3.2/focus');await mkdir(out,{recursive:true});
+const manifest=JSON.parse(await readFile(resolve(projectRoot,'pack/figure.json'),'utf8'));
+const out=resolve(projectRoot,opts.out??`docs/qa/v${manifest.version}/focus`);await mkdir(out,{recursive:true});
 const server=createPreviewServer();await new Promise((ok,no)=>{server.once('error',no);server.listen(0,'127.0.0.1',ok)});
 let browser;
 try {
