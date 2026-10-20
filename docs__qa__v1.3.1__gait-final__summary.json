@@ -1,0 +1,6042 @@
+{
+  "schemaVersion": 1,
+  "evidenceKind": "lossless-archive-summary",
+  "status": "complete",
+  "passed": true,
+  "startedAt": "2026-10-20T04:27:20.983Z",
+  "completedAt": "2026-10-20T04:27:39.840Z",
+  "scope": "Actual staged character in the unmodified native opaque iframe. Parent advance() submits and awaits each real tick; a temporary operator hook records the native body after that tick. Fixed-step captures are not real-time FPS evidence. Transparent PNGs exclude the outer SVG transform and particles.",
+  "sourcesUnchanged": true,
+  "original": {
+    "file": "report.json",
+    "bytes": 4739486,
+    "sha256": "63f585112a22d20801c2b7f06b3fdab8876df78cf3f0c3574e448acd0e4faba3"
+  },
+  "archive": {
+    "file": "report.json.gz",
+    "bytes": 737112,
+    "sha256": "e70a3e82a20d1686ddeb4265d6c60c206b85b387b5e202bf233a63755e95b966",
+    "encoding": "gzip, original UTF-8 JSON bytes, mtime=0"
+  },
+  "restoreCommand": "gzip -dk report.json.gz",
+  "summary": {
+    "recordedFrames": 960,
+    "screenshots": 264,
+    "recoveryFrames": 192,
+    "checks": 102,
+    "passedChecks": 102,
+    "failedChecks": []
+  },
+  "checks": [
+    {
+      "id": "actual opaque native iframe",
+      "passed": true
+    },
+    {
+      "id": "renderer initialized without GL error",
+      "passed": true
+    },
+    {
+      "id": "new foot and whole-ear fields are actually staged",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: native stop leaves the walking mode",
+      "passed": true
+    },
+    {
+      "id": "production and staged payload hashes unchanged",
+      "passed": true
+    },
+    {
+      "id": "native host and final renderer have no recorded errors",
+      "passed": true
+    },
+    {
+      "id": "no final GL error",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x193c0018a200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x193c0018a200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x193c0018a200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x193c0018a200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "sourceFilesObserved": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 35419,
+      "sha256": "eff7eb45a14446db9d16777e02cc3a22bb33b99a5c3f13b8f9a4b49562e43522"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 39921,
+      "sha256": "49a882ee5a4d9f0a4becff9df56c640333b7716b15ba5357d9b0a83aeff89b7e"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 24362,
+      "sha256": "961aa25d38680d00842eb2c0dc4abb3a15142983f9a7470182715c930a5df98e"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    },
+    {
+      "path": "art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "figure.js",
+      "bytes": 123612,
+      "sha256": "47e1c5e09c0dbdc9fd12adfafb2f4dcec30763f4cfd13d85c65c3a95e16ebffb"
+    },
+    {
+      "path": "figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    }
+  ],
+  "originalScriptSHA256": "6fbbc2f1880d45909f72c966cecbdbdf490cfaeee7918993f8e03a4d0e2828a9",
+  "graphics": [
+    {
+      "webgl": true,
+      "width": 640,
+      "height": 394,
+      "error": 0,
+      "attributes": {
+        "alpha": true,
+        "antialias": false,
+        "depth": false,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "low-power",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "requestedScale": 0.9,
+  "limitations": "The archive is the unmodified original report. This summary is an index, not a replacement run. Public QA tools only change dependency/browser path resolution, so their current script hash may differ; production runtime bytes remain as recorded.",
+  "phases": [
+    {
+      "id": "gentle-walk-left",
+      "scheme": "gentle",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.707292954201195,
+              "frame": 78,
+              "seconds": 1.2999999999999954
+            },
+            "maximum": {
+              "value": 9.714619960211044,
+              "frame": 92,
+              "seconds": 1.5333333333333279
+            },
+            "span": 19.42191291441224,
+            "largestStep": {
+              "value": 2.1325494654986676,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.714619960211031,
+              "frame": 92,
+              "seconds": 1.5333333333333279
+            },
+            "maximum": {
+              "value": 9.707292954201192,
+              "frame": 78,
+              "seconds": 1.2999999999999954
+            },
+            "span": 19.421912914412225,
+            "largestStep": {
+              "value": 2.1325494654986654,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.00046755996277393223,
+              "frame": 32,
+              "seconds": 0.5333333333333314
+            },
+            "maximum": {
+              "value": 7.204788745277149,
+              "frame": 99,
+              "seconds": 1.6499999999999941
+            },
+            "span": 7.204321185314375,
+            "largestStep": {
+              "value": 1.2238610922021964,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 7.208041630893523,
+              "frame": 85,
+              "seconds": 1.4166666666666616
+            },
+            "span": 7.208041630893523,
+            "largestStep": {
+              "value": 1.221124055729777,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.843626067087888,
+              "frame": 93,
+              "seconds": 1.5499999999999945
+            },
+            "maximum": {
+              "value": 22.620332715685112,
+              "frame": 107,
+              "seconds": 1.783333333333327
+            },
+            "span": 33.463958782773,
+            "largestStep": {
+              "value": 3.6723543319398297,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.6036260670879,
+              "frame": 93,
+              "seconds": 1.5499999999999945
+            },
+            "maximum": {
+              "value": 10.860332715685102,
+              "frame": 107,
+              "seconds": 1.783333333333327
+            },
+            "span": 33.463958782773005,
+            "largestStep": {
+              "value": 3.6723543319398355,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0417218471212115,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.4287942156602615,
+              "frame": 86,
+              "seconds": 1.4333333333333282
+            },
+            "span": 0.38707236853904997,
+            "largestStep": {
+              "value": 0.06893674060011112,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05104007965728125,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.42858754919338343,
+              "frame": 72,
+              "seconds": 1.1999999999999957
+            },
+            "span": 0.3775474695361022,
+            "largestStep": {
+              "value": 0.08505878300561837,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.02697604890956271,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.23843670129763686,
+              "frame": 20,
+              "seconds": 0.33333333333333215
+            },
+            "span": 0.21146065238807416,
+            "largestStep": {
+              "value": 0.044890839796359314,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.0008402896119233617,
+              "frame": 2,
+              "seconds": 0.033333333333333215
+            },
+            "maximum": {
+              "value": 0.23061722816699434,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "span": 0.2314575177789177,
+            "largestStep": {
+              "value": 0.02115643795527225,
+              "fromFrame": 101,
+              "toFrame": 102,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 2.4279263638887207,
+              "frame": 115,
+              "seconds": 1.9166666666666599
+            },
+            "span": 2.4279263638887207,
+            "largestStep": {
+              "value": 0.3322436537577451,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.010128385795396145,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 2.428213571982791,
+              "frame": 101,
+              "seconds": 1.6833333333333274
+            },
+            "span": 2.418085186187395,
+            "largestStep": {
+              "value": 0.33209871565311433,
+              "fromFrame": 66,
+              "toFrame": 67,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3493578318651567,
+              "frame": 80,
+              "seconds": 1.3333333333333286
+            },
+            "maximum": {
+              "value": 3.3513135965203213,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "span": 6.700671428385478,
+            "largestStep": {
+              "value": 0.7356936572913858,
+              "fromFrame": 115,
+              "toFrame": 116,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3513135965203196,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "maximum": {
+              "value": 3.349357831865156,
+              "frame": 80,
+              "seconds": 1.3333333333333286
+            },
+            "span": 6.700671428385475,
+            "largestStep": {
+              "value": 0.7356936572913848,
+              "fromFrame": 115,
+              "toFrame": 116,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.7117309935606206,
+              "frame": 23,
+              "seconds": 0.38333333333333197
+            },
+            "maximum": {
+              "value": -0.0881261975586638,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "span": 1.6236047960019568,
+            "largestStep": {
+              "value": 0.11898452120455971,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.2541560606833695,
+              "frame": 47,
+              "seconds": 0.7833333333333306
+            },
+            "maximum": {
+              "value": 0.37455930580359714,
+              "frame": 22,
+              "seconds": 0.36666666666666536
+            },
+            "span": 1.6287153664869667,
+            "largestStep": {
+              "value": 0.09429897596215675,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 7,
+        "minimumViewMargin": 25.11005859375001,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "gentle-walk-left-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": 7.457231869724303e-06,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 7.34245844347806,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 7.342450986246191,
+              "largestStep": {
+                "value": 3.312831812160467,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": -7.342458443478051,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -7.457231869724295e-06,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 7.342450986246182,
+              "largestStep": {
+                "value": 3.3128318121604625,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 8.503332167837605e-07,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 0.8372458328259822,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 0.8372449824927655,
+              "largestStep": {
+                "value": 0.3777555774998491,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 1.1157775372240026e-06,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 1.0986047292554433,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 1.098603613477906,
+              "largestStep": {
+                "value": 0.4956776703721284,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": -8.770755335092101,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -0.0008861918727172016,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 8.769869143219385,
+              "largestStep": {
+                "value": 2.8915422151058348,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -18.463345981644334,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -0.0018655254338966463,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 18.461480456210438,
+              "largestStep": {
+                "value": 6.086995053256567,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.1671465154087015,
+                "frame": 11,
+                "seconds": 0.18333333333333268
+              },
+              "maximum": {
+                "value": 0.31400425255194153,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 0.14685773714324002,
+              "largestStep": {
+                "value": 0.04021249988019182,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.12383024745140403,
+                "frame": 9,
+                "seconds": 0.14999999999999947
+              },
+              "maximum": {
+                "value": 0.26616115769584253,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 0.1423309102444385,
+              "largestStep": {
+                "value": 0.043429262187063195,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.059330444239398206,
+                "frame": 8,
+                "seconds": 0.13333333333333286
+              },
+              "maximum": {
+                "value": 0.05344512225695037,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 0.11277556649634857,
+              "largestStep": {
+                "value": 0.028321305492847074,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.10577192515684607,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 0.20963506902879583,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 0.10386314387194977,
+              "largestStep": {
+                "value": 0.015489867853571176,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.008153882650944992,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 1.1901415707342542,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 1.1819876880833091,
+              "largestStep": {
+                "value": 0.23184157263479876,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0017250949983360158,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 0.25179504769393357,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 0.25006995269559756,
+              "largestStep": {
+                "value": 0.04905009729472812,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.5220171279695,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "maximum": {
+                "value": 2.9461169646752317,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "span": 2.424099836705732,
+              "largestStep": {
+                "value": 0.1386431837790889,
+                "fromFrame": 10,
+                "toFrame": 11,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.9461169646752277,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -0.5220171279695,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 2.424099836705728,
+              "largestStep": {
+                "value": 0.1386431837790889,
+                "fromFrame": 10,
+                "toFrame": 11,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.5882490228933166,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -0.26973907231236227,
+                "frame": 15,
+                "seconds": 0.2499999999999991
+              },
+              "span": 0.3185099505809543,
+              "largestStep": {
+                "value": 0.035318042153470564,
+                "fromFrame": 4,
+                "toFrame": 5,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.8479700456555181,
+                "frame": 1,
+                "seconds": 0.016666666666666607
+              },
+              "maximum": {
+                "value": -0.3795180539305008,
+                "frame": 24,
+                "seconds": 0.3999999999999986
+              },
+              "span": 0.46845199172501734,
+              "largestStep": {
+                "value": 0.034539294056602166,
+                "fromFrame": 5,
+                "toFrame": 6,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.10285644531251,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.03277938359854532,
+          "earRaiseR": 0.023306914924498434
+        }
+      }
+    },
+    {
+      "id": "gentle-walk-right",
+      "scheme": "gentle",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.709799715019896,
+              "frame": 88,
+              "seconds": 1.4666666666667396
+            },
+            "maximum": {
+              "value": 9.712303242983268,
+              "frame": 74,
+              "seconds": 1.2333333333333947
+            },
+            "span": 19.422102958003165,
+            "largestStep": {
+              "value": 2.1320537108713653,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.712303242983285,
+              "frame": 74,
+              "seconds": 1.2333333333333947
+            },
+            "maximum": {
+              "value": 9.709799715019916,
+              "frame": 88,
+              "seconds": 1.4666666666667396
+            },
+            "span": 19.4221029580032,
+            "largestStep": {
+              "value": 2.1320537108713844,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0003153407216245488,
+              "frame": 28,
+              "seconds": 0.4666666666666899
+            },
+            "maximum": {
+              "value": 7.19909996916838,
+              "frame": 95,
+              "seconds": 1.583333333333412
+            },
+            "span": 7.198784628446755,
+            "largestStep": {
+              "value": 1.224412643067756,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 4.3936821861272755e-72,
+              "frame": 11,
+              "seconds": 0.18333333333334245
+            },
+            "maximum": {
+              "value": 7.20976603613936,
+              "frame": 81,
+              "seconds": 1.3500000000000671
+            },
+            "span": 7.20976603613936,
+            "largestStep": {
+              "value": 1.2204692957409904,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.853669800113632,
+              "frame": 103,
+              "seconds": 1.716666666666752
+            },
+            "maximum": {
+              "value": 22.614298460125347,
+              "frame": 89,
+              "seconds": 1.4833333333334071
+            },
+            "span": 33.467968260238976,
+            "largestStep": {
+              "value": 3.6716026536087956,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.613669800113612,
+              "frame": 103,
+              "seconds": 1.716666666666752
+            },
+            "maximum": {
+              "value": 10.85429846012533,
+              "frame": 89,
+              "seconds": 1.4833333333334071
+            },
+            "span": 33.46796826023894,
+            "largestStep": {
+              "value": 3.671602653619745,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05068207799632818,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.42873916059785505,
+              "frame": 82,
+              "seconds": 1.3666666666667346
+            },
+            "span": 0.3780570826015269,
+            "largestStep": {
+              "value": 0.08394863584939335,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.043348605103923875,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.428604186567918,
+              "frame": 68,
+              "seconds": 1.1333333333333897
+            },
+            "span": 0.38525558146399413,
+            "largestStep": {
+              "value": 0.07367905712641137,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.005698571504298356,
+              "frame": 9,
+              "seconds": 0.15000000000000746
+            },
+            "maximum": {
+              "value": 0.230800315661596,
+              "frame": 119,
+              "seconds": 1.983333333333432
+            },
+            "span": 0.23649888716589437,
+            "largestStep": {
+              "value": 0.02115888787898615,
+              "fromFrame": 97,
+              "toFrame": 98,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.027158305846691506,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.25581991205540694,
+              "frame": 15,
+              "seconds": 0.25000000000001243
+            },
+            "span": 0.22866160620871542,
+            "largestStep": {
+              "value": 0.04555366338724627,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.9632828944442646e-26,
+              "frame": 11,
+              "seconds": 0.18333333333334245
+            },
+            "maximum": {
+              "value": 2.426252745890826,
+              "frame": 111,
+              "seconds": 1.850000000000092
+            },
+            "span": 2.426252745890826,
+            "largestStep": {
+              "value": 0.33223137285942905,
+              "fromFrame": 105,
+              "toFrame": 106,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.022822090788850103,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 2.4290565618993423,
+              "frame": 97,
+              "seconds": 1.616666666666747
+            },
+            "span": 2.4062344711104924,
+            "largestStep": {
+              "value": 0.3318952280328543,
+              "fromFrame": 62,
+              "toFrame": 63,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3495591773461126,
+              "frame": 90,
+              "seconds": 1.5000000000000746
+            },
+            "maximum": {
+              "value": 3.6852561231527816,
+              "frame": 16,
+              "seconds": 0.26666666666667993
+            },
+            "span": 7.034815300498894,
+            "largestStep": {
+              "value": 0.7355018323078009,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.6852561231527843,
+              "frame": 16,
+              "seconds": 0.26666666666667993
+            },
+            "maximum": {
+              "value": 3.3495591773461144,
+              "frame": 90,
+              "seconds": 1.5000000000000746
+            },
+            "span": 7.034815300498899,
+            "largestStep": {
+              "value": 0.7355018323078026,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.3107239054564908,
+              "frame": 86,
+              "seconds": 1.4333333333334046
+            },
+            "maximum": {
+              "value": 0.4364812761430828,
+              "frame": 20,
+              "seconds": 0.3333333333333499
+            },
+            "span": 1.7472051815995735,
+            "largestStep": {
+              "value": 0.10130070659007817,
+              "fromFrame": 28,
+              "toFrame": 29,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.8057367717852606,
+              "frame": 23,
+              "seconds": 0.3833333333333524
+            },
+            "maximum": {
+              "value": 0.015932710851604415,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "span": 1.8216694826368651,
+            "largestStep": {
+              "value": 0.12337302300830877,
+              "fromFrame": 11,
+              "toFrame": 12,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.10920410156251,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "gentle-walk-right-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": -5.042097186507512,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "maximum": {
+                "value": -5.12091258247016e-06,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "span": 5.042092065594929,
+              "largestStep": {
+                "value": 2.2749355802352365,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": 5.120912582470177e-06,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 5.042097186507526,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 5.042092065594943,
+              "largestStep": {
+                "value": 2.2749355802352427,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 4.1710371426864395e-06,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 4.106841173963778,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 4.1068370029266354,
+              "largestStep": {
+                "value": 1.8529589501024044,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 1.5909171377459037e-07,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 0.156643150903503,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 0.15664299181178923,
+              "largestStep": {
+                "value": 0.07067556697322804,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0015915509569250554,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 15.751785224254633,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 15.750193673297707,
+              "largestStep": {
+                "value": 5.193047827588764,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0006122173957456106,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 6.059194577702404,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 6.058582360306659,
+              "largestStep": {
+                "value": 1.9975949894380323,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.1257153978270849,
+                "frame": 10,
+                "seconds": 0.16666666666667496
+              },
+              "maximum": {
+                "value": 0.28193467367523783,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 0.15621927584815293,
+              "largestStep": {
+                "value": 0.04708682697269592,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.16934151324014152,
+                "frame": 12,
+                "seconds": 0.20000000000000995
+              },
+              "maximum": {
+                "value": 0.3398621367912056,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 0.17052062355106407,
+              "largestStep": {
+                "value": 0.04620859479182038,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.10608233849156816,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 0.2163162055171744,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 0.11023386702560624,
+              "largestStep": {
+                "value": 0.016667086866952535,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.06128655381528303,
+                "frame": 8,
+                "seconds": 0.13333333333333997
+              },
+              "maximum": {
+                "value": 0.053134708922228276,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "span": 0.1144212627375113,
+              "largestStep": {
+                "value": 0.027144086479465708,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.003640425637512489,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 0.53135690956605,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 0.5277164839285375,
+              "largestStep": {
+                "value": 0.10350921652804507,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.008782675208309141,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 1.2819201986497109,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 1.2731375234414017,
+              "largestStep": {
+                "value": 0.24972020317205157,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": -3.076106190886414,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "maximum": {
+                "value": -0.5278701637682887,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "span": 2.5482360271181252,
+              "largestStep": {
+                "value": 0.1419251519850937,
+                "fromFrame": 10,
+                "toFrame": 11,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.5278701637682887,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "maximum": {
+                "value": 3.0761061908864167,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "span": 2.548236027118128,
+              "largestStep": {
+                "value": 0.1419251519850937,
+                "fromFrame": 10,
+                "toFrame": 11,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.1501822149706729,
+                "frame": 1,
+                "seconds": 0.016666666666667496
+              },
+              "maximum": {
+                "value": -0.4189445064198325,
+                "frame": 24,
+                "seconds": 0.4000000000000199
+              },
+              "span": 0.7312377085508404,
+              "largestStep": {
+                "value": 0.05412488966972606,
+                "fromFrame": 4,
+                "toFrame": 5,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.5477692740951918,
+                "frame": 2,
+                "seconds": 0.03333333333333499
+              },
+              "maximum": {
+                "value": -0.3692111253306054,
+                "frame": 16,
+                "seconds": 0.26666666666667993
+              },
+              "span": 0.17855814876458642,
+              "largestStep": {
+                "value": 0.020057005210705803,
+                "fromFrame": 6,
+                "toFrame": 7,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.103253173828136,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.029604643923852703,
+          "earRaiseR": 0.016971452901690387
+        }
+      }
+    },
+    {
+      "id": "gentle-run-left",
+      "scheme": "gentle",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.321032882766563,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "maximum": {
+              "value": 10.335721903560556,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "span": 20.65675478632712,
+            "largestStep": {
+              "value": 4.720410226801672,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.335721903560552,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 10.32103288276656,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 20.656754786327113,
+            "largestStep": {
+              "value": 4.72041022680167,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.003676433347950631,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 9.293728344643796,
+              "frame": 113,
+              "seconds": 1.8833333333332263
+            },
+            "span": 9.290051911295846,
+            "largestStep": {
+              "value": 2.5337405184702244,
+              "fromFrame": 96,
+              "toFrame": 97,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.079945540134898e-72,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 9.300786195414563,
+              "frame": 106,
+              "seconds": 1.7666666666665662
+            },
+            "span": 9.300786195414563,
+            "largestStep": {
+              "value": 2.524798459399441,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.20260881147196,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "maximum": {
+              "value": 22.70098537621091,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 26.90359418768287,
+            "largestStep": {
+              "value": 6.148614727497707,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.682608811471955,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "maximum": {
+              "value": 4.220985376210916,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 26.90359418768287,
+            "largestStep": {
+              "value": 6.148614727497705,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05704969668862224,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.4752795636033,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 0.41822986691467773,
+            "largestStep": {
+              "value": 0.08539824307952175,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.07385374174635997,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.4750634002795391,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.40120965853317914,
+            "largestStep": {
+              "value": 0.10663119655008815,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04364380186269472,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.30592913571438,
+              "frame": 13,
+              "seconds": 0.21666666666665435
+            },
+            "span": 0.2622853338516853,
+            "largestStep": {
+              "value": 0.05794364799830294,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.008893347724782896,
+              "frame": 2,
+              "seconds": 0.03333333333333144
+            },
+            "maximum": {
+              "value": 0.2389462175196266,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 0.2478395652444095,
+            "largestStep": {
+              "value": 0.028619771372356745,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.31364488176075367,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.675026478033667,
+              "frame": 107,
+              "seconds": 1.783333333333232
+            },
+            "span": 5.361381596272913,
+            "largestStep": {
+              "value": 0.5443450603216878,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.3350110056405469,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.67250229926106,
+              "frame": 100,
+              "seconds": 1.666666666666572
+            },
+            "span": 5.337491293620513,
+            "largestStep": {
+              "value": 0.6084105425331892,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.9066477490673495,
+              "frame": 13,
+              "seconds": 0.21666666666665435
+            },
+            "maximum": {
+              "value": 2.3288589821314245,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 6.2355067311987735,
+            "largestStep": {
+              "value": 1.0643000277755643,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.3288589821314245,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "maximum": {
+              "value": 3.9066477490673495,
+              "frame": 13,
+              "seconds": 0.21666666666665435
+            },
+            "span": 6.2355067311987735,
+            "largestStep": {
+              "value": 1.0643000277755637,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.366875994460097,
+              "frame": 23,
+              "seconds": 0.38333333333331154
+            },
+            "maximum": {
+              "value": -0.14088907531429573,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.2259869191458015,
+            "largestStep": {
+              "value": 0.16493848450115278,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.0438399674039216,
+              "frame": 48,
+              "seconds": 0.7999999999999545
+            },
+            "maximum": {
+              "value": 0.09208489654703722,
+              "frame": 23,
+              "seconds": 0.38333333333331154
+            },
+            "span": 2.135924863950959,
+            "largestStep": {
+              "value": 0.1541329201713817,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 15,
+        "minimumViewMargin": 25.112652587890636,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "gentle-run-left-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": 1.969166473078086e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 1.9388592509194207,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 1.9388572817529477,
+              "largestStep": {
+                "value": 0.8747907332662948,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.93885925091945,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -1.9691664730781155e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.938857281752977,
+              "largestStep": {
+                "value": 0.8747907332663081,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 3.96064259316941e-07,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.3899684783556383,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.38996808229137897,
+              "largestStep": {
+                "value": 0.1759492397241825,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 6.903177671496784e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.796931631788551,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.79692472861088,
+              "largestStep": {
+                "value": 3.066696462527435,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0007097266151917734,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 7.024255906978454,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 7.023546180363263,
+              "largestStep": {
+                "value": 2.3157563640465453,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -8.20695796617497,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.000829226123804488,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 8.206128740051167,
+              "largestStep": {
+                "value": 2.705669524476007,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.15896500031826702,
+                "frame": 14,
+                "seconds": 0.23333333333332007
+              },
+              "maximum": {
+                "value": 0.43954986616472735,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.28058486584646036,
+              "largestStep": {
+                "value": 0.06456260706258343,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.11681706561085577,
+                "frame": 12,
+                "seconds": 0.19999999999998863
+              },
+              "maximum": {
+                "value": 0.3475822925476331,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.23076522693677737,
+              "largestStep": {
+                "value": 0.06052483553243687,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.04652037555082394,
+                "frame": 10,
+                "seconds": 0.1666666666666572
+              },
+              "maximum": {
+                "value": 0.15998079751573402,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.20650117306655796,
+              "largestStep": {
+                "value": 0.05590845802210467,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.10795593177786195,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.15985218685810187,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.05189625508023993,
+              "largestStep": {
+                "value": 0.004240716151380941,
+                "fromFrame": 8,
+                "toFrame": 9,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.035229910369243486,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 5.142161428926024,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 5.106931518556781,
+              "largestStep": {
+                "value": 1.0017016645244228,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.024428346127336593,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 3.5655639742447094,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 3.541135628117373,
+              "largestStep": {
+                "value": 0.6945778380036582,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.1447895712356066,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 1.9120280416852011,
+                "frame": 8,
+                "seconds": 0.13333333333332575
+              },
+              "span": 2.0568176129208076,
+              "largestStep": {
+                "value": 0.6347169035328372,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.912028041685203,
+                "frame": 8,
+                "seconds": 0.13333333333332575
+              },
+              "maximum": {
+                "value": 0.1447895712355975,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 2.0568176129208005,
+              "largestStep": {
+                "value": 0.6347169035328354,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.3261024662771341,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 0.032168590619096854,
+                "frame": 13,
+                "seconds": 0.21666666666665435
+              },
+              "span": 0.35827105689623095,
+              "largestStep": {
+                "value": 0.046048467811086624,
+                "fromFrame": 5,
+                "toFrame": 6,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.8267100780007,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.3117944288864373,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.5149156491142626,
+              "largestStep": {
+                "value": 0.08143891952891091,
+                "fromFrame": 8,
+                "toFrame": 9,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.12067871093751,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.03572969743857263,
+          "earRaiseR": 0.040816836165940173
+        }
+      }
+    },
+    {
+      "id": "gentle-run-right",
+      "scheme": "gentle",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.319099407634418,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "maximum": {
+              "value": 10.339007702373356,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "span": 20.658107110007776,
+            "largestStep": {
+              "value": 4.720276581448525,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.339007702373353,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": 10.319099407634429,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 20.658107110007784,
+            "largestStep": {
+              "value": 4.7202765814485215,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.040048286839833e-70,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 9.297167504078178,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 9.297167504078178,
+            "largestStep": {
+              "value": 2.5307761350262763,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.005618478711787774,
+              "frame": 16,
+              "seconds": 0.2666666666666515
+            },
+            "maximum": {
+              "value": 9.293540953100129,
+              "frame": 94,
+              "seconds": 1.5666666666665776
+            },
+            "span": 9.28792247438834,
+            "largestStep": {
+              "value": 2.5323718851765538,
+              "fromFrame": 118,
+              "toFrame": 119,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.199313664948418,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "maximum": {
+              "value": 22.701358044588854,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "span": 26.90067170953727,
+            "largestStep": {
+              "value": 6.146995189012251,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.679313664948413,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "maximum": {
+              "value": 4.2213580445888494,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "span": 26.900671709537264,
+            "largestStep": {
+              "value": 6.146995189012249,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06435526436423504,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.4749204818517657,
+              "frame": 108,
+              "seconds": 1.7999999999998977
+            },
+            "span": 0.41056521748753066,
+            "largestStep": {
+              "value": 0.10812928068076037,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05167495770619765,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.4752511274680749,
+              "frame": 101,
+              "seconds": 1.6833333333332376
+            },
+            "span": 0.4235761697618773,
+            "largestStep": {
+              "value": 0.08572099991338761,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0013747962607208993,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.23909002415650601,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "span": 0.23771522789578511,
+            "largestStep": {
+              "value": 0.028601913698472953,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03373114267472436,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.2861585244267291,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "span": 0.25242738175200474,
+            "largestStep": {
+              "value": 0.05504459519321162,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.346408684968446,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.6702644370251365,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 5.323855752056691,
+            "largestStep": {
+              "value": 0.6302319658297618,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.31364488176075367,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.674123304101538,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 5.360478422340785,
+            "largestStep": {
+              "value": 0.5443450603216878,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.3285101996461126,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "maximum": {
+              "value": 3.4941921289148414,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "span": 5.822702328560954,
+            "largestStep": {
+              "value": 1.0636478565007832,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.4941921289148405,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "maximum": {
+              "value": 2.328510199646113,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "span": 5.822702328560954,
+            "largestStep": {
+              "value": 1.0636478565007845,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.087908280334592,
+              "frame": 111,
+              "seconds": 1.8499999999998948
+            },
+            "maximum": {
+              "value": 0.09042422911845116,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.1783325094530435,
+            "largestStep": {
+              "value": 0.11822564513258715,
+              "fromFrame": 27,
+              "toFrame": 28,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.02996336625297,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": 0.06530520339252655,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.095268569645497,
+            "largestStep": {
+              "value": 0.16782773128062,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 16,
+        "minimumViewMargin": 25.10932617187501,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "gentle-run-right-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": 3.3693367187914562e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 3.317479632120599,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 3.31747626278388,
+              "largestStep": {
+                "value": 1.496808207507884,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": -3.3174796321206705,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -3.369336718791528e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 3.3174762627839516,
+              "largestStep": {
+                "value": 1.496808207507916,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 8.348494260560136e-07,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.8220003513990788,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.8219995165496528,
+              "largestStep": {
+                "value": 0.3708769936778857,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 6.936328171336641e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.829571915972668,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.829564979644497,
+              "largestStep": {
+                "value": 3.081423378945893,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": 9.857203227625391e-05,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.9755801250207552,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.9754815529884789,
+              "largestStep": {
+                "value": 0.32162921070538775,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -14.255633748132619,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0014403807067200022,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 14.254193367425898,
+              "largestStep": {
+                "value": 4.699796677817147,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.12055766213992819,
+                "frame": 12,
+                "seconds": 0.19999999999998863
+              },
+              "maximum": {
+                "value": 0.4178687001383407,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.2973110379984125,
+              "largestStep": {
+                "value": 0.07697689174312422,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.15677354144622005,
+                "frame": 14,
+                "seconds": 0.23333333333332007
+              },
+              "maximum": {
+                "value": 0.3693578805226207,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.21258433907640065,
+              "largestStep": {
+                "value": 0.04813265234158809,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.10763206496033993,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.1361544515727823,
+                "frame": 5,
+                "seconds": 0.0833333333333286
+              },
+              "span": 0.02852238661244237,
+              "largestStep": {
+                "value": 0.004137132937934274,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.041194500211631555,
+                "frame": 10,
+                "seconds": 0.1666666666666572
+              },
+              "maximum": {
+                "value": 0.1922004657962,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.23339496600783155,
+              "largestStep": {
+                "value": 0.0617488930332952,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.03325190214582343,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 4.853451140254704,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.82019923810888,
+              "largestStep": {
+                "value": 0.9454604164180229,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.026292693313029296,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 3.837684285875285,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 3.8113915925622557,
+              "largestStep": {
+                "value": 0.7475873307780194,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.6889083788901251,
+                "frame": 9,
+                "seconds": 0.14999999999999147
+              },
+              "maximum": {
+                "value": 1.3553907854463463,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 3.044299164336471,
+              "largestStep": {
+                "value": 0.8705440491391999,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.3553907854463603,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 1.6889083788901225,
+                "frame": 9,
+                "seconds": 0.14999999999999147
+              },
+              "span": 3.0442991643364827,
+              "largestStep": {
+                "value": 0.8705440491392028,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.0286717569108577,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.43578440774564575,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.592887349165212,
+              "largestStep": {
+                "value": 0.09007169137453142,
+                "fromFrame": 9,
+                "toFrame": 10,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.5410184702260789,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.1293372263020431,
+                "frame": 13,
+                "seconds": 0.21666666666665435
+              },
+              "span": 0.4116812439240357,
+              "largestStep": {
+                "value": 0.04902159359631747,
+                "fromFrame": 4,
+                "toFrame": 5,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.12067871093751,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.03256651766878743,
+          "earRaiseR": 0.03316914384920966
+        }
+      }
+    },
+    {
+      "id": "lively-walk-left",
+      "scheme": "lively",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.480554119428685,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "maximum": {
+              "value": 12.491052781069598,
+              "frame": 67,
+              "seconds": 1.1166666666666032
+            },
+            "span": 24.971606900498283,
+            "largestStep": {
+              "value": 2.7407057762002163,
+              "fromFrame": 102,
+              "toFrame": 103,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.491052781069605,
+              "frame": 67,
+              "seconds": 1.1166666666666032
+            },
+            "maximum": {
+              "value": 12.480554119428655,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 24.97160690049826,
+            "largestStep": {
+              "value": 2.7407057762002176,
+              "fromFrame": 102,
+              "toFrame": 103,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 3.623814303616693e-71,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 9.270461689959793,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "span": 9.270461689959793,
+            "largestStep": {
+              "value": 1.570138459969181,
+              "fromFrame": 78,
+              "toFrame": 79,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0020390502511256313,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": 9.26604826464739,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 9.264009214396264,
+            "largestStep": {
+              "value": 1.5744302506358538,
+              "fromFrame": 92,
+              "toFrame": 93,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.949224161265942,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 29.08008634966025,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 43.029310510926194,
+            "largestStep": {
+              "value": 4.723631107724402,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.06922410205059,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 13.960086652897319,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 43.02931075494791,
+            "largestStep": {
+              "value": 4.723631542796742,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06920649139878568,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.5519915042014052,
+              "frame": 32,
+              "seconds": 0.533333333333303
+            },
+            "span": 0.48278501280261954,
+            "largestStep": {
+              "value": 0.09540429829276698,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.07976883998385484,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.579076460430122,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 0.4993076204462671,
+            "largestStep": {
+              "value": 0.11056183944126166,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03616891747568461,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.31584658181232195,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "span": 0.2796776643366373,
+            "largestStep": {
+              "value": 0.05993806271713792,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.004812485858167482,
+              "frame": 2,
+              "seconds": 0.03333333333333144
+            },
+            "maximum": {
+              "value": 0.2966949745339322,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "span": 0.30150746039209964,
+            "largestStep": {
+              "value": 0.028159810654144246,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03177549354121535,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 3.1233092102928532,
+              "frame": 90,
+              "seconds": 1.4999999999999147
+            },
+            "span": 3.0915337167516377,
+            "largestStep": {
+              "value": 0.42728162816587867,
+              "fromFrame": 27,
+              "toFrame": 28,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.5060592315599055e-25,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 3.1184997971795947,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 3.1184997971795947,
+            "largestStep": {
+              "value": 0.42735074862922096,
+              "fromFrame": 41,
+              "toFrame": 42,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.668780005604944,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "maximum": {
+              "value": 4.30905605468867,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "span": 8.977836060293614,
+            "largestStep": {
+              "value": 0.9581084593881936,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.309056054688669,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "maximum": {
+              "value": 4.66878000560494,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "span": 8.977836060293608,
+            "largestStep": {
+              "value": 0.958108459388191,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.1145728080921202,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "maximum": {
+              "value": -0.2504763271011612,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.864096480990959,
+            "largestStep": {
+              "value": 0.13608491415190316,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.5886093175858944,
+              "frame": 48,
+              "seconds": 0.7999999999999545
+            },
+            "maximum": {
+              "value": -0.2353116093718628,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.3532977082140316,
+            "largestStep": {
+              "value": 0.07674606685329399,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.05152587890626,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "lively-walk-left-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": 6.7258418277422485e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.622325144280344,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.622318418438517,
+              "largestStep": {
+                "value": 2.9879160471012383,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": -6.622325144280266,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -6.7258418277421705e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 6.6223184184384385,
+              "largestStep": {
+                "value": 2.987916047101203,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 4.427388127892048e-09,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.004359246689669758,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.00435924226228163,
+              "largestStep": {
+                "value": 0.001966841381774629,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 5.061888347302679e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 4.983981386778285,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.983976324889937,
+              "largestStep": {
+                "value": 2.248714407638319,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": -4.264740535627629,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0004309068327102211,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 4.264309628794919,
+              "largestStep": {
+                "value": 1.4059994634556596,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -16.726642792674838,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0016900499825145956,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 16.724952742692324,
+              "largestStep": {
+                "value": 5.514438825867346,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.187682872358219,
+                "frame": 13,
+                "seconds": 0.21666666666665435
+              },
+              "maximum": {
+                "value": 0.4824124466864819,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.2947295743282629,
+              "largestStep": {
+                "value": 0.07231474710249819,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.13375265430560213,
+                "frame": 10,
+                "seconds": 0.1666666666666572
+              },
+              "maximum": {
+                "value": 0.3467637920635976,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.21301113775799546,
+              "largestStep": {
+                "value": 0.0590484048157327,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.060774525458475656,
+                "frame": 9,
+                "seconds": 0.14999999999999147
+              },
+              "maximum": {
+                "value": 0.10814594168562919,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.16892046714410486,
+              "largestStep": {
+                "value": 0.04800179424444936,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.1342040712770951,
+                "frame": 18,
+                "seconds": 0.29999999999998295
+              },
+              "maximum": {
+                "value": 0.2051825019125841,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.070978430635489,
+              "largestStep": {
+                "value": 0.008326857179317498,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.01782044049342643,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 2.6010733717837895,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 2.583252931290363,
+              "largestStep": {
+                "value": 0.5066934521754503,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0010438111390174466,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.1523547838153104,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.15131097267629295,
+              "largestStep": {
+                "value": 0.029678967231086997,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.645365565272069,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 2.518495869641181,
+                "frame": 6,
+                "seconds": 0.09999999999999432
+              },
+              "span": 1.8731303043691119,
+              "largestStep": {
+                "value": 0.32138512417720744,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.518495869641167,
+                "frame": 6,
+                "seconds": 0.09999999999999432
+              },
+              "maximum": {
+                "value": -0.6453655652720687,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.873130304369098,
+              "largestStep": {
+                "value": 0.32138512417721565,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.8160290201469441,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.20607819659325893,
+                "frame": 17,
+                "seconds": 0.2833333333333172
+              },
+              "span": 0.6099508235536852,
+              "largestStep": {
+                "value": 0.06195441918276401,
+                "fromFrame": 5,
+                "toFrame": 6,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.9160379975796191,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.19661142354233824,
+                "frame": 22,
+                "seconds": 0.3666666666666458
+              },
+              "span": 0.7194265740372809,
+              "largestStep": {
+                "value": 0.05987018264151067,
+                "fromFrame": 4,
+                "toFrame": 5,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.104779052734386,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.05158885717724021,
+          "earRaiseR": 0.038299434384141295
+        }
+      }
+    },
+    {
+      "id": "lively-walk-right",
+      "scheme": "lively",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.487247006098233,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "maximum": {
+              "value": 12.484028236522436,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 24.97127524262067,
+            "largestStep": {
+              "value": 2.741211918035344,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.484028236522411,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "maximum": {
+              "value": 12.487247006098247,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "span": 24.971275242620656,
+            "largestStep": {
+              "value": 2.7412119180353436,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.7434063421806813e-74,
+              "frame": 11,
+              "seconds": 0.1833333333333229
+            },
+            "maximum": {
+              "value": 9.269699185056291,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 9.269699185056291,
+            "largestStep": {
+              "value": 1.5691748002665085,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.00040543799616195623,
+              "frame": 28,
+              "seconds": 0.46666666666664014
+            },
+            "maximum": {
+              "value": 9.255985709007497,
+              "frame": 95,
+              "seconds": 1.5833333333332433
+            },
+            "span": 9.255580271011334,
+            "largestStep": {
+              "value": 1.5742448248107204,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.955526547999439,
+              "frame": 89,
+              "seconds": 1.483333333333249
+            },
+            "maximum": {
+              "value": 29.074718360559558,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 43.030244908559,
+            "largestStep": {
+              "value": 4.720631978638455,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.07552654799944,
+              "frame": 89,
+              "seconds": 1.483333333333249
+            },
+            "maximum": {
+              "value": 13.954718360559557,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 43.030244908559,
+            "largestStep": {
+              "value": 4.720631978624381,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.07165051835682545,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.5510699529472831,
+              "frame": 68,
+              "seconds": 1.133333333333269
+            },
+            "span": 0.47941943459045766,
+            "largestStep": {
+              "value": 0.11978017359205248,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05719696260270731,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.5512357396916168,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 0.4940387770889095,
+            "largestStep": {
+              "value": 0.09305184572086297,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.007333273101779718,
+              "frame": 3,
+              "seconds": 0.04999999999999716
+            },
+            "maximum": {
+              "value": 0.2967195876959173,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "span": 0.304052860797697,
+            "largestStep": {
+              "value": 0.02720433700077271,
+              "fromFrame": 97,
+              "toFrame": 98,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.036166768611402604,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3014304682837902,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "span": 0.2652636996723876,
+            "largestStep": {
+              "value": 0.06171654603553905,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.029342688911202952,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 3.123072719782917,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 3.093730030871714,
+            "largestStep": {
+              "value": 0.4267224372333056,
+              "fromFrame": 62,
+              "toFrame": 63,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.513276977349973e-27,
+              "frame": 11,
+              "seconds": 0.1833333333333229
+            },
+            "maximum": {
+              "value": 3.119467826486738,
+              "frame": 111,
+              "seconds": 1.8499999999998948
+            },
+            "span": 3.119467826486738,
+            "largestStep": {
+              "value": 0.427154622545437,
+              "fromFrame": 105,
+              "toFrame": 106,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.30832281375064,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "maximum": {
+              "value": 4.331448493247774,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "span": 8.639771306998414,
+            "largestStep": {
+              "value": 0.9456451590316927,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.331448493247776,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "maximum": {
+              "value": 4.3083228137506415,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "span": 8.639771306998417,
+            "largestStep": {
+              "value": 0.9456451590316937,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.6311585074501975,
+              "frame": 43,
+              "seconds": 0.7166666666666259
+            },
+            "maximum": {
+              "value": 0.5342701445910817,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "span": 2.165428652041279,
+            "largestStep": {
+              "value": 0.16031601267336204,
+              "fromFrame": 34,
+              "toFrame": 35,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.133296820467204,
+              "frame": 24,
+              "seconds": 0.39999999999997726
+            },
+            "maximum": {
+              "value": 0.1681867897680882,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.3014836102352922,
+            "largestStep": {
+              "value": 0.15876664940415175,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.10200195312501,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "lively-walk-right-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": 6.5840299997915015e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.482695926399998,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.482689342369999,
+              "largestStep": {
+                "value": 2.9249169687323344,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": -6.482695926400083,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -6.584029999791592e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 6.482689342370084,
+              "largestStep": {
+                "value": 2.9249169687323726,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 2.0454644934576014e-07,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.20139829769538312,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.20139809314893378,
+              "largestStep": {
+                "value": 0.0908685684306281,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 5.362762323348212e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 5.280224644924422,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 5.280219282162099,
+              "largestStep": {
+                "value": 2.38237591859945,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": -7.79039229576415,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0007871365776403109,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 7.789605159186509,
+              "largestStep": {
+                "value": 2.5683361734318346,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -20.252294555616846,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0020462797277281505,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 20.250248275889117,
+              "largestStep": {
+                "value": 6.676775536768433,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.13590801378974704,
+                "frame": 11,
+                "seconds": 0.1833333333333229
+              },
+              "maximum": {
+                "value": 0.42630345126249347,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.29039543747274643,
+              "largestStep": {
+                "value": 0.07802892543324402,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.17629661869422839,
+                "frame": 12,
+                "seconds": 0.19999999999998863
+              },
+              "maximum": {
+                "value": 0.37116393818434606,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.19486731949011768,
+              "largestStep": {
+                "value": 0.04694791321985786,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.06484222594952926,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 0.1299451638899215,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 0.06510293794039224,
+              "largestStep": {
+                "value": 0.01663274561684268,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.030259369386731703,
+                "frame": 10,
+                "seconds": 0.1666666666666572
+              },
+              "maximum": {
+                "value": 0.24848621776835073,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.2787455871550824,
+              "largestStep": {
+                "value": 0.07296139706223745,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.011292011735195374,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 1.648183222469792,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 1.6368912107345968,
+              "largestStep": {
+                "value": 0.3210688540624127,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.004680546904473701,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.6831731192673088,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.6784925723628351,
+              "largestStep": {
+                "value": 0.13308326861907438,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.4828267114081424,
+                "frame": 11,
+                "seconds": 0.1833333333333229
+              },
+              "maximum": {
+                "value": 3.289735686049029,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.772562397457172,
+              "largestStep": {
+                "value": 1.2711241713776031,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -3.2897356860490516,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 1.4828267114081397,
+                "frame": 11,
+                "seconds": 0.1833333333333229
+              },
+              "span": 4.772562397457191,
+              "largestStep": {
+                "value": 1.271124171377608,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.3176462992765732,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.5444786129951356,
+                "frame": 23,
+                "seconds": 0.38333333333331154
+              },
+              "span": 0.7731676862814376,
+              "largestStep": {
+                "value": 0.06449789285682539,
+                "fromFrame": 6,
+                "toFrame": 7,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.9865645790559805,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.5334944617995615,
+                "frame": 16,
+                "seconds": 0.2666666666666515
+              },
+              "span": 0.453070117256419,
+              "largestStep": {
+                "value": 0.04941862796115548,
+                "fromFrame": 3,
+                "toFrame": 4,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.116741943359386,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.03248260115236873,
+          "earRaiseR": 0.029386611123915884
+        }
+      }
+    },
+    {
+      "id": "lively-run-left",
+      "scheme": "lively",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.288785304577726,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 13.269899420700158,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 26.558684725277885,
+            "largestStep": {
+              "value": 6.069098863030753,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.269899420700163,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "maximum": {
+              "value": 13.288785304577722,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "span": 26.558684725277885,
+            "largestStep": {
+              "value": 6.069098863030758,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.67421517421037e-72,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 11.84336421369226,
+              "frame": 79,
+              "seconds": 1.3166666666665918
+            },
+            "span": 11.84336421369226,
+            "largestStep": {
+              "value": 3.24625560653337,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.004726842875937791,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 11.867574038877002,
+              "frame": 113,
+              "seconds": 1.8833333333332263
+            },
+            "span": 11.862847196001065,
+            "largestStep": {
+              "value": 3.2577292560188598,
+              "fromFrame": 96,
+              "toFrame": 97,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.426981197985413,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "maximum": {
+              "value": 29.16335418617777,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "span": 34.59033538416318,
+            "largestStep": {
+              "value": 7.9053617924969615,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.186981197985407,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "maximum": {
+              "value": 5.403354186177772,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "span": 34.59033538416318,
+            "largestStep": {
+              "value": 7.90536179249696,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06772945052406612,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.6107955412397527,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.5430660907156866,
+            "largestStep": {
+              "value": 0.11423535783032918,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.08023938133108391,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.6110737250061657,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 0.5308343436750819,
+            "largestStep": {
+              "value": 0.13274485057441882,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.043873833718665364,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.33109809575031574,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "span": 0.28722426203165036,
+            "largestStep": {
+              "value": 0.07294070275105943,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.001262373484049981,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3074060761057339,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "span": 0.3061437026216839,
+            "largestStep": {
+              "value": 0.03679688481868712,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.43072843582356024,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.29321724190702,
+              "frame": 100,
+              "seconds": 1.666666666666572
+            },
+            "span": 6.8624888060834595,
+            "largestStep": {
+              "value": 0.7822421261141016,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4032577051209689,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.296462614614725,
+              "frame": 107,
+              "seconds": 1.783333333333232
+            },
+            "span": 6.893204909493757,
+            "largestStep": {
+              "value": 0.6998722204135985,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.5159352947025533,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "maximum": {
+              "value": 2.9937947316620797,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "span": 6.5097300263646325,
+            "largestStep": {
+              "value": 1.3683862474440265,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.99379473166208,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "maximum": {
+              "value": 3.515935294702556,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "span": 6.509730026364636,
+            "largestStep": {
+              "value": 1.3683862474440265,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.6547972051245496,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": -0.18426013095135874,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.470537074173191,
+            "largestStep": {
+              "value": 0.17447728593323308,
+              "fromFrame": 8,
+              "toFrame": 9,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.5635839395123514,
+              "frame": 44,
+              "seconds": 0.7333333333332916
+            },
+            "maximum": {
+              "value": -0.23206447943123698,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.3315194600811147,
+            "largestStep": {
+              "value": 0.15043913180677837,
+              "fromFrame": 36,
+              "toFrame": 37,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 15,
+        "minimumViewMargin": 25.10621337890626,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "lively-run-left-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.492819036893993,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -2.531785465383665e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 2.492816505108528,
+              "largestStep": {
+                "value": 1.1247309427698653,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": 2.5317854653835625e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 2.4928190368938905,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 2.4928165051084252,
+              "largestStep": {
+                "value": 1.124730942769819,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 8.852350826262319e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 8.716105279333732,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 8.716096426982906,
+              "largestStep": {
+                "value": 3.932605280614805,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 5.08544223494918e-07,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.5007172759159895,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.500716767371766,
+              "largestStep": {
+                "value": 0.2259178084999912,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.0010661478734625429,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 10.551803099364154,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 10.550736951490691,
+              "largestStep": {
+                "value": 3.478717960039372,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -9.031186166118724,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0009125056481040693,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 9.03027366047062,
+              "largestStep": {
+                "value": 2.9774010394895916,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.20106228621740213,
+                "frame": 14,
+                "seconds": 0.23333333333332007
+              },
+              "maximum": {
+                "value": 0.45875543370585165,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.2576931474884495,
+              "largestStep": {
+                "value": 0.058108497449763485,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.15585484969662144,
+                "frame": 12,
+                "seconds": 0.19999999999998863
+              },
+              "maximum": {
+                "value": 0.5532716274702829,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.39741677777366147,
+              "largestStep": {
+                "value": 0.10271821443581369,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.0665074239744803,
+                "frame": 9,
+                "seconds": 0.14999999999999147
+              },
+              "maximum": {
+                "value": 0.16916365313912618,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.23567107711360646,
+              "largestStep": {
+                "value": 0.0652612728772801,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.13916763649512456,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.24205018391294808,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.10288254741782352,
+              "largestStep": {
+                "value": 0.008810990102469635,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.03140787359229104,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 4.584296538314792,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.552888664722501,
+              "largestStep": {
+                "value": 0.893028648861879,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.04529559904617026,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.611350408619186,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.566054809573016,
+              "largestStep": {
+                "value": 1.2879021401028314,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.7183189888907769,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 2.7345795657672602,
+                "frame": 7,
+                "seconds": 0.11666666666666003
+              },
+              "span": 2.0162605768764834,
+              "largestStep": {
+                "value": 0.5845305079538465,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.7345795657672682,
+                "frame": 7,
+                "seconds": 0.11666666666666003
+              },
+              "maximum": {
+                "value": -0.718318988890777,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 2.0162605768764914,
+              "largestStep": {
+                "value": 0.5845305079538412,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.6184843245398391,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": 0.018811597261794766,
+                "frame": 13,
+                "seconds": 0.21666666666665435
+              },
+              "span": 0.6372959218016339,
+              "largestStep": {
+                "value": 0.07959676276070216,
+                "fromFrame": 3,
+                "toFrame": 4,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.1036284283749067,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.18099737457964,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.9226310537952667,
+              "largestStep": {
+                "value": 0.11943797543279366,
+                "fromFrame": 7,
+                "toFrame": 8,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.12067871093751,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.0406148742230385,
+          "earRaiseR": 0.057802097535882835
+        }
+      }
+    },
+    {
+      "id": "lively-run-right",
+      "scheme": "lively",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.293009903051416,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": 13.267413524100968,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 26.560423427152386,
+            "largestStep": {
+              "value": 6.0689270332908904,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.267413524100975,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "maximum": {
+              "value": 13.293009903051411,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "span": 26.560423427152386,
+            "largestStep": {
+              "value": 6.068927033290896,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.007223758343727605,
+              "frame": 16,
+              "seconds": 0.2666666666666515
+            },
+            "maximum": {
+              "value": 11.86584352540783,
+              "frame": 94,
+              "seconds": 1.5666666666665776
+            },
+            "span": 11.858619767064102,
+            "largestStep": {
+              "value": 3.255982490993542,
+              "fromFrame": 118,
+              "toFrame": 119,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.3354159987582594e-70,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 11.820400669979788,
+              "frame": 101,
+              "seconds": 1.6833333333332376
+            },
+            "span": 11.820400669979788,
+            "largestStep": {
+              "value": 3.2538996348139113,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.427460343043206,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "maximum": {
+              "value": 29.159117569220125,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "span": 34.58657791226333,
+            "largestStep": {
+              "value": 7.903279528730133,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.18746034304321,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "maximum": {
+              "value": 5.399117569220142,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "span": 34.58657791226335,
+            "largestStep": {
+              "value": 7.90327952873014,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.08044645878590938,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.653620893599364,
+              "frame": 14,
+              "seconds": 0.23333333333332007
+            },
+            "span": 0.5731744348134546,
+            "largestStep": {
+              "value": 0.1331299985381773,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06873525530464696,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.6106120442780062,
+              "frame": 108,
+              "seconds": 1.7999999999998977
+            },
+            "span": 0.5418767889733592,
+            "largestStep": {
+              "value": 0.11610607651144177,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.021096178573995053,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 0.30737309255043876,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "span": 0.3284692711244338,
+            "largestStep": {
+              "value": 0.036772851956191455,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04469702251357922,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3820591024598382,
+              "frame": 10,
+              "seconds": 0.1666666666666572
+            },
+            "span": 0.337362079946259,
+            "largestStep": {
+              "value": 0.07665567156790837,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4032577051209689,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.295301390987741,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 6.892043685866772,
+            "largestStep": {
+              "value": 0.6998722204135985,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4453825949594305,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.29033999046089,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 6.844957395501459,
+            "largestStep": {
+              "value": 0.8102982417811246,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.996694690854713,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "maximum": {
+              "value": 5.146756566604698,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "span": 8.143451257459411,
+            "largestStep": {
+              "value": 1.3675316726472158,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.14675656660471,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 2.99669469085471,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "span": 8.14345125745942,
+            "largestStep": {
+              "value": 1.3675316726472162,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.400127736447411,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": 0.08216792516233595,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.482295661609747,
+            "largestStep": {
+              "value": 0.1804263457711146,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.0940905703897474,
+              "frame": 23,
+              "seconds": 0.38333333333331154
+            },
+            "maximum": {
+              "value": 0.15731241995278356,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.251402990342531,
+            "largestStep": {
+              "value": 0.15698057165103463,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 16,
+        "minimumViewMargin": 25.08363037109376,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      },
+      "recovery": {
+        "id": "lively-run-right-stop",
+        "expectedFrames": 24,
+        "scope": "Actual native stand command after the completed gait; every recovery tick inspected, no forced pose or parameter reset.",
+        "errors": [],
+        "summary": {
+          "fields": {
+            "footXL": {
+              "samples": 24,
+              "minimum": {
+                "value": -4.265330955582512,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -4.3320043527307394e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 4.26532662357816,
+              "largestStep": {
+                "value": 1.924467695366776,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footXR": {
+              "samples": 24,
+              "minimum": {
+                "value": 4.332004352730848e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 4.265330955582619,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.265326623578266,
+              "largestStep": {
+                "value": 1.9244676953668245,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 8.764667779668204e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 8.629771752756843,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 8.629762988089064,
+              "largestStep": {
+                "value": 3.8936525980083454,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "footLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 1.0710570040892435e-06,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 1.05457248487194,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 1.0545714138149358,
+              "largestStep": {
+                "value": 0.47581083406962754,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.001851918051497016,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 18.32867196188351,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 18.326820043832015,
+              "largestStep": {
+                "value": 6.042595728621624,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "armR": {
+              "samples": 24,
+              "minimum": {
+                "value": -1.254317303599651,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.0001267354700696247,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.2541905681295815,
+              "largestStep": {
+                "value": 0.413523270907434,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.16621689358084393,
+                "frame": 11,
+                "seconds": 0.1833333333333229
+              },
+              "maximum": {
+                "value": 0.46306568361803435,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.29684879003719045,
+              "largestStep": {
+                "value": 0.08149188025193194,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earRaiseR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.22415858702455885,
+                "frame": 14,
+                "seconds": 0.23333333333332007
+              },
+              "maximum": {
+                "value": 0.5491996195871389,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.3250410325625801,
+              "largestStep": {
+                "value": 0.0790715144355375,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.14064616423957688,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 0.28352918664911475,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.14288302240953787,
+              "largestStep": {
+                "value": 0.016182065578851323,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earSpreadR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.07636110209368571,
+                "frame": 9,
+                "seconds": 0.14999999999999147
+              },
+              "maximum": {
+                "value": 0.12768465040296073,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 0.20404575249664644,
+              "largestStep": {
+                "value": 0.057890197400898596,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftL": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.03380489140246604,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 4.934165510411051,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 4.900360619008585,
+              "largestStep": {
+                "value": 0.961183711000305,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earLiftR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.042752445616059696,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 6.240151466041906,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "span": 6.197399020425847,
+              "largestStep": {
+                "value": 1.215591963966057,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlL": {
+              "samples": 24,
+              "minimum": {
+                "value": -3.2403564776945233,
+                "frame": 5,
+                "seconds": 0.0833333333333286
+              },
+              "maximum": {
+                "value": -0.7506475981976753,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 2.489708879496848,
+              "largestStep": {
+                "value": 0.2844007740099528,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earCurlR": {
+              "samples": 24,
+              "minimum": {
+                "value": 0.7506475981976755,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "maximum": {
+                "value": 3.2403564776945313,
+                "frame": 5,
+                "seconds": 0.0833333333333286
+              },
+              "span": 2.489708879496856,
+              "largestStep": {
+                "value": 0.28440077400994923,
+                "fromFrame": 1,
+                "toFrame": 2,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipL": {
+              "samples": 24,
+              "minimum": {
+                "value": -2.327372557997936,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.5565608213201739,
+                "frame": 24,
+                "seconds": 0.39999999999997726
+              },
+              "span": 1.770811736677762,
+              "largestStep": {
+                "value": 0.11590161971887358,
+                "fromFrame": 5,
+                "toFrame": 6,
+                "dt": 0.016666666666666666
+              }
+            },
+            "earTipR": {
+              "samples": 24,
+              "minimum": {
+                "value": -0.9040935968531412,
+                "frame": 1,
+                "seconds": 0.01666666666666572
+              },
+              "maximum": {
+                "value": -0.4336745896155143,
+                "frame": 13,
+                "seconds": 0.21666666666665435
+              },
+              "span": 0.47041900723762686,
+              "largestStep": {
+                "value": 0.0602082654275512,
+                "fromFrame": 5,
+                "toFrame": 6,
+                "dt": 0.016666666666666666
+              }
+            }
+          },
+          "liftAlternations": 0,
+          "minimumViewMargin": 25.11701660156251,
+          "modes": [
+            "idle"
+          ],
+          "negativeTriangleFrames": [],
+          "outsideViewFrames": [],
+          "rendererFailureFrames": []
+        },
+        "earRaiseStepFromGait": {
+          "earRaiseL": 0.0544690623915699,
+          "earRaiseR": 0.029931374347643036
+        }
+      }
+    }
+  ]
+}

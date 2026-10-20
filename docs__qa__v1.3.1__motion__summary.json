@@ -1,0 +1,6175 @@
+{
+  "schemaVersion": 1,
+  "evidenceKind": "lossless-archive-summary",
+  "status": "complete",
+  "passed": true,
+  "startedAt": "2026-10-20T04:20:23.337Z",
+  "completedAt": "2026-10-20T04:20:59.267Z",
+  "scope": "Actual staged character in the unmodified native opaque iframe. Parent advance() submits and awaits each real tick; a temporary operator hook records the native body after that tick. Fixed-step captures are not real-time FPS evidence. Transparent PNGs exclude the outer SVG transform and particles.",
+  "sourcesUnchanged": true,
+  "original": {
+    "file": "report.json",
+    "bytes": 9359203,
+    "sha256": "df19b7e771343f15918cfb7d9f0db40819b4c9be172a85ee011c44618a2f5834"
+  },
+  "archive": {
+    "file": "report.json.gz",
+    "bytes": 1345267,
+    "sha256": "fa6e002c977b6094daf52fe4671b971c7fa88e4761837ee6ad145d8e8a119959",
+    "encoding": "gzip, original UTF-8 JSON bytes, mtime=0"
+  },
+  "restoreCommand": "gzip -dk report.json.gz",
+  "summary": {
+    "recordedFrames": 2464,
+    "screenshots": 250,
+    "checks": 134,
+    "passedChecks": 134,
+    "failedChecks": []
+  },
+  "checks": [
+    {
+      "id": "actual opaque native iframe",
+      "passed": true
+    },
+    {
+      "id": "renderer initialized without GL error",
+      "passed": true
+    },
+    {
+      "id": "new foot and whole-ear fields are actually staged",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: mode remains actual walk",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: long actual native path is available",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: mode remains actual run",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: feet and paws visibly sized numeric motion",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: alternating native feet and responding ears",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: sampled head/body/ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: actual extent stays inside renderer view",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: renderer remains ready without recorded errors",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: all requested actual PNGs written",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: requested peak executes correct native gesture",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: whole-ear raise reaches requested strong range",
+      "passed": true
+    },
+    {
+      "id": "production and staged payload hashes unchanged",
+      "passed": true
+    },
+    {
+      "id": "native host and final renderer have no recorded errors",
+      "passed": true
+    },
+    {
+      "id": "no final GL error",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0x1a9c02388a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1a9c02388a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1a9c02388a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1a9c02388a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "sourceFilesObserved": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 35419,
+      "sha256": "b6974a561e155c1a0f21f72e22fad99d52d4be25f4cf65aaf8d087dfb05a31f8"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 39921,
+      "sha256": "49a882ee5a4d9f0a4becff9df56c640333b7716b15ba5357d9b0a83aeff89b7e"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 24362,
+      "sha256": "961aa25d38680d00842eb2c0dc4abb3a15142983f9a7470182715c930a5df98e"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    },
+    {
+      "path": "art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "figure.js",
+      "bytes": 123613,
+      "sha256": "30718635da2fdd2804673199ed6641d6246add6770430fd62877bd75bf07a16c"
+    },
+    {
+      "path": "figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    }
+  ],
+  "originalScriptSHA256": "730cba772d3882fd412d186d673a9394f70394a3e17dcc645d42cf2441fae640",
+  "graphics": [
+    {
+      "webgl": true,
+      "width": 640,
+      "height": 394,
+      "error": 0,
+      "attributes": {
+        "alpha": true,
+        "antialias": false,
+        "depth": false,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "low-power",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "requestedScale": 0.9,
+  "limitations": "The archive is the unmodified original report. This summary is an index, not a replacement run. Public QA tools only change dependency/browser path resolution, so their current script hash may differ; production runtime bytes remain as recorded.",
+  "phases": [
+    {
+      "id": "gentle-walk-left",
+      "scheme": "gentle",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.707292954201195,
+              "frame": 78,
+              "seconds": 1.2999999999999954
+            },
+            "maximum": {
+              "value": 9.714619960211044,
+              "frame": 92,
+              "seconds": 1.5333333333333279
+            },
+            "span": 19.42191291441224,
+            "largestStep": {
+              "value": 2.1325494654986676,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.714619960211031,
+              "frame": 92,
+              "seconds": 1.5333333333333279
+            },
+            "maximum": {
+              "value": 9.707292954201192,
+              "frame": 78,
+              "seconds": 1.2999999999999954
+            },
+            "span": 19.421912914412225,
+            "largestStep": {
+              "value": 2.1325494654986654,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.00046755996277393223,
+              "frame": 32,
+              "seconds": 0.5333333333333314
+            },
+            "maximum": {
+              "value": 7.204788745277149,
+              "frame": 99,
+              "seconds": 1.6499999999999941
+            },
+            "span": 7.204321185314375,
+            "largestStep": {
+              "value": 1.2238610922021964,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 7.208041630893523,
+              "frame": 85,
+              "seconds": 1.4166666666666616
+            },
+            "span": 7.208041630893523,
+            "largestStep": {
+              "value": 1.221124055729777,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.843626067087888,
+              "frame": 93,
+              "seconds": 1.5499999999999945
+            },
+            "maximum": {
+              "value": 22.620332715685112,
+              "frame": 107,
+              "seconds": 1.783333333333327
+            },
+            "span": 33.463958782773,
+            "largestStep": {
+              "value": 3.6723543319398297,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.6036260670879,
+              "frame": 93,
+              "seconds": 1.5499999999999945
+            },
+            "maximum": {
+              "value": 10.860332715685102,
+              "frame": 107,
+              "seconds": 1.783333333333327
+            },
+            "span": 33.463958782773005,
+            "largestStep": {
+              "value": 3.6723543319398355,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.029334843542875237,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.29439424873436565,
+              "frame": 86,
+              "seconds": 1.4333333333333282
+            },
+            "span": 0.2650594051914904,
+            "largestStep": {
+              "value": 0.04396843292922691,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.040309258288574644,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.29418837415482585,
+              "frame": 72,
+              "seconds": 1.1999999999999957
+            },
+            "span": 0.2538791158662512,
+            "largestStep": {
+              "value": 0.06278121899236333,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.029529393722456825,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 0.24441468863282903,
+              "frame": 20,
+              "seconds": 0.33333333333333215
+            },
+            "span": 0.2148852949103722,
+            "largestStep": {
+              "value": 0.049197159175539525,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.01169030220951507,
+              "frame": 4,
+              "seconds": 0.06666666666666643
+            },
+            "maximum": {
+              "value": 0.23061719141663017,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "span": 0.24230749362614523,
+            "largestStep": {
+              "value": 0.021156436232974918,
+              "fromFrame": 101,
+              "toFrame": 102,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 2.4279263638887207,
+              "frame": 115,
+              "seconds": 1.9166666666666599
+            },
+            "span": 2.4279263638887207,
+            "largestStep": {
+              "value": 0.3322436537577451,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.010128385795396145,
+              "frame": 1,
+              "seconds": 0.016666666666666607
+            },
+            "maximum": {
+              "value": 2.428213571982791,
+              "frame": 101,
+              "seconds": 1.6833333333333274
+            },
+            "span": 2.418085186187395,
+            "largestStep": {
+              "value": 0.33209871565311433,
+              "fromFrame": 66,
+              "toFrame": 67,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3493644466309234,
+              "frame": 80,
+              "seconds": 1.3333333333333286
+            },
+            "maximum": {
+              "value": 3.351313082321015,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "span": 6.700677528951939,
+            "largestStep": {
+              "value": 0.735693659068619,
+              "fromFrame": 115,
+              "toFrame": 116,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3513130823210138,
+              "frame": 94,
+              "seconds": 1.566666666666661
+            },
+            "maximum": {
+              "value": 3.349364446630922,
+              "frame": 80,
+              "seconds": 1.3333333333333286
+            },
+            "span": 6.700677528951935,
+            "largestStep": {
+              "value": 0.735693659068618,
+              "fromFrame": 115,
+              "toFrame": 116,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.4013876270904577,
+              "frame": 22,
+              "seconds": 0.36666666666666536
+            },
+            "maximum": {
+              "value": 0.16121281366310902,
+              "frame": 47,
+              "seconds": 0.7833333333333306
+            },
+            "span": 1.5626004407535667,
+            "largestStep": {
+              "value": 0.1141024140481387,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.9289716691727908,
+              "frame": 47,
+              "seconds": 0.7833333333333306
+            },
+            "maximum": {
+              "value": 0.6641922832031018,
+              "frame": 23,
+              "seconds": 0.38333333333333197
+            },
+            "span": 1.5931639523758925,
+            "largestStep": {
+              "value": 0.0928037848905614,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 7,
+        "minimumViewMargin": 25.117230224609386,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-walk-right",
+      "scheme": "gentle",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.709799715005383,
+              "frame": 88,
+              "seconds": 1.4666666666667396
+            },
+            "maximum": {
+              "value": 9.712303242992794,
+              "frame": 74,
+              "seconds": 1.2333333333333947
+            },
+            "span": 19.422102957998177,
+            "largestStep": {
+              "value": 2.132053710869492,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -9.712303242992796,
+              "frame": 74,
+              "seconds": 1.2333333333333947
+            },
+            "maximum": {
+              "value": 9.709799715005373,
+              "frame": 88,
+              "seconds": 1.4666666666667396
+            },
+            "span": 19.42210295799817,
+            "largestStep": {
+              "value": 2.132053710869512,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0003153407216659112,
+              "frame": 28,
+              "seconds": 0.4666666666666899
+            },
+            "maximum": {
+              "value": 7.199099969152547,
+              "frame": 95,
+              "seconds": 1.583333333333412
+            },
+            "span": 7.198784628430881,
+            "largestStep": {
+              "value": 1.2244126430686713,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.055200760021288e-65,
+              "frame": 11,
+              "seconds": 0.18333333333334245
+            },
+            "maximum": {
+              "value": 7.209766036141323,
+              "frame": 81,
+              "seconds": 1.3500000000000671
+            },
+            "span": 7.209766036141323,
+            "largestStep": {
+              "value": 1.2204692957449277,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.853669800092355,
+              "frame": 103,
+              "seconds": 1.716666666666752
+            },
+            "maximum": {
+              "value": 22.614298460145434,
+              "frame": 89,
+              "seconds": 1.4833333333334071
+            },
+            "span": 33.46796826023779,
+            "largestStep": {
+              "value": 3.6716026536109427,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.61366980009235,
+              "frame": 103,
+              "seconds": 1.716666666666752
+            },
+            "maximum": {
+              "value": 10.85429846014545,
+              "frame": 89,
+              "seconds": 1.4833333333334071
+            },
+            "span": 33.4679682602378,
+            "largestStep": {
+              "value": 3.6716026536218864,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04012270896778554,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.294339252416753,
+              "frame": 82,
+              "seconds": 1.3666666666667346
+            },
+            "span": 0.2542165434489675,
+            "largestStep": {
+              "value": 0.05968810598924636,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03162265353820152,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.29420484401126273,
+              "frame": 68,
+              "seconds": 1.1333333333333897
+            },
+            "span": 0.2625821904730612,
+            "largestStep": {
+              "value": 0.047509874682627955,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.01656767334234943,
+              "frame": 8,
+              "seconds": 0.13333333333333997
+            },
+            "maximum": {
+              "value": 0.23080031538592946,
+              "frame": 119,
+              "seconds": 1.983333333333432
+            },
+            "span": 0.2473679887282789,
+            "largestStep": {
+              "value": 0.021158885373020603,
+              "fromFrame": 97,
+              "toFrame": 98,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.028945978113553362,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 0.26297592069566955,
+              "frame": 15,
+              "seconds": 0.25000000000001243
+            },
+            "span": 0.23402994258211618,
+            "largestStep": {
+              "value": 0.04860959238767608,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 3.697224782111649e-24,
+              "frame": 11,
+              "seconds": 0.18333333333334245
+            },
+            "maximum": {
+              "value": 2.4262527458860563,
+              "frame": 111,
+              "seconds": 1.850000000000092
+            },
+            "span": 2.4262527458860563,
+            "largestStep": {
+              "value": 0.33223137285929005,
+              "fromFrame": 105,
+              "toFrame": 106,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.022822090789022365,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "maximum": {
+              "value": 2.4290565619005733,
+              "frame": 97,
+              "seconds": 1.616666666666747
+            },
+            "span": 2.406234471111551,
+            "largestStep": {
+              "value": 0.33189522803230764,
+              "fromFrame": 62,
+              "toFrame": 63,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.3495584177215676,
+              "frame": 90,
+              "seconds": 1.5000000000000746
+            },
+            "maximum": {
+              "value": 3.826893150235922,
+              "frame": 15,
+              "seconds": 0.25000000000001243
+            },
+            "span": 7.176451567957489,
+            "largestStep": {
+              "value": 0.7355018349622906,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.826893150235916,
+              "frame": 15,
+              "seconds": 0.25000000000001243
+            },
+            "maximum": {
+              "value": 3.3495584177215636,
+              "frame": 90,
+              "seconds": 1.5000000000000746
+            },
+            "span": 7.176451567957479,
+            "largestStep": {
+              "value": 0.7355018349622913,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.9748116372516293,
+              "frame": 114,
+              "seconds": 1.9000000000000945
+            },
+            "maximum": {
+              "value": 0.7718327254457207,
+              "frame": 21,
+              "seconds": 0.3500000000000174
+            },
+            "span": 1.74664436269735,
+            "largestStep": {
+              "value": 0.0988892275574681,
+              "fromFrame": 28,
+              "toFrame": 29,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.4372393905742005,
+              "frame": 23,
+              "seconds": 0.3833333333333524
+            },
+            "maximum": {
+              "value": 0.0629002526878959,
+              "frame": 1,
+              "seconds": 0.016666666666667496
+            },
+            "span": 1.5001396432620964,
+            "largestStep": {
+              "value": 0.10637176693521955,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.09736328125001,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-run-left",
+      "scheme": "gentle",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.321032882772544,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "maximum": {
+              "value": 10.335721903558163,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "span": 20.65675478633071,
+            "largestStep": {
+              "value": 4.72041022680249,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.33572190355817,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 10.32103288277255,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 20.656754786330723,
+            "largestStep": {
+              "value": 4.720410226802492,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0036764333480615364,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 9.293728344648438,
+              "frame": 113,
+              "seconds": 1.8833333333332263
+            },
+            "span": 9.290051911300376,
+            "largestStep": {
+              "value": 2.533740518470281,
+              "fromFrame": 96,
+              "toFrame": 97,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 4.389705589513242e-66,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 9.300786195411652,
+              "frame": 106,
+              "seconds": 1.7666666666665662
+            },
+            "span": 9.300786195411652,
+            "largestStep": {
+              "value": 2.5247984594015556,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.202608811464398,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "maximum": {
+              "value": 22.70098537621425,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 26.903594187678646,
+            "largestStep": {
+              "value": 6.148614727496737,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.682608811464384,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "maximum": {
+              "value": 4.2209853762142675,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 26.90359418767865,
+            "largestStep": {
+              "value": 6.14861472749674,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.037139500244746125,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3576795635913591,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 0.320540063346613,
+            "largestStep": {
+              "value": 0.06125925201971833,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04919857453830904,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3574633863344901,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.30826481179618104,
+            "largestStep": {
+              "value": 0.08251208889582456,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03437140062631695,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.30207416587462327,
+              "frame": 14,
+              "seconds": 0.23333333333332007
+            },
+            "span": 0.26770276524830633,
+            "largestStep": {
+              "value": 0.05793401538407204,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0003886861258257353,
+              "frame": 2,
+              "seconds": 0.03333333333333144
+            },
+            "maximum": {
+              "value": 0.2389462225325044,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 0.23855753640667865,
+            "largestStep": {
+              "value": 0.028619771855783877,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.31364488176075367,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.675026478034318,
+              "frame": 107,
+              "seconds": 1.783333333333232
+            },
+            "span": 5.3613815962735645,
+            "largestStep": {
+              "value": 0.5443450603216878,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.3350110056405807,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.672502299259823,
+              "frame": 100,
+              "seconds": 1.666666666666572
+            },
+            "span": 5.337491293619242,
+            "largestStep": {
+              "value": 0.6084105425333528,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.8215438000997213,
+              "frame": 13,
+              "seconds": 0.21666666666665435
+            },
+            "maximum": {
+              "value": 2.328859050092475,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 6.150402850192196,
+            "largestStep": {
+              "value": 1.0643000343819207,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.3288590500924764,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "maximum": {
+              "value": 3.821543800099724,
+              "frame": 13,
+              "seconds": 0.21666666666665435
+            },
+            "span": 6.150402850192201,
+            "largestStep": {
+              "value": 1.0643000343819211,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.132860712796624,
+              "frame": 23,
+              "seconds": 0.38333333333331154
+            },
+            "maximum": {
+              "value": 0.0022290797339256097,
+              "frame": 48,
+              "seconds": 0.7999999999999545
+            },
+            "span": 2.1350897925305494,
+            "largestStep": {
+              "value": 0.16240489477097464,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.885595669028237,
+              "frame": 48,
+              "seconds": 0.7999999999999545
+            },
+            "maximum": {
+              "value": 0.2712958043121561,
+              "frame": 23,
+              "seconds": 0.38333333333331154
+            },
+            "span": 2.156891473340393,
+            "largestStep": {
+              "value": 0.15541164410502284,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 15,
+        "minimumViewMargin": 25.11134033203126,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-run-right",
+      "scheme": "gentle",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.319099407611949,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "maximum": {
+              "value": 10.33900770236804,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "span": 20.658107109979987,
+            "largestStep": {
+              "value": 4.720276581453512,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -10.339007702368022,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": 10.31909940761195,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 20.658107109979973,
+            "largestStep": {
+              "value": 4.720276581453503,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.2338332259899034e-64,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 9.297167504090146,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 9.297167504090146,
+            "largestStep": {
+              "value": 2.530776135032448,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0056184787111318805,
+              "frame": 16,
+              "seconds": 0.2666666666666515
+            },
+            "maximum": {
+              "value": 9.293540953083172,
+              "frame": 94,
+              "seconds": 1.5666666666665776
+            },
+            "span": 9.28792247437204,
+            "largestStep": {
+              "value": 2.532371885172769,
+              "fromFrame": 118,
+              "toFrame": 119,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.199313664978994,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "maximum": {
+              "value": 22.701358044577436,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "span": 26.90067170955643,
+            "largestStep": {
+              "value": 6.146995189016646,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -22.67931366497899,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "maximum": {
+              "value": 4.221358044577433,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "span": 26.900671709556423,
+            "largestStep": {
+              "value": 6.1469951890166445,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.07123356408242512,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3573204819948501,
+              "frame": 108,
+              "seconds": 1.7999999999998977
+            },
+            "span": 0.286086917912425,
+            "largestStep": {
+              "value": 0.0801085786229439,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05759571631886047,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.36085701133085873,
+              "frame": 14,
+              "seconds": 0.23333333333332007
+            },
+            "span": 0.3032612950119983,
+            "largestStep": {
+              "value": 0.05740928937262306,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.000529009957000514,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.23908999670596437,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "span": 0.23961900666296487,
+            "largestStep": {
+              "value": 0.028601922756823134,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.035634948892445784,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.2871192546310526,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "span": 0.2514843057386068,
+            "largestStep": {
+              "value": 0.05549765248719456,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.3464086849679005,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.670264437029906,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 5.323855752062006,
+            "largestStep": {
+              "value": 0.6302319658273572,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.31364488176075367,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 5.674123304099192,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 5.3604784223384385,
+            "largestStep": {
+              "value": 0.5443450603216878,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.328509802411223,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "maximum": {
+              "value": 3.5131432273118612,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "span": 5.841653029723084,
+            "largestStep": {
+              "value": 1.0636479928848805,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.5131432273118657,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "maximum": {
+              "value": 2.3285098024112245,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "span": 5.841653029723091,
+            "largestStep": {
+              "value": 1.0636479928848797,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.7393873372263098,
+              "frame": 43,
+              "seconds": 0.7166666666666259
+            },
+            "maximum": {
+              "value": 0.25082241061010213,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "span": 1.990209747836412,
+            "largestStep": {
+              "value": 0.1128911177641363,
+              "fromFrame": 27,
+              "toFrame": 28,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.7147766807659006,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "maximum": {
+              "value": 0.18767144246124767,
+              "frame": 44,
+              "seconds": 0.7333333333332916
+            },
+            "span": 1.9024481232271482,
+            "largestStep": {
+              "value": 0.14764411472294947,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 16,
+        "minimumViewMargin": 25.10682373046876,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-ear-wave",
+      "scheme": "gentle",
+      "action": "ear-wave",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 169,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.5091331117071354e-106,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 9.028411054765354e-63,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 9.028411054765354e-63,
+            "largestStep": {
+              "value": 4.073514012470184e-63,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 169,
+            "minimum": {
+              "value": -9.028411054765861e-63,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -1.5091331117072175e-106,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 9.028411054765861e-63,
+            "largestStep": {
+              "value": 4.073514012470414e-63,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 169,
+            "minimum": {
+              "value": 4.964782432215006e-107,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 2.9701883980803845e-63,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.9701883980803845e-63,
+            "largestStep": {
+              "value": 1.340114443822393e-63,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 169,
+            "minimum": {
+              "value": 8.15393055170172e-13,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.252,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.2519999999991846,
+            "largestStep": {
+              "value": 0.01178795710465122,
+              "fromFrame": 17,
+              "toFrame": 18,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.0220885758696623e-07,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 9.239999999999407,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 9.239999897790549,
+            "largestStep": {
+              "value": 0.42622188970750763,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 169,
+            "minimum": {
+              "value": -1.6799999999998922,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "maximum": {
+              "value": -1.8583428652175674e-08,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 1.6799999814164637,
+            "largestStep": {
+              "value": 0.07749488903772872,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.9063262506311056e-06,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.9131029640806377,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.9131010577543871,
+            "largestStep": {
+              "value": 0.05078695102049141,
+              "fromFrame": 17,
+              "toFrame": 18,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 169,
+            "minimum": {
+              "value": 7.244130391997081e-07,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.3219963313142428,
+              "frame": 31,
+              "seconds": 0.5166666666666373
+            },
+            "span": 0.3219956069012036,
+            "largestStep": {
+              "value": 0.017795802316880188,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.9932850864142054e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.6135630100979428,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 0.6135430772470787,
+            "largestStep": {
+              "value": 0.03180223403155591,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.0867981513280165e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.19984595785425033,
+              "frame": 52,
+              "seconds": 0.8666666666666174
+            },
+            "span": 0.19983508987273704,
+            "largestStep": {
+              "value": 0.008008693377359238,
+              "fromFrame": 122,
+              "toFrame": 123,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.0009874686898333719,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 19.25880319712937,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 19.25781572843954,
+            "largestStep": {
+              "value": 0.7779566917637641,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.000677768561504023,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 3.7799999108703743,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 3.7793221423088705,
+            "largestStep": {
+              "value": 0.3222337815472629,
+              "fromFrame": 133,
+              "toFrame": 134,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 169,
+            "minimum": {
+              "value": -10.24552098577663,
+              "frame": 54,
+              "seconds": 0.8999999999999488
+            },
+            "maximum": {
+              "value": -0.00027250676852689435,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 10.245248479008103,
+            "largestStep": {
+              "value": 0.42803284132817687,
+              "fromFrame": 121,
+              "toFrame": 122,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 169,
+            "minimum": {
+              "value": 4.710348244283637e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 1.6799999294218704,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 1.6799528259394276,
+            "largestStep": {
+              "value": 0.07342132648206312,
+              "fromFrame": 20,
+              "toFrame": 21,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 169,
+            "minimum": {
+              "value": -3.036367467595709,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "maximum": {
+              "value": 0.08727081537256026,
+              "frame": 8,
+              "seconds": 0.13333333333332575
+            },
+            "span": 3.1236382829682694,
+            "largestStep": {
+              "value": 0.17036002931275895,
+              "fromFrame": 24,
+              "toFrame": 25,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 169,
+            "minimum": {
+              "value": -0.9533664557883126,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "maximum": {
+              "value": 0.0708573021099628,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 1.0242237578982754,
+            "largestStep": {
+              "value": 0.06787844689478573,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-flap",
+      "scheme": "gentle",
+      "action": "flap",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.519999825403082,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "maximum": {
+              "value": 2.397427401470507e-169,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.519999825403082,
+            "largestStep": {
+              "value": 0.8549979468414268,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.3974274014706383e-169,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 2.519999825403082,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 2.519999825403082,
+            "largestStep": {
+              "value": 0.8549979468414268,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.7489023558266396e-11,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 4.535999720019598,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 4.535999720002109,
+            "largestStep": {
+              "value": 1.3710180429481458,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.7489023558266396e-11,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 4.535999720019598,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 4.535999720002109,
+            "largestStep": {
+              "value": 1.3710180429481458,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": 8.746074399778525e-07,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 19.319823782860592,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 19.31982290825315,
+            "largestStep": {
+              "value": 2.8473686713526547,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -19.319823782860592,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "maximum": {
+              "value": -8.746074399778525e-07,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 19.31982290825315,
+            "largestStep": {
+              "value": 2.8473686713526547,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0014973124672485465,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 0.9473202214105895,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.9458229089433409,
+            "largestStep": {
+              "value": 0.10080218320257522,
+              "fromFrame": 8,
+              "toFrame": 9,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0014973124672485465,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 0.9473202214105895,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.9458229089433409,
+            "largestStep": {
+              "value": 0.10080218320257522,
+              "fromFrame": 8,
+              "toFrame": 9,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.05584489576751361,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 0.6412852698723155,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.6971301656398291,
+            "largestStep": {
+              "value": 0.08411928672457986,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.05584489576751361,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 0.6412852698723155,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.6971301656398291,
+            "largestStep": {
+              "value": 0.08411928672457986,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.011129999623941069,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 13.675154982161708,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 13.664024982537766,
+            "largestStep": {
+              "value": 1.450235540086494,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.011129999623941069,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 13.675154982161708,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 13.664024982537766,
+            "largestStep": {
+              "value": 1.450235540086494,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.323489716205694,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "maximum": {
+              "value": 0.04477800321608696,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "span": 5.368267719421781,
+            "largestStep": {
+              "value": 0.8130986293311606,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.323489716205694,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "maximum": {
+              "value": 0.04477800321608696,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "span": 5.368267719421781,
+            "largestStep": {
+              "value": 0.8130986293311606,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.382494558516214,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 0.06707259998817039,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 2.4495671585043843,
+            "largestStep": {
+              "value": 0.17999187070802303,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.2525134283090504,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 0.002061157037228268,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 2.254574585346279,
+            "largestStep": {
+              "value": 0.1732228462447194,
+              "fromFrame": 13,
+              "toFrame": 14,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "crouch",
+          "air",
+          "land",
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-stretch",
+      "scheme": "gentle",
+      "action": "stretch",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 229,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 229,
+            "minimum": {
+              "value": -1.292220320955352e-84,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -5.010158230440604e-144,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 1.292220320955352e-84,
+            "largestStep": {
+              "value": 5.830347724178973e-85,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 229,
+            "minimum": {
+              "value": 5.010158230440604e-144,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 1.292220320955352e-84,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.292220320955352e-84,
+            "largestStep": {
+              "value": 5.830347724178973e-85,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.077204986611385e-133,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 2.7783277683253033e-74,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.7783277683253033e-74,
+            "largestStep": {
+              "value": 1.253549160185228e-74,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.077204986611385e-133,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 2.7783277683253033e-74,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.7783277683253033e-74,
+            "largestStep": {
+              "value": 1.253549160185228e-74,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 229,
+            "minimum": {
+              "value": 7.235610495885518e-08,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 23.51999999990444,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 23.519999927548334,
+            "largestStep": {
+              "value": 0.5370784171630163,
+              "fromFrame": 161,
+              "toFrame": 162,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 229,
+            "minimum": {
+              "value": -23.51999999990444,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -7.235610495885518e-08,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 23.519999927548334,
+            "largestStep": {
+              "value": 0.5370784171630163,
+              "fromFrame": 161,
+              "toFrame": 162,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.0006566318316927309,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.8231999915357313,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.8225433597040386,
+            "largestStep": {
+              "value": 0.01988813309950266,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.0006566318316927309,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.8231999915357313,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.8225433597040386,
+            "largestStep": {
+              "value": 0.01988813309950266,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.1670176311904041e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.6383996173392918,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.63838794716298,
+            "largestStep": {
+              "value": 0.014323905049567487,
+              "fromFrame": 164,
+              "toFrame": 165,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.1670176311904041e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.6383996173392918,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.63838794716298,
+            "largestStep": {
+              "value": 0.014323905049567487,
+              "fromFrame": 164,
+              "toFrame": 165,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.00015045084591398886,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 17.6399962073191,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 17.639845756473186,
+            "largestStep": {
+              "value": 0.397090898339556,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.00015045084591398886,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 17.6399962073191,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 17.639845756473186,
+            "largestStep": {
+              "value": 0.397090898339556,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 229,
+            "minimum": {
+              "value": -5.879998735773032,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -5.0150281971329646e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 5.879948585491061,
+            "largestStep": {
+              "value": 0.13236363277985141,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 229,
+            "minimum": {
+              "value": -5.879998735773032,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -5.0150281971329646e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 5.879948585491061,
+            "largestStep": {
+              "value": 0.13236363277985141,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 229,
+            "minimum": {
+              "value": -2.975081777657467,
+              "frame": 123,
+              "seconds": 2.0499999999998835
+            },
+            "maximum": {
+              "value": 0.11006144251728069,
+              "frame": 3,
+              "seconds": 0.04999999999999716
+            },
+            "span": 3.0851432201747477,
+            "largestStep": {
+              "value": 0.06644427791303964,
+              "fromFrame": 168,
+              "toFrame": 169,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 229,
+            "minimum": {
+              "value": -2.978568343751624,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "maximum": {
+              "value": 0.07095328210532725,
+              "frame": 2,
+              "seconds": 0.03333333333333144
+            },
+            "span": 3.0495216258569515,
+            "largestStep": {
+              "value": 0.0665034302974703,
+              "fromFrame": 168,
+              "toFrame": 169,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "gentle-celebrate",
+      "scheme": "gentle",
+      "action": "celebrate",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 234,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 234,
+            "minimum": {
+              "value": -7.959198916372502e-207,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -1.5363875833237892e-267,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "span": 7.959198916372502e-207,
+            "largestStep": {
+              "value": 3.591097937080307e-207,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.5363875833237892e-267,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 7.959198916372502e-207,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 7.959198916372502e-207,
+            "largestStep": {
+              "value": 3.591097937080307e-207,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.3609445086745853e-19,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.8289139916234708,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 0.8289139916234708,
+            "largestStep": {
+              "value": 0.07723961507260335,
+              "fromFrame": 98,
+              "toFrame": 99,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 234,
+            "minimum": {
+              "value": 7.849865569556189e-205,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "maximum": {
+              "value": 0.8289139916234692,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 0.8289139916234692,
+            "largestStep": {
+              "value": 0.0772396150726063,
+              "fromFrame": 65,
+              "toFrame": 66,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 234,
+            "minimum": {
+              "value": 2.5864138876950418e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 29.93639966140285,
+              "frame": 151,
+              "seconds": 2.5166666666665236
+            },
+            "span": 29.93639707498896,
+            "largestStep": {
+              "value": 1.1866374659519785,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 234,
+            "minimum": {
+              "value": -29.936399661402834,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": -2.697067075210996e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "span": 29.93639696433576,
+            "largestStep": {
+              "value": 1.2688749843151772,
+              "fromFrame": 186,
+              "toFrame": 187,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.581547214401201e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.9312595679247456,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.9312579863775312,
+            "largestStep": {
+              "value": 0.050863371028047055,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 234,
+            "minimum": {
+              "value": 3.427352936109683e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.9354624766018649,
+              "frame": 53,
+              "seconds": 0.8833333333332831
+            },
+            "span": 0.9354590492489288,
+            "largestStep": {
+              "value": 0.05013513271262182,
+              "fromFrame": 65,
+              "toFrame": 66,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.8246994147408182e-05,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.6165458020601896,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 0.6165275550660422,
+            "largestStep": {
+              "value": 0.03183597988609177,
+              "fromFrame": 98,
+              "toFrame": 99,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 234,
+            "minimum": {
+              "value": 4.2154463224680697e-05,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.620348113991272,
+              "frame": 54,
+              "seconds": 0.8999999999999488
+            },
+            "span": 0.6203059595280473,
+            "largestStep": {
+              "value": 0.03191235010098176,
+              "fromFrame": 65,
+              "toFrame": 66,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.0016727584771920492,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 16.77283366949371,
+              "frame": 153,
+              "seconds": 2.549999999999855
+            },
+            "span": 16.77116091101652,
+            "largestStep": {
+              "value": 0.6403622908290516,
+              "fromFrame": 199,
+              "toFrame": 200,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.0018792316362163445,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 16.772833665314135,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 16.770954433677918,
+            "largestStep": {
+              "value": 0.7194039617637906,
+              "fromFrame": 199,
+              "toFrame": 200,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.00015649935902661532,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 6.5149445564969595,
+              "frame": 153,
+              "seconds": 2.549999999999855
+            },
+            "span": 6.514788057137933,
+            "largestStep": {
+              "value": 0.27211291737867427,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.00022532374536804708,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 6.514944553899189,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 6.514719230153821,
+            "largestStep": {
+              "value": 0.2858402312270485,
+              "fromFrame": 188,
+              "toFrame": 189,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 234,
+            "minimum": {
+              "value": -2.786490751723012,
+              "frame": 157,
+              "seconds": 2.616666666666518
+            },
+            "maximum": {
+              "value": 0.036036537398325075,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.822527289121337,
+            "largestStep": {
+              "value": 0.11404428733146665,
+              "fromFrame": 21,
+              "toFrame": 22,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 234,
+            "minimum": {
+              "value": -2.748621985677579,
+              "frame": 125,
+              "seconds": 2.083333333333215
+            },
+            "maximum": {
+              "value": 0.08513968041286467,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.8337616660904437,
+            "largestStep": {
+              "value": 0.09530573438357304,
+              "fromFrame": 193,
+              "toFrame": 194,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 5,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-walk-left",
+      "scheme": "lively",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.480554119427898,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "maximum": {
+              "value": 12.491052781069902,
+              "frame": 67,
+              "seconds": 1.1166666666666032
+            },
+            "span": 24.9716069004978,
+            "largestStep": {
+              "value": 2.740705776200098,
+              "fromFrame": 102,
+              "toFrame": 103,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.4910527810699,
+              "frame": 67,
+              "seconds": 1.1166666666666032
+            },
+            "maximum": {
+              "value": 12.4805541194279,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 24.9716069004978,
+            "largestStep": {
+              "value": 2.7407057762000977,
+              "fromFrame": 102,
+              "toFrame": 103,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 5.907424767915756e-84,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 9.270461689959774,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "span": 9.270461689959774,
+            "largestStep": {
+              "value": 1.570138459969339,
+              "fromFrame": 78,
+              "toFrame": 79,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0020390502511345794,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": 9.266048264647784,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 9.26400921439665,
+            "largestStep": {
+              "value": 1.5744302506358778,
+              "fromFrame": 92,
+              "toFrame": 93,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.949224161264755,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 29.08008634966099,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 43.02931051092575,
+            "largestStep": {
+              "value": 4.723631107724457,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.06922410204939,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 13.960086652898015,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 43.0293107549474,
+            "largestStep": {
+              "value": 4.7236315427967925,
+              "fromFrame": 60,
+              "toFrame": 61,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03480342753085468,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.378791205718363,
+              "frame": 32,
+              "seconds": 0.533333333333303
+            },
+            "span": 0.3439877781875083,
+            "largestStep": {
+              "value": 0.05984303850481408,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04408282386214918,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.4014773018331061,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 0.3573944779709569,
+            "largestStep": {
+              "value": 0.07258088243087268,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.034373836902654026,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.31334971742681095,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "span": 0.2789758805241569,
+            "largestStep": {
+              "value": 0.056049571905623666,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0006297300213964268,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.2966976725378156,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "span": 0.29606794251641916,
+            "largestStep": {
+              "value": 0.028031943698507034,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03177549354122465,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 3.1233092102928808,
+              "frame": 90,
+              "seconds": 1.4999999999999147
+            },
+            "span": 3.0915337167516563,
+            "largestStep": {
+              "value": 0.42728162816592374,
+              "fromFrame": 27,
+              "toFrame": 28,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.0764337149745464e-26,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 3.1184997971794854,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 3.1184997971794854,
+            "largestStep": {
+              "value": 0.4273507486292294,
+              "fromFrame": 41,
+              "toFrame": 42,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.62057800931202,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "maximum": {
+              "value": 4.309098204214082,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "span": 8.9296762135261,
+            "largestStep": {
+              "value": 0.95565183031029,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.30909820421408,
+              "frame": 69,
+              "seconds": 1.1499999999999346
+            },
+            "maximum": {
+              "value": 4.620578009312015,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "span": 8.929676213526095,
+            "largestStep": {
+              "value": 0.9556518303102902,
+              "fromFrame": 33,
+              "toFrame": 34,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.6124093844173808,
+              "frame": 20,
+              "seconds": 0.3333333333333144
+            },
+            "maximum": {
+              "value": 0.043973946851129486,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 1.6563833312685103,
+            "largestStep": {
+              "value": 0.11243555485734591,
+              "fromFrame": 11,
+              "toFrame": 12,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.033140788878426,
+              "frame": 48,
+              "seconds": 0.7999999999999545
+            },
+            "maximum": {
+              "value": 0.22825968508902172,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "span": 1.2614004739674478,
+            "largestStep": {
+              "value": 0.08020024464062481,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.066204833984386,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-walk-right",
+      "scheme": "lively",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.487247006084893,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "maximum": {
+              "value": 12.484028236542802,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 24.971275242627694,
+            "largestStep": {
+              "value": 2.7412119180379673,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -12.484028236542793,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "maximum": {
+              "value": 12.487247006084905,
+              "frame": 74,
+              "seconds": 1.2333333333332632
+            },
+            "span": 24.971275242627698,
+            "largestStep": {
+              "value": 2.741211918037969,
+              "fromFrame": 109,
+              "toFrame": 110,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 3.3741293416820913e-68,
+              "frame": 11,
+              "seconds": 0.1833333333333229
+            },
+            "maximum": {
+              "value": 9.269699185053529,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 9.269699185053529,
+            "largestStep": {
+              "value": 1.5691748002609769,
+              "fromFrame": 85,
+              "toFrame": 86,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.00040543799609146303,
+              "frame": 28,
+              "seconds": 0.46666666666664014
+            },
+            "maximum": {
+              "value": 9.255985709029705,
+              "frame": 95,
+              "seconds": 1.5833333333332433
+            },
+            "span": 9.255580271033613,
+            "largestStep": {
+              "value": 1.574244824809429,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.95552654797128,
+              "frame": 89,
+              "seconds": 1.483333333333249
+            },
+            "maximum": {
+              "value": 29.074718360589372,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 43.030244908560654,
+            "largestStep": {
+              "value": 4.720631978635437,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.075526547971275,
+              "frame": 89,
+              "seconds": 1.483333333333249
+            },
+            "maximum": {
+              "value": 13.954718360589364,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 43.03024490856064,
+            "largestStep": {
+              "value": 4.720631978621375,
+              "fromFrame": 67,
+              "toFrame": 68,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0523555954033388,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3782710705983834,
+              "frame": 68,
+              "seconds": 1.133333333333269
+            },
+            "span": 0.3259154751950446,
+            "largestStep": {
+              "value": 0.08825219174713543,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03635846559794886,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3784357850084592,
+              "frame": 82,
+              "seconds": 1.366666666666589
+            },
+            "span": 0.34207731941051034,
+            "largestStep": {
+              "value": 0.059852921614938014,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.014821528343006632,
+              "frame": 3,
+              "seconds": 0.04999999999999716
+            },
+            "maximum": {
+              "value": 0.29671900312017685,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "span": 0.3115405314631835,
+            "largestStep": {
+              "value": 0.02720433929836996,
+              "fromFrame": 97,
+              "toFrame": 98,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.03906316667929322,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3021207669311019,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "span": 0.2630576002518087,
+            "largestStep": {
+              "value": 0.06433998779424027,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.02934268891096288,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 3.1230727197811925,
+              "frame": 97,
+              "seconds": 1.6166666666665748
+            },
+            "span": 3.09373003087023,
+            "largestStep": {
+              "value": 0.42672243723407344,
+              "fromFrame": 62,
+              "toFrame": 63,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 4.557150074965138e-25,
+              "frame": 11,
+              "seconds": 0.1833333333333229
+            },
+            "maximum": {
+              "value": 3.1194678264934246,
+              "frame": 111,
+              "seconds": 1.8499999999998948
+            },
+            "span": 3.1194678264934246,
+            "largestStep": {
+              "value": 0.42715462254562997,
+              "fromFrame": 105,
+              "toFrame": 106,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.308313975114815,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "maximum": {
+              "value": 4.3442668423504385,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "span": 8.652580817465253,
+            "largestStep": {
+              "value": 0.9456451566008601,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -4.34426684235044,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "maximum": {
+              "value": 4.308313975114818,
+              "frame": 76,
+              "seconds": 1.2666666666665947
+            },
+            "span": 8.652580817465259,
+            "largestStep": {
+              "value": 0.9456451566008592,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.2548120133067695,
+              "frame": 43,
+              "seconds": 0.7166666666666259
+            },
+            "maximum": {
+              "value": 0.9174263601708655,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "span": 2.172238373477635,
+            "largestStep": {
+              "value": 0.161290801146853,
+              "fromFrame": 34,
+              "toFrame": 35,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.7679065366786517,
+              "frame": 24,
+              "seconds": 0.39999999999997726
+            },
+            "maximum": {
+              "value": 0.161899549284507,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.9298060859631587,
+            "largestStep": {
+              "value": 0.1582505273525594,
+              "fromFrame": 31,
+              "toFrame": 32,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 8,
+        "minimumViewMargin": 25.10200195312501,
+        "modes": [
+          "walk"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-run-left",
+      "scheme": "lively",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.288785304574663,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "maximum": {
+              "value": 13.269899420707839,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "span": 26.558684725282504,
+            "largestStep": {
+              "value": 6.069098863031805,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.269899420707853,
+              "frame": 103,
+              "seconds": 1.716666666666569
+            },
+            "maximum": {
+              "value": 13.288785304574654,
+              "frame": 96,
+              "seconds": 1.599999999999909
+            },
+            "span": 26.558684725282507,
+            "largestStep": {
+              "value": 6.0690988630317975,
+              "fromFrame": 99,
+              "toFrame": 100,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 5.643906033915978e-66,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 11.843364213698376,
+              "frame": 79,
+              "seconds": 1.3166666666665918
+            },
+            "span": 11.843364213698376,
+            "largestStep": {
+              "value": 3.2462556065360904,
+              "fromFrame": 103,
+              "toFrame": 104,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.004726842876081293,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 11.867574038874702,
+              "frame": 113,
+              "seconds": 1.8833333333332263
+            },
+            "span": 11.86284719599862,
+            "largestStep": {
+              "value": 3.257729256018915,
+              "fromFrame": 96,
+              "toFrame": 97,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.4269811979897185,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "maximum": {
+              "value": 29.163354186168007,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "span": 34.590335384157726,
+            "largestStep": {
+              "value": 7.9053617924957145,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.186981197989713,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "maximum": {
+              "value": 5.403354186168029,
+              "frame": 110,
+              "seconds": 1.8333333333332291
+            },
+            "span": 34.59033538415774,
+            "largestStep": {
+              "value": 7.905361792495718,
+              "fromFrame": 113,
+              "toFrame": 114,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.05050330527991253,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.45959556286964853,
+              "frame": 86,
+              "seconds": 1.4333333333332519
+            },
+            "span": 0.409092257589736,
+            "largestStep": {
+              "value": 0.08522323656894368,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06408905250114702,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.45987372507082225,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 0.3957846725696752,
+            "largestStep": {
+              "value": 0.1054929353518971,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.045522360371542066,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3327249084582063,
+              "frame": 26,
+              "seconds": 0.4333333333333087
+            },
+            "span": 0.28720254808666423,
+            "largestStep": {
+              "value": 0.07575896226091958,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.002103191314471246,
+              "frame": 2,
+              "seconds": 0.03333333333333144
+            },
+            "maximum": {
+              "value": 0.3074060721619215,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "span": 0.30950926347639274,
+            "largestStep": {
+              "value": 0.03679688616676527,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4307284358236049,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.293217241905421,
+              "frame": 100,
+              "seconds": 1.666666666666572
+            },
+            "span": 6.862488806081816,
+            "largestStep": {
+              "value": 0.7822421261143129,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4032577051209689,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.296462614615556,
+              "frame": 107,
+              "seconds": 1.783333333333232
+            },
+            "span": 6.893204909494587,
+            "largestStep": {
+              "value": 0.6998722204135985,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.5468494945611813,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "maximum": {
+              "value": 2.993794678740629,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "span": 6.540644173301811,
+            "largestStep": {
+              "value": 1.3683862662214814,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.993794678740633,
+              "frame": 104,
+              "seconds": 1.7333333333332348
+            },
+            "maximum": {
+              "value": 3.546849494561184,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "span": 6.540644173301817,
+            "largestStep": {
+              "value": 1.3683862662214796,
+              "fromFrame": 100,
+              "toFrame": 101,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.2834429532394687,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": -0.13668776563144003,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 2.1467551876080284,
+            "largestStep": {
+              "value": 0.15056200113053975,
+              "fromFrame": 8,
+              "toFrame": 9,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.241274111312936,
+              "frame": 44,
+              "seconds": 0.7333333333332916
+            },
+            "maximum": {
+              "value": -0.18197932147027157,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "span": 2.0592947898426646,
+            "largestStep": {
+              "value": 0.15138492507633083,
+              "fromFrame": 36,
+              "toFrame": 37,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 15,
+        "minimumViewMargin": 25.101177978515636,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-run-right",
+      "scheme": "lively",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "30 consecutive native ticks at 1/60 s; the entire longer path is inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.293009903044567,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": 13.267413524072031,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 26.560423427116596,
+            "largestStep": {
+              "value": 6.06892703329731,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": -13.267413524072031,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "maximum": {
+              "value": 13.293009903044569,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "span": 26.5604234271166,
+            "largestStep": {
+              "value": 6.068927033297316,
+              "fromFrame": 114,
+              "toFrame": 115,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.0072237583428843,
+              "frame": 16,
+              "seconds": 0.2666666666666515
+            },
+            "maximum": {
+              "value": 11.865843525417482,
+              "frame": 94,
+              "seconds": 1.5666666666665776
+            },
+            "span": 11.858619767074597,
+            "largestStep": {
+              "value": 3.255982490988674,
+              "fromFrame": 118,
+              "toFrame": 119,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.8688617958076672e-64,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 11.820400669904041,
+              "frame": 101,
+              "seconds": 1.6833333333332376
+            },
+            "span": 11.820400669904041,
+            "largestStep": {
+              "value": 3.2538996348218676,
+              "fromFrame": 111,
+              "toFrame": 112,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.427460343028515,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "maximum": {
+              "value": 29.159117569259493,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "span": 34.58657791228801,
+            "largestStep": {
+              "value": 7.903279528735796,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -29.18746034302853,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "maximum": {
+              "value": 5.399117569259509,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "span": 34.586577912288035,
+            "largestStep": {
+              "value": 7.903279528735803,
+              "fromFrame": 94,
+              "toFrame": 95,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.06196509093314395,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.5065644923464447,
+              "frame": 14,
+              "seconds": 0.23333333333332007
+            },
+            "span": 0.4445994014133008,
+            "largestStep": {
+              "value": 0.10206432778145774,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.050253887451843254,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.45941204427752985,
+              "frame": 108,
+              "seconds": 1.7999999999998977
+            },
+            "span": 0.40915815682568657,
+            "largestStep": {
+              "value": 0.08504040575455582,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.021096178573962874,
+              "frame": 7,
+              "seconds": 0.11666666666666003
+            },
+            "maximum": {
+              "value": 0.30737309255053613,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "span": 0.32846927112449903,
+            "largestStep": {
+              "value": 0.0367728519562317,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.04469702251363589,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.3820591024581022,
+              "frame": 10,
+              "seconds": 0.1666666666666572
+            },
+            "span": 0.3373620799444663,
+            "largestStep": {
+              "value": 0.07665567156805683,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.4032577051209689,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.295301390984719,
+              "frame": 88,
+              "seconds": 1.4666666666665833
+            },
+            "span": 6.89204368586375,
+            "largestStep": {
+              "value": 0.6998722204135985,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.44538259495873045,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 7.290339990467026,
+              "frame": 81,
+              "seconds": 1.3499999999999233
+            },
+            "span": 6.844957395508295,
+            "largestStep": {
+              "value": 0.8102982417780338,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -2.9966946908549494,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "maximum": {
+              "value": 5.146756566563195,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "span": 8.143451257418144,
+            "largestStep": {
+              "value": 1.3675316726471705,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -5.146756566563205,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 2.996694690854948,
+              "frame": 119,
+              "seconds": 1.9833333333332206
+            },
+            "span": 8.143451257418153,
+            "largestStep": {
+              "value": 1.3675316726471696,
+              "fromFrame": 81,
+              "toFrame": 82,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.9538104290200862,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "maximum": {
+              "value": -0.07354727801860217,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.880263151001484,
+            "largestStep": {
+              "value": 0.17747919308142834,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -1.7808662611413295,
+              "frame": 22,
+              "seconds": 0.3666666666666458
+            },
+            "maximum": {
+              "value": 0.0462800089305857,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.8271462700719152,
+            "largestStep": {
+              "value": 0.1609161123599332,
+              "fromFrame": 30,
+              "toFrame": 31,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 16,
+        "minimumViewMargin": 25.08363037109376,
+        "modes": [
+          "run"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-ear-wave",
+      "scheme": "lively",
+      "action": "ear-wave",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 169,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 169,
+            "minimum": {
+              "value": -1.1607957070400956e-62,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -1.940314000764369e-106,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 1.1607957070400956e-62,
+            "largestStep": {
+              "value": 5.237375158884985e-63,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.9403140007644908e-106,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 1.160795707040167e-62,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.160795707040167e-62,
+            "largestStep": {
+              "value": 5.237375158885308e-63,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 169,
+            "minimum": {
+              "value": 9.51086708769247e-106,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 5.689890234917223e-62,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 5.689890234917223e-62,
+            "largestStep": {
+              "value": 2.567212265896877e-62,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.048362499504507e-12,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.32399999999999995,
+              "frame": 85,
+              "seconds": 1.4166666666665861
+            },
+            "span": 0.32399999999895157,
+            "largestStep": {
+              "value": 0.015155944848837283,
+              "fromFrame": 17,
+              "toFrame": 18,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.314113883260994e-07,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 11.879999999999235,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 11.879999868587847,
+            "largestStep": {
+              "value": 0.547999572481082,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 169,
+            "minimum": {
+              "value": -2.159999999999861,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "maximum": {
+              "value": -2.3892979695654426e-08,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 2.1599999761068815,
+            "largestStep": {
+              "value": 0.09963628590565099,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.001468240040754276,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.9999753311822384,
+              "frame": 98,
+              "seconds": 1.6333333333332405
+            },
+            "span": 0.9985070911414841,
+            "largestStep": {
+              "value": 0.0652975082534577,
+              "fromFrame": 17,
+              "toFrame": 18,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.0012052063027747986,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.41434394987599066,
+              "frame": 31,
+              "seconds": 0.5166666666666373
+            },
+            "span": 0.41313874357321584,
+            "largestStep": {
+              "value": 0.022880317061685168,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 169,
+            "minimum": {
+              "value": 2.5627951111039777e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.7888667272687835,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 0.7888410993176724,
+            "largestStep": {
+              "value": 0.040888586612000455,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 169,
+            "minimum": {
+              "value": 1.3973119088503061e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 0.25694480295546474,
+              "frame": 52,
+              "seconds": 0.8666666666666174
+            },
+            "span": 0.2569308298363762,
+            "largestStep": {
+              "value": 0.010296891485176166,
+              "fromFrame": 122,
+              "toFrame": 123,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.0012696026012143343,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 24.761318396309193,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 24.760048793707977,
+            "largestStep": {
+              "value": 1.000230032267698,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 169,
+            "minimum": {
+              "value": 0.0008714167219337438,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 4.859999885404767,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 4.859128468682833,
+            "largestStep": {
+              "value": 0.41430057627505246,
+              "fromFrame": 133,
+              "toFrame": 134,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 169,
+            "minimum": {
+              "value": -13.172812695998523,
+              "frame": 54,
+              "seconds": 0.8999999999999488
+            },
+            "maximum": {
+              "value": -0.00035036584524886444,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "span": 13.172462330153275,
+            "largestStep": {
+              "value": 0.5503279388505131,
+              "fromFrame": 121,
+              "toFrame": 122,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 169,
+            "minimum": {
+              "value": 6.056162028364676e-05,
+              "frame": 169,
+              "seconds": 2.8166666666665066
+            },
+            "maximum": {
+              "value": 2.159999909256691,
+              "frame": 99,
+              "seconds": 1.6499999999999062
+            },
+            "span": 2.1599393476364073,
+            "largestStep": {
+              "value": 0.09439884833408119,
+              "fromFrame": 20,
+              "toFrame": 21,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 169,
+            "minimum": {
+              "value": -3.9856866512768305,
+              "frame": 92,
+              "seconds": 1.5333333333332462
+            },
+            "maximum": {
+              "value": 0.16856646609329157,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 4.154253117370122,
+            "largestStep": {
+              "value": 0.21939046904387793,
+              "fromFrame": 23,
+              "toFrame": 24,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 169,
+            "minimum": {
+              "value": -1.1433628390366253,
+              "frame": 27,
+              "seconds": 0.4499999999999744
+            },
+            "maximum": {
+              "value": 0.08286534001716944,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.2262281790537948,
+            "largestStep": {
+              "value": 0.08306247188014748,
+              "fromFrame": 11,
+              "toFrame": 12,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-flap",
+      "scheme": "lively",
+      "action": "flap",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 120,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.239999775518247,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "maximum": {
+              "value": -2.536742710603528e-171,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "span": 3.239999775518247,
+            "largestStep": {
+              "value": 1.0992830745104054,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.536742710603688e-171,
+              "frame": 9,
+              "seconds": 0.14999999999999147
+            },
+            "maximum": {
+              "value": 3.239999775518247,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 3.239999775518247,
+            "largestStep": {
+              "value": 1.0992830745104054,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.2485887432056776e-11,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 5.831999640025199,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 5.831999640002713,
+            "largestStep": {
+              "value": 1.7627374837904728,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 2.2485887432056776e-11,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 5.831999640025199,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 5.831999640002713,
+            "largestStep": {
+              "value": 1.7627374837904728,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 120,
+            "minimum": {
+              "value": 1.1244952799715249e-06,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 24.839773435106473,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "span": 24.839772310611192,
+            "largestStep": {
+              "value": 3.6609025774534114,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 120,
+            "minimum": {
+              "value": -24.839773435106473,
+              "frame": 37,
+              "seconds": 0.6166666666666316
+            },
+            "maximum": {
+              "value": -1.1244952799715249e-06,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 24.839772310611192,
+            "largestStep": {
+              "value": 3.6609025774534114,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.030256863134986763,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.9861619269441899,
+              "frame": 49,
+              "seconds": 0.8166666666666202
+            },
+            "span": 0.9559050638092031,
+            "largestStep": {
+              "value": 0.11344184110483158,
+              "fromFrame": 7,
+              "toFrame": 8,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.030256863134986763,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": 0.9861619269441899,
+              "frame": 49,
+              "seconds": 0.8166666666666202
+            },
+            "span": 0.9559050638092031,
+            "largestStep": {
+              "value": 0.11344184110483158,
+              "fromFrame": 7,
+              "toFrame": 8,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.0718005802725175,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 0.8245096326929771,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.8963102129654945,
+            "largestStep": {
+              "value": 0.10815336864588837,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 120,
+            "minimum": {
+              "value": -0.0718005802725175,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "maximum": {
+              "value": 0.8245096326929771,
+              "frame": 47,
+              "seconds": 0.7833333333332888
+            },
+            "span": 0.8963102129654945,
+            "largestStep": {
+              "value": 0.10815336864588837,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.014309999516495649,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 17.582342119922192,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 17.568032120405697,
+            "largestStep": {
+              "value": 1.8645885515397786,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 120,
+            "minimum": {
+              "value": 0.014309999516495649,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "maximum": {
+              "value": 17.582342119922192,
+              "frame": 18,
+              "seconds": 0.29999999999998295
+            },
+            "span": 17.568032120405697,
+            "largestStep": {
+              "value": 1.8645885515397786,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 120,
+            "minimum": {
+              "value": -6.844486777978747,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "maximum": {
+              "value": 0.05757171842068323,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "span": 6.90205849639943,
+            "largestStep": {
+              "value": 1.0454125234257778,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 120,
+            "minimum": {
+              "value": -6.844486777978747,
+              "frame": 19,
+              "seconds": 0.31666666666664867
+            },
+            "maximum": {
+              "value": 0.05757171842068323,
+              "frame": 4,
+              "seconds": 0.06666666666666288
+            },
+            "span": 6.90205849639943,
+            "largestStep": {
+              "value": 1.0454125234257778,
+              "fromFrame": 10,
+              "toFrame": 11,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.261340638497067,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": 0.07071348085356852,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 3.3320541193506354,
+            "largestStep": {
+              "value": 0.24922409175666527,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 120,
+            "minimum": {
+              "value": -3.068205832804272,
+              "frame": 21,
+              "seconds": 0.3499999999999801
+            },
+            "maximum": {
+              "value": -0.017126152692089423,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 3.0510796801121827,
+            "largestStep": {
+              "value": 0.23983343532579005,
+              "fromFrame": 12,
+              "toFrame": 13,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "crouch",
+          "air",
+          "land",
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-stretch",
+      "scheme": "lively",
+      "action": "stretch",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 229,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 229,
+            "minimum": {
+              "value": -1.6614261269425965e-84,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -6.441632010566493e-144,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 1.6614261269425965e-84,
+            "largestStep": {
+              "value": 7.496161359658683e-85,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 229,
+            "minimum": {
+              "value": 6.441632010566493e-144,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 1.6614261269425965e-84,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.6614261269425965e-84,
+            "largestStep": {
+              "value": 7.496161359658683e-85,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.3849778399289223e-133,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 3.572135702132531e-74,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 3.572135702132531e-74,
+            "largestStep": {
+              "value": 1.6117060630952927e-74,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.3849778399289223e-133,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 3.572135702132531e-74,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 3.572135702132531e-74,
+            "largestStep": {
+              "value": 1.6117060630952927e-74,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 229,
+            "minimum": {
+              "value": 9.302927780424232e-08,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 30.23999999987713,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 30.239999906847853,
+            "largestStep": {
+              "value": 0.6905293934953072,
+              "fromFrame": 161,
+              "toFrame": 162,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 229,
+            "minimum": {
+              "value": -30.23999999987713,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -9.302927780424232e-08,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 30.239999906847853,
+            "largestStep": {
+              "value": 0.6905293934953072,
+              "fromFrame": 161,
+              "toFrame": 162,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 229,
+            "minimum": {
+              "value": 9.678834160516485e-07,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.999999999916399,
+              "frame": 136,
+              "seconds": 2.266666666666538
+            },
+            "span": 0.9999990320329829,
+            "largestStep": {
+              "value": 0.025570462013081274,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 229,
+            "minimum": {
+              "value": 9.678834160516485e-07,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.999999999916399,
+              "frame": 136,
+              "seconds": 2.266666666666538
+            },
+            "span": 0.9999990320329829,
+            "largestStep": {
+              "value": 0.025570462013081274,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.5004512401019481e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.8207995080076607,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.8207845034952597,
+            "largestStep": {
+              "value": 0.01841644934944392,
+              "fromFrame": 164,
+              "toFrame": 165,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 229,
+            "minimum": {
+              "value": 1.5004512401019481e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 0.8207995080076607,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 0.8207845034952597,
+            "largestStep": {
+              "value": 0.01841644934944392,
+              "fromFrame": 164,
+              "toFrame": 165,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.0001934368018894145,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 22.67999512369598,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 22.67980168689409,
+            "largestStep": {
+              "value": 0.510545440722284,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 229,
+            "minimum": {
+              "value": 0.0001934368018894145,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "maximum": {
+              "value": 22.67999512369598,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "span": 22.67980168689409,
+            "largestStep": {
+              "value": 0.510545440722284,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 229,
+            "minimum": {
+              "value": -7.559998374565328,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -6.447893396313813e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 7.5599338956313655,
+            "largestStep": {
+              "value": 0.17018181357409512,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 229,
+            "minimum": {
+              "value": -7.559998374565328,
+              "frame": 126,
+              "seconds": 2.0999999999998806
+            },
+            "maximum": {
+              "value": -6.447893396313813e-05,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 7.5599338956313655,
+            "largestStep": {
+              "value": 0.17018181357409512,
+              "fromFrame": 163,
+              "toFrame": 164,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 229,
+            "minimum": {
+              "value": -3.869032364565895,
+              "frame": 129,
+              "seconds": 2.149999999999878
+            },
+            "maximum": {
+              "value": 0.12757461850247792,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 3.996606983068373,
+            "largestStep": {
+              "value": 0.08612786896950064,
+              "fromFrame": 167,
+              "toFrame": 168,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 229,
+            "minimum": {
+              "value": -3.8716072476655725,
+              "frame": 107,
+              "seconds": 1.783333333333232
+            },
+            "maximum": {
+              "value": 0.19091696929911287,
+              "frame": 229,
+              "seconds": 3.8166666666664497
+            },
+            "span": 4.062524216964685,
+            "largestStep": {
+              "value": 0.08714314942263046,
+              "fromFrame": 167,
+              "toFrame": 168,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 0,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    },
+    {
+      "id": "lively-celebrate",
+      "scheme": "lively",
+      "action": "celebrate",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 234,
+      "captureScope": "Requested peak ticks plus any first observed technical failures; whole action and .6 s recovery inspected every tick.",
+      "errors": [],
+      "summary": {
+        "fields": {
+          "footXL": {
+            "samples": 234,
+            "minimum": {
+              "value": -1.02332557496218e-206,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "maximum": {
+              "value": -1.975355464273447e-267,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "span": 1.02332557496218e-206,
+            "largestStep": {
+              "value": 4.617125919103256e-207,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footXR": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.975355464273447e-267,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 1.02332557496218e-206,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 1.02332557496218e-206,
+            "largestStep": {
+              "value": 4.617125919103256e-207,
+              "fromFrame": 1,
+              "toFrame": 2,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftL": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.7497857968673252e-19,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 1.0657465606587482,
+              "frame": 84,
+              "seconds": 1.3999999999999204
+            },
+            "span": 1.0657465606587482,
+            "largestStep": {
+              "value": 0.09930807652191859,
+              "fromFrame": 98,
+              "toFrame": 99,
+              "dt": 0.016666666666666666
+            }
+          },
+          "footLiftR": {
+            "samples": 234,
+            "minimum": {
+              "value": 1.0092684303715088e-204,
+              "frame": 33,
+              "seconds": 0.5499999999999687
+            },
+            "maximum": {
+              "value": 1.0657465606587457,
+              "frame": 117,
+              "seconds": 1.9499999999998892
+            },
+            "span": 1.0657465606587457,
+            "largestStep": {
+              "value": 0.0993080765219223,
+              "fromFrame": 65,
+              "toFrame": 66,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armL": {
+            "samples": 234,
+            "minimum": {
+              "value": 3.32538928417934e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 38.489656707517945,
+              "frame": 151,
+              "seconds": 2.5166666666665236
+            },
+            "span": 38.48965338212866,
+            "largestStep": {
+              "value": 1.525676741938259,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "armR": {
+            "samples": 234,
+            "minimum": {
+              "value": -38.48965670751794,
+              "frame": 118,
+              "seconds": 1.9666666666665549
+            },
+            "maximum": {
+              "value": -3.467657668128424e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "span": 38.48965323986027,
+            "largestStep": {
+              "value": 1.6314106941195128,
+              "fromFrame": 186,
+              "toFrame": 187,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseL": {
+            "samples": 234,
+            "minimum": {
+              "value": 2.0333788290653563e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.9977830085292404,
+              "frame": 91,
+              "seconds": 1.5166666666665805
+            },
+            "span": 0.9977809751504113,
+            "largestStep": {
+              "value": 0.06321588262114841,
+              "fromFrame": 16,
+              "toFrame": 17,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earRaiseR": {
+            "samples": 234,
+            "minimum": {
+              "value": 4.40670362141515e-06,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.9986499207297368,
+              "frame": 58,
+              "seconds": 0.9666666666666117
+            },
+            "span": 0.9986455140261153,
+            "largestStep": {
+              "value": 0.060053971922407245,
+              "fromFrame": 131,
+              "toFrame": 132,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadL": {
+            "samples": 234,
+            "minimum": {
+              "value": 2.346042104666766e-05,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.7927017455059577,
+              "frame": 87,
+              "seconds": 1.4499999999999176
+            },
+            "span": 0.7926782850849111,
+            "largestStep": {
+              "value": 0.04093197413926086,
+              "fromFrame": 98,
+              "toFrame": 99,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earSpreadR": {
+            "samples": 234,
+            "minimum": {
+              "value": 5.419859557458948e-05,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 0.7975904322744926,
+              "frame": 54,
+              "seconds": 0.8999999999999488
+            },
+            "span": 0.797536233678918,
+            "largestStep": {
+              "value": 0.041030164415548076,
+              "fromFrame": 65,
+              "toFrame": 66,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftL": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.002150689470675491,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 21.565071860777635,
+              "frame": 153,
+              "seconds": 2.549999999999855
+            },
+            "span": 21.56292117130696,
+            "largestStep": {
+              "value": 0.823322945351638,
+              "fromFrame": 199,
+              "toFrame": 200,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earLiftR": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.002416154960849584,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 21.565071855403886,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 21.562655700443038,
+            "largestStep": {
+              "value": 0.9249479508391594,
+              "fromFrame": 199,
+              "toFrame": 200,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlL": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.00020121346160564818,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 8.37635728692466,
+              "frame": 153,
+              "seconds": 2.549999999999855
+            },
+            "span": 8.376156073463054,
+            "largestStep": {
+              "value": 0.3498594652011531,
+              "fromFrame": 18,
+              "toFrame": 19,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earCurlR": {
+            "samples": 234,
+            "minimum": {
+              "value": 0.00028970195833034613,
+              "frame": 234,
+              "seconds": 3.8999999999997783
+            },
+            "maximum": {
+              "value": 8.37635728358467,
+              "frame": 120,
+              "seconds": 1.9999999999998863
+            },
+            "span": 8.376067581626339,
+            "largestStep": {
+              "value": 0.36750886872049016,
+              "fromFrame": 188,
+              "toFrame": 189,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipL": {
+            "samples": 234,
+            "minimum": {
+              "value": -3.642143252414646,
+              "frame": 157,
+              "seconds": 2.616666666666518
+            },
+            "maximum": {
+              "value": -0.07328108246559953,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 3.5688621699490466,
+            "largestStep": {
+              "value": 0.14802705495310753,
+              "fromFrame": 20,
+              "toFrame": 21,
+              "dt": 0.016666666666666666
+            }
+          },
+          "earTipR": {
+            "samples": 234,
+            "minimum": {
+              "value": -3.5911912336955947,
+              "frame": 124,
+              "seconds": 2.066666666666549
+            },
+            "maximum": {
+              "value": 0.027926669786093733,
+              "frame": 1,
+              "seconds": 0.01666666666666572
+            },
+            "span": 3.6191179034816883,
+            "largestStep": {
+              "value": 0.1323750799253327,
+              "fromFrame": 192,
+              "toFrame": 193,
+              "dt": 0.016666666666666666
+            }
+          }
+        },
+        "liftAlternations": 5,
+        "minimumViewMargin": 25.102520751953136,
+        "modes": [
+          "idle"
+        ],
+        "negativeTriangleFrames": [],
+        "outsideViewFrames": [],
+        "rendererFailureFrames": []
+      }
+    }
+  ]
+}
