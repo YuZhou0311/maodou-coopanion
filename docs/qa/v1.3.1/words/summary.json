@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "evidenceKind": "lossless-archive-summary",
+  "status": "complete",
+  "passed": null,
+  "startedAt": "2026-10-20T04:17:19.752Z",
+  "completedAt": "2026-10-20T04:18:20.816Z",
+  "scope": "Actual native opaque-frame ticks and screenshots. Visual acceptance and stable real-time smoothness are not inferred from technical completion.",
+  "sourcesUnchanged": true,
+  "original": {
+    "file": "report.json",
+    "bytes": 1257855,
+    "sha256": "68857fe8b618d3c11504a196c8c63c2158700cdcb881305c32df7a76d3d77992"
+  },
+  "archive": {
+    "file": "report.json.gz",
+    "bytes": 129502,
+    "sha256": "25da6539a58a247a4f9f735c4acf57770d9708b8b9eab65a8b3131195a715c4c",
+    "encoding": "gzip, original UTF-8 JSON bytes, mtime=0"
+  },
+  "restoreCommand": "gzip -dk report.json.gz",
+  "summary": null,
+  "checks": [],
+  "errors": [],
+  "warnings": [
+    "[.WebGL-0xf0c00188a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0xf0c00188a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0xf0c00188a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0xf0c00188a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "sourceFilesObserved": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 35419,
+      "sha256": "b6974a561e155c1a0f21f72e22fad99d52d4be25f4cf65aaf8d087dfb05a31f8"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 39921,
+      "sha256": "49a882ee5a4d9f0a4becff9df56c640333b7716b15ba5357d9b0a83aeff89b7e"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 24362,
+      "sha256": "961aa25d38680d00842eb2c0dc4abb3a15142983f9a7470182715c930a5df98e"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    },
+    {
+      "path": "art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "figure.js",
+      "bytes": 123613,
+      "sha256": "30718635da2fdd2804673199ed6641d6246add6770430fd62877bd75bf07a16c"
+    },
+    {
+      "path": "figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    }
+  ],
+  "originalScriptSHA256": null,
+  "graphics": [
+    {
+      "width": 640,
+      "height": 394,
+      "webgl": true,
+      "error": 0,
+      "attributes": {
+        "alpha": true,
+        "antialias": false,
+        "depth": false,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "low-power",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "requestedScale": 1.35,
+  "limitations": "The archive is the unmodified original report. This summary is an index, not a replacement run. Public QA tools only change dependency/browser path resolution, so their current script hash may differ; production runtime bytes remain as recorded.",
+  "sampledWords": [
+    {
+      "id": "word-neutral",
+      "file": "word-neutral.png",
+      "sha256": "132ca8e25354535fdee37549ca9669198230a363f3181f5b8c49916efa2e3d81",
+      "word": "neutral",
+      "kind": "expression"
+    },
+    {
+      "id": "word-happy",
+      "file": "word-happy.png",
+      "sha256": "ab8def315ddb750784e7f0a89a54895a9505cd1951541488f9d0fd476845ae85",
+      "word": "happy",
+      "kind": "expression"
+    },
+    {
+      "id": "word-wink",
+      "file": "word-wink.png",
+      "sha256": "cbdc47150191ae258ca39bb9ed22bae5781052d3e961a1a5ef4e926b1a0e5124",
+      "word": "wink",
+      "kind": "expression"
+    },
+    {
+      "id": "word-love",
+      "file": "word-love.png",
+      "sha256": "f6f7f84910f4e1e4d5d9412c42961719953fe28318054273bca2d15768e582af",
+      "word": "love",
+      "kind": "expression"
+    },
+    {
+      "id": "word-shy",
+      "file": "word-shy.png",
+      "sha256": "80a85450ed7da08762a37cc1a0a13cdddb028fdfe0de7e45cb02bd725f2f9ece",
+      "word": "shy",
+      "kind": "expression"
+    },
+    {
+      "id": "word-surprised",
+      "file": "word-surprised.png",
+      "sha256": "8cd9f94fe248086f6b97f1f70856c140e3603dea2857c86960c7b17f031b0f83",
+      "word": "surprised",
+      "kind": "expression"
+    },
+    {
+      "id": "word-angry",
+      "file": "word-angry.png",
+      "sha256": "82c65c1969d8b9ad68f795bb600cb348f4aa3b0dadb60d35c8b473fd265f1678",
+      "word": "angry",
+      "kind": "expression"
+    },
+    {
+      "id": "word-sad",
+      "file": "word-sad.png",
+      "sha256": "977fdd4e316493e46dfe3863cdbf8dd66b3a82dccce8ba365a7dd921c93633e2",
+      "word": "sad",
+      "kind": "expression"
+    },
+    {
+      "id": "word-sleepy",
+      "file": "word-sleepy.png",
+      "sha256": "9e6c5bd914fcd82e391c8f7a20553b8b6c5e8acc7cc3e12e09cc671b9f0f81ee",
+      "word": "sleepy",
+      "kind": "expression"
+    },
+    {
+      "id": "word-thinking",
+      "file": "word-thinking.png",
+      "sha256": "643fa8c7ddbc36bb16767efd25d45f3f9f64cdf87712fde051d2c38008b455af",
+      "word": "thinking",
+      "kind": "expression"
+    },
+    {
+      "id": "word-smug",
+      "file": "word-smug.png",
+      "sha256": "fb12ad77307d9270641d1b4e94f54e00ce4ced0edc892fa274b6923caf6426bf",
+      "word": "smug",
+      "kind": "expression"
+    },
+    {
+      "id": "word-pout",
+      "file": "word-pout.png",
+      "sha256": "337f99d1ef2de1a142c6edcfac60267c07a895c9d371089264d4ed4197e8c696",
+      "word": "pout",
+      "kind": "expression"
+    },
+    {
+      "id": "word-worried",
+      "file": "word-worried.png",
+      "sha256": "0715f4b27985a39bf859c8465d9108b6d3878629e3e61970f8be67421d4a43b7",
+      "word": "worried",
+      "kind": "expression"
+    },
+    {
+      "id": "word-determined",
+      "file": "word-determined.png",
+      "sha256": "37f75b37108ce581e62bee3058bae7626bc770a4ab0afaa7609a8f80e7e8c31c",
+      "word": "determined",
+      "kind": "expression"
+    },
+    {
+      "id": "word-flustered",
+      "file": "word-flustered.png",
+      "sha256": "978d32123d0181e04fe5f16b4b35f989043da96be79ed614864c66b5558ea0fe",
+      "word": "flustered",
+      "kind": "expression"
+    },
+    {
+      "id": "word-scared",
+      "file": "word-scared.png",
+      "sha256": "227f4d511d31441c21602193490dfc18f737db9a45084f70bfa10905e3dc552e",
+      "word": "scared",
+      "kind": "expression"
+    },
+    {
+      "id": "word-excited",
+      "file": "word-excited.png",
+      "sha256": "034c1470d28b88041a7cd1abd13eee756aaff7e834acd20f4fecfce162d72146",
+      "word": "excited",
+      "kind": "expression"
+    },
+    {
+      "id": "word-cry",
+      "file": "word-cry.png",
+      "sha256": "7659656389533042743052559dfb5761f52ecca4ce1cf8bd3de1173fc8b72f9c",
+      "word": "cry",
+      "kind": "expression"
+    },
+    {
+      "id": "word-confused",
+      "file": "word-confused.png",
+      "sha256": "95aa2c1484ac71132198d8c0d00d3714f79b6569fcbde6d7a18adcf56fbe4d77",
+      "word": "confused",
+      "kind": "expression"
+    },
+    {
+      "id": "word-cozy",
+      "file": "word-cozy.png",
+      "sha256": "931ed16d124d9726ad6c5bdd3c23f8eb43d94255ac838f097be7d9f9e00d25b3",
+      "word": "cozy",
+      "kind": "expression"
+    },
+    {
+      "id": "word-curious",
+      "file": "word-curious.png",
+      "sha256": "be4957e6b398e709a551e30cafe1fb20cd6f36b0d1d4dce6db122abfbd866861",
+      "word": "curious",
+      "kind": "expression"
+    },
+    {
+      "id": "word-bashful",
+      "file": "word-bashful.png",
+      "sha256": "21320f6c15d9ef86d59baeda6f0ceea6d28c881bcaeb7a2a68aef59b97faa7b4",
+      "word": "bashful",
+      "kind": "expression"
+    },
+    {
+      "id": "word-pleading",
+      "file": "word-pleading.png",
+      "sha256": "9fe9566762523a7a22a8c1bf6f2dc9301dee645e49ae9e89326500c70c357054",
+      "word": "pleading",
+      "kind": "expression"
+    },
+    {
+      "id": "word-proud",
+      "file": "word-proud.png",
+      "sha256": "f0525bd4074134cfd8f03ee8551a658117f9f24975644b9de4b58fda228ce589",
+      "word": "proud",
+      "kind": "expression"
+    },
+    {
+      "id": "word-sparkle",
+      "file": "word-sparkle.png",
+      "sha256": "a34177edd3c6bf31edc0fb50d73f66c2a162881c2959e8ae8948b1adc373c053",
+      "word": "sparkle",
+      "kind": "expression"
+    },
+    {
+      "id": "word-stand",
+      "file": "word-stand.png",
+      "sha256": "9b60681c56723e97ec6ee0f68a1fc5f4db8d128f0a9c0569055671c8d2eaf26b",
+      "word": "stand",
+      "kind": "motion"
+    },
+    {
+      "id": "word-jump",
+      "file": "word-jump.png",
+      "sha256": "e457bf035b18ef7ace08c2bf1e0f82279fe0e8531b70ef2f6e06699df92eab29",
+      "word": "jump",
+      "kind": "motion"
+    },
+    {
+      "id": "word-hop",
+      "file": "word-hop.png",
+      "sha256": "4598b0673fbc2ea8551fbeb2d75d0b09f31c6f9ca096fa6423b8bfc53b895e07",
+      "word": "hop",
+      "kind": "motion"
+    },
+    {
+      "id": "word-look",
+      "file": "word-look.png",
+      "sha256": "2fdebbde4908609c8875d351cdc4fdd35d5a8e8bbee4bf78ee9770d90ca43de6",
+      "word": "look",
+      "kind": "motion"
+    },
+    {
+      "id": "word-turn",
+      "file": "word-turn.png",
+      "sha256": "89e1cfef4d10a90395f66e6190b94ddf37368dd75aa13c639116668a96c248bc",
+      "word": "turn",
+      "kind": "motion"
+    },
+    {
+      "id": "word-nod",
+      "file": "word-nod.png",
+      "sha256": "54ae742cf4d525eec8c332bbdaabf177b2294c485cdbd58679bf9880e07e30d3",
+      "word": "nod",
+      "kind": "motion"
+    },
+    {
+      "id": "word-shake",
+      "file": "word-shake.png",
+      "sha256": "37afa37ea63cc0635ac6527e5fde1517c69315e726a81d6f9c82096b08eb906c",
+      "word": "shake",
+      "kind": "motion"
+    },
+    {
+      "id": "word-spin",
+      "file": "word-spin.png",
+      "sha256": "72a2456657b921a89b7fd4e10ece7ef21107831737230f936ba42a40399152dc",
+      "word": "spin",
+      "kind": "motion"
+    },
+    {
+      "id": "word-sit",
+      "file": "word-sit.png",
+      "sha256": "382c02f2c3d415e26216a531456c26ec5fabdc250a11ecf8a6c806c3f221969a",
+      "word": "sit",
+      "kind": "motion"
+    },
+    {
+      "id": "word-sleep",
+      "file": "word-sleep.png",
+      "sha256": "bdbf71f32a55a6ee35b60accf449424b77f017991467619ab91b7181f08f116b",
+      "word": "sleep",
+      "kind": "motion"
+    },
+    {
+      "id": "word-dizzy",
+      "file": "word-dizzy.png",
+      "sha256": "7733b8ab5011855ebf66125fa0cc4d85691d248935492db68e1a48ccb31d9298",
+      "word": "dizzy",
+      "kind": "motion"
+    },
+    {
+      "id": "word-walk",
+      "file": "word-walk.png",
+      "sha256": "6efc8d21cf637d2c19c533838a949b768eba951536c104181d33536157661165",
+      "word": "walk",
+      "kind": "motion"
+    },
+    {
+      "id": "word-run",
+      "file": "word-run.png",
+      "sha256": "9432385fccaae27bd10e3d4b5b4ce1b635b8f2aa32dc032904b761fd3a1c8b2d",
+      "word": "run",
+      "kind": "motion"
+    },
+    {
+      "id": "word-wave",
+      "file": "word-wave.png",
+      "sha256": "0f29d66bd1ba7b837a668c1c8de59deccd7cd104a54a2e043de91237c3c4708e",
+      "word": "wave",
+      "kind": "motion"
+    },
+    {
+      "id": "word-bow",
+      "file": "word-bow.png",
+      "sha256": "d46bcbd46338463567673f6a6374b510125349ab13fadbc1e7ca8b950d9995b7",
+      "word": "bow",
+      "kind": "motion"
+    },
+    {
+      "id": "word-shiver",
+      "file": "word-shiver.png",
+      "sha256": "947a3f92915f0ef0e36635201e36847df7d7c2d8bbd4b064df77a87964825e38",
+      "word": "shiver",
+      "kind": "motion"
+    },
+    {
+      "id": "word-flap",
+      "file": "word-flap.png",
+      "sha256": "3110541f6849aae6167bcd4cb85391b537875ceeda297d9fc6d4c9c01c3673fc",
+      "word": "flap",
+      "kind": "motion"
+    },
+    {
+      "id": "word-dance",
+      "file": "word-dance.png",
+      "sha256": "7b97a620c3331c790b34a6fac7120dd8e685e8ea0c9ee75cb41b5c3aff7b4272",
+      "word": "dance",
+      "kind": "motion"
+    },
+    {
+      "id": "word-ear-wave",
+      "file": "word-ear-wave.png",
+      "sha256": "91f53ba6451f1bae1ac4fe9fd7d5eed58735a9c257916610c39ca927cc439b01",
+      "word": "ear-wave",
+      "kind": "motion"
+    },
+    {
+      "id": "word-ear-fold",
+      "file": "word-ear-fold.png",
+      "sha256": "804f776b542d54a542c9174628d3d731a3347cea3618712b057394dc73c81253",
+      "word": "ear-fold",
+      "kind": "motion"
+    },
+    {
+      "id": "word-cuddle",
+      "file": "word-cuddle.png",
+      "sha256": "3058c142ce91c939cf6900e7ab0c2469b1b6cbe7c6e86f241f930d644d4527bf",
+      "word": "cuddle",
+      "kind": "motion"
+    },
+    {
+      "id": "word-peek",
+      "file": "word-peek.png",
+      "sha256": "2c4615be09c79373a7bf7540ce7594f45aa5696e9b08fb86d2badc8db6e21178",
+      "word": "peek",
+      "kind": "motion"
+    },
+    {
+      "id": "word-stretch",
+      "file": "word-stretch.png",
+      "sha256": "78e982cb261d34ba17493ad94e153d7f56e2ddc5103b5594c799aaac24a026a0",
+      "word": "stretch",
+      "kind": "motion"
+    },
+    {
+      "id": "word-sway",
+      "file": "word-sway.png",
+      "sha256": "d4a90c222baa26b37151a03cc40c60f16f49ecd48c1ee007b10bc32e35c375d0",
+      "word": "sway",
+      "kind": "motion"
+    },
+    {
+      "id": "word-bounce",
+      "file": "word-bounce.png",
+      "sha256": "99fd646e81eef4edb095b7ca167db9011c5c328a835781f09f041c61c390684b",
+      "word": "bounce",
+      "kind": "motion"
+    },
+    {
+      "id": "word-doze",
+      "file": "word-doze.png",
+      "sha256": "b862f2dba9fa5a7ff6df7b68ea1d23535b61c51e50e925dd573317750293293a",
+      "word": "doze",
+      "kind": "motion"
+    },
+    {
+      "id": "word-greet",
+      "file": "word-greet.png",
+      "sha256": "daea60875ce3816ef135be74ae52fe944328bcee8784b64237b0df7491ced1e7",
+      "word": "greet",
+      "kind": "motion"
+    },
+    {
+      "id": "word-celebrate",
+      "file": "word-celebrate.png",
+      "sha256": "a3bbe395f9c65e66d840897f53903121dfdc43c4493f5531b65277a7d4d17fcc",
+      "word": "celebrate",
+      "kind": "motion"
+    }
+  ],
+  "registeredExpressions": 25,
+  "registeredMotions": 28
+}

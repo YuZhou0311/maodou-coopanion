@@ -1,0 +1,19 @@
+{
+  "repository": "YuZhou0311/Coopanion",
+  "refAtRetrieval": "main",
+  "path": "packages/cortico-world-desktop-pet/web/pet-app.js",
+  "gitBlobSha": "ddd0a6a8bc6b35d345b9bea03bdedfa8d99b7d6d",
+  "sourceUrl": "https://github.com/YuZhou0311/Coopanion/blob/main/packages/cortico-world-desktop-pet/web/pet-app.js",
+  "originalFile": "pet-app.base.js",
+  "patchedFile": "pet-app.js",
+  "patchFile": "pointer-release.patch",
+  "baseSha256": "a4b5f7ce304146da313da8c2b8ccb40a611a8a7c8013f95bdd7cfca4fd93e82d",
+  "patchedSha256": "c9794af17ca374ea16bda0d9f97da96878a2019a13c4ac5db2919ae4cbde1fa9",
+  "patchSha256": "b924a47a92994b2a31dcb66399e19b5a4af0d785f012643c652423580fbc07c6",
+  "scope": "Read-only retrieval. No mutation of upstream/fork, vendored runtime or user installation. Patch prepared for review in the separate maodou-coopanion project.",
+  "isolatedPatchCheck": {
+    "passed": true,
+    "appliedBytesEqualCandidate": true,
+    "scope": "Applied only to a temporary copy of the exact base; no external repository or installation modified."
+  }
+}

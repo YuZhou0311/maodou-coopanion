@@ -1,0 +1,374 @@
+{
+  "schema": "maodou-public-reference-index-v1",
+  "research_date": "2026-10-20",
+  "scope": "第一阶段大耳帽兜；本轮重新下载并观察资料，不继承已被否定的旧AI造型。",
+  "media_distributed": false,
+  "note": "Public source repository includes URLs, classifications, frame times and observation hashes only. No official, community or player images, videos, HTML pages, user attachments or expiring signed media URLs are distributed.",
+  "coordinate_convention": "裁切坐标均相对原3840×2160帧；LTRB右下边界不包含。生成裁图未重绘、去背景、改色或放大。",
+  "timing_convention": "视频名义秒数按HLS分段起点计，60帧/秒；frame-index记录分段内decoded_frame_index。TS有约1.446444秒封装PTS偏移，不把该偏移写进视频时间。",
+  "sources": [
+    {
+      "id": "A01",
+      "category": "official-primary-video",
+      "url": "https://www.taptap.cn/moment/791683843412200827",
+      "title": "《洛克王国：世界》「大耳帽兜大量出没」",
+      "author": "洛克王国世界",
+      "author_id": 99962293,
+      "published_date": "2026-04-10",
+      "video_id": 5599890,
+      "selected_stream": "4k60 / 3840×2160 / 60fps",
+      "scene_categories": [
+        {
+          "range_observed_seconds": [
+            32.0,
+            32.5
+          ],
+          "onscreen_label": "版本实机画面演示",
+          "classification": "official-gameplay",
+          "color": "ordinary"
+        },
+        {
+          "range_observed_seconds": [
+            70.0,
+            77.4
+          ],
+          "onscreen_label": "此为宣传创意演绎 所展示内容仅供参考",
+          "classification": "official-promotional-creative",
+          "color": "shiny"
+        }
+      ],
+      "official_evidence": {
+        "is_official": true,
+        "verified_reason": "《洛克王国：世界》管理员",
+        "app_id": 188212
+      }
+    },
+    {
+      "id": "B01",
+      "category": "media-reprint-of-claimed-official-material",
+      "url": "https://news.17173.com/content/04102026/213311492.shtml",
+      "date": "2026-04-10",
+      "displayed_byline": "洛克王国世界",
+      "provenance_limit": "转载页署名洛克王国世界并称来源公众号；原始公众号URL未核验，不能升格为直接官方发布。",
+      "linked_media": [
+        {
+          "direct_url": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/mYKKWobtvBzrhCf.jpg",
+          "use": "普通一阶立绘与柔软手爪、拥抱气质的文字设定核对。",
+          "width_height": [
+            750,
+            1000
+          ],
+          "sha256": "40b9781eb03bc8673dc070dd2d869ea30d7cc1a41842e5be9a5590bf13a0b3e3"
+        },
+        {
+          "direct_url": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/sOHQOgbtvBzrhCe.jpg",
+          "use": "异色颜色分区与一/二/三阶明确区分，仅取一阶作形体核对。",
+          "width_height": [
+            900,
+            1200
+          ],
+          "sha256": "25306b90952bf3f6d32c45ea6a0b96c8b7ace1adb181ae0990a55e84c5bade09"
+        },
+        {
+          "direct_url": "https://i.17173cdn.com/2fhnvk/YWxqaGBf/cms3/iWGbgJbtvBzriwt.gif",
+          "use": "官方抱持镜头的转载低分辨率GIF；与A01非独立形体证据。",
+          "width_height": [
+            640,
+            344
+          ],
+          "sha256": "7d8774526835c12dad2b1427d9f3fe6a6ac88ca533e18e2becd173bc9ebb4682"
+        }
+      ]
+    },
+    {
+      "id": "X01",
+      "category": "player-gameplay-rejected-stage",
+      "url": "https://www.taptap.cn/moment/798205212039842301",
+      "author": "可爱小猪包",
+      "author_id": 496855300,
+      "accepted": false,
+      "reason": "标题泛称大耳帽兜，但实际UI写雪影娃娃；主体为第三阶段，拿着类似一阶的道具。不得当作异色第一阶段的身体或比例资料。"
+    },
+    {
+      "id": "C01",
+      "category": "community-wiki-reference",
+      "url": "https://wiki.biligame.com/nrc/%E5%A4%A7%E8%80%B3%E5%B8%BD%E5%85%9C",
+      "observed_revision_url": "https://wiki.biligame.com/nrc/index.php?title=%E5%A4%A7%E8%80%B3%E5%B8%BD%E5%85%9C&oldid=7564",
+      "title": "大耳帽兜 - 精灵图鉴 - 洛克王国世界 WIKI",
+      "official": false,
+      "use": "Community first-stage ordinary/shiny illustration used for color and stage cross-check only. No image or copied page is distributed; this is not official orthographic evidence."
+    }
+  ],
+  "observations_of_non_distributed_reference_media": [
+    {
+      "id": "A01-32.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "ordinary",
+      "evidence_category": "official-gameplay",
+      "nominal_seconds": 32.0,
+      "angle_observation": "近正面抱持；头略倾斜",
+      "selected_for_shape_reference": true,
+      "use": "头罩轮廓、眼色块、耳根连续性",
+      "caveat": "被人手与衣服遮住身体，不用于头身比。",
+      "source_frame_sha256": "e7ec21e16f2fe2c0942d6ae879b6ab347831d6a391a37d9c8d8a3bd356f41e1d",
+      "crop_ltrb_exclusive": [
+        1260,
+        350,
+        2380,
+        1310
+      ],
+      "output_width_height": [
+        1120,
+        960
+      ],
+      "sha256": "51984b80de55319385c5864cdddae8f305242dcc7f4b8b6692f0760032b1383f",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-70.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 70.0,
+      "angle_observation": "后侧，双耳自然下垂",
+      "selected_for_shape_reference": true,
+      "use": "背部头罩体积、耳外面与内面、圆尾",
+      "caveat": "夜景光照；不是正交后视图。",
+      "source_frame_sha256": "cf945bcd05634500a317c7d3f9f35f78260aabe6336581bf17af928df2186ddf",
+      "crop_ltrb_exclusive": [
+        2360,
+        1000,
+        2890,
+        1530
+      ],
+      "output_width_height": [
+        530,
+        530
+      ],
+      "sha256": "cb9e923b8a02d258d1e978babb745c75b829571870b11cad96770f73a6fb6f34",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-72.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 72.0,
+      "angle_observation": "前侧跳起抬耳",
+      "selected_for_shape_reference": false,
+      "use": "抬耳活动范围与宽耳根",
+      "caveat": "动作姿势，禁止作为自然垂耳头形。",
+      "source_frame_sha256": "bf617bbc045b9faefee8f980deddfb7fbb28fc372fd02811e33a88d773fe3dad",
+      "crop_ltrb_exclusive": [
+        1260,
+        410,
+        2070,
+        970
+      ],
+      "output_width_height": [
+        810,
+        560
+      ],
+      "sha256": "ec0b4f432a7d59208ac3cef08c05a37a4b1c72cde9d6516621a9bf7df6dd0d04",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-74.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 74.0,
+      "angle_observation": "后侧跳起抬耳",
+      "selected_for_shape_reference": true,
+      "use": "后脑体积、尾巴、小手脚",
+      "caveat": "动作姿势，禁止作为自然垂耳头形。",
+      "source_frame_sha256": "c17265a5bc2d2858096863d636a61dc7a6ae54db87e0bd476c36c7bb56533c4b",
+      "crop_ltrb_exclusive": [
+        1120,
+        710,
+        1830,
+        1280
+      ],
+      "output_width_height": [
+        710,
+        570
+      ],
+      "sha256": "2b5be9d0b6e344e9cdaab3b7d16d271b4d544e637e26d86b6e20426d03a39daf",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-75.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 75.0,
+      "angle_observation": "朝屏幕右的侧背",
+      "selected_for_shape_reference": true,
+      "use": "近耳大幅覆盖侧脸与胸前；前颊只露窄段",
+      "caveat": "角度未标定，不声称精确45或90度。",
+      "source_frame_sha256": "56f36a0a9202ba0044bf1e931537547350af62b19dc452dadd2fe0cbb32ffd39",
+      "crop_ltrb_exclusive": [
+        1370,
+        880,
+        1820,
+        1410
+      ],
+      "output_width_height": [
+        450,
+        530
+      ],
+      "sha256": "656174b42027d1eea0b4e1baac4f858d5b8a12cd95922a976d804f9c30fbb196",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-75.30",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 75.3,
+      "angle_observation": "朝屏幕右的侧背过渡",
+      "selected_for_shape_reference": true,
+      "use": "与75.0连续核对前耳覆盖",
+      "caveat": "角度未标定，不视为独立来源。",
+      "source_frame_sha256": "2e52e0f1cc930f91b4ae5df8faeb049dd64e7c38f252c1ef1ddd95a4fa6fc324",
+      "crop_ltrb_exclusive": [
+        1330,
+        880,
+        1820,
+        1410
+      ],
+      "output_width_height": [
+        490,
+        530
+      ],
+      "sha256": "95c785a69f610d7182fd4281ae5f80c6b727f61b81d4c5c1ea1fa1b1e64c88f5",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-75.60",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 75.6,
+      "angle_observation": "从侧背转向前侧，近耳向前摆",
+      "selected_for_shape_reference": true,
+      "use": "近耳白面/粉端挡同侧眼颊，远耳内面在下颌后方",
+      "caveat": "下颌下面的大莓红块是远耳内面；嘴只是脸上的小口。",
+      "source_frame_sha256": "d219030ad2c7dcd36ca7aab695990e43b7b1e93115023a340dc16dc556cbb57d",
+      "crop_ltrb_exclusive": [
+        1320,
+        850,
+        1820,
+        1400
+      ],
+      "output_width_height": [
+        500,
+        550
+      ],
+      "sha256": "b7bf07739f4ac6fbb581a7e52a561cffd96878b83dc38aaf1d590aedbe705c62",
+      "transform": "Native-pixel rectangular crop only. No redrawing, cleanup, recoloring or upscaling."
+    },
+    {
+      "id": "A01-77.00",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 77.0,
+      "angle_observation": "落地回弹，屏幕左耳仍外摆",
+      "selected_for_shape_reference": false,
+      "use": "耳动作过渡",
+      "caveat": "文件名rest是提取时的暂名；实际不是自然静止基准，左耳尖靠裁边。",
+      "source_frame_sha256": "419cdc78b0a3f73486b91ed78aae67b1158405a7a13086a19ac2804381641ba6",
+      "crop_ltrb_exclusive": [
+        1070,
+        800,
+        1740,
+        1490
+      ],
+      "output_width_height": [
+        670,
+        690
+      ],
+      "sha256": "59f8e12354369a1c11ccbd380fb080fa75e8bb682b2bc2571346d5c4e3604a1f",
+      "transform": "Native-pixel rectangular crop only; no repainting/upscaling."
+    },
+    {
+      "id": "A01-77.20",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 77.2,
+      "angle_observation": "落地自然垂耳，朝屏幕右轻偏转",
+      "selected_for_shape_reference": true,
+      "use": "自然垂耳、头身比、小手脚、眼睛透视",
+      "caveat": "不是精确正交正面；右眼比左眼窄。",
+      "source_frame_sha256": "f0666ad039db1abc86944ae153a3983fd0005e260e4bc40b61413438312ff914",
+      "crop_ltrb_exclusive": [
+        1070,
+        800,
+        1740,
+        1490
+      ],
+      "output_width_height": [
+        670,
+        690
+      ],
+      "sha256": "1fb55c49c1d2a2417268718ed6de79844a97aa2dda236fc893761c1ab1eda3a4",
+      "transform": "Native-pixel rectangular crop only; no repainting/upscaling."
+    },
+    {
+      "id": "A01-77.40",
+      "source_id": "A01",
+      "original_page_url": "https://www.taptap.cn/moment/791683843412200827",
+      "video_id": 5599890,
+      "stage": "first-stage / 大耳帽兜",
+      "color_variant": "shiny",
+      "evidence_category": "official-promotional-creative",
+      "nominal_seconds": 77.4,
+      "angle_observation": "落地自然垂耳，朝屏幕右轻偏转",
+      "selected_for_shape_reference": true,
+      "use": "本轮最合适的自然垂耳异色近正面基准",
+      "caveat": "仍是动画瞬间与夜景光照，不是官方静止建模规范。",
+      "source_frame_sha256": "fc061c2daaa69cbe315f8914f1b6cb4541444031cef0d432398d79895be97b99",
+      "crop_ltrb_exclusive": [
+        1070,
+        800,
+        1740,
+        1490
+      ],
+      "output_width_height": [
+        670,
+        690
+      ],
+      "sha256": "407e9f49dd45594f83ed4756381bcce34330fecde954b3f4294a0afc755f43ea",
+      "transform": "Native-pixel rectangular crop only; no repainting/upscaling."
+    }
+  ]
+}

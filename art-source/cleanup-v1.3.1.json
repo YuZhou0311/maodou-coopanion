@@ -1,0 +1,26 @@
+{
+  "version": "1.3.1",
+  "outputs": [
+    {
+      "file": "art-source/torso-skins-10-clean.png",
+      "sha256": "b99bdea1d623fd5dd52cbf0961ec477cbb31a411cf7354c7c9b7c8f80fc09f83",
+      "size": [
+        2172,
+        724
+      ],
+      "createdBy": "GPT built-in image generation/edit",
+      "background": "transparent"
+    },
+    {
+      "file": "art-source/ear-skins-11-clean-root.png",
+      "sha256": "0a0405152f6eaa12af22bdab8f6ac79c61186845b2a57530bb0512eaf801e34f",
+      "size": [
+        1774,
+        887
+      ],
+      "createdBy": "GPT built-in image generation/edit",
+      "background": "transparent"
+    }
+  ],
+  "originalFilesPreserved": true
+}

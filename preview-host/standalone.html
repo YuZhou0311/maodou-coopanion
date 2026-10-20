@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' blob:; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>大耳帽兜 · 离线预览</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%2390cada'/%3E%3C/svg%3E">
+  <style>/*__STANDALONE_STYLE__*/</style>
+</head>
+<body>
+  <main>
+    <header class="page-header"><div><p class="eyebrow">MAODOU / OFFLINE PREVIEW</p><h1>大耳帽兜 · 离线预览</h1><p id="subtitle">正在载入本文件中的角色。</p></div><button id="reload" class="secondary">回到初始状态</button></header>
+    <div class="workspace">
+      <section class="scene-panel" aria-label="角色预览">
+        <div class="scene-toolbar"><div class="segmented" aria-label="背景"><button data-background="light" aria-pressed="true">浅色</button><button data-background="dark" aria-pressed="false">深色</button><button data-background="checker" aria-pressed="false">透明棋盘</button></div><button id="pause" data-requires-body disabled>暂停</button></div>
+        <div id="stage" class="pet-stage" data-background="light"><div id="layer"></div><div id="empty-state" role="status"><span class="empty-rule"></span><h2 id="empty-title">正在载入角色</h2><p id="empty-detail">模型、贴图与运行代码均已内嵌。</p></div><div id="scene-caption" aria-live="polite">本地运行 · 无音频</div></div>
+        <div class="scene-footer"><label for="scale">显示比例 <output id="scale-value">1.20</output></label><input id="scale" type="range" min="0.3" max="1.5" step="0.05" value="1.2"><span id="mode">—</span></div>
+        <div class="frame-meter"><span>本页绘制回调 <b id="local-fps">—</b></span><span>双击 HTML 即可打开</span></div>
+      </section>
+      <aside class="controls">
+        <section><h2>转向</h2><p class="hint">滑动查看头耳的左右变化，自动模式跟随视线与移动。</p><label class="yaw-label" for="yaw-slider">方向 <output id="yaw-value">自动</output></label><input id="yaw-slider" type="range" min="-75" max="75" step="1" value="0" data-requires-body disabled><div class="yaw-grid"><button data-yaw="-1" data-requires-body disabled>左 75°</button><button data-yaw="-0.6" data-requires-body disabled>左 45°</button><button data-yaw="0" data-requires-body disabled>正面</button><button data-yaw="0.6" data-requires-body disabled>右 45°</button><button data-yaw="1" data-requires-body disabled>右 75°</button><button data-yaw="auto" data-requires-body disabled>自动</button></div><button id="sweep" class="sweep-button" aria-pressed="false" data-requires-body disabled>连续左右转向</button></section>
+        <section id="scheme-section"><h2>性格</h2><div id="schemes"></div><p class="hint">两种性格共享配色，动作的幅度与节奏各有变化。</p></section>
+        <section><h2>互动</h2><p class="hint">点击、轻抚、拖动角色，再松开手。</p><div class="button-grid"><button id="walk-left" data-requires-body disabled>走向左边</button><button id="walk-right" data-requires-body disabled>走向右边</button><button id="listen" aria-pressed="false" data-requires-body disabled>倾听</button><button id="think" aria-pressed="false" data-requires-body disabled>思考</button></div><button id="talk" class="talk-button" aria-pressed="false" data-requires-body disabled>按住模拟说话口型</button><p class="hint">口型模拟不播放声音，也不访问麦克风。</p></section>
+        <section><h2>表情 <span id="expression-count">0</span></h2><div id="expressions" class="word-grid"></div></section>
+        <section><h2>动作 <span id="motion-count">0</span></h2><div id="motions" class="word-grid"></div></section>
+      </aside>
+    </div>
+    <details class="technical"><summary>本地预览与来源说明</summary><p>本文件完整内嵌正式角色包中的代码、模型与贴图，并复用固定版本 Coopanion 的身体模拟。正常运行不需要网络服务。</p><p>这里是方便查看资产的独立本地页面，不采用 Coopanion 的原生不透明源 iframe。正式安装包的隔离接入与真实交互验收由原生预览另行记录。本页绘制回调数也不等于屏幕实际呈现帧率或稳定流畅承诺。</p><dl><dt>角色版本</dt><dd id="pack-version">—</dd><dt>固定上游</dt><dd id="upstream">—</dd><dt>实际安装代码 SHA</dt><dd id="figure-sha">—</dd><dt>已绘制帧数</dt><dd id="rendered-frames">0</dd></dl><h3>最近事件</h3><pre id="events">尚无事件</pre><details><summary>代码许可与上游通知</summary><pre id="license-notice"></pre></details></details>
+    <footer>与正式角色包共用原图及运行代码。此 HTML 是本地预览，不是 Cubism 模型，也不替代 Coopanion 安装 ZIP。</footer>
+  </main>
+  <script id="maodou-embedded" type="application/json">/*__STANDALONE_PAYLOAD__*/</script>
+  <script>/*__STANDALONE_SCRIPT__*/</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+--- a/packages/cortico-world-desktop-pet/web/pet-app.js
++++ b/packages/cortico-world-desktop-pet/web/pet-app.js
+@@ -1377,14 +1377,15 @@
+ const UI_SELECTOR = '.bubble:not(.status):not(.fading):not([hidden]), .menu:not([hidden]), .tools:not([hidden])';
+ const overUi = (e) => e.target.closest && e.target.closest(UI_SELECTOR);
+ document.addEventListener('pointermove', (e) => {
++  if (activePointerId !== null && e.pointerId !== activePointerId) return;
+   pointerSeen = true;
+   lastPointer.x = e.clientX; lastPointer.y = e.clientY;
+   const p = { x: e.clientX, y: e.clientY };
+   cursor.at = p;
+   // a move carries the buttons that are really down: a press whose release was missed ends here
+-  if (pressing && e.buttons === 0) pressing = false;
++  if (pressing && e.buttons === 0) cancelPointer(e, 'move-buttons-zero');
+   // while the window moves to another display, moves may come in either display's coordinates; the drag shifts over once it has moved
+-  if (!shifting) body?.pointer('move', { ...p, t: e.timeStamp });
++  if (!shifting && !releasing) body?.pointer('move', { ...p, t: e.timeStamp, buttons: e.buttons, pointerId: e.pointerId, pointerType: e.pointerType });
+   const hit = !!body?.hit(p), ui = !!overUi(e);
+   diag.move = { at: performance.now(), type: e.pointerType, x: Math.round(p.x), y: Math.round(p.y), hit, ui };
+   diag.types.add(e.pointerType);
+@@ -1414,15 +1415,34 @@
+   setInteractive(rendering() && (pressing || hit || ui), 'poll');
+ });
+ /** A press that began on the body and has not been let go of: the window keeps the mouse meanwhile. */
+-let pressing = false;
++let pressing = false, activePointerId = null, releasing = false, releasePointerId = null, pointerEpoch = 0;
++const pointerPoint = (e, reason) => ({ x: e?.clientX ?? lastPointer.x, y: e?.clientY ?? lastPointer.y,
++  t: e?.timeStamp ?? performance.now(), ...(typeof e?.buttons === 'number' ? { buttons: e.buttons } : {}),
++  ...(e?.pointerId != null ? { pointerId: e.pointerId } : {}), ...(e?.pointerType ? { pointerType: e.pointerType } : {}), ...(reason ? { reason } : {}) });
++function detachPointer() {
++  const id = activePointerId; activePointerId = null; pressing = false; stage.style.cursor = '';
++  // Clear ownership first: releasePointerCapture may synchronously report loss.
++  if (id !== null && stage.hasPointerCapture?.(id)) { try { stage.releasePointerCapture(id); } catch {} }
++}
++function cancelPointer(e, reason = 'cancel') {
++  if (reason === 'lostpointercapture' && activePointerId === null) return;
++  if ((!pressing && !releasing) || (e?.pointerId != null && (activePointerId ?? releasePointerId) !== e.pointerId)) return;
++  ++pointerEpoch; releasing = false; releasePointerId = null;
++  detachPointer(); following = null; shifting = false;
++  document.body.style.visibility = '';
++  body?.pointer('cancel', pointerPoint(e, reason));
++}
+ stage.addEventListener('pointerdown', (e) => {
+-  if (e.button !== 0) return;
++  if (e.button !== 0 || e.isPrimary === false || pressing || releasing) return;
+   closeMenu();
+-  const p = { x: e.clientX, y: e.clientY, t: e.timeStamp };
++  const p = pointerPoint(e);
++  if (!body?.hit(p)) return;
++  ++pointerEpoch; pressing = true; activePointerId = e.pointerId;
+   body?.pointer('down', p);
+-  if (body?.hit(p)) { pressing = true; stage.setPointerCapture(e.pointerId); e.preventDefault(); }
++  try { stage.setPointerCapture(e.pointerId); } catch { /* window-level release still applies */ }
++  e.preventDefault();
+ });
+-const up = (e) => { pressing = false; body?.pointer('up', { x: e?.clientX ?? lastPointer.x, y: e?.clientY ?? lastPointer.y, t: e?.timeStamp ?? performance.now() }); stage.style.cursor = ''; };
++const up = (e) => { detachPointer(); body?.pointer('up', pointerPoint(e)); };
+ /**
+  * Most milliseconds a drop on another display waits for the page to take the window's new size
+  * (within a pixel: fractional scales round it). The size normally arrives a frame or two after
+@@ -1448,22 +1468,30 @@
+  * the held pet stays in sight instead of being cut off at the edge until it is let go of.
+  */
+ function followDrag(p) {
+-  if (following || at()?.mode !== 'drag' || !host?.followCursor || !outside(p)) return;
++  if (!pressing || releasing || following || at()?.mode !== 'drag' || !host?.followCursor || !outside(p)) return;
++  const epoch = pointerEpoch;
+   shifting = true;
+   following = (async () => {
+     const to = await host.followCursor().catch(() => null);
++    if (epoch !== pointerEpoch) return;
+     shifting = false;
+     if (!to) return;
+     body?.shift(to.dx, to.dy);
+     await settleSize(to);
+-  })().finally(() => { following = null; shifting = false; });
+-}
+-stage.addEventListener('pointerup', async (e) => {
++  })().finally(() => { if (epoch === pointerEpoch) { following = null; shifting = false; } });
++}
++window.addEventListener('pointerup', async (e) => {
++  if (!pressing || releasing || e.pointerId !== activePointerId) return;
++  const epoch = pointerEpoch;
++  releasing = true; releasePointerId = e.pointerId;
++  detachPointer();
++  try {
+   // the window was moving under the cursor: the release point is in the coordinates it left behind
+-  if (following) { await following; up(); return; }
++  if (following) { await following; if (epoch === pointerEpoch) up(); return; }
+   if (!outside({ x: e.clientX, y: e.clientY }) || at()?.mode !== 'drag' || !host?.followCursor) { up(e); return; }
+   // let go of past the window's edge in one move: over another display the window follows and the pet drops there
+   const to = await host.followCursor().catch(() => null);
++  if (epoch !== pointerEpoch) return;
+   if (!to) { up(e); return; }
+   pressing = false;
+   stage.style.cursor = '';
+@@ -1471,12 +1499,17 @@
+   document.body.style.visibility = 'hidden';
+   try {
+     await settleSize(to);
+-    body?.drop({ x: to.x, y: to.y });
++    if (epoch === pointerEpoch) body?.drop({ x: to.x, y: to.y });
+   } finally {
+     document.body.style.visibility = '';
+   }
+-});
+-stage.addEventListener('pointercancel', up);
++  } finally { if (epoch === pointerEpoch) { releasing = false; releasePointerId = null; } }
++}, { capture: true });
++window.addEventListener('pointercancel', e => cancelPointer(e, 'pointercancel'), { capture: true });
++stage.addEventListener('lostpointercapture', e => cancelPointer(e, 'lostpointercapture'));
++window.addEventListener('blur', () => cancelPointer(null, 'window-blur'));
++document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') cancelPointer(null, 'document-hidden'); });
++host?.onShown?.(shown => { if (!shown) cancelPointer(null, 'window-hidden'); });
+ document.addEventListener('pointerleave', () => { cursor.at = null; body?.pointer('leave', {}); });
+ stage.addEventListener('dblclick', (e) => { if (prefs.doubleClickChat && body?.hit({ x: e.clientX, y: e.clientY })) openInput(); });
+ document.addEventListener('contextmenu', (e) => {

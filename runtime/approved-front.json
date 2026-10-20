@@ -1,0 +1,865 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Original-image measurements for the user-selected front-master-02. This is landmark data, not a drawing function or a new authored head. Other angles remain unapproved design references.",
+  "source": {
+    "file": "art-source/front-master-02.png",
+    "sha256": "dc82b022ee7def52c7e20c88cdf85af735744aaa9fce15234cdd89a879635c98",
+    "width": 1254,
+    "height": 1254,
+    "coordinateConvention": "Source pixel space, x right / y down. Pixel samples are centred at index+0.5; manually named crown/chin anchors retain the integer coordinates provided during review."
+  },
+  "approvalScope": "The user selected this front head shape. Neither head-skins-04, turnaround-test-03, a generated extraction, nor a future rig is thereby approved.",
+  "registration": {
+    "referenceFramePx": [
+      334,
+      180,
+      587,
+      565
+    ],
+    "referenceFrameStatus": "Review estimate: visible head width about 587 and height about 565. This frame is not a clip rectangle; measured points may extend slightly beyond it.",
+    "crownPx": [
+      628,
+      180
+    ],
+    "chinPx": [
+      628,
+      745
+    ],
+    "requestedModelFrame": [
+      54,
+      22,
+      148,
+      142
+    ],
+    "normalizedCoordinateRule": "u=(x-334)/587; v=(y-180)/565. Do not clamp measured points to [0,1].",
+    "requestedAffineScale": [
+      0.252129471890971,
+      0.2513274336283186
+    ],
+    "requestedAffineAxisRatio": 1.0031912085802719,
+    "preferredUniformModelRegistration": {
+      "scale": 0.2513274336283186,
+      "sourceCenterX": 627.5,
+      "targetCenterX": 128,
+      "sourceTopY": 180,
+      "targetTopY": 22,
+      "matrix2x3": [
+        [
+          0.2513274336283186,
+          0,
+          -29.70796460176993
+        ],
+        [
+          0,
+          0.2513274336283186,
+          -23.23893805309735
+        ]
+      ],
+      "referenceFrameModelWidth": 147.52920353982302,
+      "referenceFrameModelHeight": 142
+    },
+    "measuredControlExtentsPx": [
+      331.4821,
+      180,
+      924.0926,
+      745
+    ],
+    "measuredControlWidthPx": 592.6105,
+    "measuredControlWidthAtUniformScale": 148.9392761061947,
+    "shapeAuthority": "Use the selected image points and combined head/ear envelope for rest geometry. The 633/532 aspect ratio of the clean 04 cut is not the target head aspect ratio."
+  },
+  "approvedFrontContour": {
+    "pointOrder": "Each side runs from crown down to chin; right is not silently mirrored from left.",
+    "left": [
+      [
+        628,
+        180
+      ],
+      [
+        547.6855,
+        190
+      ],
+      [
+        501.8228,
+        205
+      ],
+      [
+        458.967,
+        225
+      ],
+      [
+        418.9145,
+        250
+      ],
+      [
+        386.4109,
+        275
+      ],
+      [
+        360.0552,
+        300
+      ],
+      [
+        341.4303,
+        320
+      ],
+      [
+        364.375,
+        395
+      ],
+      [
+        358.1538,
+        410
+      ],
+      [
+        352.6667,
+        425
+      ],
+      [
+        348.4444,
+        440
+      ],
+      [
+        344.8889,
+        455
+      ],
+      [
+        341.0882,
+        475
+      ],
+      [
+        335.5938,
+        500
+      ],
+      [
+        334.0149,
+        525
+      ],
+      [
+        332.8226,
+        550
+      ],
+      [
+        331.5517,
+        575
+      ],
+      [
+        331.4821,
+        590
+      ],
+      [
+        332.7619,
+        605
+      ],
+      [
+        335.6792,
+        620
+      ],
+      [
+        340.4898,
+        635
+      ],
+      [
+        347.2619,
+        650
+      ],
+      [
+        356.5714,
+        665
+      ],
+      [
+        370.2469,
+        680
+      ],
+      [
+        383.9055,
+        695
+      ],
+      [
+        408.0899,
+        710
+      ],
+      [
+        444.2404,
+        725
+      ],
+      [
+        481.4079,
+        735
+      ],
+      [
+        628,
+        745
+      ]
+    ],
+    "right": [
+      [
+        628,
+        180
+      ],
+      [
+        710.7396,
+        190
+      ],
+      [
+        755.1011,
+        205
+      ],
+      [
+        797.0777,
+        225
+      ],
+      [
+        837.4028,
+        250
+      ],
+      [
+        869.8993,
+        275
+      ],
+      [
+        896.1958,
+        300
+      ],
+      [
+        914.6031,
+        320
+      ],
+      [
+        892.8333,
+        395
+      ],
+      [
+        899.125,
+        410
+      ],
+      [
+        904.0,
+        425
+      ],
+      [
+        907.5,
+        440
+      ],
+      [
+        911.2,
+        455
+      ],
+      [
+        914.5517,
+        475
+      ],
+      [
+        919.8788,
+        500
+      ],
+      [
+        921.3448,
+        525
+      ],
+      [
+        922.75,
+        550
+      ],
+      [
+        924.0,
+        575
+      ],
+      [
+        924.0926,
+        590
+      ],
+      [
+        922.7212,
+        605
+      ],
+      [
+        919.9545,
+        620
+      ],
+      [
+        915.0175,
+        635
+      ],
+      [
+        908.1915,
+        650
+      ],
+      [
+        898.925,
+        665
+      ],
+      [
+        885.6375,
+        680
+      ],
+      [
+        873.5441,
+        695
+      ],
+      [
+        850.4439,
+        710
+      ],
+      [
+        814.713,
+        725
+      ],
+      [
+        776.3636,
+        735
+      ],
+      [
+        628,
+        745
+      ]
+    ],
+    "rowSamples": [
+      {
+        "y": 190,
+        "left": 547.6855,
+        "right": 710.7396,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          1.1543,
+          1.3797
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 205,
+        "left": 501.8228,
+        "right": 755.1011,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.8822,
+          0.7794
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 225,
+        "left": 458.967,
+        "right": 797.0777,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.6649,
+          0.6923
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 250,
+        "left": 418.9145,
+        "right": 837.4028,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.6076,
+          0.5996
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 275,
+        "left": 386.4109,
+        "right": 869.8993,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.6116,
+          0.4912
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 300,
+        "left": 360.0552,
+        "right": 896.1958,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.4397,
+          0.5453
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 320,
+        "left": 341.4303,
+        "right": 914.6031,
+        "evidence": "visible combined crown outline; head edge before ear branch",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5674,
+          0.5438
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 395,
+        "left": 364.375,
+        "right": 892.8333,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          1.0,
+          1.1667
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 410,
+        "left": 358.1538,
+        "right": 899.125,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.9366,
+          0.875
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 425,
+        "left": 352.6667,
+        "right": 904.0,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          1.1667,
+          1.0667
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 440,
+        "left": 348.4444,
+        "right": 907.5,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.9192,
+          0.8529
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 455,
+        "left": 344.8889,
+        "right": 911.2,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.9293,
+          0.9778
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 475,
+        "left": 341.0882,
+        "right": 914.5517,
+        "evidence": "head/inner-ear painted boundary; low contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.9743,
+          0.9089
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 500,
+        "left": 335.5938,
+        "right": 919.8788,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.808,
+          0.9444
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 525,
+        "left": 334.0149,
+        "right": 921.3448,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.3851,
+          0.7586
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 550,
+        "left": 332.8226,
+        "right": 922.75,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.4501,
+          0.9207
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 575,
+        "left": 331.5517,
+        "right": 924.0,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.7096,
+          1.0566
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 590,
+        "left": 331.4821,
+        "right": 924.0926,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.719,
+          1.1452
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 605,
+        "left": 332.7619,
+        "right": 922.7212,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.871,
+          0.9916
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 620,
+        "left": 335.6792,
+        "right": 919.9545,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.8314,
+          1.0682
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 635,
+        "left": 340.4898,
+        "right": 915.0175,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.8509,
+          1.0752
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 650,
+        "left": 347.2619,
+        "right": 908.1915,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.7234,
+          0.9693
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 665,
+        "left": 356.5714,
+        "right": 898.925,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          0.8852,
+          1.0331
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 680,
+        "left": 370.2469,
+        "right": 885.6375,
+        "evidence": "head/inner-ear painted boundary; stronger contrast",
+        "method": "5-pixel box-filtered premultiplied G, 3-pixel derivative, local signed peak with parabolic subpixel fit; fixed L ROI [315,385), R ROI [875,935)",
+        "samplingSpreadPx": [
+          1.0792,
+          2.7455
+        ],
+        "spreadMeaning": "maximum localization change for 3/5/7-pixel box filters; this measures estimator stability, not semantic boundary accuracy"
+      },
+      {
+        "y": 695,
+        "left": 383.9055,
+        "right": 873.5441,
+        "evidence": "visible lower cheek against transparent gap",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5757,
+          0.625
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 710,
+        "left": 408.0899,
+        "right": 850.4439,
+        "evidence": "visible lower cheek against transparent gap",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.7873,
+          0.8226
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 725,
+        "left": 444.2404,
+        "right": 814.713,
+        "evidence": "visible lower cheek against transparent gap",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          1.2557,
+          1.2297
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 735,
+        "left": 481.4079,
+        "right": 776.3636,
+        "evidence": "visible lower cheek against transparent gap",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          1.8829,
+          2.0589
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      }
+    ],
+    "inferredConnections": [
+      {
+        "betweenY": [
+          180,
+          190
+        ],
+        "scope": "Crown endpoint at [628,180] is a named geometric apex. Raster alpha at row 180 forms a short near-horizontal top run; a curve through the apex and the measured next row is a reconstruction, not an exact raster trace.",
+        "manualAnchorUncertaintyPx": [
+          2,
+          1
+        ]
+      },
+      {
+        "betweenY": [
+          320,
+          395
+        ],
+        "scope": "White head and white ear roots share one silhouette. The selected source cannot identify a separate head alpha boundary here. Connect only inside the registered ear-root cover; judge the visible union against combinedHeadEarEnvelope. Do not call this hidden connection measured or expose it as a notch."
+      },
+      {
+        "betweenY": [
+          735,
+          745
+        ],
+        "scope": "The middle shallow chin meets the white neck/body. Central chin [628,745] is a visual anchor, not an alpha edge. Preserve the shallow lower-face line and place its completion under the neck.",
+        "manualAnchorUncertaintyPx": [
+          3,
+          3
+        ]
+      }
+    ],
+    "interpolationNotes": [
+      "These samples are measurements, not Bezier handles. Use a shape-preserving interpolant; do not allow cubic overshoot to create a V indentation.",
+      "A higher sampling density does not resolve the hidden ear/head separation. Keep roots and head on the same registered rest coordinates.",
+      "All CPU estimates precede a real raster composition and do not certify the final silhouette or any animation."
+    ]
+  },
+  "combinedHeadEarEnvelope": {
+    "purpose": "Visible union around the crown/ear shoulder. These rows must not all be relabelled as the separate head boundary.",
+    "rowSamples": [
+      {
+        "y": 320,
+        "left": 341.4303,
+        "right": 914.6031,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5674,
+          0.5438
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 335,
+        "left": 328.9578,
+        "right": 926.929,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.414,
+          0.4113
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 350,
+        "left": 317.2517,
+        "right": 938.2701,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.573,
+          0.5694
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 365,
+        "left": 306.2331,
+        "right": 949.1275,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5425,
+          0.4871
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 380,
+        "left": 296.211,
+        "right": 959.2107,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5209,
+          0.5565
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 395,
+        "left": 286.887,
+        "right": 968.4784,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.4891,
+          0.5496
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 410,
+        "left": 277.902,
+        "right": 977.6028,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.4361,
+          0.5675
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 425,
+        "left": 269.4444,
+        "right": 985.4458,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5669,
+          0.5312
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 440,
+        "left": 261.7111,
+        "right": 993.6321,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.5708,
+          0.5802
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 455,
+        "left": 254.3245,
+        "right": 1000.8822,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.576,
+          0.3664
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 475,
+        "left": 244.8447,
+        "right": 1010.0669,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.4609,
+          0.3706
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      },
+      {
+        "y": 500,
+        "left": 233.9849,
+        "right": 1020.7791,
+        "evidence": "visible head plus ear-root outer alpha",
+        "method": "central alpha run; 0.5 crossing interpolated between pixel centres",
+        "samplingSpreadPx": [
+          0.384,
+          0.5193
+        ],
+        "spreadMeaning": "maximum displacement when alpha crossing threshold changes from 0.5 to 0.25 or 0.75; not a ground-truth error bound"
+      }
+    ]
+  },
+  "cleanSkinSource": {
+    "file": "art-source/cut/head.front.png",
+    "sha256": "cb69b15f9c7a311ef54b336e480a5e41934123aa46d842d11ede64bd5f67cddb",
+    "size": [
+      633,
+      532
+    ],
+    "sourceFile": "art-source/head-skins-04.png",
+    "sourceSHA256": "d1b55da35accb58f701131a7b44eb9cb50bc28021370da04543017c3ea1b35a1",
+    "role": "Clean low-frequency skin colour for corresponding UV sampling and hidden completion; not the rest geometry authority.",
+    "correspondence": "For each normalized target contour row, sample 04 using its own contour.rows left/right UV boundaries. Target xy comes from the selected 02 contour, independently of 04 UV aspect. Match the facial details to the selected 02 coordinates separately."
+  },
+  "verificationScope": {
+    "readOnlyImageAnalysis": true,
+    "wroteGeometryFunctions": false,
+    "startedBrowser": false,
+    "generatedImages": false,
+    "gpuPixelComparison": false,
+    "limitations": [
+      "No independent ground-truth head mask exists for the selected full character.",
+      "Sampling spread records algorithm sensitivity at the exact source rows, not a universal artwork error bound.",
+      "The accepted front image does not authorize changing its head proportions to fit another generated direction."
+    ]
+  }
+}

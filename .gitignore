@@ -1,0 +1,12 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+exports/
+preview-host/staged/
+preview-host/qa/native-runner/
+preview-host/qa/tmp/
+.qa-tmp/
+test-browser/
+tools/fonts/NotoSansCJKsc-Regular.otf

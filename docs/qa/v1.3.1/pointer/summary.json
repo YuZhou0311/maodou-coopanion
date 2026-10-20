@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "evidenceKind": "lossless-archive-summary",
+  "status": "complete",
+  "passed": true,
+  "startedAt": "2026-10-20T04:22:41.196Z",
+  "completedAt": "2026-10-20T04:22:53.776Z",
+  "scope": "Browser-native DOM input into the unchanged opaque figure frame. Desktop-host event handlers are exercised with Electron bridge stubs; real OS focus/capture and displays remain a separate integration check.",
+  "sourcesUnchanged": true,
+  "original": {
+    "file": "report.json",
+    "bytes": 1001718,
+    "sha256": "6b3b9a4c22b088c9334413ec4254ed925f8defb31de5c6f059be35d1ab3fade7"
+  },
+  "archive": {
+    "file": "report.json.gz",
+    "bytes": 75443,
+    "sha256": "513357bfc4f99c57251431b7fb0ffdd6262f0932a70490fa47a700e0fb9d5d95",
+    "encoding": "gzip, original UTF-8 JSON bytes, mtime=0"
+  },
+  "restoreCommand": "gzip -dk report.json.gz",
+  "summary": null,
+  "checks": [],
+  "errors": [],
+  "warnings": [
+    {
+      "host": "preview",
+      "warning": "[.WebGL-0x2b3c00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "host": "preview",
+      "warning": "[.WebGL-0x2b3c00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "host": "preview",
+      "warning": "[.WebGL-0x2b3c00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "host": "preview",
+      "warning": "[.WebGL-0x2b3c00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "sourceFilesObserved": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 35419,
+      "sha256": "b6974a561e155c1a0f21f72e22fad99d52d4be25f4cf65aaf8d087dfb05a31f8"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 39921,
+      "sha256": "49a882ee5a4d9f0a4becff9df56c640333b7716b15ba5357d9b0a83aeff89b7e"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 24362,
+      "sha256": "961aa25d38680d00842eb2c0dc4abb3a15142983f9a7470182715c930a5df98e"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    },
+    {
+      "path": "art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "figure.js",
+      "bytes": 123613,
+      "sha256": "30718635da2fdd2804673199ed6641d6246add6770430fd62877bd75bf07a16c"
+    },
+    {
+      "path": "figure.json",
+      "bytes": 18557,
+      "sha256": "12cd1025c5ee97f5d7b668e38bc1efac6c80bad738fd8e5ce0552bacd2231d5e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "model.json",
+      "bytes": 228280,
+      "sha256": "baed6c6144bfc77bbfa571aa48a2a5c835fb6a5e5047a1e8bbd3d44b4c670251"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2033,
+      "sha256": "66eef131385c7d440e7cba7577b351c0059a4109eafa44d8d7d4e7d891406e4e"
+    }
+  ],
+  "originalScriptSHA256": null,
+  "graphics": null,
+  "requestedScale": null,
+  "limitations": "The archive is the unmodified original report. This summary is an index, not a replacement run. Public QA tools only change dependency/browser path resolution, so their current script hash may differ; production runtime bytes remain as recorded.",
+  "hosts": [
+    {
+      "name": "preview",
+      "status": "complete",
+      "checks": [
+        {
+          "id": "normal-release",
+          "scope": "Trusted Playwright mouse.",
+          "passed": true
+        },
+        {
+          "id": "outside-window-release",
+          "scope": "Trusted mouse coordinates outside viewport with active capture; not a separate OS window.",
+          "passed": true
+        },
+        {
+          "id": "missing-up-and-lostcapture-then-buttons-zero",
+          "scope": "Real mouse up/lostcapture intentionally intercepted only in this QA session; subsequent real zero-buttons move must recover.",
+          "passed": true
+        },
+        {
+          "id": "lost-capture",
+          "scope": "Real browser pointer capture relinquished by DOM API while the mouse remains down.",
+          "passed": true
+        },
+        {
+          "id": "pointercancel",
+          "scope": "CDP touch input generates trusted browser pointercancel; no synthetic PointerEvent.",
+          "passed": true
+        },
+        {
+          "id": "blur",
+          "scope": "Real mouse drag followed by explicitly synthetic window blur; this tests the DOM handler, not OS focus delivery.",
+          "passed": true
+        },
+        {
+          "id": "metadata-absent-and-held-leave",
+          "scope": "Direct compatibility messages into actual native body, explicitly not trusted pointer events.",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "scope": "Production preview bridge + actual native iframe.",
+      "passed": true
+    },
+    {
+      "name": "desktop-handlers",
+      "status": "complete",
+      "checks": [
+        {
+          "id": "normal-release",
+          "scope": "Trusted Playwright mouse.",
+          "passed": true
+        },
+        {
+          "id": "outside-window-release",
+          "scope": "Trusted mouse coordinates outside viewport with active capture; not a separate OS window.",
+          "passed": true
+        },
+        {
+          "id": "missing-up-and-lostcapture-then-buttons-zero",
+          "scope": "Real mouse up/lostcapture intentionally intercepted only in this QA session; subsequent real zero-buttons move must recover.",
+          "passed": true
+        },
+        {
+          "id": "lost-capture",
+          "scope": "Real browser pointer capture relinquished by DOM API while the mouse remains down.",
+          "passed": true
+        },
+        {
+          "id": "pointercancel",
+          "scope": "CDP touch input generates trusted browser pointercancel; no synthetic PointerEvent.",
+          "passed": true
+        },
+        {
+          "id": "blur",
+          "scope": "Real mouse drag followed by explicitly synthetic window blur; this tests the DOM handler, not OS focus delivery.",
+          "passed": true
+        },
+        {
+          "id": "metadata-absent-and-held-leave",
+          "scope": "Direct compatibility messages into actual native body, explicitly not trusted pointer events.",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "scope": "Verbatim patched pet-app pointer section; only surrounding UI/Electron dependencies stubbed. Full-viewport stage matches desktop client coordinates.",
+      "passed": true
+    }
+  ],
+  "sourceHashes": {
+    "runtime/host-adapter.js": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e",
+    "preview-host/app.js": "620d2474a6db0fb64cab05cbeb98f9c2ba51f8e558f7ddb393af271d5486eab5",
+    "host-fix/pet-app.js": "c9794af17ca374ea16bda0d9f97da96878a2019a13c4ac5db2919ae4cbde1fa9",
+    "tools/qa-pointer-v131.mjs": "b9998bc9204bdc59291cbbbfdee55dfd283ed93ef7ada739a786f9d2f3391fb0"
+  },
+  "finalSourceHashes": {
+    "runtime/host-adapter.js": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e",
+    "preview-host/app.js": "620d2474a6db0fb64cab05cbeb98f9c2ba51f8e558f7ddb393af271d5486eab5",
+    "host-fix/pet-app.js": "c9794af17ca374ea16bda0d9f97da96878a2019a13c4ac5db2919ae4cbde1fa9",
+    "tools/qa-pointer-v131.mjs": "b9998bc9204bdc59291cbbbfdee55dfd283ed93ef7ada739a786f9d2f3391fb0"
+  }
+}

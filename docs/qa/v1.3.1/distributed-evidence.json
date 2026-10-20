@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "scope": "Original reports are losslessly archived where large. Only listed screenshots are distributed; the full report records additional captures kept during the original QA session. No absent image is represented as included.",
+  "reports": [
+    {
+      "path": "docs/qa/v1.3.1/gait-final/report.json.gz",
+      "bytes": 737112,
+      "sha256": "e70a3e82a20d1686ddeb4265d6c60c206b85b387b5e202bf233a63755e95b966",
+      "originalBytes": 4739486,
+      "originalSHA256": "63f585112a22d20801c2b7f06b3fdab8876df78cf3f0c3574e448acd0e4faba3",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/report.json.gz",
+      "bytes": 74964,
+      "sha256": "5db540e16bc4653962863861a18ffca5b821c71bce591920a54fedf5c1278cf7",
+      "originalBytes": 585038,
+      "originalSHA256": "0d5f878c382e263c8d1cf79b0f71f943aef5e9d5ac6a6a66718c2278068330fc",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/pointer/report.json.gz",
+      "bytes": 75443,
+      "sha256": "513357bfc4f99c57251431b7fb0ffdd6262f0932a70490fa47a700e0fb9d5d95",
+      "originalBytes": 1001718,
+      "originalSHA256": "6b3b9a4c22b088c9334413ec4254ed925f8defb31de5c6f059be35d1ab3fade7",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/report.json.gz",
+      "bytes": 1345267,
+      "sha256": "fa6e002c977b6094daf52fe4671b971c7fa88e4761837ee6ad145d8e8a119959",
+      "originalBytes": 9359203,
+      "originalSHA256": "df19b7e771343f15918cfb7d9f0db40819b4c9be172a85ee011c44618a2f5834",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/report.json.gz",
+      "bytes": 129502,
+      "sha256": "25da6539a58a247a4f9f735c4acf57770d9708b8b9eab65a8b3131195a715c4c",
+      "originalBytes": 1257855,
+      "originalSHA256": "68857fe8b618d3c11504a196c8c63c2158700cdcb881305c32df7a76d3d77992",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release/report.json.gz",
+      "bytes": 74584,
+      "sha256": "be1270291f55e7932bb8bb744cb58fcd30225431ca864c0a6806d2ed3ee78d72",
+      "originalBytes": 584797,
+      "originalSHA256": "9ccbeee4e642b23cab3575a1e9f48d50fb92cfdc66ad3aafdbdbb66c36d36ada",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/qa/v1.3.1/native-import.json",
+      "bytes": 35807,
+      "sha256": "8bbc3360387d7b94d044c0f1698ddaff06aec35bf7195216d01a6f853b6a15cb",
+      "compression": null
+    },
+    {
+      "path": "docs/qa/drag-release-v1_3_1/cpu-report.json",
+      "bytes": 5560,
+      "sha256": "e0c0cfe4d8d6e72ed3821340c827e0e0e213edcdfff1cf564b29b47703b1156b",
+      "compression": null
+    },
+    {
+      "path": "docs/qa/animation-motion-upgrade.json",
+      "bytes": 174429,
+      "sha256": "0cad358ec4dcd5c9b2f7b67ee4c18d6a86b7e0c028a34c428a74d7f45d8e5b20",
+      "compression": null
+    },
+    {
+      "path": "docs/qa/standalone-build.json",
+      "bytes": 10747,
+      "sha256": "f1bd074f1271a539331b858f8692b689da9de6576014449839e62011883a8c1d",
+      "compression": null
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-left-f0039.png",
+      "bytes": 70680,
+      "sha256": "33d2f5143e3b9f51f07d4876478b329dce523719a89d6762cbbe7c65e4f7da80"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-left-f0054.png",
+      "bytes": 70561,
+      "sha256": "7941b55cc4d90ca7d200084834179802491eb149aeba2307e3dedc2541fe7d7f"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-left-stop-f0024.png",
+      "bytes": 103318,
+      "sha256": "fa71e4ce85aeebb0afa2cee8960e207e1fae3f9b51679f447350ec3e7c8a6e50"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-right-f0039.png",
+      "bytes": 72212,
+      "sha256": "536f31d035478a81decf3d28e13577b129f3d9caf252b90d8fb708f21267df3f"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-right-f0054.png",
+      "bytes": 72399,
+      "sha256": "24ec864519aae5a0a86817e7ce8ebda081357c0159441a02f0ec07113667e943"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-run-right-stop-f0024.png",
+      "bytes": 103357,
+      "sha256": "d572fa7638a1bb4039d95e99f4728bcbf44fa5d6e0bfdc061e97d0289062e9eb"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-left-f0039.png",
+      "bytes": 81641,
+      "sha256": "1923324dd45691b38afc5827315832bad26d40265beb322f1895bab8a378375a"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-left-f0054.png",
+      "bytes": 81442,
+      "sha256": "f15ddf2776e7fa04f092ec18fe655cd49dcc08f40afa681248d3cc316931edf0"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-left-stop-f0024.png",
+      "bytes": 104942,
+      "sha256": "05e06ec6912035eb2b6c79043d44cd8aeb999c45095c621a1ee9693c0471a588"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-right-f0039.png",
+      "bytes": 81704,
+      "sha256": "26939979eca664c904fb3bc3de2ee6514e367a2e29440b41ad5d82074f218ca8"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-right-f0054.png",
+      "bytes": 81893,
+      "sha256": "0ca0db94d25e7174d3e6bb2ba62e7c50323cc151bceb65ed7b0671967b387e52"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/gentle-walk-right-stop-f0024.png",
+      "bytes": 103332,
+      "sha256": "cb57293c7ccdb7360b932d06262cfcf3588df1a4590e6e71fa4ee71a5fc1e24e"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-left-f0039.png",
+      "bytes": 75334,
+      "sha256": "f9dfbfcfc9625c880b4f6ecd1d36c785d51551398ab87602177ef9c11899c082"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-left-f0054.png",
+      "bytes": 75087,
+      "sha256": "d75ca06e3c1240906774c8bea48a0f57beae2f9af5dafa35bbf46c2e5dd81ffe"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-left-stop-f0024.png",
+      "bytes": 103981,
+      "sha256": "04f612d99d83dfe74b291e0c306c5778cfdbd00a9429ecbb2ea00ddddb57f339"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-right-f0039.png",
+      "bytes": 73611,
+      "sha256": "1ff39ab32db0c392aa6d4479a42256328b633015a1a9a4990d73d6d1f13087e2"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-right-f0054.png",
+      "bytes": 73450,
+      "sha256": "0e89a9c99618be7eac5c8435bdef1963ad48e090d8408fb9b95eb4c836e87ba5"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-run-right-stop-f0024.png",
+      "bytes": 104459,
+      "sha256": "159716aec0f5088f72d1a17578a95282debfd4c54aa6a016c21469c974524562"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-left-f0039.png",
+      "bytes": 82090,
+      "sha256": "253e52d8bc79e507760cf3cfaf3c52d8efa5e7e1175b933c8e68286a5f071925"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-left-f0054.png",
+      "bytes": 83282,
+      "sha256": "75ca58415137de2962da77fd9ea43cad28c0c007e81c376e5efc0bf35026d7fc"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-left-stop-f0024.png",
+      "bytes": 104905,
+      "sha256": "13ee93649960ad4a4f8b9c0c72ba4b3e6406da82d1b47cb0919f12b29dc243cc"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-right-f0039.png",
+      "bytes": 82550,
+      "sha256": "96227cc0296bbae6988575810947986eab369487067458165284bd9c0ca53f85"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-right-f0054.png",
+      "bytes": 82579,
+      "sha256": "3449beb072c31a204176f1072a574d78fe0e885a95339f896db687f0e9fc6e74"
+    },
+    {
+      "path": "docs/qa/v1.3.1/gait-final/lively-walk-right-stop-f0024.png",
+      "bytes": 103919,
+      "sha256": "dabc911a4744f8ec4172ea706549c9cddf5ef34e5580c4bd10b719f10a3d8bd0"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/gentle-celebrate-f0119.png",
+      "bytes": 105250,
+      "sha256": "2489fe3545b73c1f9103c039d41323db023d6387b9838c8502468a03e10870d3"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/gentle-celebrate-f0152.png",
+      "bytes": 105064,
+      "sha256": "d454f5703c80086e73eb2eccf4ed5daee4084d6947d54fc5f8f619632f5a0256"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/gentle-ear-wave-f0086.png",
+      "bytes": 102628,
+      "sha256": "4de5f9e169edc44382bff2de35ec97a66fb80b0f2f5cd0daff46965fc88d7003"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/gentle-flap-f0047.png",
+      "bytes": 102457,
+      "sha256": "122668f976f45e74e1c42faeb1ed2b7af909d0d1e675eb7c78c34c7e4e4d4187"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/gentle-stretch-f0126.png",
+      "bytes": 101969,
+      "sha256": "558d8e60a01616139b8e2e6be51bd6ab3f09c4295863dd7a65268ead38e18b72"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/lively-celebrate-f0119.png",
+      "bytes": 104875,
+      "sha256": "37ed7a61d855b9fb83ef3ff93e115ee64bac70d577b271366ad21bb141c08cea"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/lively-celebrate-f0152.png",
+      "bytes": 104740,
+      "sha256": "f4d7dfe3bd9eb7f7c6fc5ff2d0444399a5251d92df185d74bc10eddbc66f7011"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/lively-ear-wave-f0086.png",
+      "bytes": 102477,
+      "sha256": "d7a32428e85e64b8df950b109a72dfccbe01c84f73643d9a329171c004b14bdf"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/lively-flap-f0047.png",
+      "bytes": 101560,
+      "sha256": "29b045b672c2a57cbd7607d6dcfd2ff18c604e3e291b5f4d31db90bbd538991f"
+    },
+    {
+      "path": "docs/qa/v1.3.1/motion/lively-stretch-f0126.png",
+      "bytes": 99922,
+      "sha256": "33d201dbd324e04af4dae9133ab39be7a4c15c5a644a52e6d3c3fe8c37b4347c"
+    },
+    {
+      "path": "docs/qa/v1.3.1/pointer/desktop-handlers-released.png",
+      "bytes": 30899,
+      "sha256": "473a81f5065aac3ec7424ea2ae874ef4cca3939617da347f7c23ef75e3016113"
+    },
+    {
+      "path": "docs/qa/v1.3.1/pointer/preview-released.png",
+      "bytes": 27658,
+      "sha256": "cc6e808415237967971cfe3124377d292d8e0483827ba351e1e0a0cb0bf484dc"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/angle-front-0-transparent.png",
+      "bytes": 103700,
+      "sha256": "3c8d5936d99a30650cbb3a6b0b75a4bbd7486e76c3522adeddfc4d9c2a11d835"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/angle-left-45-transparent.png",
+      "bytes": 82558,
+      "sha256": "df617319005346c4c9d55364be48e13cfe6615484822290c3ebb01c223562c04"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/angle-left-75-transparent.png",
+      "bytes": 64677,
+      "sha256": "56b1c516d7778a26f9127fe195bdc66e52d37c6bd1bb576c812fc7239c127a70"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/angle-right-45-transparent.png",
+      "bytes": 82345,
+      "sha256": "214680dc9121235108d8fb95b3dcf4fc56afb68ee918c038675cbce556fe66e2"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/angle-right-75-transparent.png",
+      "bytes": 64971,
+      "sha256": "88a16170680692f4571c05dbc2b7a61a6b2c57f7deade380efbcb783368eff53"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/offline-preview-full.png",
+      "bytes": 227208,
+      "sha256": "a427965ef900858925b14833f391fc2b00e18a65deda8baeb016e291e141bb44"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/pointer-air.png",
+      "bytes": 93000,
+      "sha256": "4309f68c29fe0623567d87b814ab66b01e2c4d2e647e1ff34f20925a29374a9c"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/pointer-drag.png",
+      "bytes": 92609,
+      "sha256": "9a28410e670cb56583dd9dd7a3e6c6daa7d930602c59360434fb940c08fa3778"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/pointer-land.png",
+      "bytes": 94187,
+      "sha256": "dbef023f05e2e21886895938763b65e85c32c39f1a1af0352a7ae6058272fbd5"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/stage-checker.png",
+      "bytes": 84219,
+      "sha256": "e23811e91bff1428c6306847850066923bf9b6607088b8a3eeba11d79fc8a1b4"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/stage-dark.png",
+      "bytes": 84091,
+      "sha256": "0bf417eeb8e91a2b4511d53f1ac7a284edb6c709e46884f35d5d6ab0b62dad64"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/stage-light.png",
+      "bytes": 81835,
+      "sha256": "d1751092cb4c0579cc0860b8cd8425b2a6fd7b8744d85c88e7c7b3256e031d98"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release-final/talk-speaking.png",
+      "bytes": 82655,
+      "sha256": "fc574c82fb5189deefdb922e35d0cd69ed86a16541dc51ff09b7d5ed5ac150c1"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release/angle-front-0-transparent.png",
+      "bytes": 103367,
+      "sha256": "5fefdaf7fc2cb8f95e7135fd2b9d5cafa789fd1e6332f91a9216997c22224cb1"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release/angle-right-45-transparent.png",
+      "bytes": 82516,
+      "sha256": "361bd326e5045060e962dd54f7bdadc71947319a7cc29887bd33348673bca8a0"
+    },
+    {
+      "path": "docs/qa/v1.3.1/release/angle-right-75-transparent.png",
+      "bytes": 64794,
+      "sha256": "f232da02b3f35635cb3a70da04534afbefba2e0761e613d72dc01bfc21945f8d"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-angry-transparent.png",
+      "bytes": 100197,
+      "sha256": "30256d02dfa1a67dd9d1c8865b6b0ceb04aeb2e7db166a288f8d9d4d58e8d023"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-bashful-transparent.png",
+      "bytes": 99961,
+      "sha256": "1bb07b30d367653ccf2ed8a4d9c21d667ff62297e5b1605c8ab094747aaed9a7"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-celebrate-transparent.png",
+      "bytes": 100405,
+      "sha256": "8b9f2a99c952c9fdca712ae5f7567db9aa9ac076995de54b583fb745b529cfb4"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-confused-transparent.png",
+      "bytes": 99043,
+      "sha256": "370e645b41693c448660ea7b88a634527f657b0722403ef4eb4a02a13e061296"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-cozy-transparent.png",
+      "bytes": 100393,
+      "sha256": "45d1df85a625dfab810f639f41274b54f6d3ad2e4c5bd69ded4e9dc8f08d27c2"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-cry-transparent.png",
+      "bytes": 101340,
+      "sha256": "858cb4aa1f9765a6ab48340e2c00e523f7205502a60d729f065f6a8325f12777"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-cuddle-transparent.png",
+      "bytes": 98150,
+      "sha256": "f796db92517ec80f922c6e7eea2969addae5d9cf38fe49f157da77a66e5c86ab"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-curious-transparent.png",
+      "bytes": 101609,
+      "sha256": "f8e95fbd1ee847a7cbe203d396c66205cbc863a4068ab6fc3e446ea7dd45dcd2"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-determined-transparent.png",
+      "bytes": 101156,
+      "sha256": "97dbb4815ef8e8f9b09f502579b362abdd2f3a4021aab7b9d962b697958d11a5"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-ear-fold-transparent.png",
+      "bytes": 98351,
+      "sha256": "8ebb54a4392f1beb980ba1e8e94e30fc498e438990a9af62e538425ac835add7"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-ear-wave-transparent.png",
+      "bytes": 103547,
+      "sha256": "7f1348cb568def0686495b0fce442cf7d4c54c3444a4ef9d636c7c3259aef809"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-excited-transparent.png",
+      "bytes": 98923,
+      "sha256": "66c0b32cd2741904b968f7895450eee03fee6ceb1748d9c876eecdbb1981ce31"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-flustered-transparent.png",
+      "bytes": 99626,
+      "sha256": "056e2bc05ba7b327cad95c820e18d43a4f2ae3091cfe000e42f00f8a98efc157"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-happy-transparent.png",
+      "bytes": 98469,
+      "sha256": "7c29ad0d50c344897bf77325dcd2ac87f6ff09fd81cd42f8dbf1d40e68e6b947"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-love-transparent.png",
+      "bytes": 101386,
+      "sha256": "b2564ea055a45afcc02befcd07e6b7fdf4e8bce154fd12aed5ac5d42c13a5b44"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-neutral-transparent.png",
+      "bytes": 101976,
+      "sha256": "424f2c7818e7464912014df24ede34e0c7bdfa38176295d1dbc0180ae484e1f9"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-pleading-transparent.png",
+      "bytes": 95993,
+      "sha256": "34a36d20df9f4c99b8bf085ed9681dc827f64b5eed51eaa4d663a05d60427687"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-pout-transparent.png",
+      "bytes": 92654,
+      "sha256": "82d7316f76cc69be4537d91b2c7b1d86fc9935e9b77feae7e7d86609a94910c0"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-proud-transparent.png",
+      "bytes": 101675,
+      "sha256": "eb3938bf2511d1d5e2ac9f3278783fa7457849178d1e34de10e9c75f24d74312"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-sad-transparent.png",
+      "bytes": 102076,
+      "sha256": "c826fdd60bd1ebe37875f93148aa3a8b8b8d4f407701bee3a10a02824a34fae6"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-scared-transparent.png",
+      "bytes": 99451,
+      "sha256": "3aea4231950f9c5a7330d11637d24a1243217c04623c3ab4fc76b6b7e174e661"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-shy-transparent.png",
+      "bytes": 101457,
+      "sha256": "3f5e76d553f4cce5519c92110b163ed12ab1741794460f6cc83e7bf1c610fea8"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-sleepy-transparent.png",
+      "bytes": 100453,
+      "sha256": "b4cec2bc4a7f2bb68df6d82674ca17f5a21ba188bf5ab6f95a66cd3b598d8a6d"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-smug-transparent.png",
+      "bytes": 101637,
+      "sha256": "30cbb94a8add3675a97e22349f766c2c9d0116834efca3aba07df5d367908a91"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-sparkle-transparent.png",
+      "bytes": 101208,
+      "sha256": "cfa2c530d884b5ca042774fd140d718f055c120dd9117a9cff6f75d3c1247894"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-stretch-transparent.png",
+      "bytes": 101684,
+      "sha256": "e01043955b5692ba5527bcef1f5ff974eae5cda70b377773572f656317ce7519"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-surprised-transparent.png",
+      "bytes": 99678,
+      "sha256": "f1978d33ca0feb3412f6340f3ad75fd573bd6b5660eaa5c7ca2e1557b544559f"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-thinking-transparent.png",
+      "bytes": 101675,
+      "sha256": "71177f138226ff701117eaf85c0fd20d18f07ee7fb875816ea77edf783139fd3"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-wink-transparent.png",
+      "bytes": 100946,
+      "sha256": "3934f45207bc1f6a4fb971895860b448947ec923a7e33e1e1c1ff3878a239980"
+    },
+    {
+      "path": "docs/qa/v1.3.1/words/word-worried-transparent.png",
+      "bytes": 100839,
+      "sha256": "6bc4a061e6decbcc47c9095f87a18bb47b637dc691cd56327d74851d3c062eeb"
+    }
+  ]
+}

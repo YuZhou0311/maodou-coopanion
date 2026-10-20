@@ -1,0 +1,80 @@
+[
+  {
+    "path": "src/script.ts",
+    "bytes": 8250,
+    "sha256": "e9c5c081f973e72492d3c368d4986103d0d33fbe2e684028fad7c818b8d6e30e",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/script.ts"
+  },
+  {
+    "path": "src/i18n/index.ts",
+    "bytes": 2651,
+    "sha256": "d2bfdf772ec781852eac840a370ae7bb8af81c3833eec4d89445537cf917df6b",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/index.ts"
+  },
+  {
+    "path": "src/i18n/zh.ts",
+    "bytes": 23898,
+    "sha256": "d0a5f9c36382a2a8feea7b8c30b41445f3691fd89cb1c32db800d29b86cefe1c",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/zh.ts"
+  },
+  {
+    "path": "src/i18n/en.ts",
+    "bytes": 24958,
+    "sha256": "50091c463b69e5bca449fe5e2492acc0e9c2403f63c26d0790a3337b104b91d3",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/en.ts"
+  },
+  {
+    "path": "src/i18n/zh-Hant.ts",
+    "bytes": 21850,
+    "sha256": "37a9ce412aa5502afc7173b4d904a048b6d7a6cbc31953dde190470a5072280c",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/zh-Hant.ts"
+  },
+  {
+    "path": "src/i18n/ja.ts",
+    "bytes": 28602,
+    "sha256": "af5c065b244d2eda378513b428ace90afb54d61c797ad285fdcccbc2ef84690f",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/ja.ts"
+  },
+  {
+    "path": "src/i18n/ko.ts",
+    "bytes": 26509,
+    "sha256": "8f1f708e01687d19844f925c20d696d5b824d502a7d317490861ef5dde63d83d",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/ko.ts"
+  },
+  {
+    "path": "src/i18n/fr.ts",
+    "bytes": 25786,
+    "sha256": "e64bf67140c42441213fde5907a6b66c81b816ed45002fbddb6eb2fce96a8104",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/fr.ts"
+  },
+  {
+    "path": "src/i18n/de.ts",
+    "bytes": 24986,
+    "sha256": "62ca20ff51eb790b4869a5ddfe6b6dbe5c7790a936da71973b512603d1cdfff5",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/de.ts"
+  },
+  {
+    "path": "src/i18n/es-419.ts",
+    "bytes": 25189,
+    "sha256": "975dee0b4864992f395a901cb9631c70eb5b415486dba7e1977817ebda5a8b40",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/es-419.ts"
+  },
+  {
+    "path": "src/i18n/pt-BR.ts",
+    "bytes": 24517,
+    "sha256": "537eb48f19bcef4e7302428fed2fdc3fe6bc3367064d1850ea2871efc0eed4e1",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/pt-BR.ts"
+  },
+  {
+    "path": "src/i18n/it.ts",
+    "bytes": 25137,
+    "sha256": "27464a0daaf428a86557570ee78829131b2c266b77fc7be963e6e35adf276999",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/it.ts"
+  },
+  {
+    "path": "src/i18n/ru.ts",
+    "bytes": 35020,
+    "sha256": "6f4748f69e0cdb27460a1f3d5fc55d3dd1d6531c97c9ac7880f71f5ff27c9469",
+    "sourceUrl": "https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/src/i18n/ru.ts"
+  }
+]

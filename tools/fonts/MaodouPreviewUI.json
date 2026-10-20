@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "font": "tools/fonts/MaodouPreviewUI.woff2",
+  "sha256": "ff6833e03bbe64b402abf3fdfa6ce2ab5b1930eb78daeeb789d9b5a5598f6763",
+  "bytes": 159544,
+  "requestedPrintableCharacters": 607,
+  "includedCharacters": 606,
+  "sourceUnsupportedCharacters": "✕",
+  "sourceFont": {
+    "file": "tools/fonts/NotoSansCJKsc-Regular.otf",
+    "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+  },
+  "license": "tools/fonts/OFL.txt",
+  "family": "Maodou Preview UI",
+  "inputs": [
+    {
+      "file": "preview-host/standalone.html",
+      "sha256": "71385c0aafe3beef1cb6f67f4dca60de5a0296cea266a8aafa9d2f072177a0fb"
+    },
+    {
+      "file": "preview-host/standalone-app.js",
+      "sha256": "bc1fd8f766efd86ffcfb49a444d4c13f664376bc288a8e05d9527a3c3ac4866e"
+    },
+    {
+      "file": "preview-host/app.js",
+      "sha256": "729fd7bb9710c18933dbf373008eff74241cf2104bcf534624fb0e4f643f7233"
+    },
+    {
+      "file": "pack/figure.json",
+      "sha256": "5fe319d972bf336cc17a0c9c02eb889ba556f695ec483fff0445b04946c7cd31"
+    }
+  ],
+  "validation": "Decoded generated WOFF2 and verified every source-supported requested character is retained."
+}

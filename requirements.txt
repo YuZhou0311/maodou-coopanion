@@ -1,0 +1,4 @@
+# Asset and PNG validation tools; the runtime JavaScript does not use Python.
+Pillow==12.3.0
+numpy==2.3.5
+fonttools==4.61.1

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>大耳帽兜 · 原生预览</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%2390cada'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <div><p class="eyebrow">MAODOU / COOPANION</p><h1>大耳帽兜 · 原生预览</h1><p id="subtitle">正在读取接入状态。</p></div>
+      <button id="reload" class="secondary">重新载入</button>
+    </header>
+    <div class="workspace">
+      <section class="scene-panel" aria-label="角色预览">
+        <div class="scene-toolbar">
+          <div class="segmented" aria-label="背景"><button data-background="light" aria-pressed="true">浅色</button><button data-background="dark" aria-pressed="false">深色</button><button data-background="checker" aria-pressed="false">透明棋盘</button></div>
+          <button id="pause" data-requires-body disabled>暂停</button>
+        </div>
+        <div id="stage" class="pet-stage" data-background="light">
+          <div id="layer"></div>
+          <div id="empty-state" role="status"><span class="empty-rule"></span><h2>等待角色资产接入</h2><p id="empty-detail">预览会在真实角色完成打包后启用。</p></div>
+          <div id="scene-caption" aria-live="polite">尚未运行角色</div>
+        </div>
+        <div class="scene-footer"><label for="scale">显示比例 <output id="scale-value">0.60</output></label><input id="scale" type="range" min="0.3" max="1.5" step="0.05" value="0.6"><span id="mode">—</span></div>
+        <div class="frame-meter" aria-live="off"><span>页面 rAF <b id="raf-fps">—</b></span><span>角色完成 <b id="body-fps">—</b></span><span>帧间隔 P95 <b id="body-p95">—</b></span></div>
+      </section>
+      <aside class="controls">
+        <section><h2>转向检查</h2><p class="hint">按画面左右选择。自动模式跟随视线和移动。</p>
+          <label class="yaw-label" for="yaw-slider">转向 <output id="yaw-value">自动</output></label><input id="yaw-slider" type="range" min="-75" max="75" step="1" value="0" list="yaw-ticks" data-requires-body disabled><datalist id="yaw-ticks"><option value="-75"></option><option value="-60"></option><option value="-45"></option><option value="-30"></option><option value="-15"></option><option value="0"></option><option value="15"></option><option value="30"></option><option value="45"></option><option value="60"></option><option value="75"></option></datalist>
+          <div class="yaw-grid"><button data-yaw="-1" data-requires-body disabled>左 75°</button><button data-yaw="-0.8" data-requires-body disabled>左 60°</button><button data-yaw="-0.6" data-requires-body disabled>左 45°</button><button data-yaw="-0.4" data-requires-body disabled>左 30°</button><button data-yaw="-0.2" data-requires-body disabled>左 15°</button><button data-yaw="0" data-requires-body disabled>正面</button><button data-yaw="0.2" data-requires-body disabled>右 15°</button><button data-yaw="0.4" data-requires-body disabled>右 30°</button><button data-yaw="0.6" data-requires-body disabled>右 45°</button><button data-yaw="0.8" data-requires-body disabled>右 60°</button><button data-yaw="1" data-requires-body disabled>右 75°</button><button data-yaw="auto" data-requires-body disabled>自动</button></div>
+          <button id="sweep" class="sweep-button" aria-pressed="false" data-requires-body disabled>连续左右转向</button>
+          <label class="check"><input id="instant-yaw" type="checkbox">静态检查时直接到达角度</label>
+        </section>
+        <section><h2>互动</h2><p class="hint">可在角色上点击、抚摸、拖拽和松手。</p><div class="button-grid"><button id="walk-left" data-requires-body disabled>走向左边</button><button id="walk-right" data-requires-body disabled>走向右边</button><button id="listen" aria-pressed="false" data-requires-body disabled>倾听</button><button id="think" aria-pressed="false" data-requires-body disabled>思考</button></div><button id="talk" class="talk-button" aria-pressed="false" data-requires-body disabled>按住模拟说话口型</button><p class="hint">这里只发送口型脉冲，不播放音频。</p></section>
+        <section id="scheme-section" hidden><h2>外观</h2><div id="schemes"></div></section>
+        <section><h2>表情 <span id="expression-count">0</span></h2><div id="expressions" class="word-grid"><p class="hint">清单尚未登记表情。</p></div></section>
+        <section><h2>动作 <span id="motion-count">0</span></h2><div id="motions" class="word-grid"><p class="hint">清单尚未登记动作。</p></div></section>
+      </aside>
+    </div>
+    <details class="technical"><summary>接入与验收记录</summary><p>这里复用 Coopanion 的原生隔离页面与消息宿主。页面 rAF 与角色完成帧率分别统计最近 4 秒；不以页面 60 FPS 代替角色绘制速度。P95 是已返回帧之间的真实时间间隔。</p><p>连续转向采用 8 秒模拟周期。暂停后可使用单步接口，所有单步仍实际绘制。口型测试没有音频。</p><dl><dt>固定上游版本</dt><dd id="upstream">—</dd><dt>清单 / 运行接口</dt><dd id="manifest-version">—</dd><dt>隔离消息来源</dt><dd id="message-origin">待实际运行观察</dd><dt>已返回帧数</dt><dd id="completed-frames">0</dd></dl><pre id="technical-status"></pre><h3>最近事件</h3><pre id="events">尚无事件</pre></details>
+    <footer>使用实际导入目录中的原图与代码。预览入口不绘制替代角色。</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

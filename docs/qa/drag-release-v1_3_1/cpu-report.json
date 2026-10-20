@@ -1,0 +1,200 @@
+{
+  "checkedAt": "2026-10-20T04:15:30.150Z",
+  "passed": true,
+  "scope": "Synthetic CPU events execute the exact extracted old/new desktop page pointer handlers and unchanged native createPet through the character adapter. No browser, OS capture, real desktop or trusted-event claim.",
+  "baseRepository": "YuZhou0311/Coopanion",
+  "basePath": "packages/cortico-world-desktop-pet/web/pet-app.js",
+  "baseGitBlobSha": "ddd0a6a8bc6b35d345b9bea03bdedfa8d99b7d6d",
+  "sourceHashes": {
+    "host-fix/pet-app.base.js": "a4b5f7ce304146da313da8c2b8ccb40a611a8a7c8013f95bdd7cfca4fd93e82d",
+    "host-fix/pet-app.js": "c9794af17ca374ea16bda0d9f97da96878a2019a13c4ac5db2919ae4cbde1fa9",
+    "host-fix/pointer-lifecycle.contract.mjs": "0755c933fe3a1a143177ca64357c364c3aded5bb6cdbd60a1e6a3ea58cada050",
+    "runtime/host-adapter.js": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e",
+    "preview-host/vendor/coopanion/web/kit/body.js": "03520bb81c40465ccf919a540d5a0117081a41a25b965a9762fd888fd9d6751a"
+  },
+  "checks": [
+    {
+      "name": "Original fork reproduces mismatch: buttons-zero clears page but native press stays and follows",
+      "passed": true,
+      "details": {
+        "pagePressing": false,
+        "nativePressing": true,
+        "mode": "drag",
+        "missingReleaseReproduced": true
+      }
+    },
+    {
+      "name": "Patched fork sends cancel on observed buttons-zero; native body releases",
+      "passed": true,
+      "details": {
+        "signals": [
+          {
+            "type": "down",
+            "p": {
+              "x": 280,
+              "y": 278.5,
+              "t": 1016,
+              "buttons": 1,
+              "pointerId": 1,
+              "pointerType": "mouse"
+            }
+          },
+          {
+            "type": "move",
+            "p": {
+              "x": 350,
+              "y": 188.5,
+              "t": 1032,
+              "buttons": 1,
+              "pointerId": 1,
+              "pointerType": "mouse"
+            }
+          },
+          {
+            "type": "cancel",
+            "p": {
+              "x": 420,
+              "y": 178.5,
+              "t": 1048,
+              "buttons": 0,
+              "pointerId": 1,
+              "pointerType": "mouse",
+              "reason": "move-buttons-zero"
+            }
+          },
+          {
+            "type": "move",
+            "p": {
+              "x": 420,
+              "y": 178.5,
+              "t": 1048,
+              "buttons": 0,
+              "pointerId": 1,
+              "pointerType": "mouse"
+            }
+          }
+        ],
+        "release": {
+          "reason": "move-buttons-zero",
+          "cancel": true,
+          "wasDragging": true,
+          "time": 0,
+          "pointerTime": 1048
+        }
+      }
+    },
+    {
+      "name": "Thirty seconds holding still with buttons down does not time out or release",
+      "passed": true,
+      "details": {
+        "simulatedSeconds": 30,
+        "mode": "drag"
+      }
+    },
+    {
+      "name": "Window-level release outside the stage retains the normal throw path",
+      "passed": true,
+      "details": {
+        "mode": "air",
+        "events": [
+          {
+            "kind": "mode",
+            "detail": {
+              "mode": "drag"
+            }
+          },
+          {
+            "kind": "touch",
+            "detail": {
+              "kind": "grab"
+            }
+          },
+          {
+            "kind": "mode",
+            "detail": {
+              "mode": "air"
+            }
+          },
+          {
+            "kind": "touch",
+            "detail": {
+              "kind": "throw",
+              "x": 280
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "lost capture ends a held body once without throwing",
+      "passed": true,
+      "details": {
+        "lastRelease": {
+          "reason": "lostpointercapture",
+          "cancel": true,
+          "wasDragging": true,
+          "time": 0,
+          "pointerTime": 1048
+        }
+      }
+    },
+    {
+      "name": "window cancel ends a held body once without throwing",
+      "passed": true,
+      "details": {
+        "lastRelease": {
+          "reason": "pointercancel",
+          "cancel": true,
+          "wasDragging": true,
+          "time": 0,
+          "pointerTime": 1048
+        }
+      }
+    },
+    {
+      "name": "window blur ends a held body once without throwing",
+      "passed": true,
+      "details": {
+        "lastRelease": {
+          "reason": "window-blur",
+          "cancel": true,
+          "wasDragging": true,
+          "time": 0,
+          "pointerTime": 1032
+        }
+      }
+    },
+    {
+      "name": "Hidden desktop window cancels, even if document itself remains visible",
+      "passed": true
+    },
+    {
+      "name": "Unrelated pointer cannot release the active mouse drag",
+      "passed": true
+    },
+    {
+      "name": "Leaving the window while held does not release; a later up does",
+      "passed": true
+    },
+    {
+      "name": "Legacy messages without buttons remain held; explicit zero recovers",
+      "passed": true
+    },
+    {
+      "name": "A normal click still emits poke and a cancelled click emits none",
+      "passed": true
+    },
+    {
+      "name": "Cross-display follow resolves before release, then native press is cleared",
+      "passed": true
+    },
+    {
+      "name": "Blur cancels an explicit release waiting for cross-display IPC",
+      "passed": true
+    },
+    {
+      "name": "A cancelled old cross-display follow cannot shift a newly held body",
+      "passed": true
+    }
+  ]
+}
