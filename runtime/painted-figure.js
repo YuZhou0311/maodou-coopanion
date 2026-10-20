@@ -8,6 +8,8 @@
  */
 import { createAtlasRenderer } from './atlas-renderer.js';
 import { createAnimator } from './animation.js';
+import { walkingArmPoint } from './arm-walk.js';
+import { applyHoodMaterial } from './hood-material.js';
 import { CUSTOM_MOTION_IDS } from './words.js';
 
 const SVG = 'http://www.w3.org/2000/svg', HTML = 'http://www.w3.org/1999/xhtml';
@@ -304,36 +306,51 @@ export async function createPaintedFigure(base, opts) {
       const ix=(i*stride+col)*2,jx=ix+stride*2;
       return sign*lerp(lerp(a[ix],a[jx],k),lerp(b[ix],b[jx],k),state.k);
     };
-    // Snapshot the free outer edge before fairing, so the solution is not
-    // order-dependent. The short interval covers only the hidden shoulder
-    // branch of the accepted head, never the cheek/chin or free ear tip.
     const free=rows.map(r=>({y:r.rawY,out:sign*r.rawX+r.width*.5}));
     const earAt=y=>{
-      if(y<=free[0].y)return free[0].out;
+      if(y<free[0].y)return -Infinity;
       if(y>=free.at(-1).y)return free.at(-1).out;
       let i=0;while(free[i+1].y<y)i++;
       return lerp(free[i].out,free[i+1].out,(y-free[i].y)/(free[i+1].y-free[i].y));
     };
+    // The join must cover the entire change from the crown to the free ear.
+    // A fixed short window leaves the hidden head branch visible again below
+    // that window, producing a vertical ledge around 20–25 degrees.
     const union=y=>Math.max(headAt(y),earAt(y));
-    const y0=lerp(top,bottom,.18),y1=lerp(top,bottom,.38),h=y1-y0,u0=union(y0),u1=union(y1),secant=(u1-u0)/h;
-    const tangent=y=>{
-      const m=(union(y+1)-union(y-1))*.5;
-      return m*secant>0?Math.sign(m)*Math.min(Math.abs(m),3*Math.abs(secant)):0;
+    const y0=lerp(top,bottom,.11);
+    let joinY=lerp(top,bottom,.60),previousY=y0,previousGap=headAt(y0)-earAt(y0);
+    for(let i=1;i<=96;i++){
+      const y=lerp(y0,bottom-1,i/96),gap=headAt(y)-earAt(y);
+      if(previousGap>=0&&gap<0){
+        const k=Number.isFinite(previousGap)?previousGap/(previousGap-gap):1;
+        joinY=lerp(previousY,y,k);
+      }
+      previousY=y;previousGap=gap;
+    }
+    const y1=Math.min(bottom-1,Math.max(lerp(top,bottom,.64),joinY+8)),h=y1-y0;
+    const x0=union(y0),x1=earAt(y1),m0=(union(y0+1)-union(y0-1))*.5,m1=(earAt(y1+1)-earAt(y1-1))*.5;
+    // Bound both tangent handles inside the transition. A quadratic tangent
+    // intersection becomes degenerate when the ear takes over farther down
+    // at larger yaw. This cubic keeps its Y coordinate strictly increasing.
+    const span=Math.max(.01,x1-x0);
+    const h0=Math.min(h*.24,span*.42/Math.max(.02,Math.abs(m0)));
+    const h1=Math.min(h*.24,span*.42/Math.max(.02,Math.abs(m1)));
+    const xs=[x0,x0+m0*h0,x1-m1*h1,x1],ys=[y0,y0+h0,y1-h1,y1];
+    const envelope=y=>{
+      let lo=0,hi=1;
+      for(let i=0;i<18;i++){
+        const mid=(lo+hi)*.5;
+        if(bezier(ys,mid)<y)lo=mid;else hi=mid;
+      }
+      return bezier(xs,(lo+hi)*.5);
     };
-    const m0=tangent(y0),m1=tangent(y1),buffer=(rows[2].rawY-rows[0].rawY);
-    const hermite=t=>{
-      const t2=t*t,t3=t2*t;
-      return (2*t3-3*t2+1)*u0+(t3-2*t2+t)*h*m0+(-2*t3+3*t2)*u1+(t3-t2)*h*m1;
-    };
-    // The hidden head branch and the ear share one shoulder envelope. Merely
-    // pushing the ear outward leaves the old head bulge exposed at mid-yaw,
-    // and an extra outward bump can make the outline briefly turn vertical.
-    // Trim only that hidden branch, distributing the small correction across
-    // each head row. The front, cheek, chin and 45/75-degree keys are intact.
+    const fade=y=>smooth(y0,y0+3,y)*(1-smooth(y1-3,y1,y));
+    // Both meshes meet the same outline. Trim only the head's hidden branch;
+    // do not expand the cheek over the inner ear or add a covering patch.
     for(let row=0;row<=64;row++){
       const first=row*stride*2,y=currentHeadRaw[first+1];
       if(y<y0||y>y1)continue;
-      const delta=Math.min(0,hermite((y-y0)/h)-headAt(y))*gain;
+      const delta=Math.min(0,envelope(y)-headAt(y))*gain*fade(y);
       if(!delta)continue;
       for(let c=0;c<=12;c++){
         const n=first+c*2,weight=isLeft?1-c/12:c/12;
@@ -343,16 +360,9 @@ export async function createPaintedFigure(base, opts) {
       }
     }
     for(const row of rows){
-      const y=row.rawY,current=sign*row.rawX+row.width*.5;
-      let target=current;
-      if(y>=y0&&y<=y1){
-        target=hermite((y-y0)/h);
-      }else if(y>=y0-buffer&&y<y0){
-        target=current+smooth(y0-buffer,y0,y)*Math.max(0,headAt(y)-current);
-      }else if(y>y1&&y<=y1+buffer){
-        target=current+(1-smooth(y1,y1+buffer,y))*Math.max(0,headAt(y)-current);
-      }
-      const delta=(target-current)*gain;
+      const y=row.rawY;if(y<y0||y>y1)continue;
+      const current=sign*row.rawX+row.width*.5;
+      const delta=(envelope(y)-current)*gain*fade(y);
       row.rawX+=sign*delta*.5;row.width+=delta;
     }
   }
@@ -430,6 +440,9 @@ export async function createPaintedFigure(base, opts) {
       const p=side==='L'?earL:earR,raw=earRootCoordinates[side];
       for(let n=0;n<earMesh.count;n++)rootMaterial(p,n,raw[n*2],raw[n*2+1],p.rootWeight[n],projectedHeadKeys,uvs,state);
     }
+    applyHoodMaterial({head,headRaw:currentHeadRaw,
+      ears:[{part:earL,raw:earRootCoordinates.L},{part:earR,raw:earRootCoordinates.R}],
+      frontUV:headUV[0],q});
   }
   function face(q,sign,state){
     const proj={
@@ -498,6 +511,20 @@ export async function createPaintedFigure(base, opts) {
       limbs[p.id]={bounds,center:[(bounds[0]+bounds[2])/2,(bounds[1]+bounds[3])/2],
         baseZ:isFoot?(p.id.endsWith(nearSide)?6:5):9,foregroundZ:fg.z,
         foregroundMean:sum/fg.vertexAlpha.length,foregroundPeak:peak};
+      if(!isFoot){
+        const band=(lo,hi)=>{
+          let x=0,y=0,count=0;
+          for(let n=0;n<limbMesh.count;n++){
+            const v=limbMesh.st[n*2+1];if(v<lo||v>hi)continue;
+            x+=p.xy[n*2];y+=p.xy[n*2+1];count++;
+          }
+          return [x/count,y/count];
+        };
+        const shoulder=band(0,.0001),pawCenter=band(.749,.921);
+        Object.assign(limbs[p.id],{shoulder,pawCenter,
+          pawFromShoulder:[pawCenter[0]-shoulder[0],pawCenter[1]-shoulder[1]],
+          landmarkScope:'actual mesh root row and distal rows 9..11; after body transform'});
+      }
     }
     return {nearSide,hipGap:lerp(19,4,smooth(.08,.9,Math.abs(lastYaw))),
       footSeparationX:limbs.footR.center[0]-limbs.footL.center[0],parts:limbs};
@@ -538,8 +565,16 @@ export async function createPaintedFigure(base, opts) {
         box[0]+=(isLeft?1:-1)*handIn;
         const pivot=[isLeft?box[0]+box[2]-3:box[0]+3,box[1]+2];
         const arm=isLeft?armL:armR,armOver=limbFront['arm'+side];
-        spriteBox(arm,limbMesh,isLeft?'arm.left':'arm.right',box,{angle:pose['arm'+side]??0,pivot,transform:transformBody,
-          material:(n,x,y)=>rootMaterial(arm,n,x,y,1-smooth(.05,.46,limbMesh.st[n*2+1]),bodyKeys,bodyUVs,state,10,40)});
+        const sprite=art[isLeft?'arm.left':'arm.right'],rootEdge=sampleRow(sprite,0);
+        for(let n=0;n<limbMesh.count;n++){
+          const u=limbMesh.st[n*2],v=limbMesh.st[n*2+1],edge=sampleRow(sprite,v);
+          let x=box[0]+lerp(edge[0],edge[1],u)*box[2],y=box[1]+v*box[3];
+          [x,y]=walkingArmPoint({x,y,v,edge,rootEdge,box,pivot,
+            angle:pose['arm'+side]??0,blend:pose.walkArms??0});
+          rootMaterial(arm,n,x,y,1-smooth(.05,.46,v),bodyKeys,bodyUVs,state,10,40);
+          [x,y]=transformBody(x,y);arm.xy[n*2]=x;arm.xy[n*2+1]=y;
+        }
+        arm.vertexAlpha.fill(1);
         for(let n=0;n<limbMesh.count;n++)armOver.vertexAlpha[n]=(near?turn:0)*smooth(.02,.34,limbMesh.st[n*2+1]);
       }
       // Perspective compresses the two hip tracks, so a side-on step can

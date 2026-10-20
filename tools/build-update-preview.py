@@ -12,14 +12,14 @@ resizing, interpolation, recoloring, retouching, or added shadow over the art.
 
 When a report.json is present it must be complete and is preserved by hash in
 the source map. Recorded PNG hashes are checked. Gait sample selection uses the
-recorded foot-separation extremes and peak lift among available real captures.
-Without a report, the first, middle and last available f0039..f0068 PNGs are used.
+near paw's shoulder-relative extrema when recorded; older reports fall back to
+foot separation and lift. Without a report, three available captures are used.
 Angle inputs may use yaw-{signed angle}.png or the native qa-release names
 angle-left-75-transparent.png, angle-front-0-transparent.png, etc. A matching
 recorded file takes precedence over an unrecorded file from either naming style.
 
-No GIF is produced: 30 consecutive frames at 60 Hz are a short sampled segment;
-their endpoint pose and ear spring state are not guaranteed to form a loop.
+This tool produces static contact sheets. Continuous, non-looping review clips
+are produced separately by build-motion-video.py from ordered native captures.
 Requires Pillow and a local TrueType/OpenType font. Never accesses the network.
 """
 from __future__ import annotations
@@ -192,16 +192,28 @@ def choose_walk_samples(inputs: Inputs, phase_id: str) -> list[tuple[int, list[s
     available = {}
     for path in inputs.directory.glob(phase_id + "-f*.png"):
         match = pattern.fullmatch(path.name)
-        if match and 39 <= int(match[1]) <= 68:
+        if match and 39 <= int(match[1]):
             if inputs.captures and path.name not in inputs.captures:
                 continue
             available[int(match[1])] = path.name
     if len(available) < 3:
-        raise RuntimeError(f"Need at least 3 actual f0039..f0068 captures for {phase_id}")
+        raise RuntimeError(f"Need at least 3 actual captures after frame 38 for {phase_id}")
     phase = inputs.phases.get(phase_id, {})
     rows = [row for row in phase.get("rows", []) if row.get("index") in available
             and isinstance(row.get("limbs", {}).get("footSeparationX"), (int, float))]
     chosen: dict[int, list[str]] = {}
+    paw_rows = [row for row in rows if isinstance(row.get('limbs', {}).get('parts', {}).get(
+        'arm' + row.get('limbs', {}).get('nearSide', ''), {}).get('pawFromShoulder'), list)]
+    if len(paw_rows) >= 3:
+        def paw_x(row):
+            return row['limbs']['parts']['arm' + row['limbs']['nearSide']]['pawFromShoulder'][0]
+        low, high = min(paw_rows, key=paw_x), max(paw_rows, key=paw_x)
+        chosen[low['index']] = ['minimum actual near-paw horizontal position relative to shoulder']
+        chosen[high['index']] = ['maximum actual near-paw horizontal position relative to shoulder']
+        middle = (low['index'] + high['index']) / 2
+        between = min((row for row in paw_rows if row['index'] not in chosen), key=lambda row: abs(row['index'] - middle))
+        chosen[between['index']] = ['actual intermediate phase between the measured paw extremes']
+        return sorted(chosen.items())
     if len(rows) >= 3:
         picks = (
             (min(rows, key=lambda row: row["limbs"]["footSeparationX"]), "minimum actual foot-centre separation"),
@@ -328,8 +340,8 @@ def main():
                 "scope": "Technical layout of actual runtime captures. Source pixels are not resized, recolored, painted over or sharpened. All nonzero source alpha is included; only common transparent outer margins are cropped. No visual/performance acceptance is inferred.",
                 "reports": {"angles": angle_inputs.report_meta, "motion": motion_inputs.report_meta},
                 "font": {"file": display_path(Path(font_path)), "sha256": font_hash, "language": "zh" if chinese else "en"},
-                "animation": {"gifGenerated": False, "reason": "Only a short captured f0039..f0068 segment is available. Endpoint poses and ear spring state have not been verified as identical. No artificial seamless loop, frame reversal, duplication or interpolation is made.",
-                              "sourceTickSeconds": 1 / 60, "candidateFrameRange": [39, 68], "candidateDurationSeconds": .5},
+                "animation": {"gifGenerated": False, "reason": "This tool lays out static contact sheets. Continuous review clips are generated separately by build-motion-video.py and have their own source manifests; no loop, reversal or interpolated motion is implied by these sheets.",
+                              "sourceTickSeconds": 1 / 60},
                 "outputs": outputs}
     atomic(out / "source-map.json", (json.dumps(manifest, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
     print(json.dumps({"status": "complete", "output": display_path(out), "outputs": [{"file": item["file"], "size": item["size"], "cards": len(item["cards"])} for item in outputs],

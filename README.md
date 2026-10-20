@@ -1,27 +1,27 @@
-# 异色大耳帽兜 · Coopanion v1.3.2
+# 异色大耳帽兜 · Coopanion v1.3.3
 
 为 Coopanion 制作的非官方第一阶段异色大耳帽兜角色。工程包含完整生成原图、分层 PNG、2048×2048 图集、网格与动画源码、本地预览，以及旧版 Coopanion 宿主的鼠标释放修复补丁。
 
 运行格式是 **Coopanion `manifest: 2 / api: 2`**。本项目采用绘画分层与网格动画，不包含 Cubism `moc3`、`model3.json` 或 Cubism Editor 工程。左右侧转覆盖约 **−75° 至 +75°**，不是完整 360° 模型。
 
-> v1.3.2 调整耳根材质衔接、侧耳流线与走跑时的四肢交错。修改内容与适用范围见 [本次版本说明](docs/releases/v1.3.2.md)；发布验收、原始报告及源码哈希以 [验收入口](docs/qa/acceptance.md) 为准。可直接使用的两个文件位于 `dist/`。
+> v1.3.3 根据实际使用反馈，继续修复约 22° 的头耳外缘台阶、连接处的旧阴影扩散，以及走路时双臂同开同合的姿态。修改内容见 [本次版本说明](docs/releases/v1.3.3.md)；发布文件、实际运行记录与源码哈希以 [验收入口](docs/qa/acceptance.md) 为准。可直接使用的两个文件位于 `dist/`。
 
-![v1.3.2 五向实际运行预览](preview/release/v1.3.2/turning-five-views.png)
+![v1.3.3 五向实际运行预览](preview/release/v1.3.3/turning-five-views.png)
 
-图册来自 v1.3.2 最终代码的实际运行截图，保持角色原像素。连续动作可在下方离线预览中操作查看。
+图册与下方动作片段来自角色实际运行捕获。图册用于观察形状和遮挡，连续片段用于检查摆臂与步伐；也可以下载离线预览自行操作。
 
 ## 安装到 Coopanion
 
 可直接下载，无需安装开发环境：
 
-- [角色安装 ZIP](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Coopanion-v1.3.2.zip)
-- [离线预览 HTML](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Offline-Preview-v1.3.2.html)：保存为 `.html` 后双击打开。
+- [角色安装 ZIP](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Coopanion-v1.3.3.zip)
+- [离线预览 HTML](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Offline-Preview-v1.3.3.html)：保存为 `.html` 后双击打开。
 
 仓内文件与 SHA-256 见 [dist/README.md](dist/README.md)。离线预览不用安装 Coopanion，也不依赖网络。
 
-1. 使用构建得到的 `Maodou-Coopanion-v1.3.2.zip`，保持 ZIP 格式。
+1. 使用构建得到的 `Maodou-Coopanion-v1.3.3.zip`，保持 ZIP 格式。
 2. 打开 Coopanion「装扮」页，在「形象」一行选择「导入」，选中 ZIP；支持的宿主也可将 ZIP 拖入装扮页。
-3. 确认角色名称「异色大耳帽兜」和版本 `1.3.2`，然后安装并选用。角色 ID 是 `maodou-shiny`，已有同 ID 版本时按导入器提示替换。
+3. 确认角色名称「异色大耳帽兜」和版本 `1.3.3`，然后安装并选用。角色 ID 是 `maodou-shiny`，已有同 ID 版本时按导入器提示替换。
 4. 选择「温柔」或「活泼」性格。两者共享配色，动作节奏与幅度不同。
 
 入口依据固定版本的 [Coopanion 原生导入说明](https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/README.md#导入)。未提供 `packDir` 的嵌入宿主需要自行实现形象包安装位置。
@@ -56,31 +56,31 @@ npm run preview
 另开终端，在工程根目录构建可安装 ZIP 和双击打开的离线预览：
 
 ```sh
-node preview-host/validate-native.mjs --build-zip=exports/Maodou-Coopanion-v1.3.2.zip --report=docs/qa/native-import.json
+node preview-host/validate-native.mjs --build-zip=exports/Maodou-Coopanion-v1.3.3.zip --report=docs/qa/native-import.json
 node tools/build-standalone.mjs
 ```
 
-输出位于 `exports/`。原生验收器使用固定上游的导入器实际解包、检查 PNG，并在工程临时目录验证安装；不会安装到用户正在使用的桌宠。离线文件 `Maodou-Offline-Preview-v1.3.2.html` 内嵌角色、图集、原生身体与中文字体，方便双击查看。它是独立本地页面，原生 iframe 接入另由本地预览验证。
+输出位于 `exports/`。原生验收器使用固定上游的导入器实际解包、检查 PNG，并在工程临时目录验证安装；不会安装到用户正在使用的桌宠。离线文件 `Maodou-Offline-Preview-v1.3.3.html` 内嵌角色、图集、原生身体与中文字体，方便双击查看。它是独立本地页面，原生 iframe 接入另由本地预览验证。
 
-## v1.3.2 的修改
+## v1.3.3 的修改
 
-| 项目 | 修改内容 |
+| 用户反馈 | 本次处理 |
 | --- | --- |
-| 耳根材质 | 耳根沿用当前头部方向的同源绘画颜色，并沿耳长逐渐回到原耳材质；前后耳层共享采样，保留各自的透明覆盖与遮挡 |
-| 侧耳流线 | 侧向耳中心线改用三次 Bézier 曲线，宽度使用独立的圆根、渐宽中段与圆润耳尖轮廓；耳肩与头部外缘之间补齐连续过渡 |
-| 大角度近耳 | 调整约 75° 侧转的近耳中心线，使耳身向后下方垂落，保留整耳抬起、展开及耳尖延迟动作 |
-| 四肢层级 | 增加近侧手臂与脚部在躯干前的覆盖，手臂根部借用躯干材质；侧向收拢两脚的投影间距，脚步交叉时保持稳定的近远层级 |
-| 支撑与摆动 | 从宿主 `legsScreen` 恢复步态相位，走跑采用交替的单脚支撑与摆动，并保留短暂双脚支撑；摆臂和耳动作跟随同一相位 |
-| 连续落地 | 摆动脚的水平轨迹与支撑段连续连接，抬脚采用落地速度归零的曲线；脚部转角随抬起高度连续收回，起步与停步保留过渡 |
-| 端点稳定性 | 头顶与下巴使用共同顶点构成扇形封口，避免接近正视时的极细网格受 Float32 精度影响而翻向 |
+| 约 22° 时头耳交界不圆润 | 将过早结束的固定修整区间，改为覆盖头部外缘到自由耳外缘实际接管位置的连续曲线；头与耳在同一区间共同修整，避免旧头部分支在下方再次露出 |
+| 连接处的阴影影响整体观感 | 将头部连接带和耳根映射到同一干净的内部绘画材质，停止把方向切片的旧边缘阴影扩散到耳根；保留原透明覆盖、内耳配色与近侧耳朵遮挡 |
+| 走路时双臂同开同合 | 进入走跑后，手臂从原来的斜伸形状平顺转为固定肩点下垂，再按同一步态相位交替前后摆动；近远手层级稳定，停止后恢复原姿态 |
 
-此前的头部高度微调、已清理的躯干与外耳原图、整耳 `raise / spread` 动作，以及角色端和旧宿主的指针释放修复继续保留。生产素材来源以 `pack/art-data.json` 和 `tools/build-art.py` 的登记为准。
+材质映射为所有相关顶点写入有效坐标，即使该顶点的材质权重为零也不跳过，避免三角形插值跨入其他图集区域而形成细线。转向起步时逐渐退出原方向材质，保留连续过渡。
 
-本节记录已实施的修改。发布包对应的检查范围、运行画面与哈希见 [验收入口](docs/qa/acceptance.md)，详细说明见 [v1.3.2 版本说明](docs/releases/v1.3.2.md)。
+此前的头部高度微调、双脚交错与落地恢复、整耳抬起和展开，以及角色端与旧宿主的指针释放处理继续保留。耳朵跟随走跑的同一步态相位，并通过不同响应速度形成抬起、回落和耳尖延迟。
 
-![v1.3.2 活泼方案左右行走的实际相位](preview/release/v1.3.2/walking-lively.png)
+![v1.3.3 约 22° 头耳连接对照](preview/release/v1.3.3/join-22-comparison.png)
 
-[温柔方案行走](preview/release/v1.3.2/walking-gentle.png) · [停步恢复](preview/release/v1.3.2/walking-stop.png) · [截图来源与原始帧号](preview/release/v1.3.2/source-map.json)
+![v1.3.3 活泼方案左右行走的实际相位](preview/release/v1.3.3/walking-lively.png)
+
+连续片段：[活泼方案左右行走](preview/release/v1.3.3/walking-lively.mp4) · [温柔方案左右行走](preview/release/v1.3.3/walking-gentle.mp4)。片段用于观察动作连续性；设备实时性能以验收记录中明确注明的环境和计时为准。
+
+**v1.3.2 的说明、图册和报告保留为历史证据。** 用户在该版本的实际使用中继续指出了上述问题，因此旧版的检查结论不作为 v1.3.3 的验收结论。本节记录实施内容，本次发布包的具体检查范围与实际结果统一见 [验收入口](docs/qa/acceptance.md)。
 
 ## 内容与编辑入口
 

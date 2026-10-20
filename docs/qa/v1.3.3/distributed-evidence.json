@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "version": "1.3.3",
+  "scope": "Final production reports only. Reports are losslessly gzip-compressed, summaries omit dense per-tick rows. PNGs are an explicitly selected subset; full recorded gait sequences are represented by the two ordered native-frame MP4 review clips. No user attachment or raw third-party reference media are included.",
+  "reports": [
+    {
+      "directory": "docs/qa/v1.3.3/release-verified",
+      "rawSHA256": "9a051b2e974e17e85913aad96e3c53b47357937b912770286a0e288f2385f858",
+      "rawBytes": 847403,
+      "gzipSHA256": "7f37cfb649f35b906d28808099c4be810073e3954d95908ed54bdacce150eab4",
+      "gzipBytes": 103098,
+      "checksPassed": 24,
+      "checksTotal": 24,
+      "recordedPNGCount": 35,
+      "distributedPNGCount": 35,
+      "distributedPNGs": [
+        {
+          "file": "angle-front-0-transparent.png",
+          "bytes": 100908,
+          "sha256": "c82a505f68d524b44716652b13ce0611649d4e8cc0e6b4ff5943ca10961ce4f9"
+        },
+        {
+          "file": "angle-left-15-transparent.png",
+          "bytes": 93641,
+          "sha256": "cb1600eeb508489ee8ee927dd926b71cdcbbe4507764c2bf6b89cb26acf631e6"
+        },
+        {
+          "file": "angle-left-20-transparent.png",
+          "bytes": 89734,
+          "sha256": "769e39b273ab01da0a384f9f08b1ae6f3eb2a0044787162e94d3b7fe4b8b7636"
+        },
+        {
+          "file": "angle-left-21-transparent.png",
+          "bytes": 88790,
+          "sha256": "3f7627829cde56978cb01ed8e15ac9a9218a7943dfec6b1ddf4065980dd4bc0f"
+        },
+        {
+          "file": "angle-left-22-transparent.png",
+          "bytes": 88134,
+          "sha256": "fc4eac968af9ddd6a520f2052f1253d72091fd784880095c334e4334e5862383"
+        },
+        {
+          "file": "angle-left-23-transparent.png",
+          "bytes": 87741,
+          "sha256": "d2e78828b282dcd897a151f72a695ab5f8f6a101e74357f3fbdee33afe8666dc"
+        },
+        {
+          "file": "angle-left-25-transparent.png",
+          "bytes": 86563,
+          "sha256": "44ac27a74726af4ec05a5c0a587e174feada942179ec9888eaeb8b7f8379d723"
+        },
+        {
+          "file": "angle-left-30-transparent.png",
+          "bytes": 84195,
+          "sha256": "8273441ad81dff5f80c2e1247fcbb1303dae2cc217cadd846f66dfa9a956799a"
+        },
+        {
+          "file": "angle-left-35-transparent.png",
+          "bytes": 81709,
+          "sha256": "e7c9b495c3f81859951a67a83dff7ffda1df2951f91eb6acd715f6e923f763e3"
+        },
+        {
+          "file": "angle-left-38-transparent.png",
+          "bytes": 81297,
+          "sha256": "ac1860ed3fc8f32a8168175aeb950fdca3145b656335edf0f7704a063f97ad86"
+        },
+        {
+          "file": "angle-left-41-transparent.png",
+          "bytes": 81240,
+          "sha256": "f6a7d9314a6482cdf5c62483479a994b4c3110ea4cbc7415d6754694efd80702"
+        },
+        {
+          "file": "angle-left-45-transparent.png",
+          "bytes": 81322,
+          "sha256": "ec110785f4c9d2fbdfbaf03552bd7000be920e2afc5152f14079e155933f1099"
+        },
+        {
+          "file": "angle-left-60-transparent.png",
+          "bytes": 73545,
+          "sha256": "0c63bbcad6c2063f1347f4feed75d30729d98853ab28638b6553ce51d9e38771"
+        },
+        {
+          "file": "angle-left-75-transparent.png",
+          "bytes": 69998,
+          "sha256": "38feb73e6ee27b6e558f716401407964c9b6eb20e285ab93bf8f55897eab942d"
+        },
+        {
+          "file": "angle-right-15-transparent.png",
+          "bytes": 93959,
+          "sha256": "a2dce85c15019dde1c07b57221bc66ed07bde56569e658ae1e29de3ca3d2c530"
+        },
+        {
+          "file": "angle-right-20-transparent.png",
+          "bytes": 89824,
+          "sha256": "cb31e558aa31e2f8fada5ede8e2cd00bdab6d74274632b7a95050ffe40af9a69"
+        },
+        {
+          "file": "angle-right-21-transparent.png",
+          "bytes": 88808,
+          "sha256": "6ef3209245f7cf851ff37e3dd112fac9afda83e63e9d272ba33650d45ea4df3d"
+        },
+        {
+          "file": "angle-right-22-transparent.png",
+          "bytes": 88055,
+          "sha256": "748503261830a1858b34e54111598f29fd399784b49869dab6c53092a0541934"
+        },
+        {
+          "file": "angle-right-23-transparent.png",
+          "bytes": 87402,
+          "sha256": "8fc046d1f6f2bcaba097108923eea929d2e8fe18a2062a396b58c0aa75c88090"
+        },
+        {
+          "file": "angle-right-25-transparent.png",
+          "bytes": 86681,
+          "sha256": "47b210ee26301118a8c78df7b2e15ca60ae68dea670dd82f0535228e93c44785"
+        },
+        {
+          "file": "angle-right-30-transparent.png",
+          "bytes": 83961,
+          "sha256": "d8a7b590834b50b81affa91fe624f7e9150d32acf09b18131ec133ce935917de"
+        },
+        {
+          "file": "angle-right-35-transparent.png",
+          "bytes": 81874,
+          "sha256": "6c210f23a6eeae0dc40b2bebf7ba7be2e1f7fee7af09a64a8d37a18fd35a68d7"
+        },
+        {
+          "file": "angle-right-38-transparent.png",
+          "bytes": 81209,
+          "sha256": "d0f99cb36cf0ca72034b9f2aec8b1213779d75ef56b1e587dada2f412a921823"
+        },
+        {
+          "file": "angle-right-41-transparent.png",
+          "bytes": 81162,
+          "sha256": "83f55d4a7fe9b4919b14f87e709da9c2011179d7e2fb8accbbb898f1304f8f51"
+        },
+        {
+          "file": "angle-right-45-transparent.png",
+          "bytes": 81167,
+          "sha256": "d0bdce030f3ee305c75f3d5227e0ef5ab238e174ec27af52a8652f1bd1b48ee7"
+        },
+        {
+          "file": "angle-right-60-transparent.png",
+          "bytes": 73366,
+          "sha256": "67c81c5bb99bc57e8baef69421411aadf15f18d35d6d8cdeccc74c22667a2a76"
+        },
+        {
+          "file": "angle-right-75-transparent.png",
+          "bytes": 70197,
+          "sha256": "c9e7aa6c472dbd64c9da207a1c2c6d45c0a8340149853cd4bfe8b46cf73162ea"
+        },
+        {
+          "file": "offline-preview-full.png",
+          "bytes": 226478,
+          "sha256": "65fa14445428392906b5367e13271d8dcacd8bd866674c4809ccab72f37c9c41"
+        },
+        {
+          "file": "pointer-air.png",
+          "bytes": 92049,
+          "sha256": "64e517fb9f67164af733fe051f12b5b48b2c7e38b360dbb4bfd6f879aa68579b"
+        },
+        {
+          "file": "pointer-drag.png",
+          "bytes": 92081,
+          "sha256": "53ddd066efb7cf331e9c1f22f2a67ba87ffb2f9d79b548ca80d870b13bf20b25"
+        },
+        {
+          "file": "pointer-land.png",
+          "bytes": 93831,
+          "sha256": "e4c9dec22de555022e8746f30000cab34c5a8a4ad11f92c8c143d28232827377"
+        },
+        {
+          "file": "stage-checker.png",
+          "bytes": 83750,
+          "sha256": "1710f1c6790cc2328573c1ed61eb2386a8912cf4b36f7566d1bc236ec188aca7"
+        },
+        {
+          "file": "stage-dark.png",
+          "bytes": 83706,
+          "sha256": "15d0068bdb083b04a9e9c6789f177493d43c8375e6d13a8cd63574c6e9e48fa5"
+        },
+        {
+          "file": "stage-light.png",
+          "bytes": 81708,
+          "sha256": "3d9cce52b16a0f6e4e61376527aca1c33d88d10e620bb6fe0cff70b574f5205b"
+        },
+        {
+          "file": "talk-speaking.png",
+          "bytes": 82071,
+          "sha256": "44d1224c4584e6b124a65b4edd6d9c22fa1b45b767b04582094e5a3d79415fcd"
+        }
+      ]
+    },
+    {
+      "directory": "docs/qa/v1.3.3/motion-verified",
+      "rawSHA256": "2754a5718f0e372583b9b668aec0581df21ead6cd8eaa32b045b8f0f250d2850",
+      "rawBytes": 26705728,
+      "gzipSHA256": "408fd20730b23c18aa3ede4e0274675e928f2ad14d608534630a55a6f33e1099",
+      "gzipBytes": 2932896,
+      "checksPassed": 231,
+      "checksTotal": 231,
+      "recordedPNGCount": 1162,
+      "distributedPNGCount": 42,
+      "distributedPNGs": [
+        {
+          "file": "gentle-celebrate-f0119.png",
+          "bytes": 90242,
+          "sha256": "cc3cbb57c72b701909a24e42bd78b0aa1182af50f26ef66b64669f999b6fe359"
+        },
+        {
+          "file": "gentle-celebrate-f0152.png",
+          "bytes": 90901,
+          "sha256": "e59b662bb7a9318081721f982c211138006b6efb708619a99a55b50fcdd55419"
+        },
+        {
+          "file": "gentle-ear-wave-f0086.png",
+          "bytes": 88226,
+          "sha256": "3e5f498004f751156738671b1bfd8af273f51713c5d04d97edd82d34cb9e7237"
+        },
+        {
+          "file": "gentle-flap-f0047.png",
+          "bytes": 88635,
+          "sha256": "2b1a3fc0bf047e0b263df6614a9d2f50bcb838b364dd87c6a56373b812036111"
+        },
+        {
+          "file": "gentle-run-left-f0076.png",
+          "bytes": 76150,
+          "sha256": "a1a5c41990e51ba394f4bcd2ca6c415372e1bcecc4331a4dbc9c155011341f3c"
+        },
+        {
+          "file": "gentle-run-left-f0093.png",
+          "bytes": 76450,
+          "sha256": "196eb6d62d57a19090bfde193ef86b8e42887e12d746812e6ae2b7acd6c1496f"
+        },
+        {
+          "file": "gentle-run-left-f0110.png",
+          "bytes": 76060,
+          "sha256": "9856febe63e96533e8a5a83312a165a3f738b59c1d39126ec079dde473720912"
+        },
+        {
+          "file": "gentle-run-left-stop-f0024.png",
+          "bytes": 101564,
+          "sha256": "1e630c44d0e70c2f1ceb17da6f52a43cb550a6c4266c8d02ead5b5b7f7f71162"
+        },
+        {
+          "file": "gentle-run-right-f0084.png",
+          "bytes": 75998,
+          "sha256": "48a996a77df23f342d38e3d05f71e58f56fa4f94471f4678c32c806e88cc00c9"
+        },
+        {
+          "file": "gentle-run-right-f0087.png",
+          "bytes": 75863,
+          "sha256": "87839fa7ab4b648370d2de8a162bb48606199e34d92b6daf5a414001ef5bd687"
+        },
+        {
+          "file": "gentle-run-right-f0091.png",
+          "bytes": 76012,
+          "sha256": "2bf3694326c710711708465c8530a965ea6600f65105ae72d0a1516cc45d32cd"
+        },
+        {
+          "file": "gentle-run-right-stop-f0024.png",
+          "bytes": 96413,
+          "sha256": "e274aab04993ac4e6502cc31cc707f7f0dc2a65ae893304086bcd35097d9b49f"
+        },
+        {
+          "file": "gentle-stretch-f0126.png",
+          "bytes": 88072,
+          "sha256": "531b475bf29a07f95c3570f780e4b91daa4d65a022c5d3819171d86c07181e80"
+        },
+        {
+          "file": "gentle-walk-left-f0092.png",
+          "bytes": 81103,
+          "sha256": "7eab27e05f051ea10c9973d8067fff8f47e27e6f36ca47b0a0ca06e804bbc821"
+        },
+        {
+          "file": "gentle-walk-left-f0099.png",
+          "bytes": 81650,
+          "sha256": "155c80943152b5d1543e69e356413b7d3e058c8d7cf6935b3b3d383708ff1be7"
+        },
+        {
+          "file": "gentle-walk-left-f0106.png",
+          "bytes": 81403,
+          "sha256": "779e427d755455ebbe633c531b08cca9e0821b700acecda975ca784ff2a4995f"
+        },
+        {
+          "file": "gentle-walk-left-stop-f0024.png",
+          "bytes": 93934,
+          "sha256": "4116214f1b2ed15f7be19a79f5d7bafdbfb91f111246b02d07815bda082192e8"
+        },
+        {
+          "file": "gentle-walk-right-f0088.png",
+          "bytes": 81523,
+          "sha256": "38822ab4aa8c96e2291d2b85aac58346c10607fc765d49271fb983c40a61bf9b"
+        },
+        {
+          "file": "gentle-walk-right-f0095.png",
+          "bytes": 81600,
+          "sha256": "2c06408e6dfbcb235f3def19ed3eb45970bf9a3771d07146edcc10bf491117b2"
+        },
+        {
+          "file": "gentle-walk-right-f0102.png",
+          "bytes": 80825,
+          "sha256": "7077baa06af9110d650f3571fc04d015cc1fd0d2fba51aeb5fbd3521fadf9f73"
+        },
+        {
+          "file": "gentle-walk-right-stop-f0024.png",
+          "bytes": 102133,
+          "sha256": "a698848b80e9d11acf97c2a9fe6404cf3b947bd0cc845f8ccb1976f7a3dfe660"
+        },
+        {
+          "file": "lively-celebrate-f0119.png",
+          "bytes": 90177,
+          "sha256": "e5365bb0da61f83be7fbb9c7db65ee38a008ad4f19c82b826ead684e326223a2"
+        },
+        {
+          "file": "lively-celebrate-f0152.png",
+          "bytes": 90627,
+          "sha256": "04c9a914736764428bfbd8facfad6ca88420becafe684a58f193eb8c9950bad0"
+        },
+        {
+          "file": "lively-ear-wave-f0086.png",
+          "bytes": 87703,
+          "sha256": "24aeb9d43977315b2d1af8c73f6ce112bc40afbf836effcf3e7343f5ad90e7b0"
+        },
+        {
+          "file": "lively-flap-f0047.png",
+          "bytes": 88025,
+          "sha256": "0b7cb6584b6070008d2eefd9cffa93599a614974b19555b212da84df45ca87f9"
+        },
+        {
+          "file": "lively-run-left-f0076.png",
+          "bytes": 76260,
+          "sha256": "0e7596e82a3717ba8510c4ed987dda7e1fbe5e5a4f8d45ff63b65a6dd1e4ee3a"
+        },
+        {
+          "file": "lively-run-left-f0093.png",
+          "bytes": 76505,
+          "sha256": "d2782ff54ba4d6e886b4cac9a2fe1694d2b00b248bbe39d9b81d7447b94b7e78"
+        },
+        {
+          "file": "lively-run-left-f0110.png",
+          "bytes": 75915,
+          "sha256": "584266dbe05dee558687855b72f1ee1a0d19a295470533ef0f489b6bac8cb3d6"
+        },
+        {
+          "file": "lively-run-left-stop-f0024.png",
+          "bytes": 100384,
+          "sha256": "f9ad3f82b9d2c47518c84dea3691e567ab5acc47859a8c3aee61c4f9e264af2b"
+        },
+        {
+          "file": "lively-run-right-f0084.png",
+          "bytes": 76987,
+          "sha256": "0ba54bd905a4afcc15eed56afe6bd2a13417b2e8f2eece70a8f68fcc603261bc"
+        },
+        {
+          "file": "lively-run-right-f0087.png",
+          "bytes": 76201,
+          "sha256": "d31b35d6b0f637e4315fb71e5bdb4296360c1eaefca54f9e83003c60af11679c"
+        },
+        {
+          "file": "lively-run-right-f0091.png",
+          "bytes": 76339,
+          "sha256": "42335c803f5b0f405d02f9c8181488bfe72257c032d230bb24e4c262ac276125"
+        },
+        {
+          "file": "lively-run-right-stop-f0024.png",
+          "bytes": 102296,
+          "sha256": "9b0ec16aea38285e660f3d7c49cb2ab2b2f580fe5d37d12c31e381993a1b9b79"
+        },
+        {
+          "file": "lively-stretch-f0126.png",
+          "bytes": 87284,
+          "sha256": "2bbf45c7a6d5d3034bb985f4d2d2813b6be40a178eb00313ac26b29fb7bb0c26"
+        },
+        {
+          "file": "lively-walk-left-f0067.png",
+          "bytes": 82101,
+          "sha256": "9db3d40d3472bb5bf7ddfd1ad6746c86d340299f632af9c286d5f135f2561d86"
+        },
+        {
+          "file": "lively-walk-left-f0074.png",
+          "bytes": 81945,
+          "sha256": "ff34e6ffcf81c3abc92c830ad2a6c3961f49792a1bb65c8e12191250c74621cb"
+        },
+        {
+          "file": "lively-walk-left-f0081.png",
+          "bytes": 82395,
+          "sha256": "1cc97727d45d8de87bb9a24d56d635b7f8352e7157e956da8e115b315ed79a2f"
+        },
+        {
+          "file": "lively-walk-left-stop-f0024.png",
+          "bytes": 103532,
+          "sha256": "50cf2d0c81d512b69de135bad765f6fe8bf1eae2d4041240a62d70ea18ae7c2c"
+        },
+        {
+          "file": "lively-walk-right-f0088.png",
+          "bytes": 82058,
+          "sha256": "adf898200dd6a2e3d763a8048a0a83737a1a40f355888c94225d4f66872a7cb5"
+        },
+        {
+          "file": "lively-walk-right-f0095.png",
+          "bytes": 81892,
+          "sha256": "b043ef85cbfb4a08d3e51578152638220285b8bf47e1ecf25c8e308f3a777f20"
+        },
+        {
+          "file": "lively-walk-right-f0102.png",
+          "bytes": 82294,
+          "sha256": "034703b47bfd735c39870fede036d0c3a05b0d34f965509658f1760bdf535122"
+        },
+        {
+          "file": "lively-walk-right-stop-f0024.png",
+          "bytes": 102491,
+          "sha256": "462983e48347fd9f668fd9573a32a841a66f0e4230988108fd9a2edb22a82569"
+        }
+      ]
+    },
+    {
+      "directory": "docs/qa/v1.3.3/shoulder-minus22-verified",
+      "rawSHA256": "7beb3eca341f9fff89a5ff3600cd926faf17fcb25ffdf0bddd09a6f4f496524b",
+      "rawBytes": 5216270,
+      "gzipSHA256": "96bbdd695f46e623407d9a13793a76167fe5da649ad24c7ba40f478bb7576827",
+      "gzipBytes": 511599,
+      "checksPassed": 35,
+      "checksTotal": 35,
+      "recordedPNGCount": 4,
+      "distributedPNGCount": 4,
+      "distributedPNGs": [
+        {
+          "file": "gentle-ear-wave-f0086.png",
+          "bytes": 87392,
+          "sha256": "97acea998b97d626f1457ab5faa1eaf91fb3349fcd0f0e48566bb04b169d51f4"
+        },
+        {
+          "file": "gentle-flap-f0047.png",
+          "bytes": 88660,
+          "sha256": "58c4211400a4c8063d9a7d7b150637a82d856c3b28837c77ccd839e2804e9465"
+        },
+        {
+          "file": "lively-ear-wave-f0086.png",
+          "bytes": 87128,
+          "sha256": "2ec22fac6bfa98de8fdf2d672ae2b8e570a80a0eeeaf6f82f0f1819ce13c62a4"
+        },
+        {
+          "file": "lively-flap-f0047.png",
+          "bytes": 88130,
+          "sha256": "e9d4390d856b9a7eb3d81084a9e7a27fe4ba492f1932a8ead21990adb222b5a3"
+        }
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "path": "preview/release/v1.3.3/join-22-comparison.png",
+      "bytes": 225760,
+      "sha256": "69335e33414647fe8bf96a863550e4b69aea68f3c3cf5687b1c183a9881a1b39"
+    },
+    {
+      "path": "preview/release/v1.3.3/join-22-comparison.sources.json",
+      "bytes": 4383,
+      "sha256": "ce74d0461a1b6c21498cec3b634b6151e05f8080f3d974781ada4f21d8bdcfbb"
+    },
+    {
+      "path": "preview/release/v1.3.3/source-map.json",
+      "bytes": 27118,
+      "sha256": "dda9ede18b3f9b762f251d2949550605ecdfbf6160ff7defe79caa3c0081fac6"
+    },
+    {
+      "path": "preview/release/v1.3.3/turning-five-views.png",
+      "bytes": 258452,
+      "sha256": "81b4ebaf97ac888fa98c251726f47b1f253cf4f8c1187a9343901de7990aa9c2"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-gentle.mp4",
+      "bytes": 249236,
+      "sha256": "3aca3018545145b15b81cd92d5b92ad2c38e895e7e636b0631f167509cb9116a"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-gentle.png",
+      "bytes": 295238,
+      "sha256": "5da92085b6b58ee3bdbcba1b379e0d21df6130464d76e97f7d819d29385b3c19"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-gentle.sources.json",
+      "bytes": 713899,
+      "sha256": "896e5a09a7f13b3735a38c83838125dfb004004ba22cbd2c72e85ac3ac28bed7"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-lively.mp4",
+      "bytes": 263052,
+      "sha256": "697fdb0e416849848f3ffe4f94dccfc569443eb1a41ce142cf2cbe60d66dbfa9"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-lively.png",
+      "bytes": 298804,
+      "sha256": "408a7d4e3ebbf15eea03984d468dd2ed5dba1b624b56c63a92a653140d3b876e"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-lively.sources.json",
+      "bytes": 713990,
+      "sha256": "2fec45a471cf316ba49231b7a4665354e5acd8bdeb272228da0282aa50bbe1b4"
+    },
+    {
+      "path": "preview/release/v1.3.3/walking-stop.png",
+      "bytes": 268218,
+      "sha256": "1af9e2ff1b7d5993c78f9c5d79b13f75410ee84a5b1937893fc15be8466d734e"
+    }
+  ],
+  "totals": {
+    "recordedPNGCount": 1201,
+    "distributedPNGCount": 81,
+    "motionAndRecoveryFrames": 3234
+  }
+}

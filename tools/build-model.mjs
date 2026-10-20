@@ -11,7 +11,7 @@ const [art, approved, ears, featureProfiles] = await Promise.all([
   readFile(resolve(root, 'runtime/feature-profiles.json'), 'utf8').then(JSON.parse),
 ]);
 const model = {
-  format: 'maodou-painted-mesh', version: '1.3.2',
+  format: 'maodou-painted-mesh', version: '1.3.3',
   coordinates: 'Coopanion logical units; x right, y down, feet at 256. Authored yaw +/-75 degrees.',
   view: [-150, -60, 406, 282], renderEdge: 640,
   headHeightScale: .965,

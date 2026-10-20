@@ -30,7 +30,7 @@ const BASE = Object.freeze({
   eyeL: 1, eyeR: 1, happyL: 0, happyR: 0, eyeTiltL: 0, eyeTiltR: 0,
   browY: 0, browTilt: 0, mouthW: 9, mouthH: 2.4, blush: 0, tear: 0,
   headTilt: 0, headY: 0, bodyY: 0, bodySX: 1, bodySY: 1, bodyTilt: 0,
-  armL: 0, armR: 0, handIn: 0, earLiftL: 0, earLiftR: 0,
+  armL: 0, armR: 0, walkArms: 0, handIn: 0, earLiftL: 0, earLiftR: 0,
   earRaiseL: 0, earRaiseR: 0, earSpreadL: 0, earSpreadR: 0,
   earInL: 0, earInR: 0, earCurlL: 0, earCurlR: 0, earTipL: 0, earTipR: 0,
   footLiftL: 0, footLiftR: 0, footXL: 0, footXR: 0, tail: 0, yawOffset: 0,
@@ -41,7 +41,7 @@ const LIMITS = Object.freeze({
   mouthW: [3, 15], mouthH: [.8, 11], blush: [0, 1], tear: [0, 1],
   headTilt: [-7, 7], headY: [-3.2, 4.8], bodyY: [-3.5, 5.5],
   bodySX: [.96, 1.045], bodySY: [.96, 1.055], bodyTilt: [-4, 4],
-  armL: [-36, 52], armR: [-52, 36], handIn: [0, 10],
+  armL: [-36, 52], armR: [-52, 36], walkArms: [0, 1], handIn: [0, 10],
   earLiftL: [-8, 32], earLiftR: [-8, 32], earInL: [-10, 22], earInR: [-10, 22],
   earRaiseL: [0, 1], earRaiseR: [0, 1], earSpreadL: [-1, 1], earSpreadR: [-1, 1],
   earCurlL: [-18, 38], earCurlR: [-18, 38], earTipL: [-4, 4], earTipR: [-4, 4],
@@ -203,12 +203,21 @@ function modePose(p, frame, t) {
       p._gait = { source: 'native endpoint phase', phase, amplitude, heading, swingFraction,
         supportL: leftCycle.support, supportR: rightCycle.support, kinematicBlend: smooth(mt / .18) };
     }
-    const armGain = run ? 30 : dance ? 27 : 24, armOpen = dance ? 12 : 7;
-    // Both arm angles are ordinary screen rotations: a positive angle swings
-    // a hanging paw LEFT. The same-side forward foot therefore needs a positive
-    // arm angle. Mirroring the right arm's phase as well made both paws swing
-    // together; only the small outward rest angle is mirrored here.
-    p.armL += armOpen + armGain * strideL; p.armR += -armOpen + armGain * strideR;
+    if (dance) {
+      p.armL += 12 + 27 * strideL; p.armR += -12 + 27 * strideR;
+    } else {
+      // Walking is a shoulder-fixed sagittal pendulum. The rig gradually
+      // straightens the original diagonally spread paws into hanging arms;
+      // opposite rotations of the old diagonal shapes looked like both
+      // wings opening/closing because their vertical displacements agreed.
+      // Recover one opposed pair from the SAME native foot phase. The small
+      // phase offset centres the asymmetric support/swing foot trajectory.
+      const g = p._gait, phase = g.phase + Math.PI * (.5 - g.swingFraction);
+      const swing = Math.sin(phase) * g.amplitude * g.heading;
+      const armGain = run ? 32 : 27;
+      p.armL += 4 + armGain * swing; p.armR += -4 - armGain * swing;
+      p.walkArms = 1;
+    }
     // A modest raised base reveals the alternating paws; the opposite foot
     // leads each ear, and the slower spread/tip responses arrive behind it.
     const baseRaise = run ? .37 : dance ? .24 : .30, beatRaise = run ? .34 : dance ? .43 : .27;
@@ -321,7 +330,7 @@ function spring(state, target, omega, dt) {
 // Native feet have already been filtered at rate 40. Keep this extra layer
 // responsive enough for the 4.4 Hz run, then let arms, ear roots and tips lag
 // in that order. The eye/mouth smoothing rates are deliberately unchanged.
-const rateFor = key => key === 'yawOffset' ? 22 : key.startsWith('eye') || key.startsWith('happy') ? 18 : key.startsWith('mouth') ? 20 : key.startsWith('foot') ? 36 : key.startsWith('arm') ? 24 : key.startsWith('earRaise') ? 16 : key.startsWith('earSpread') ? 12 : key.startsWith('ear') ? 13 : 11;
+const rateFor = key => key === 'yawOffset' ? 22 : key.startsWith('eye') || key.startsWith('happy') ? 18 : key.startsWith('mouth') ? 20 : key.startsWith('foot') ? 36 : key === 'walkArms' ? 15 : key.startsWith('arm') ? 24 : key.startsWith('earRaise') ? 16 : key.startsWith('earSpread') ? 12 : key.startsWith('ear') ? 13 : 11;
 
 export const ANIMATION_CONTRACT = Object.freeze({
   version: 2,
@@ -341,7 +350,7 @@ export const ANIMATION_CONTRACT = Object.freeze({
   gait: Object.freeze({ source: 'native legsScreen endpoint phase and amplitude', footY: 241,
     nativeStride: Object.freeze({ walk: 10, run: 17, dance: 5 }), nativeLift: Object.freeze({ walk: 8, run: 15, dance: 10 }),
     swingFraction: Object.freeze({ walk: .44, run: .48 }), supportStroke: 'linear with zero sole lift',
-    swingStroke: 'C1 cubic horizontal / sin-squared vertical', armPhase: 'opposed screen rotation, contralateral to feet',
+    swingStroke: 'C1 cubic horizontal / sin-squared vertical', armPhase: 'shoulder-fixed sagittal pendulum from native phase, contralateral to feet',
     noIndependentPhase: true, worldSpaceFootLock: false }),
   noHeadScale: true, clock: 'native frame.t, frame.modeT, frame.gesture.k and legsScreen',
 });

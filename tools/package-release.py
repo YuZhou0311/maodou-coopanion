@@ -88,7 +88,9 @@ def source_decision(relative: PurePosixPath) -> tuple[bool, str]:
         return True, "public project configuration"
     if any(p in EXCLUDED_DIRS or p.startswith(".") for p in parts):
         return False, "dependencies, cache, temporary or recursive exports"
-    if relative.suffix.lower() in {".pyc", ".pyo"} | VIDEO_SUFFIXES:
+    native_review_clip = (len(parts) >= 3 and parts[:2] == ("preview", "release")
+                          and relative.name in {"walking-lively.mp4", "walking-gentle.mp4"})
+    if relative.suffix.lower() in {".pyc", ".pyo"} | VIDEO_SUFFIXES and not native_review_clip:
         return False, "compiled cache or large media"
     if len(parts) == 1:
         return (name in ROOT_FILES, "selected public root configuration")
@@ -317,7 +319,7 @@ def main() -> int:
         payload = {"schemaVersion": 1, "kind": "source", "version": version, "createdAtUTC": utc_now(),
                    "scope": "Editable source, AI-painted originals and layers, public reference URL indices, host patch, and retained runtime evidence. This source ZIP is not the directly installable Coopanion ZIP.",
                    "omittedReferenceMedia": "Official, media, community and user original images/videos are not distributed. references/ contains public URLs and documented observations only.",
-                   "historyScope": "Reports retain their original version, scope and hashes. Each version's distributed-evidence.json lists its selected actual captures; large reports are losslessly compressed with summaries. Historical v1.3.1 evidence and contact sheets are separate from the v1.3.2 reports and previews, and do not establish results for the later release.",
+                   "historyScope": "Reports retain their original version, scope and hashes. Each version's distributed-evidence.json lists its selected actual captures; large reports are losslessly compressed with summaries. Historical reports and contact sheets do not establish results for a later release. Consult docs/qa/acceptance.md for this release's final evidence.",
                    **inventory}
         if not args.build_source:
             report = {**payload, "status": "planned", "zipCreated": False}

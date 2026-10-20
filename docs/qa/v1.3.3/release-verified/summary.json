@@ -1,0 +1,681 @@
+{
+  "status": "complete",
+  "passed": true,
+  "startedAt": "2026-10-20T06:28:56.791Z",
+  "completedAt": "2026-10-20T06:29:17.396Z",
+  "scope": "Actual native opaque iframe, real trusted pointer input, completed-frame timings, and a separate direct local offline preview. No full-vocabulary rerun or automatic visual certification.",
+  "requestedScale": 1.35,
+  "checks": [
+    {
+      "id": "actual opaque native iframe",
+      "passed": true,
+      "originNullObserved": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "id": "native WebGL ready without initial error",
+      "passed": true
+    },
+    {
+      "id": "165 dense yaw observations",
+      "passed": true
+    },
+    {
+      "id": "head body and both ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "dense head widths preserve the authored head volume",
+      "passed": true,
+      "minimum": 141.50672149658203,
+      "maximum": 151.9727897644043,
+      "reason": "Authored widths are approximately 142–152 model units; the former mirrored-column collapse produced about 74."
+    },
+    {
+      "id": "dense yaw renderer has no errors or invalid parts",
+      "passed": true
+    },
+    {
+      "id": "real click emits native poke",
+      "passed": true,
+      "events": [
+        {
+          "at": 3966.300000000745,
+          "kind": "touch",
+          "detail": {
+            "kind": "pet",
+            "asleep": false
+          }
+        },
+        {
+          "at": 4019.10000000149,
+          "kind": "touch",
+          "detail": {
+            "kind": "poke"
+          }
+        }
+      ]
+    },
+    {
+      "id": "real movement enters drag mode",
+      "passed": true,
+      "mode": "drag"
+    },
+    {
+      "id": "real pointer inputs are trusted",
+      "passed": true
+    },
+    {
+      "id": "real drag emits native grab",
+      "passed": true
+    },
+    {
+      "id": "real fast release emits native throw",
+      "passed": true
+    },
+    {
+      "id": "release enters air and reaches a native grounded landing state",
+      "passed": true,
+      "releaseMode": "air",
+      "landingMode": "land",
+      "footY": 461.15999999999997,
+      "floorY": 461.15999999999997,
+      "nativeRule": "Pinned kit/body.js land(): a throw impact >1000 enters dizzy and emits crash; other impacts enter land."
+    },
+    {
+      "id": "native talk changes actual mouth height",
+      "passed": true,
+      "before": 2.4000000000000004,
+      "peak": 4.58612710711229
+    },
+    {
+      "id": "mouth returns toward rest after input stops",
+      "passed": true,
+      "before": 2.4000000000000004,
+      "peak": 4.58612710711229,
+      "after": 2.400000000000001
+    },
+    {
+      "id": "both schemes are actually selected",
+      "passed": true
+    },
+    {
+      "id": "both personality samples execute the registered ear-wave gesture",
+      "passed": true
+    },
+    {
+      "id": "lively has greater actual movement gain and distinct pose",
+      "passed": true,
+      "gentle": 0.84,
+      "lively": 1.0797811483282669
+    },
+    {
+      "id": "timed sweep returns actual completed frame measurements",
+      "passed": true
+    },
+    {
+      "id": "native source hashes unchanged",
+      "passed": true
+    },
+    {
+      "id": "native host and final renderer report no errors",
+      "passed": true
+    },
+    {
+      "id": "offline file renders with 25 expression and 28 motion controls",
+      "passed": true,
+      "expressions": 25,
+      "motions": 28,
+      "renderedFrames": 41
+    },
+    {
+      "id": "offline makes zero HTTP or HTTPS requests",
+      "passed": true,
+      "requests": []
+    },
+    {
+      "id": "offline renderer has no errors",
+      "passed": true
+    },
+    {
+      "id": "offline embeds current staged figure and model",
+      "passed": true,
+      "embeddedFigure": "b401c200fd2cb0d81d35d7df964cede9d0f95bcf31984d23b34723afb5faa7fb",
+      "stagedFigure": "b401c200fd2cb0d81d35d7df964cede9d0f95bcf31984d23b34723afb5faa7fb",
+      "embeddedModel": "acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf",
+      "stagedModel": "acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "page": "native",
+      "warning": "[.WebGL-0x1dcc00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "page": "native",
+      "warning": "[.WebGL-0x1dcc00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "page": "native",
+      "warning": "[.WebGL-0x1dcc00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "page": "native",
+      "warning": "[.WebGL-0x1dcc00189600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "sourcesUnchanged": true,
+  "visualPassed": null,
+  "smoothnessPassed": null,
+  "graphics": [
+    {
+      "width": 640,
+      "height": 394,
+      "webgl": true,
+      "error": 0,
+      "attributes": {
+        "alpha": true,
+        "antialias": false,
+        "depth": false,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "low-power",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "rawReport": {
+    "file": "report.json.gz",
+    "decompressedBytes": 847403,
+    "decompressedSHA256": "9a051b2e974e17e85913aad96e3c53b47357937b912770286a0e288f2385f858",
+    "compressedBytes": 103098,
+    "compressedSHA256": "7f37cfb649f35b906d28808099c4be810073e3954d95908ed54bdacce150eab4"
+  },
+  "sourceFiles": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "b7775ae4cdc993b6eeac25c1df004c4b958c4ec1282f8e6392ec7c338c0e575d"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 232541,
+      "sha256": "acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 38972,
+      "sha256": "7e2df8c2caf219d95f4fdb8108e3151a613abb6fa292fcd09d074f1cd10945e4"
+    },
+    {
+      "path": "runtime/arm-walk.js",
+      "bytes": 1208,
+      "sha256": "8349e2ac1a9cd0180501544cc8ef62bc3e35d384c907e54bba9dbbdd081324d3"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 42671,
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "runtime/hood-material.js",
+      "bytes": 3017,
+      "sha256": "e07c5e3b1664fc22993b9cee9f5e88cda9e57fdff3a35a35347544dbd44aac42"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 34759,
+      "sha256": "3089d30161c744a3f23488764aabe895a7a5741d4013834c2bae3fb77f2ca13c"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    }
+  ],
+  "stagedFiles": [
+    {
+      "path": "art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "figure.js",
+      "bytes": 140947,
+      "sha256": "b401c200fd2cb0d81d35d7df964cede9d0f95bcf31984d23b34723afb5faa7fb"
+    },
+    {
+      "path": "figure.json",
+      "bytes": 18557,
+      "sha256": "b7775ae4cdc993b6eeac25c1df004c4b958c4ec1282f8e6392ec7c338c0e575d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "model.json",
+      "bytes": 232541,
+      "sha256": "acc8908bf978e2da089cbd50c256fbb32f153a70150f0f1e4c6ba7d3473c6abf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    }
+  ],
+  "checksSummary": {
+    "passed": 24,
+    "total": 24
+  },
+  "recordedPNGCount": 35,
+  "distributedPNGs": [
+    {
+      "file": "angle-front-0-transparent.png",
+      "bytes": 100908,
+      "sha256": "c82a505f68d524b44716652b13ce0611649d4e8cc0e6b4ff5943ca10961ce4f9"
+    },
+    {
+      "file": "angle-left-15-transparent.png",
+      "bytes": 93641,
+      "sha256": "cb1600eeb508489ee8ee927dd926b71cdcbbe4507764c2bf6b89cb26acf631e6"
+    },
+    {
+      "file": "angle-left-20-transparent.png",
+      "bytes": 89734,
+      "sha256": "769e39b273ab01da0a384f9f08b1ae6f3eb2a0044787162e94d3b7fe4b8b7636"
+    },
+    {
+      "file": "angle-left-21-transparent.png",
+      "bytes": 88790,
+      "sha256": "3f7627829cde56978cb01ed8e15ac9a9218a7943dfec6b1ddf4065980dd4bc0f"
+    },
+    {
+      "file": "angle-left-22-transparent.png",
+      "bytes": 88134,
+      "sha256": "fc4eac968af9ddd6a520f2052f1253d72091fd784880095c334e4334e5862383"
+    },
+    {
+      "file": "angle-left-23-transparent.png",
+      "bytes": 87741,
+      "sha256": "d2e78828b282dcd897a151f72a695ab5f8f6a101e74357f3fbdee33afe8666dc"
+    },
+    {
+      "file": "angle-left-25-transparent.png",
+      "bytes": 86563,
+      "sha256": "44ac27a74726af4ec05a5c0a587e174feada942179ec9888eaeb8b7f8379d723"
+    },
+    {
+      "file": "angle-left-30-transparent.png",
+      "bytes": 84195,
+      "sha256": "8273441ad81dff5f80c2e1247fcbb1303dae2cc217cadd846f66dfa9a956799a"
+    },
+    {
+      "file": "angle-left-35-transparent.png",
+      "bytes": 81709,
+      "sha256": "e7c9b495c3f81859951a67a83dff7ffda1df2951f91eb6acd715f6e923f763e3"
+    },
+    {
+      "file": "angle-left-38-transparent.png",
+      "bytes": 81297,
+      "sha256": "ac1860ed3fc8f32a8168175aeb950fdca3145b656335edf0f7704a063f97ad86"
+    },
+    {
+      "file": "angle-left-41-transparent.png",
+      "bytes": 81240,
+      "sha256": "f6a7d9314a6482cdf5c62483479a994b4c3110ea4cbc7415d6754694efd80702"
+    },
+    {
+      "file": "angle-left-45-transparent.png",
+      "bytes": 81322,
+      "sha256": "ec110785f4c9d2fbdfbaf03552bd7000be920e2afc5152f14079e155933f1099"
+    },
+    {
+      "file": "angle-left-60-transparent.png",
+      "bytes": 73545,
+      "sha256": "0c63bbcad6c2063f1347f4feed75d30729d98853ab28638b6553ce51d9e38771"
+    },
+    {
+      "file": "angle-left-75-transparent.png",
+      "bytes": 69998,
+      "sha256": "38feb73e6ee27b6e558f716401407964c9b6eb20e285ab93bf8f55897eab942d"
+    },
+    {
+      "file": "angle-right-15-transparent.png",
+      "bytes": 93959,
+      "sha256": "a2dce85c15019dde1c07b57221bc66ed07bde56569e658ae1e29de3ca3d2c530"
+    },
+    {
+      "file": "angle-right-20-transparent.png",
+      "bytes": 89824,
+      "sha256": "cb31e558aa31e2f8fada5ede8e2cd00bdab6d74274632b7a95050ffe40af9a69"
+    },
+    {
+      "file": "angle-right-21-transparent.png",
+      "bytes": 88808,
+      "sha256": "6ef3209245f7cf851ff37e3dd112fac9afda83e63e9d272ba33650d45ea4df3d"
+    },
+    {
+      "file": "angle-right-22-transparent.png",
+      "bytes": 88055,
+      "sha256": "748503261830a1858b34e54111598f29fd399784b49869dab6c53092a0541934"
+    },
+    {
+      "file": "angle-right-23-transparent.png",
+      "bytes": 87402,
+      "sha256": "8fc046d1f6f2bcaba097108923eea929d2e8fe18a2062a396b58c0aa75c88090"
+    },
+    {
+      "file": "angle-right-25-transparent.png",
+      "bytes": 86681,
+      "sha256": "47b210ee26301118a8c78df7b2e15ca60ae68dea670dd82f0535228e93c44785"
+    },
+    {
+      "file": "angle-right-30-transparent.png",
+      "bytes": 83961,
+      "sha256": "d8a7b590834b50b81affa91fe624f7e9150d32acf09b18131ec133ce935917de"
+    },
+    {
+      "file": "angle-right-35-transparent.png",
+      "bytes": 81874,
+      "sha256": "6c210f23a6eeae0dc40b2bebf7ba7be2e1f7fee7af09a64a8d37a18fd35a68d7"
+    },
+    {
+      "file": "angle-right-38-transparent.png",
+      "bytes": 81209,
+      "sha256": "d0f99cb36cf0ca72034b9f2aec8b1213779d75ef56b1e587dada2f412a921823"
+    },
+    {
+      "file": "angle-right-41-transparent.png",
+      "bytes": 81162,
+      "sha256": "83f55d4a7fe9b4919b14f87e709da9c2011179d7e2fb8accbbb898f1304f8f51"
+    },
+    {
+      "file": "angle-right-45-transparent.png",
+      "bytes": 81167,
+      "sha256": "d0bdce030f3ee305c75f3d5227e0ef5ab238e174ec27af52a8652f1bd1b48ee7"
+    },
+    {
+      "file": "angle-right-60-transparent.png",
+      "bytes": 73366,
+      "sha256": "67c81c5bb99bc57e8baef69421411aadf15f18d35d6d8cdeccc74c22667a2a76"
+    },
+    {
+      "file": "angle-right-75-transparent.png",
+      "bytes": 70197,
+      "sha256": "c9e7aa6c472dbd64c9da207a1c2c6d45c0a8340149853cd4bfe8b46cf73162ea"
+    },
+    {
+      "file": "offline-preview-full.png",
+      "bytes": 226478,
+      "sha256": "65fa14445428392906b5367e13271d8dcacd8bd866674c4809ccab72f37c9c41"
+    },
+    {
+      "file": "pointer-air.png",
+      "bytes": 92049,
+      "sha256": "64e517fb9f67164af733fe051f12b5b48b2c7e38b360dbb4bfd6f879aa68579b"
+    },
+    {
+      "file": "pointer-drag.png",
+      "bytes": 92081,
+      "sha256": "53ddd066efb7cf331e9c1f22f2a67ba87ffb2f9d79b548ca80d870b13bf20b25"
+    },
+    {
+      "file": "pointer-land.png",
+      "bytes": 93831,
+      "sha256": "e4c9dec22de555022e8746f30000cab34c5a8a4ad11f92c8c143d28232827377"
+    },
+    {
+      "file": "stage-checker.png",
+      "bytes": 83750,
+      "sha256": "1710f1c6790cc2328573c1ed61eb2386a8912cf4b36f7566d1bc236ec188aca7"
+    },
+    {
+      "file": "stage-dark.png",
+      "bytes": 83706,
+      "sha256": "15d0068bdb083b04a9e9c6789f177493d43c8375e6d13a8cd63574c6e9e48fa5"
+    },
+    {
+      "file": "stage-light.png",
+      "bytes": 81708,
+      "sha256": "3d9cce52b16a0f6e4e61376527aca1c33d88d10e620bb6fe0cff70b574f5205b"
+    },
+    {
+      "file": "talk-speaking.png",
+      "bytes": 82071,
+      "sha256": "44d1224c4584e6b124a65b4edd6d9c22fa1b45b767b04582094e5a3d79415fcd"
+    }
+  ],
+  "summaryScope": "Derived index and aggregates only. Original complete report is preserved byte-for-byte after gzip decompression.",
+  "denseYaw": {
+    "scope": "151 integer angles plus eight nonzero near-zero probes and six probes around the +/-0.75-degree material onset. Each calls actual body.set(viewYawImmediate), body.step(0), and GPU render; no simulated screenshot substitution.",
+    "observations": 165,
+    "angles": [
+      -75,
+      -74,
+      -73,
+      -72,
+      -71,
+      -70,
+      -69,
+      -68,
+      -67,
+      -66,
+      -65,
+      -64,
+      -63,
+      -62,
+      -61,
+      -60,
+      -59,
+      -58,
+      -57,
+      -56,
+      -55,
+      -54,
+      -53,
+      -52,
+      -51,
+      -50,
+      -49,
+      -48,
+      -47,
+      -46,
+      -45,
+      -44,
+      -43,
+      -42,
+      -41,
+      -40,
+      -39,
+      -38,
+      -37,
+      -36,
+      -35,
+      -34,
+      -33,
+      -32,
+      -31,
+      -30,
+      -29,
+      -28,
+      -27,
+      -26,
+      -25,
+      -24,
+      -23,
+      -22,
+      -21,
+      -20,
+      -19,
+      -18,
+      -17,
+      -16,
+      -15,
+      -14,
+      -13,
+      -12,
+      -11,
+      -10,
+      -9,
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      -0.1,
+      -0.01,
+      -0.001,
+      -0.0001,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      -0.7501,
+      -0.75,
+      -0.7499,
+      0.7499,
+      0.75,
+      0.7501
+    ]
+  },
+  "performance": {
+    "requestedSeconds": 8,
+    "elapsedMs": 8000.20000000298,
+    "characterFrames": {
+      "samples": 477,
+      "fps": 59.676792497769085,
+      "durationMs": 7976.300000000745,
+      "p95Ms": 19.5
+    },
+    "maxCharacterIntervalMs": 38.19999999925494,
+    "bounds": {
+      "W": 716,
+      "H": 549,
+      "floorY": 461.15999999999997,
+      "S": 1.35
+    },
+    "scope": "Actual RAF callbacks and completed native frame messages in this fixed window. No smoothness threshold or pass is inferred; no offline video frames are counted.",
+    "scopeNote": "One fixed wall-clock window, not retried. Sweep phase uses simulation time; capped dt means a very slow renderer may cover less than a full simulated cycle. Completed body frames and page RAF are distinct. No stable-60-FPS claim."
+  }
+}

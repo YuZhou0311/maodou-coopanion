@@ -12,7 +12,7 @@ const HELP = `Usage: node tools/qa-release.mjs [options]
   --software-webgl             use SwiftShader for WebGL only
   --scale=0.6                  logical display scale
   --out=docs/qa/release-acceptance
-  --offline=exports/Maodou-Offline-Preview-v1.3.2.html
+  --offline=exports/Maodou-Offline-Preview-v1.3.3.html
 Starts and closes an owned ephemeral local server and an owned test browser.
 Requires current staged assets and a freshly built standalone HTML. It does not
 rebuild or change production files. Dense geometry checks do not certify art;
@@ -30,7 +30,7 @@ for (const arg of process.argv.slice(2)) {
 const scale = Number(options.scale ?? .6);
 if (!(scale > 0 && scale <= 1.5)) throw new Error('Invalid --scale');
 const out = resolve(projectRoot, options.out ?? 'docs/qa/release-acceptance');
-const offlineFile = resolve(projectRoot, options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.2.html');
+const offlineFile = resolve(projectRoot, options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.3.html');
 await mkdir(out, { recursive: true });
 const reportFile = resolve(out, 'report.json');
 const report = {
@@ -108,22 +108,23 @@ try {
   check('native WebGL ready without initial error', report.graphics.some(g => g.webgl) && report.graphics.every(g => !g.webgl || g.error === 0));
 
   await phase('dense-yaw-and-transparent-views', async () => {
-    const angles = [...Array.from({ length: 151 }, (_, i) => i - 75), -.1, -.01, -.001, -.0001, .0001, .001, .01, .1];
+    const angles = [...Array.from({ length: 151 }, (_, i) => i - 75), -.1, -.01, -.001, -.0001, .0001, .001, .01, .1,
+      -.7501, -.75, -.7499, .7499, .75, .7501];
     const result = await nativeFrame.evaluate(values => {
       const b = globalThis.__maodouQABody, rows = [], images = [];
       for (const angle of values) {
         b.set({ viewYaw: angle / 75, viewYawImmediate: true }); b.step(0);
         const s = b.inspect(), f = s.figure;
         rows.push({ angle, viewYaw: s.viewYaw, headWidth: f.headBounds[2] - f.headBounds[0], headBounds: f.headBounds, meshHealth: f.meshHealth, rendererErrors: f.renderer.errors, invalidParts: f.renderer.lastInvalidParts, figureErrors: f.errors });
-        // Retain actual views through the shoulder's 31.5..45 degree fade,
-        // in addition to the front, main side keys and repaired 21-degree pose.
-        if ([-75,-60,-45,-41,-38,-35,-30,-21,-15,0,15,21,30,35,38,41,45,60,75].includes(angle)) images.push({ angle, data: document.querySelector('canvas').toDataURL('image/png') });
+        // Retain the user's exact 22-degree failure plus its neighbouring
+        // directions, the shoulder fade and the main authored side views.
+        if ([-75,-60,-45,-41,-38,-35,-30,-25,-23,-22,-21,-20,-15,0,15,20,21,22,23,25,30,35,38,41,45,60,75].includes(angle)) images.push({ angle, data: document.querySelector('canvas').toDataURL('image/png') });
       }
       b.set({ viewYaw: 0, viewYawImmediate: true }); b.step(0);
       return { rows, images };
     }, angles);
-    report.denseYaw = { scope: '151 integer angles plus eight nonzero near-zero probes. Each calls actual body.set(viewYawImmediate), body.step(0), and GPU render; no simulated screenshot substitution.', samples: result.rows };
-    check('159 dense yaw observations', result.rows.length === 159);
+    report.denseYaw = { scope: '151 integer angles plus eight nonzero near-zero probes and six probes around the +/-0.75-degree material onset. Each calls actual body.set(viewYawImmediate), body.step(0), and GPU render; no simulated screenshot substitution.', samples: result.rows };
+    check('165 dense yaw observations', result.rows.length === 165);
     check('head body and both ears have no inverted triangles', result.rows.every(r => ['head', 'body', 'earL', 'earR'].every(key => r.meshHealth?.[key]?.negativeTriangles === 0)));
     check('dense head widths preserve the authored head volume', result.rows.every(r => Number.isFinite(r.headWidth) && r.headWidth > 130), {minimum:Math.min(...result.rows.map(r=>r.headWidth)),maximum:Math.max(...result.rows.map(r=>r.headWidth)),reason:'Authored widths are approximately 142–152 model units; the former mirrored-column collapse produced about 74.'});
     check('dense yaw renderer has no errors or invalid parts', result.rows.every(r => !r.rendererErrors?.length && !r.figureErrors?.length && !r.invalidParts?.length));

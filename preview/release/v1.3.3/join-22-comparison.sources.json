@@ -1,0 +1,178 @@
+{
+  "file": "join-22-comparison.png",
+  "sha256": "69335e33414647fe8bf96a863550e4b69aea68f3c3cf5687b1c183a9881a1b39",
+  "inputReport": {
+    "file": "docs/qa/v1.3.3/release-verified/report.json",
+    "sha256": "9a051b2e974e17e85913aad96e3c53b47357937b912770286a0e288f2385f858",
+    "status": "complete",
+    "passed": true,
+    "sourcesUnchanged": true
+  },
+  "cells": [
+    {
+      "source": "docs/qa/v1.3.3/release-verified/angle-right-21-transparent.png",
+      "sourceSHA256": "6ef3209245f7cf851ff37e3dd112fac9afda83e63e9d272ba33650d45ea4df3d",
+      "sourceSize": [
+        640,
+        394
+      ],
+      "nonzeroAlphaBox": [
+        161,
+        100,
+        492,
+        365
+      ],
+      "reportHashVerified": true,
+      "label": "+21°",
+      "frame": null,
+      "seconds": null,
+      "nativeTime": null,
+      "requestedAngle": 21,
+      "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+      "detail": "实际运行截图",
+      "commonCropBox": [
+        139,
+        90,
+        502,
+        375
+      ],
+      "destinationBox": [
+        48,
+        184,
+        363,
+        285
+      ],
+      "sourceToOutputPixelOffset": [
+        -91,
+        94
+      ],
+      "scale": 1,
+      "resampling": "none",
+      "compositing": "original RGBA over uniform panel; no paint over character"
+    },
+    {
+      "source": "docs/qa/v1.3.3/release-verified/angle-right-22-transparent.png",
+      "sourceSHA256": "748503261830a1858b34e54111598f29fd399784b49869dab6c53092a0541934",
+      "sourceSize": [
+        640,
+        394
+      ],
+      "nonzeroAlphaBox": [
+        164,
+        100,
+        491,
+        365
+      ],
+      "reportHashVerified": true,
+      "label": "+22°",
+      "frame": null,
+      "seconds": null,
+      "nativeTime": null,
+      "requestedAngle": 22,
+      "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+      "detail": "实际运行截图",
+      "commonCropBox": [
+        139,
+        90,
+        502,
+        375
+      ],
+      "destinationBox": [
+        451,
+        184,
+        363,
+        285
+      ],
+      "sourceToOutputPixelOffset": [
+        312,
+        94
+      ],
+      "scale": 1,
+      "resampling": "none",
+      "compositing": "original RGBA over uniform panel; no paint over character"
+    },
+    {
+      "source": "docs/qa/v1.3.3/release-verified/angle-right-23-transparent.png",
+      "sourceSHA256": "8fc046d1f6f2bcaba097108923eea929d2e8fe18a2062a396b58c0aa75c88090",
+      "sourceSize": [
+        640,
+        394
+      ],
+      "nonzeroAlphaBox": [
+        166,
+        100,
+        489,
+        365
+      ],
+      "reportHashVerified": true,
+      "label": "+23°",
+      "frame": null,
+      "seconds": null,
+      "nativeTime": null,
+      "requestedAngle": 23,
+      "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+      "detail": "实际运行截图",
+      "commonCropBox": [
+        139,
+        90,
+        502,
+        375
+      ],
+      "destinationBox": [
+        854,
+        184,
+        363,
+        285
+      ],
+      "sourceToOutputPixelOffset": [
+        715,
+        94
+      ],
+      "scale": 1,
+      "resampling": "none",
+      "compositing": "original RGBA over uniform panel; no paint over character"
+    },
+    {
+      "source": "docs/qa/v1.3.3/release-verified/angle-left-22-transparent.png",
+      "sourceSHA256": "fc4eac968af9ddd6a520f2052f1253d72091fd784880095c334e4334e5862383",
+      "sourceSize": [
+        640,
+        394
+      ],
+      "nonzeroAlphaBox": [
+        149,
+        100,
+        476,
+        365
+      ],
+      "reportHashVerified": true,
+      "label": "-22°",
+      "frame": null,
+      "seconds": null,
+      "nativeTime": null,
+      "requestedAngle": -22,
+      "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+      "detail": "实际运行截图",
+      "commonCropBox": [
+        139,
+        90,
+        502,
+        375
+      ],
+      "destinationBox": [
+        1257,
+        184,
+        363,
+        285
+      ],
+      "sourceToOutputPixelOffset": [
+        1118,
+        94
+      ],
+      "scale": 1,
+      "resampling": "none",
+      "compositing": "original RGBA over uniform panel; no paint over character"
+    }
+  ],
+  "scope": "Unretouched native frames; only common transparent margins cropped."
+}
