@@ -3,16 +3,27 @@
  * motion clock, generated geometry, or Cubism binary is included here.
  *
  * Coordinates: xy and view=[left,top,right,bottom] use top-left, y-down model
- * space. uv/uv2 are normalized, top-left atlas coordinates. page is 0 (main
- * artwork) or 1 (expression canvas), constant throughout each part. Both UVs
+ * space. All UVs are normalized, top-left atlas coordinates. page is 0 (main
+ * artwork) or 1 (expression canvas), constant throughout each part. All UVs
  * sample that same page; premultiplied texels are mixed before compositing.
  *
  * Each part: {id,xy,uv,indices,uv2?,mix?,alpha?,vertexAlpha?,page?,z?,visible?,
+ *            rootUV?,rootUV2?,rootMix?,rootWeight?,
  *            maskOnly?,clip?:{mask,mode:'inside'|'outside',strength?:1}}.
- * xy/uv/uv2 are flat Float32Array or numeric arrays. mix is a scalar or one
- * value per vertex; vertexAlpha is one value per vertex. indices is a triangle
+ * xy and UVs are flat Float32Array or numeric arrays. mix, rootMix and
+ * rootWeight accept scalars or one value per vertex; their defaults are zero.
+ * vertexAlpha is one value per vertex. indices is a triangle
  * list local to the part. Topology is static until setScene/updatePart(indices).
  * Borrowed Float32Arrays may be edited in place; prepare checks finite values.
+ *
+ * Optional rootUV/rootUV2 sample a shared material from the same page. rootUV
+ * defaults to uv; rootUV2 defaults to rootUV. rootMix blends those two samples,
+ * and rootWeight replaces only the original surface RGB. Source RGB is first
+ * unpremultiplied, then multiplied by the ORIGINAL surface alpha. Transparent
+ * root samples fall back to the original color; geometry, alpha, masks and
+ * clipping therefore remain independent of this material correction. The
+ * mask pass neither samples nor applies the root material. Six attributes and
+ * five varying vectors stay within WebGL 1's minimum portable limits.
  *
  * Up to four masks: {id,parts:[partId,...],coreThreshold?,supportThreshold?}. Source alphas are
  * unioned into RGBA channels in one mask draw. Masks use the source's current
@@ -46,7 +57,7 @@
  * https://docs.live2d.com/en/cubism-editor-manual/physics-operation/
  */
 
-const STRIDE = 14;
+const STRIDE = 20;
 const STRIDE_BYTES = STRIDE * 4;
 const LIMIT_VERTICES = 65535; // Portable Uint16 element buffers, including WebGL 1.
 const clamp01 = value => Math.min(1, Math.max(0, value));
@@ -152,6 +163,10 @@ export function createAtlasBatch(scene = { parts: [], masks: [] }) {
       uv: numericArray(input.uv, xy.length, input.id + '.uv'),
       uv2: input.uv2 == null ? null : numericArray(input.uv2, xy.length, input.id + '.uv2'),
       mix: scalarOrArray(input.mix ?? 0, count, input.id + '.mix'),
+      rootUV: input.rootUV == null ? null : numericArray(input.rootUV, xy.length, input.id + '.rootUV'),
+      rootUV2: input.rootUV2 == null ? null : numericArray(input.rootUV2, xy.length, input.id + '.rootUV2'),
+      rootMix: scalarOrArray(input.rootMix ?? 0, count, input.id + '.rootMix'),
+      rootWeight: scalarOrArray(input.rootWeight ?? 0, count, input.id + '.rootWeight'),
       vertexAlpha: input.vertexAlpha == null ? null : numericArray(input.vertexAlpha, count, input.id + '.vertexAlpha'),
       alpha: clamp01(finiteNumber(input.alpha ?? 1, input.id + '.alpha')), page,
       z: finiteNumber(input.z ?? 0, input.id + '.z'), visible: input.visible !== false,
@@ -187,9 +202,13 @@ export function createAtlasBatch(scene = { parts: [], masks: [] }) {
     // Validate first, commit together; malformed patches do not leave half-updated parts.
     const next = {};
     for (const name of ['xy', 'uv']) if (own(patch, name)) next[name] = numericArray(patch[name], part.count * 2, id + '.' + name);
-    if (own(patch, 'uv2')) next.uv2 = patch.uv2 == null ? null : numericArray(patch.uv2, part.count * 2, id + '.uv2');
+    for (const name of ['uv2', 'rootUV', 'rootUV2']) if (own(patch, name)) {
+      next[name] = patch[name] == null ? null : numericArray(patch[name], part.count * 2, id + '.' + name);
+    }
     if (own(patch, 'vertexAlpha')) next.vertexAlpha = patch.vertexAlpha == null ? null : numericArray(patch.vertexAlpha, part.count, id + '.vertexAlpha');
-    if (own(patch, 'mix')) next.mix = scalarOrArray(patch.mix, part.count, id + '.mix');
+    for (const name of ['mix', 'rootMix', 'rootWeight']) if (own(patch, name)) {
+      next[name] = scalarOrArray(patch[name], part.count, id + '.' + name);
+    }
     if (own(patch, 'alpha')) next.alpha = clamp01(finiteNumber(patch.alpha, id + '.alpha'));
     if (own(patch, 'z')) next.z = finiteNumber(patch.z, id + '.z');
     if (own(patch, 'page')) {
@@ -223,24 +242,35 @@ export function createAtlasBatch(scene = { parts: [], masks: [] }) {
     for (const part of ordered) {
       if (!part.visible || part.alpha <= .001 || (part.maskOnly && !part.maskBits)) continue;
       const uv2 = part.uv2 ?? part.uv;
+      const rootUV = part.rootUV ?? part.uv, rootUV2 = part.rootUV2 ?? rootUV;
       let valid = true, minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
       for (let i = 0; i < part.count; i++) {
         const j = i * 2, at = (part.base + i) * STRIDE;
         const x = part.xy[j], y = part.xy[j + 1], u = part.uv[j], v = part.uv[j + 1], u2 = uv2[j], v2 = uv2[j + 1];
         const mix = typeof part.mix === 'number' ? part.mix : part.mix[i];
+        const ru = rootUV[j], rv = rootUV[j + 1], ru2 = rootUV2[j], rv2 = rootUV2[j + 1];
+        const rootMix = typeof part.rootMix === 'number' ? part.rootMix : part.rootMix[i];
+        const rootWeight = typeof part.rootWeight === 'number' ? part.rootWeight : part.rootWeight[i];
         const alpha = part.alpha * (part.vertexAlpha ? part.vertexAlpha[i] : 1);
-        if (!Number.isFinite(x + y + u + v + u2 + v2 + mix + alpha)) { valid = false; break; }
+        if (!Number.isFinite(x + y + u + v + u2 + v2 + mix + alpha + ru + rv + ru2 + rv2 + rootMix + rootWeight)) {
+          valid = false; break;
+        }
         vertexData[at] = x; vertexData[at + 1] = y;
         vertexData[at + 2] = u; vertexData[at + 3] = v;
         vertexData[at + 4] = u2; vertexData[at + 5] = v2;
         vertexData[at + 6] = clamp01(alpha); vertexData[at + 7] = part.page;
         vertexData[at + 8] = clamp01(mix); vertexData[at + 9] = part.clip?.outside ?? 0;
         for (let k = 0; k < 4; k++) vertexData[at + 10 + k] = part.clip?.slot === k ? part.clip.strength : 0;
+        vertexData[at + 14] = ru; vertexData[at + 15] = rv;
+        vertexData[at + 16] = ru2; vertexData[at + 17] = rv2;
+        vertexData[at + 18] = clamp01(rootMix); vertexData[at + 19] = clamp01(rootWeight);
         if (part.maskBits) {
           const mt = (part.maskBase + i) * STRIDE;
           for (let k = 0; k < 9; k++) maskVertexData[mt + k] = vertexData[at + k];
           maskVertexData[mt + 9] = 0;
           for (let k = 0; k < 4; k++) maskVertexData[mt + 10 + k] = (part.maskBits >> k) & 1;
+          // Root material changes RGB only. Keep its mask attributes zero and
+          // let MASK_FRAGMENT use the original surface alpha without sampling it.
         }
         minX = Math.min(minX, x); minY = Math.min(minY, y); maxX = Math.max(maxX, x); maxY = Math.max(maxY, y);
       }
@@ -278,14 +308,19 @@ attribute vec2 aPosition;
 attribute vec4 aUV;
 attribute vec4 aStyle;
 attribute vec4 aMask;
+attribute vec4 aRootUV;
+attribute vec2 aRootStyle;
 uniform vec4 uView;
 varying vec4 vUV;
 varying vec4 vStyle;
 varying vec4 vMask;
+varying vec4 vRootUV;
+varying vec2 vRootStyle;
 void main() {
   vec2 p = (aPosition - uView.xy) * uView.zw;
   gl_Position = vec4(p.x * 2.0 - 1.0, 1.0 - p.y * 2.0, 0.0, 1.0);
   vUV = aUV; vStyle = aStyle; vMask = aMask;
+  vRootUV = aRootUV; vRootStyle = aRootStyle;
 }`;
 const SAMPLE_ART = `
 uniform sampler2D uAtlas;
@@ -303,11 +338,20 @@ vec4 surface() {
   return color * vStyle.x;
 }`;
 const MAIN_FRAGMENT = SAMPLE_ART + `
+varying vec4 vRootUV;
+varying vec2 vRootStyle;
 uniform sampler2D uMasks;
 uniform vec2 uPixelInv;
 uniform vec4 uCoreThresholds;
 void main() {
   vec4 color = surface();
+  if (vRootStyle.y > 0.00001 && color.a > 0.0) {
+    vec4 root = artwork(vRootUV.xy);
+    if (vRootStyle.x > 0.00001) root = mix(root, artwork(vRootUV.zw), vRootStyle.x);
+    // Reconstruct the shared material's RGB, preserving the original coverage.
+    // An empty source texel is not a black material: retain the original color.
+    if (root.a > 0.00001) color.rgb = mix(color.rgb, root.rgb / root.a * color.a, vRootStyle.y);
+  }
   float strength = dot(vMask, vec4(1.0));
   if (strength > 0.00001) {
     float coverage = dot(texture2D(uMasks, gl_FragCoord.xy * uPixelInv), vMask) / strength;
@@ -426,7 +470,9 @@ export function createAtlasRenderer(canvas, options = {}) {
         if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) throw new Error('Shader compilation: ' + gl.getShaderInfoLog(shader));
         gl.attachShader(object, shader);
       }
-      for (const [index, name] of ['aPosition', 'aUV', 'aStyle', 'aMask'].entries()) gl.bindAttribLocation(object, index, name);
+      for (const [index, name] of ['aPosition', 'aUV', 'aStyle', 'aMask', 'aRootUV', 'aRootStyle'].entries()) {
+        gl.bindAttribLocation(object, index, name);
+      }
       gl.linkProgram(object);
       if (!gl.getProgramParameter(object, gl.LINK_STATUS)) throw new Error('Shader link: ' + gl.getProgramInfoLog(object));
       const uniforms = {};
@@ -558,7 +604,7 @@ export function createAtlasRenderer(canvas, options = {}) {
   }
   function meshAttributes(vertexBuffer, elementBuffer) {
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer.object);
-    for (const [index, size, offset] of [[0, 2, 0], [1, 4, 2], [2, 4, 6], [3, 4, 10]]) {
+    for (const [index, size, offset] of [[0, 2, 0], [1, 4, 2], [2, 4, 6], [3, 4, 10], [4, 4, 14], [5, 2, 18]]) {
       gl.enableVertexAttribArray(index); gl.vertexAttribPointer(index, size, gl.FLOAT, false, STRIDE_BYTES, offset * 4);
     }
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, elementBuffer.object);
@@ -644,7 +690,7 @@ export function createAtlasRenderer(canvas, options = {}) {
           gl.uniform4fv(r.post.uniforms.uOutline, outline.color);
           gl.bindBuffer(gl.ARRAY_BUFFER, r.quad.object); gl.enableVertexAttribArray(0);
           gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
-          for (let i = 1; i < 4; i++) gl.disableVertexAttribArray(i);
+          for (let i = 1; i < 6; i++) gl.disableVertexAttribArray(i);
           gl.drawArrays(gl.TRIANGLES, 0, 3); calls.outline = 1;
         }
       } else stats.lastPostRectangle = null;

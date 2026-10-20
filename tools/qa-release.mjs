@@ -8,11 +8,11 @@ import { createPreviewServer } from '../preview-host/serve.mjs';
 import { projectRoot, atomicWrite, hashFile } from '../preview-host/pack-tools.mjs';
 
 const HELP = `Usage: node tools/qa-release.mjs [options]
-  --chromium=/path/to/chrome    optional; CHROMIUM_PATH or Playwright's installed Chromium otherwise
+  --chromium=/path/to/chrome    default /workspace/scratch/4b38f3d3ca52/test-browser/chrome-linux64/chrome
   --software-webgl             use SwiftShader for WebGL only
   --scale=0.6                  logical display scale
   --out=docs/qa/release-acceptance
-  --offline=exports/Maodou-Offline-Preview-v1.3.1.html
+  --offline=exports/Maodou-Offline-Preview-v1.3.2.html
 Starts and closes an owned ephemeral local server and an owned test browser.
 Requires current staged assets and a freshly built standalone HTML. It does not
 rebuild or change production files. Dense geometry checks do not certify art;
@@ -30,7 +30,7 @@ for (const arg of process.argv.slice(2)) {
 const scale = Number(options.scale ?? .6);
 if (!(scale > 0 && scale <= 1.5)) throw new Error('Invalid --scale');
 const out = resolve(projectRoot, options.out ?? 'docs/qa/release-acceptance');
-const offlineFile = resolve(projectRoot, options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.1.html');
+const offlineFile = resolve(projectRoot, options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.2.html');
 await mkdir(out, { recursive: true });
 const reportFile = resolve(out, 'report.json');
 const report = {
@@ -115,7 +115,9 @@ try {
         b.set({ viewYaw: angle / 75, viewYawImmediate: true }); b.step(0);
         const s = b.inspect(), f = s.figure;
         rows.push({ angle, viewYaw: s.viewYaw, headWidth: f.headBounds[2] - f.headBounds[0], headBounds: f.headBounds, meshHealth: f.meshHealth, rendererErrors: f.renderer.errors, invalidParts: f.renderer.lastInvalidParts, figureErrors: f.errors });
-        if ([-75, -45, 0, 45, 75].includes(angle)) images.push({ angle, data: document.querySelector('canvas').toDataURL('image/png') });
+        // Retain actual views through the shoulder's 31.5..45 degree fade,
+        // in addition to the front, main side keys and repaired 21-degree pose.
+        if ([-75,-60,-45,-41,-38,-35,-30,-21,-15,0,15,21,30,35,38,41,45,60,75].includes(angle)) images.push({ angle, data: document.querySelector('canvas').toDataURL('image/png') });
       }
       b.set({ viewYaw: 0, viewYawImmediate: true }); b.step(0);
       return { rows, images };
@@ -232,7 +234,7 @@ try {
       await local.waitForFunction(() => window.maodouStandalone?.ready, null, { timeout: 30000 });
       await local.evaluate(async () => { maodouStandalone.setPaused(true); await maodouStandalone.advance(36, 1 / 60); });
       const observation = await local.evaluate(() => ({ ready: maodouStandalone.ready, renderedFrames: maodouStandalone.renderedFrames, source: maodouStandalone.source, records: maodouStandalone.records, inspect: maodouStandalone.body.inspect(), expressions: document.querySelectorAll('#expressions [data-word]').length, motions: document.querySelectorAll('#motions [data-word]').length }));
-      report.offline = { file: options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.1.html', sha256: await hashFile(offlineFile), scope: 'Direct file preview with HTTP/HTTPS blocked; intentionally distinct from the native iframe sandbox.', blockedRequests: requests, ...observation };
+      report.offline = { file: options.offline ?? 'exports/Maodou-Offline-Preview-v1.3.2.html', sha256: await hashFile(offlineFile), scope: 'Direct file preview with HTTP/HTTPS blocked; intentionally distinct from the native iframe sandbox.', blockedRequests: requests, ...observation };
       const file = 'offline-preview-full.png', path = resolve(out, file); await atomicWrite(path, await local.screenshot({ fullPage: true }));
       report.screenshots.push({ file, sha256: await hashFile(path), scope: 'Actual standalone file full page, with HTTP/HTTPS requests blocked.' });
       check('offline file renders with 25 expression and 28 motion controls', observation.ready && observation.renderedFrames >= 36 && observation.expressions === 25 && observation.motions === 28, { expressions: observation.expressions, motions: observation.motions, renderedFrames: observation.renderedFrames });

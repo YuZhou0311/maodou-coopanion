@@ -1,0 +1,5088 @@
+{
+  "version": "1.3.2",
+  "directory": "docs/qa/v1.3.2/motion-verified",
+  "status": "complete",
+  "passed": true,
+  "scope": "Actual staged character in the unmodified native opaque iframe. Parent advance() submits and awaits each real tick; a temporary operator hook records the native body after that tick. Fixed-step captures are not real-time FPS evidence. Transparent PNGs exclude the outer SVG transform and particles.",
+  "checks": [
+    {
+      "id": "actual opaque native iframe",
+      "passed": true,
+      "originNullObserved": true,
+      "sandbox": "allow-scripts",
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      }
+    },
+    {
+      "id": "renderer initialized without GL error",
+      "passed": true
+    },
+    {
+      "id": "new foot and whole-ear fields are actually staged",
+      "passed": true
+    },
+    {
+      "id": "v1.3.2 limb geometry and depth diagnostics are actually staged",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: long actual native path is available",
+      "passed": true,
+      "start": 958.4,
+      "target": 121.60000000000001,
+      "heading": -1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "gentle-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-left: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-left: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-left: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "gentle-walk-left: mode remains actual walk",
+      "passed": true,
+      "modes": [
+        "walk"
+      ]
+    },
+    {
+      "id": "gentle-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -11.867328390509005,
+            "frame": 102,
+            "seconds": 1.699999999999994
+          },
+          "maximum": {
+            "value": 11.86702395645964,
+            "frame": 120,
+            "seconds": 1.999999999999993
+          },
+          "span": 23.734352346968645,
+          "largestStep": {
+            "value": 3.3497830483519326,
+            "fromFrame": 96,
+            "toFrame": 97,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -11.840057129370427,
+            "frame": 88,
+            "seconds": 1.4666666666666615
+          },
+          "maximum": {
+            "value": 11.842118155409223,
+            "frame": 106,
+            "seconds": 1.7666666666666604
+          },
+          "span": 23.68217528477965,
+          "largestStep": {
+            "value": 3.3594178578791416,
+            "fromFrame": 82,
+            "toFrame": 83,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 15,
+            "seconds": 0.2499999999999991
+          },
+          "maximum": {
+            "value": 7.6512435910928955,
+            "frame": 97,
+            "seconds": 1.616666666666661
+          },
+          "span": 7.6512435910928955,
+          "largestStep": {
+            "value": 1.8927582286266822,
+            "fromFrame": 93,
+            "toFrame": 94,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "maximum": {
+            "value": 7.67074855914846,
+            "frame": 111,
+            "seconds": 1.8499999999999934
+          },
+          "span": 7.67074855914846,
+          "largestStep": {
+            "value": 1.89266165249111,
+            "fromFrame": 85,
+            "toFrame": 86,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -10.169048336966044,
+            "frame": 76,
+            "seconds": 1.2666666666666622
+          },
+          "maximum": {
+            "value": 23.039843990462806,
+            "frame": 93,
+            "seconds": 1.5499999999999945
+          },
+          "span": 33.20889232742885,
+          "largestStep": {
+            "value": 4.720675909827937,
+            "fromFrame": 70,
+            "toFrame": 71,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -21.94342292140238,
+            "frame": 90,
+            "seconds": 1.4999999999999947
+          },
+          "maximum": {
+            "value": 11.319061877235427,
+            "frame": 79,
+            "seconds": 1.316666666666662
+          },
+          "span": 33.26248479863781,
+          "largestStep": {
+            "value": 4.717105657182782,
+            "fromFrame": 84,
+            "toFrame": 85,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.04440290207077483,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "maximum": {
+            "value": 0.4022074586638577,
+            "frame": 85,
+            "seconds": 1.4166666666666616
+          },
+          "span": 0.35780455659308286,
+          "largestStep": {
+            "value": 0.07228181704678022,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.055535541904621705,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "maximum": {
+            "value": 0.4023686487961973,
+            "frame": 99,
+            "seconds": 1.6499999999999941
+          },
+          "span": 0.34683310689157565,
+          "largestStep": {
+            "value": 0.09122674604755532,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.029883531823589254,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "maximum": {
+            "value": 0.2451122441710554,
+            "frame": 21,
+            "seconds": 0.34999999999999876
+          },
+          "span": 0.21522871234746616,
+          "largestStep": {
+            "value": 0.04982163125239124,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.015998470264663472,
+            "frame": 5,
+            "seconds": 0.08333333333333304
+          },
+          "maximum": {
+            "value": 0.23399204433732615,
+            "frame": 94,
+            "seconds": 1.566666666666661
+          },
+          "span": 0.24999051460198962,
+          "largestStep": {
+            "value": 0.025728234966085423,
+            "fromFrame": 71,
+            "toFrame": 72,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "maximum": {
+            "value": 2.0232359308952264,
+            "frame": 85,
+            "seconds": 1.4166666666666616
+          },
+          "span": 2.0232359308952264,
+          "largestStep": {
+            "value": 0.3971713007107849,
+            "fromFrame": 81,
+            "toFrame": 82,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.003900209279115569,
+            "frame": 33,
+            "seconds": 0.549999999999998
+          },
+          "maximum": {
+            "value": 2.019861887317044,
+            "frame": 71,
+            "seconds": 1.1833333333333291
+          },
+          "span": 2.0159616780379284,
+          "largestStep": {
+            "value": 0.3959333797337634,
+            "fromFrame": 95,
+            "toFrame": 96,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.2951270137353967,
+            "frame": 16,
+            "seconds": 0.2666666666666657
+          },
+          "maximum": {
+            "value": 3.464438290684972,
+            "frame": 94,
+            "seconds": 1.566666666666661
+          },
+          "span": 6.759565304420368,
+          "largestStep": {
+            "value": 0.9001624961398926,
+            "fromFrame": 71,
+            "toFrame": 72,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.9994496649605296,
+            "frame": 92,
+            "seconds": 1.5333333333333279
+          },
+          "maximum": {
+            "value": 3.4641736680537014,
+            "frame": 80,
+            "seconds": 1.3333333333333286
+          },
+          "span": 6.463623333014231,
+          "largestStep": {
+            "value": 0.8993107104762581,
+            "fromFrame": 85,
+            "toFrame": 86,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.676313847117263,
+            "frame": 22,
+            "seconds": 0.36666666666666536
+          },
+          "maximum": {
+            "value": -0.08501650999005927,
+            "frame": 1,
+            "seconds": 0.016666666666666607
+          },
+          "span": 1.5912973371272037,
+          "largestStep": {
+            "value": 0.123008466844162,
+            "fromFrame": 33,
+            "toFrame": 34,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.1495980361245635,
+            "frame": 46,
+            "seconds": 0.7666666666666639
+          },
+          "maximum": {
+            "value": 0.4367655671621362,
+            "frame": 22,
+            "seconds": 0.36666666666666536
+          },
+          "span": 1.5863636032866997,
+          "largestStep": {
+            "value": 0.09666282785997571,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "gentle-walk-left: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 8,
+      "raiseSpan": [
+        0.35780455659308286,
+        0.34683310689157565
+      ]
+    },
+    {
+      "id": "gentle-walk-left: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "gentle-walk-left: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -8.340812683105469,
+          "frame": 119,
+          "seconds": 1.9833333333333263
+        },
+        "maximum": {
+          "value": 31.62383270263672,
+          "frame": 104,
+          "seconds": 1.7333333333333272
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 5.85103235687561,
+          "frame": 120,
+          "seconds": 1.999999999999993
+        },
+        "maximum": {
+          "value": 6.268366744932537,
+          "frame": 28,
+          "seconds": 0.466666666666665
+        }
+      }
+    },
+    {
+      "id": "gentle-walk-left: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9280381046957455,
+      "actualArmCentreCorrelation": -0.9323618492472474,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.8734803876527467,
+        "R": -0.8726255139242287
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "gentle-walk-left: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 12,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "gentle-walk-left: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-left: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.466666666666665
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.466666666666665
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "gentle-walk-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "gentle-walk-left: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "gentle-walk-right: long actual native path is available",
+      "passed": true,
+      "start": 121.60000000000001,
+      "target": 958.4,
+      "heading": 1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "gentle-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-right: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-right: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-right: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "gentle-walk-right: mode remains actual walk",
+      "passed": true,
+      "modes": [
+        "walk"
+      ]
+    },
+    {
+      "id": "gentle-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -11.856255282638653,
+            "frame": 116,
+            "seconds": 1.9333333333334295
+          },
+          "maximum": {
+            "value": 11.857107207270053,
+            "frame": 98,
+            "seconds": 1.6333333333334146
+          },
+          "span": 23.713362489908704,
+          "largestStep": {
+            "value": 3.3518297515359246,
+            "fromFrame": 64,
+            "toFrame": 65,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -11.858579726035641,
+            "frame": 102,
+            "seconds": 1.7000000000000846
+          },
+          "maximum": {
+            "value": 11.857352073819364,
+            "frame": 84,
+            "seconds": 1.4000000000000696
+          },
+          "span": 23.715931799855007,
+          "largestStep": {
+            "value": 3.3586658836592886,
+            "fromFrame": 78,
+            "toFrame": 79,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.18333333333334245
+          },
+          "maximum": {
+            "value": 7.663921839317195,
+            "frame": 93,
+            "seconds": 1.550000000000077
+          },
+          "span": 7.663921839317195,
+          "largestStep": {
+            "value": 1.8954132456140935,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.016666666666667496
+          },
+          "maximum": {
+            "value": 7.66287182674875,
+            "frame": 107,
+            "seconds": 1.783333333333422
+          },
+          "span": 7.66287182674875,
+          "largestStep": {
+            "value": 1.896329230992169,
+            "fromFrame": 75,
+            "toFrame": 76,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -11.316763693686354,
+            "frame": 118,
+            "seconds": 1.9666666666667645
+          },
+          "maximum": {
+            "value": 21.93828704204592,
+            "frame": 72,
+            "seconds": 1.2000000000000597
+          },
+          "span": 33.255050735732276,
+          "largestStep": {
+            "value": 4.72136106331978,
+            "fromFrame": 66,
+            "toFrame": 67,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -23.07732145344301,
+            "frame": 75,
+            "seconds": 1.2500000000000622
+          },
+          "maximum": {
+            "value": 10.175282468584896,
+            "frame": 86,
+            "seconds": 1.4333333333334046
+          },
+          "span": 33.2526039220279,
+          "largestStep": {
+            "value": 4.720522617082112,
+            "fromFrame": 109,
+            "toFrame": 110,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.051850846243602214,
+            "frame": 1,
+            "seconds": 0.016666666666667496
+          },
+          "maximum": {
+            "value": 0.4023488919641196,
+            "frame": 81,
+            "seconds": 1.3500000000000671
+          },
+          "span": 0.3504980457205174,
+          "largestStep": {
+            "value": 0.08171366292801842,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.04372350461476053,
+            "frame": 1,
+            "seconds": 0.016666666666667496
+          },
+          "maximum": {
+            "value": 0.4022326965192525,
+            "frame": 95,
+            "seconds": 1.583333333333412
+          },
+          "span": 0.35850919190449193,
+          "largestStep": {
+            "value": 0.07138624768411467,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.001772764518581472,
+            "frame": 2,
+            "seconds": 0.03333333333333499
+          },
+          "maximum": {
+            "value": 0.2200548066578621,
+            "frame": 88,
+            "seconds": 1.4666666666667396
+          },
+          "span": 0.22182757117644356,
+          "largestStep": {
+            "value": 0.02574383932802768,
+            "fromFrame": 110,
+            "toFrame": 111,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.028988846996921287,
+            "frame": 1,
+            "seconds": 0.016666666666667496
+          },
+          "maximum": {
+            "value": 0.2502920287164552,
+            "frame": 12,
+            "seconds": 0.20000000000000995
+          },
+          "span": 0.2213031817195339,
+          "largestStep": {
+            "value": 0.045095019989273795,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 7.628330664597915e-27,
+            "frame": 12,
+            "seconds": 0.20000000000000995
+          },
+          "maximum": {
+            "value": 2.0215971097232286,
+            "frame": 81,
+            "seconds": 1.3500000000000671
+          },
+          "span": 2.0215971097232286,
+          "largestStep": {
+            "value": 0.39739643858849305,
+            "fromFrame": 77,
+            "toFrame": 78,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.0026936836994451764,
+            "frame": 29,
+            "seconds": 0.4833333333333574
+          },
+          "maximum": {
+            "value": 2.0216344459452116,
+            "frame": 67,
+            "seconds": 1.1166666666667222
+          },
+          "span": 2.0189407622457662,
+          "largestStep": {
+            "value": 0.3946457034946115,
+            "fromFrame": 91,
+            "toFrame": 92,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.461824777042993,
+            "frame": 119,
+            "seconds": 1.983333333333432
+          },
+          "maximum": {
+            "value": 3.564196274674834,
+            "frame": 12,
+            "seconds": 0.20000000000000995
+          },
+          "span": 7.0260210517178265,
+          "largestStep": {
+            "value": 0.9002813450618035,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.658219621266721,
+            "frame": 17,
+            "seconds": 0.2833333333333474
+          },
+          "maximum": {
+            "value": 3.0012972139693797,
+            "frame": 88,
+            "seconds": 1.4666666666667396
+          },
+          "span": 6.659516835236101,
+          "largestStep": {
+            "value": 0.9000659359662353,
+            "fromFrame": 110,
+            "toFrame": 111,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.1933738021366846,
+            "frame": 84,
+            "seconds": 1.4000000000000696
+          },
+          "maximum": {
+            "value": 0.4774574949921442,
+            "frame": 20,
+            "seconds": 0.3333333333333499
+          },
+          "span": 1.6708312971288288,
+          "largestStep": {
+            "value": 0.10134914665552497,
+            "fromFrame": 32,
+            "toFrame": 33,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.7660246621645936,
+            "frame": 23,
+            "seconds": 0.3833333333333524
+          },
+          "maximum": {
+            "value": 0.007665030467103651,
+            "frame": 1,
+            "seconds": 0.016666666666667496
+          },
+          "span": 1.7736896926316974,
+          "largestStep": {
+            "value": 0.11854608686220391,
+            "fromFrame": 13,
+            "toFrame": 14,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "gentle-walk-right: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 8,
+      "raiseSpan": [
+        0.3504980457205174,
+        0.35850919190449193
+      ]
+    },
+    {
+      "id": "gentle-walk-right: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "gentle-walk-right: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -8.340747833251953,
+          "frame": 100,
+          "seconds": 1.6666666666667496
+        },
+        "maximum": {
+          "value": 31.623882293701172,
+          "frame": 115,
+          "seconds": 1.916666666666762
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 5.851032353501482,
+          "frame": 120,
+          "seconds": 2.0000000000000995
+        },
+        "maximum": {
+          "value": 6.175056161575297,
+          "frame": 28,
+          "seconds": 0.4666666666666899
+        }
+      }
+    },
+    {
+      "id": "gentle-walk-right: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9303375242054369,
+      "actualArmCentreCorrelation": -0.9298936978771607,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.8732794404360985,
+        "R": -0.8724675504145367
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "gentle-walk-right: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 13,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "gentle-walk-right: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-walk-right: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.4666666666666899
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.4666666666666899
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "gentle-walk-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-walk-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "gentle-walk-right: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "gentle-run-left: long actual native path is available",
+      "passed": true,
+      "start": 958.4,
+      "target": 121.60000000000001,
+      "heading": -1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "gentle-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-left: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-left: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-left: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "gentle-run-left: mode remains actual run",
+      "passed": true,
+      "modes": [
+        "run"
+      ]
+    },
+    {
+      "id": "gentle-run-left: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -13.406081133366909,
+            "frame": 87,
+            "seconds": 1.4499999999999176
+          },
+          "maximum": {
+            "value": 13.349134831679525,
+            "frame": 109,
+            "seconds": 1.8166666666665634
+          },
+          "span": 26.755215965046432,
+          "largestStep": {
+            "value": 7.369488777327971,
+            "fromFrame": 111,
+            "toFrame": 112,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -13.349066801426021,
+            "frame": 80,
+            "seconds": 1.3333333333332575
+          },
+          "maximum": {
+            "value": 13.41364067027146,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "span": 26.76270747169748,
+          "largestStep": {
+            "value": 7.351552588186716,
+            "fromFrame": 118,
+            "toFrame": 119,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 10.953117739743398,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "span": 10.953117739743398,
+          "largestStep": {
+            "value": 5.063822140936554,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 10.956337099397649,
+            "frame": 91,
+            "seconds": 1.5166666666665805
+          },
+          "span": 10.956337099397649,
+          "largestStep": {
+            "value": 5.059225851519234,
+            "fromFrame": 89,
+            "toFrame": 90,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.2206135181644324,
+            "frame": 89,
+            "seconds": 1.483333333333249
+          },
+          "maximum": {
+            "value": 23.361001613431476,
+            "frame": 83,
+            "seconds": 1.3833333333332547
+          },
+          "span": 26.58161513159591,
+          "largestStep": {
+            "value": 7.2577026885111,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -21.66798446267764,
+            "frame": 96,
+            "seconds": 1.599999999999909
+          },
+          "maximum": {
+            "value": 4.849681905033681,
+            "frame": 90,
+            "seconds": 1.4999999999999147
+          },
+          "span": 26.51766636771132,
+          "largestStep": {
+            "value": 7.252541751611114,
+            "fromFrame": 106,
+            "toFrame": 107,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.05150149810430756,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.4375170235680087,
+            "frame": 20,
+            "seconds": 0.3333333333333144
+          },
+          "span": 0.38601552546370116,
+          "largestStep": {
+            "value": 0.0853516107911799,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.06351274629791175,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.436193479057359,
+            "frame": 113,
+            "seconds": 1.8833333333332263
+          },
+          "span": 0.37268073275944724,
+          "largestStep": {
+            "value": 0.10633510494432309,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.03435338755394382,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.303793663170625,
+            "frame": 15,
+            "seconds": 0.2499999999999858
+          },
+          "span": 0.26944027561668116,
+          "largestStep": {
+            "value": 0.05779672022092877,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.00040024243111582466,
+            "frame": 4,
+            "seconds": 0.06666666666666288
+          },
+          "maximum": {
+            "value": 0.24245692850856218,
+            "frame": 97,
+            "seconds": 1.6166666666665748
+          },
+          "span": 0.242857170939678,
+          "largestStep": {
+            "value": 0.03243180931300643,
+            "fromFrame": 86,
+            "toFrame": 87,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.31364488176075367,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 5.043135661848541,
+            "frame": 120,
+            "seconds": 1.9999999999998863
+          },
+          "span": 4.7294907800877874,
+          "largestStep": {
+            "value": 0.5774328857525983,
+            "fromFrame": 104,
+            "toFrame": 105,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.3341335456400989,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 5.042597077989178,
+            "frame": 86,
+            "seconds": 1.4333333333332519
+          },
+          "span": 4.708463532349079,
+          "largestStep": {
+            "value": 0.6034210089267525,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.842146596403042,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 2.4591552989715186,
+            "frame": 97,
+            "seconds": 1.6166666666665748
+          },
+          "span": 6.301301895374561,
+          "largestStep": {
+            "value": 1.2091797183648234,
+            "fromFrame": 113,
+            "toFrame": 114,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.077299447873932,
+            "frame": 83,
+            "seconds": 1.3833333333332547
+          },
+          "maximum": {
+            "value": 3.891779963000296,
+            "frame": 15,
+            "seconds": 0.2499999999999858
+          },
+          "span": 5.969079410874228,
+          "largestStep": {
+            "value": 1.2114043291902994,
+            "fromFrame": 79,
+            "toFrame": 80,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.2976705494900127,
+            "frame": 23,
+            "seconds": 0.38333333333331154
+          },
+          "maximum": {
+            "value": -0.0596453530986239,
+            "frame": 48,
+            "seconds": 0.7999999999999545
+          },
+          "span": 2.238025196391389,
+          "largestStep": {
+            "value": 0.1621581654770412,
+            "fromFrame": 32,
+            "toFrame": 33,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.9135691080098887,
+            "frame": 47,
+            "seconds": 0.7833333333332888
+          },
+          "maximum": {
+            "value": 0.1400083699517365,
+            "frame": 22,
+            "seconds": 0.3666666666666458
+          },
+          "span": 2.053577477961625,
+          "largestStep": {
+            "value": 0.1484671628930614,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "gentle-run-left: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 15,
+      "raiseSpan": [
+        0.38601552546370116,
+        0.37268073275944724
+      ]
+    },
+    {
+      "id": "gentle-run-left: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "gentle-run-left: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -15.983467102050781,
+          "frame": 108,
+          "seconds": 1.7999999999998977
+        },
+        "maximum": {
+          "value": 31.868045806884766,
+          "frame": 115,
+          "seconds": 1.9166666666665577
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 4,
+          "frame": 114,
+          "seconds": 1.899999999999892
+        },
+        "maximum": {
+          "value": 4.031712742101547,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "gentle-run-left: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9689882057494473,
+      "actualArmCentreCorrelation": -0.9677621118930871,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.6358059486425668,
+        "R": -0.6355747369152907
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "gentle-run-left: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 4,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "gentle-run-left: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-left: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "gentle-run-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "gentle-run-left: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "gentle-run-right: long actual native path is available",
+      "passed": true,
+      "start": 121.60000000000001,
+      "target": 958.4,
+      "heading": 1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "gentle-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-right: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-right: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-right: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "gentle-run-right: mode remains actual run",
+      "passed": true,
+      "modes": [
+        "run"
+      ]
+    },
+    {
+      "id": "gentle-run-right: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -13.40686499176637,
+            "frame": 83,
+            "seconds": 1.3833333333332547
+          },
+          "maximum": {
+            "value": 13.403720969853538,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "span": 26.810585961619907,
+          "largestStep": {
+            "value": 7.352251970922374,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -13.373699482112869,
+            "frame": 117,
+            "seconds": 1.9499999999998892
+          },
+          "maximum": {
+            "value": 13.378904962184132,
+            "frame": 109,
+            "seconds": 1.8166666666665634
+          },
+          "span": 26.752604444297,
+          "largestStep": {
+            "value": 7.366427531870972,
+            "fromFrame": 92,
+            "toFrame": 93,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 10.977867106322583,
+            "frame": 113,
+            "seconds": 1.8833333333332263
+          },
+          "span": 10.977867106322583,
+          "largestStep": {
+            "value": 5.043437834512782,
+            "fromFrame": 70,
+            "toFrame": 71,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 10.946223624000258,
+            "frame": 79,
+            "seconds": 1.3166666666665918
+          },
+          "span": 10.946223624000258,
+          "largestStep": {
+            "value": 5.062931709624667,
+            "fromFrame": 104,
+            "toFrame": 105,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -4.842709482642697,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "maximum": {
+            "value": 22.321252927406416,
+            "frame": 18,
+            "seconds": 0.29999999999998295
+          },
+          "span": 27.163962410049113,
+          "largestStep": {
+            "value": 7.250774679015515,
+            "fromFrame": 87,
+            "toFrame": 88,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -23.369126681800047,
+            "frame": 105,
+            "seconds": 1.7499999999999005
+          },
+          "maximum": {
+            "value": 3.2163989177587595,
+            "frame": 111,
+            "seconds": 1.8499999999998948
+          },
+          "span": 26.585525599558807,
+          "largestStep": {
+            "value": 7.251506640353641,
+            "fromFrame": 80,
+            "toFrame": 81,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.06400103039795876,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.4471983950777816,
+            "frame": 24,
+            "seconds": 0.39999999999997726
+          },
+          "span": 0.3831973646798228,
+          "largestStep": {
+            "value": 0.10632481909167393,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.051602103172677355,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.4569814825858776,
+            "frame": 14,
+            "seconds": 0.23333333333332007
+          },
+          "span": 0.40537937941320024,
+          "largestStep": {
+            "value": 0.08534948332210729,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.0016144005313451287,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.23205858386152742,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "span": 0.2304441833301823,
+          "largestStep": {
+            "value": 0.032351154490554646,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.033873452419237074,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.28551269243365013,
+            "frame": 19,
+            "seconds": 0.31666666666664867
+          },
+          "span": 0.25163924001441307,
+          "largestStep": {
+            "value": 0.05567186144818634,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.3412443138588086,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 5.041271207383188,
+            "frame": 108,
+            "seconds": 1.7999999999998977
+          },
+          "span": 4.700026893524379,
+          "largestStep": {
+            "value": 0.6036600203982725,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.31364488176075367,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 5.042777870542896,
+            "frame": 101,
+            "seconds": 1.6833333333332376
+          },
+          "span": 4.729132988782142,
+          "largestStep": {
+            "value": 0.5774778310996176,
+            "fromFrame": 85,
+            "toFrame": 86,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.4603857940344542,
+            "frame": 85,
+            "seconds": 1.4166666666665861
+          },
+          "maximum": {
+            "value": 3.4349712717898737,
+            "frame": 19,
+            "seconds": 0.31666666666664867
+          },
+          "span": 5.895357065824328,
+          "largestStep": {
+            "value": 1.2127793217218885,
+            "fromFrame": 101,
+            "toFrame": 102,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.5634748019379447,
+            "frame": 20,
+            "seconds": 0.3333333333333144
+          },
+          "maximum": {
+            "value": 2.0778448494316297,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "span": 5.6413196513695745,
+          "largestStep": {
+            "value": 1.2086334158914096,
+            "fromFrame": 94,
+            "toFrame": 95,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.9501391576880667,
+            "frame": 44,
+            "seconds": 0.7333333333332916
+          },
+          "maximum": {
+            "value": 0.08972816389139826,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.039867321579465,
+          "largestStep": {
+            "value": 0.11740122681848253,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.9520584649221957,
+            "frame": 21,
+            "seconds": 0.3499999999999801
+          },
+          "maximum": {
+            "value": 0.06134638551289773,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.0134048504350934,
+          "largestStep": {
+            "value": 0.16611076155491244,
+            "fromFrame": 11,
+            "toFrame": 12,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "gentle-run-right: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 16,
+      "raiseSpan": [
+        0.3831973646798228,
+        0.40537937941320024
+      ]
+    },
+    {
+      "id": "gentle-run-right: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "gentle-run-right: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -15.977310180664062,
+          "frame": 89,
+          "seconds": 1.483333333333249
+        },
+        "maximum": {
+          "value": 31.864986419677734,
+          "frame": 96,
+          "seconds": 1.599999999999909
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 4,
+          "frame": 114,
+          "seconds": 1.899999999999892
+        },
+        "maximum": {
+          "value": 4.031712757534448,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "gentle-run-right: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9699290615939881,
+      "actualArmCentreCorrelation": -0.9695499581064577,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.6565756125627602,
+        "R": -0.6581094082569455
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "gentle-run-right: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 5,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "gentle-run-right: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-run-right: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "gentle-run-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "gentle-run-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "gentle-run-right: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "gentle-ear-wave: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-ear-wave: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-ear-wave: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-ear-wave: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-ear-wave: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "gentle-ear-wave: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 86,
+          "seconds": 1.4333333333332519,
+          "mode": "idle",
+          "gesture": {
+            "kind": "ear-wave",
+            "k": 0.6515151515151144
+          }
+        }
+      ]
+    },
+    {
+      "id": "gentle-ear-wave: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9131029640806377,
+          "frame": 86,
+          "seconds": 1.4333333333332519
+        },
+        {
+          "value": 0.3219963312970069,
+          "frame": 31,
+          "seconds": 0.5166666666666373
+        }
+      ]
+    },
+    {
+      "id": "gentle-flap: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-flap: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-flap: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-flap: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-flap: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "gentle-flap: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 47,
+          "seconds": 0.7833333333332888,
+          "mode": "land",
+          "gesture": {
+            "kind": "flap",
+            "k": 0.5595238095237778
+          }
+        }
+      ]
+    },
+    {
+      "id": "gentle-flap: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9473202214105902,
+          "frame": 47,
+          "seconds": 0.7833333333332888
+        },
+        {
+          "value": 0.9473202214105902,
+          "frame": 47,
+          "seconds": 0.7833333333332888
+        }
+      ]
+    },
+    {
+      "id": "gentle-stretch: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-stretch: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-stretch: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-stretch: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-stretch: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "gentle-stretch: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 126,
+          "seconds": 2.0999999999998806,
+          "mode": "idle",
+          "gesture": {
+            "kind": "stretch",
+            "k": 0.6562499999999627
+          }
+        }
+      ]
+    },
+    {
+      "id": "gentle-stretch: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.8401384540579404,
+          "frame": 128,
+          "seconds": 2.133333333333212
+        },
+        {
+          "value": 0.8401384540579404,
+          "frame": 128,
+          "seconds": 2.133333333333212
+        }
+      ]
+    },
+    {
+      "id": "gentle-celebrate: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "gentle-celebrate: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-celebrate: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-celebrate: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "gentle-celebrate: all requested actual PNGs written",
+      "passed": true,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "id": "gentle-celebrate: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 119,
+          "seconds": 1.9833333333332206,
+          "mode": "idle",
+          "gesture": {
+            "kind": "celebrate",
+            "k": 0.6010101010100669
+          }
+        },
+        {
+          "frame": 152,
+          "seconds": 2.5333333333331893,
+          "mode": "idle",
+          "gesture": {
+            "kind": "celebrate",
+            "k": 0.7676767676767241
+          }
+        }
+      ]
+    },
+    {
+      "id": "gentle-celebrate: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9312595678962672,
+          "frame": 86,
+          "seconds": 1.4333333333332519
+        },
+        {
+          "value": 0.935462470574917,
+          "frame": 53,
+          "seconds": 0.8833333333332831
+        }
+      ]
+    },
+    {
+      "id": "lively-walk-left: long actual native path is available",
+      "passed": true,
+      "start": 958.4,
+      "target": 121.60000000000001,
+      "heading": -1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "lively-walk-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-left: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-left: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-left: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "lively-walk-left: mode remains actual walk",
+      "passed": true,
+      "modes": [
+        "walk"
+      ]
+    },
+    {
+      "id": "lively-walk-left: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -15.252379884954383,
+            "frame": 77,
+            "seconds": 1.2833333333332604
+          },
+          "maximum": {
+            "value": 15.25316997240416,
+            "frame": 95,
+            "seconds": 1.5833333333332433
+          },
+          "span": 30.505549857358545,
+          "largestStep": {
+            "value": 4.317736802102732,
+            "fromFrame": 71,
+            "toFrame": 72,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -15.236400094998764,
+            "frame": 91,
+            "seconds": 1.5166666666665805
+          },
+          "maximum": {
+            "value": 15.257099293310436,
+            "frame": 52,
+            "seconds": 0.8666666666666174
+          },
+          "span": 30.4934993883092,
+          "largestStep": {
+            "value": 4.3194189726400225,
+            "fromFrame": 114,
+            "toFrame": 115,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 21,
+            "seconds": 0.3499999999999801
+          },
+          "maximum": {
+            "value": 9.854461997385641,
+            "frame": 43,
+            "seconds": 0.7166666666666259
+          },
+          "span": 9.854461997385641,
+          "largestStep": {
+            "value": 2.43941820132884,
+            "fromFrame": 68,
+            "toFrame": 69,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 9.858623092837894,
+            "frame": 86,
+            "seconds": 1.4333333333332519
+          },
+          "span": 9.858623092837894,
+          "largestStep": {
+            "value": 2.4392292745866655,
+            "fromFrame": 60,
+            "toFrame": 61,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -13.076698980523869,
+            "frame": 79,
+            "seconds": 1.3166666666665918
+          },
+          "maximum": {
+            "value": 29.670314780475053,
+            "frame": 68,
+            "seconds": 1.133333333333269
+          },
+          "span": 42.747013760998925,
+          "largestStep": {
+            "value": 6.071346862990439,
+            "fromFrame": 102,
+            "toFrame": 103,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -28.21359512834287,
+            "frame": 65,
+            "seconds": 1.0833333333332718
+          },
+          "maximum": {
+            "value": 14.553788864455727,
+            "frame": 111,
+            "seconds": 1.8499999999998948
+          },
+          "span": 42.7673839927986,
+          "largestStep": {
+            "value": 6.073817650270501,
+            "fromFrame": 59,
+            "toFrame": 60,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.05712661855540267,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5194406354624435,
+            "frame": 31,
+            "seconds": 0.5166666666666373
+          },
+          "span": 0.46231401690704077,
+          "largestStep": {
+            "value": 0.0956699400670455,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.068189056674669,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5541388129326118,
+            "frame": 16,
+            "seconds": 0.2666666666666515
+          },
+          "span": 0.4859497562579428,
+          "largestStep": {
+            "value": 0.11219797340026132,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.03625959613969111,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.3198338810652257,
+            "frame": 26,
+            "seconds": 0.4333333333333087
+          },
+          "span": 0.2835742849255346,
+          "largestStep": {
+            "value": 0.05806801604533554,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.0050332085307206375,
+            "frame": 2,
+            "seconds": 0.03333333333333144
+          },
+          "maximum": {
+            "value": 0.30109288454230027,
+            "frame": 69,
+            "seconds": 1.1499999999999346
+          },
+          "span": 0.3061260930730209,
+          "largestStep": {
+            "value": 0.03309978366952118,
+            "fromFrame": 103,
+            "toFrame": 104,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.00606554935663,
+            "frame": 22,
+            "seconds": 0.3666666666666458
+          },
+          "maximum": {
+            "value": 2.602026376014227,
+            "frame": 117,
+            "seconds": 1.9499999999998892
+          },
+          "span": 2.595960826657597,
+          "largestStep": {
+            "value": 0.5103612441137935,
+            "fromFrame": 113,
+            "toFrame": 114,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 1.0764337149745464e-26,
+            "frame": 7,
+            "seconds": 0.11666666666666003
+          },
+          "maximum": {
+            "value": 2.5980903019182824,
+            "frame": 74,
+            "seconds": 1.2333333333332632
+          },
+          "span": 2.5980903019182824,
+          "largestStep": {
+            "value": 0.5109345433555474,
+            "fromFrame": 70,
+            "toFrame": 71,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -4.38612415376051,
+            "frame": 23,
+            "seconds": 0.38333333333331154
+          },
+          "maximum": {
+            "value": 4.456625199920584,
+            "frame": 69,
+            "seconds": 1.1499999999999346
+          },
+          "span": 8.842749353681093,
+          "largestStep": {
+            "value": 1.1576313135977676,
+            "fromFrame": 103,
+            "toFrame": 104,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.859593425543172,
+            "frame": 95,
+            "seconds": 1.5833333333332433
+          },
+          "maximum": {
+            "value": 4.8046510071746305,
+            "frame": 26,
+            "seconds": 0.4333333333333087
+          },
+          "span": 8.664244432717803,
+          "largestStep": {
+            "value": 1.1658728967809557,
+            "fromFrame": 31,
+            "toFrame": 32,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.7087425430962864,
+            "frame": 20,
+            "seconds": 0.3333333333333144
+          },
+          "maximum": {
+            "value": 0.17639914621112973,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 1.885141689307416,
+          "largestStep": {
+            "value": 0.13454465002678884,
+            "fromFrame": 11,
+            "toFrame": 12,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.4989941488088487,
+            "frame": 107,
+            "seconds": 1.783333333333232
+          },
+          "maximum": {
+            "value": 0.1489049282684407,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 1.6478990770772894,
+          "largestStep": {
+            "value": 0.1005121027496223,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "lively-walk-left: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 8,
+      "raiseSpan": [
+        0.46231401690704077,
+        0.4859497562579428
+      ]
+    },
+    {
+      "id": "lively-walk-left: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "lively-walk-left: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -14.050045013427734,
+          "frame": 93,
+          "seconds": 1.549999999999912
+        },
+        "maximum": {
+          "value": 37.33955764770508,
+          "frame": 50,
+          "seconds": 0.833333333333286
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 5.851032355674128,
+          "frame": 120,
+          "seconds": 1.9999999999998863
+        },
+        "maximum": {
+          "value": 6.2348879882902395,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "lively-walk-left: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9251929369654159,
+      "actualArmCentreCorrelation": -0.9262565382042065,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.8647343312556716,
+        "R": -0.8574529800588881
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "lively-walk-left: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 10,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "lively-walk-left: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-left: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "lively-walk-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "lively-walk-left: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "lively-walk-right: long actual native path is available",
+      "passed": true,
+      "start": 121.60000000000001,
+      "target": 958.4,
+      "heading": 1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "lively-walk-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-right: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-right: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-right: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "lively-walk-right: mode remains actual walk",
+      "passed": true,
+      "modes": [
+        "walk"
+      ]
+    },
+    {
+      "id": "lively-walk-right: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -15.246745295127102,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "maximum": {
+            "value": 15.245166881606659,
+            "frame": 84,
+            "seconds": 1.3999999999999204
+          },
+          "span": 30.491912176733763,
+          "largestStep": {
+            "value": 4.318284714640301,
+            "fromFrame": 78,
+            "toFrame": 79,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -15.243756866541295,
+            "frame": 116,
+            "seconds": 1.9333333333332234
+          },
+          "maximum": {
+            "value": 15.244852194479437,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "span": 30.488609061020732,
+          "largestStep": {
+            "value": 4.309495375229213,
+            "fromFrame": 64,
+            "toFrame": 65,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 9.852263831817925,
+            "frame": 107,
+            "seconds": 1.783333333333232
+          },
+          "span": 9.852263831817925,
+          "largestStep": {
+            "value": 2.4381375703021035,
+            "fromFrame": 75,
+            "toFrame": 76,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 9.853613741861539,
+            "frame": 93,
+            "seconds": 1.549999999999912
+          },
+          "span": 9.853613741861539,
+          "largestStep": {
+            "value": 2.4369598747721573,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -14.55084189256433,
+            "frame": 75,
+            "seconds": 1.249999999999929
+          },
+          "maximum": {
+            "value": 28.202506084235473,
+            "frame": 86,
+            "seconds": 1.4333333333332519
+          },
+          "span": 42.7533479767998,
+          "largestStep": {
+            "value": 6.069243343100451,
+            "fromFrame": 109,
+            "toFrame": 110,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -29.670124707881733,
+            "frame": 118,
+            "seconds": 1.9666666666665549
+          },
+          "maximum": {
+            "value": 13.086369015804522,
+            "frame": 72,
+            "seconds": 1.1999999999999318
+          },
+          "span": 42.756493723686255,
+          "largestStep": {
+            "value": 6.070321365949216,
+            "fromFrame": 66,
+            "toFrame": 67,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.06655949128510792,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5171563627675074,
+            "frame": 95,
+            "seconds": 1.5833333333332433
+          },
+          "span": 0.4505968714823995,
+          "largestStep": {
+            "value": 0.11143618381277089,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.05385831639214349,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5173052816549939,
+            "frame": 81,
+            "seconds": 1.3499999999999233
+          },
+          "span": 0.4634469652628504,
+          "largestStep": {
+            "value": 0.08917809511333276,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.0009623724565446774,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.2828549635698769,
+            "frame": 74,
+            "seconds": 1.2333333333332632
+          },
+          "span": 0.2818925911133322,
+          "largestStep": {
+            "value": 0.03306677609480249,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.03441435595739744,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.2895510401482408,
+            "frame": 30,
+            "seconds": 0.4999999999999716
+          },
+          "span": 0.25513668419084334,
+          "largestStep": {
+            "value": 0.05648266226949678,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.0034633071779147082,
+            "frame": 29,
+            "seconds": 0.48333333333330586
+          },
+          "maximum": {
+            "value": 2.599244279758775,
+            "frame": 67,
+            "seconds": 1.1166666666666032
+          },
+          "span": 2.5957809725808603,
+          "largestStep": {
+            "value": 0.5074016264414873,
+            "fromFrame": 91,
+            "toFrame": 92,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 9.26368829840966e-28,
+            "frame": 12,
+            "seconds": 0.19999999999998863
+          },
+          "maximum": {
+            "value": 2.5991962946794502,
+            "frame": 81,
+            "seconds": 1.3499999999999233
+          },
+          "span": 2.5991962946794502,
+          "largestStep": {
+            "value": 0.510938278030203,
+            "fromFrame": 77,
+            "toFrame": 78,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -4.4559802798102925,
+            "frame": 76,
+            "seconds": 1.2666666666665947
+          },
+          "maximum": {
+            "value": 3.9348916463922263,
+            "frame": 30,
+            "seconds": 0.4999999999999716
+          },
+          "span": 8.390871926202518,
+          "largestStep": {
+            "value": 1.1572275678908135,
+            "fromFrame": 110,
+            "toFrame": 111,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -4.4509176177871295,
+            "frame": 119,
+            "seconds": 1.9833333333332206
+          },
+          "maximum": {
+            "value": 3.860414480248403,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "span": 8.311332098035532,
+          "largestStep": {
+            "value": 1.1576501091294014,
+            "fromFrame": 67,
+            "toFrame": 68,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -1.7828991963624317,
+            "frame": 42,
+            "seconds": 0.6999999999999602
+          },
+          "maximum": {
+            "value": 0.2176881594625071,
+            "frame": 21,
+            "seconds": 0.3499999999999801
+          },
+          "span": 2.0005873558249387,
+          "largestStep": {
+            "value": 0.15902414614146165,
+            "fromFrame": 34,
+            "toFrame": 35,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.3641605903120553,
+            "frame": 23,
+            "seconds": 0.38333333333331154
+          },
+          "maximum": {
+            "value": -0.21521751534859346,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.1489430749634617,
+          "largestStep": {
+            "value": 0.16329694642610737,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "lively-walk-right: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 8,
+      "raiseSpan": [
+        0.4505968714823995,
+        0.4634469652628504
+      ]
+    },
+    {
+      "id": "lively-walk-right: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "lively-walk-right: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -14.050048828125,
+          "frame": 115,
+          "seconds": 1.9166666666665577
+        },
+        "maximum": {
+          "value": 37.33304214477539,
+          "frame": 100,
+          "seconds": 1.666666666666572
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 5.851032354154224,
+          "frame": 120,
+          "seconds": 1.9999999999998863
+        },
+        "maximum": {
+          "value": 6.192760764834244,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "lively-walk-right: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.930337443941171,
+      "actualArmCentreCorrelation": -0.9324918043000597,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.8636177999424075,
+        "R": -0.8741536012356678
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "lively-walk-right: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 13,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "lively-walk-right: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-walk-right: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "lively-walk-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-walk-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "lively-walk-right: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "lively-run-left: long actual native path is available",
+      "passed": true,
+      "start": 958.4,
+      "target": 121.60000000000001,
+      "heading": -1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "lively-run-left: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-left: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-left: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-left: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "lively-run-left: mode remains actual run",
+      "passed": true,
+      "modes": [
+        "run"
+      ]
+    },
+    {
+      "id": "lively-run-left: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -17.163085887547044,
+            "frame": 80,
+            "seconds": 1.3333333333332575
+          },
+          "maximum": {
+            "value": 17.246109433206108,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "span": 34.409195320753156,
+          "largestStep": {
+            "value": 9.451996184811776,
+            "fromFrame": 118,
+            "toFrame": 119,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -17.236390028614796,
+            "frame": 87,
+            "seconds": 1.4499999999999176
+          },
+          "maximum": {
+            "value": 17.163173355017125,
+            "frame": 109,
+            "seconds": 1.8166666666665634
+          },
+          "span": 34.39956338363192,
+          "largestStep": {
+            "value": 9.47505699942143,
+            "fromFrame": 111,
+            "toFrame": 112,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 14,
+            "frame": 91,
+            "seconds": 1.5166666666665805
+          },
+          "span": 14,
+          "largestStep": {
+            "value": 6.504718951953359,
+            "fromFrame": 89,
+            "toFrame": 90,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 14,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "span": 14,
+          "largestStep": {
+            "value": 6.510628466918102,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -4.098837166300084,
+            "frame": 96,
+            "seconds": 1.599999999999909
+          },
+          "maximum": {
+            "value": 29.995305306472595,
+            "frame": 90,
+            "seconds": 1.4999999999999147
+          },
+          "span": 34.09414247277268,
+          "largestStep": {
+            "value": 9.324696537785929,
+            "fromFrame": 106,
+            "toFrame": 107,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -27.900788809068697,
+            "frame": 89,
+            "seconds": 1.483333333333249
+          },
+          "maximum": {
+            "value": 6.275573502983036,
+            "frame": 83,
+            "seconds": 1.3833333333332547
+          },
+          "span": 34.17636231205174,
+          "largestStep": {
+            "value": 9.331332028085564,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.06979398244408758,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5608201861708909,
+            "frame": 113,
+            "seconds": 1.8833333333332263
+          },
+          "span": 0.49102620372680333,
+          "largestStep": {
+            "value": 0.11786012118182865,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.0841982588547307,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5918388305199717,
+            "frame": 20,
+            "seconds": 0.3333333333333144
+          },
+          "span": 0.507640571665241,
+          "largestStep": {
+            "value": 0.1401973625523312,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.04655436489941746,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.3396267367884954,
+            "frame": 27,
+            "seconds": 0.4499999999999744
+          },
+          "span": 0.293072371889078,
+          "largestStep": {
+            "value": 0.07801761635120005,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.0071800972689393915,
+            "frame": 3,
+            "seconds": 0.04999999999999716
+          },
+          "maximum": {
+            "value": 0.31197925807130505,
+            "frame": 104,
+            "seconds": 1.7333333333332348
+          },
+          "span": 0.3191593553402444,
+          "largestStep": {
+            "value": 0.04168342584855264,
+            "fromFrame": 79,
+            "toFrame": 80,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.4296002729658416,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 6.483339100271798,
+            "frame": 86,
+            "seconds": 1.4333333333332519
+          },
+          "span": 6.053738827305956,
+          "largestStep": {
+            "value": 0.7758270114772553,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.4032577051209689,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 6.484031565233794,
+            "frame": 120,
+            "seconds": 1.9999999999998863
+          },
+          "span": 6.080773860112825,
+          "largestStep": {
+            "value": 0.7424137102533779,
+            "fromFrame": 104,
+            "toFrame": 105,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.399870686337798,
+            "frame": 26,
+            "seconds": 0.4333333333333087
+          },
+          "maximum": {
+            "value": 3.1633655294721565,
+            "frame": 104,
+            "seconds": 1.7333333333332348
+          },
+          "span": 6.563236215809955,
+          "largestStep": {
+            "value": 1.5574956978176075,
+            "fromFrame": 79,
+            "toFrame": 80,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.671636669190775,
+            "frame": 117,
+            "seconds": 1.9499999999998892
+          },
+          "maximum": {
+            "value": 3.7645018405791046,
+            "frame": 27,
+            "seconds": 0.4499999999999744
+          },
+          "span": 6.436138509769879,
+          "largestStep": {
+            "value": 1.554659685496513,
+            "fromFrame": 113,
+            "toFrame": 114,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.2278643902796706,
+            "frame": 21,
+            "seconds": 0.3499999999999801
+          },
+          "maximum": {
+            "value": 0.12850091651896722,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.356365306798638,
+          "largestStep": {
+            "value": 0.16198936062131497,
+            "fromFrame": 8,
+            "toFrame": 9,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.3077286463046716,
+            "frame": 109,
+            "seconds": 1.8166666666665634
+          },
+          "maximum": {
+            "value": 0.16265346799936142,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.4703821143040328,
+          "largestStep": {
+            "value": 0.15380273034240388,
+            "fromFrame": 36,
+            "toFrame": 37,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "lively-run-left: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 15,
+      "raiseSpan": [
+        0.49102620372680333,
+        0.507640571665241
+      ]
+    },
+    {
+      "id": "lively-run-left: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "lively-run-left: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -22.820281982421875,
+          "frame": 115,
+          "seconds": 1.9166666666665577
+        },
+        "maximum": {
+          "value": 38.70309066772461,
+          "frame": 108,
+          "seconds": 1.7999999999998977
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 4,
+          "frame": 115,
+          "seconds": 1.9166666666665577
+        },
+        "maximum": {
+          "value": 4.043047631301945,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "lively-run-left: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9689882211254741,
+      "actualArmCentreCorrelation": -0.9682451851216078,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.6479823299996407,
+        "R": -0.6465704803580306
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "lively-run-left: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 4,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "lively-run-left: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-left: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "lively-run-left: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-run-left: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "lively-run-left: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "lively-run-right: long actual native path is available",
+      "passed": true,
+      "start": 121.60000000000001,
+      "target": 958.4,
+      "heading": 1,
+      "bounds": {
+        "W": 1080,
+        "H": 610,
+        "floorY": 512.4,
+        "S": 0.9
+      },
+      "availableDistance": 836.8,
+      "maximumRunTravelInWindow": 500
+    },
+    {
+      "id": "lively-run-right: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-right: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.30000000000001,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-right: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-right: all requested actual PNGs written",
+      "passed": true,
+      "count": 30,
+      "expected": 30
+    },
+    {
+      "id": "lively-run-right: mode remains actual run",
+      "passed": true,
+      "modes": [
+        "run"
+      ]
+    },
+    {
+      "id": "lively-run-right: feet and paws visibly sized numeric motion",
+      "passed": true,
+      "scope": "Numeric excursion threshold only; actual visibility under ears still requires image review.",
+      "fields": {
+        "footXL": {
+          "samples": 120,
+          "minimum": {
+            "value": -17.194756477002503,
+            "frame": 117,
+            "seconds": 1.9499999999998892
+          },
+          "maximum": {
+            "value": 17.201449237093456,
+            "frame": 109,
+            "seconds": 1.8166666666665634
+          },
+          "span": 34.396205714095956,
+          "largestStep": {
+            "value": 9.47112111240574,
+            "fromFrame": 92,
+            "toFrame": 93,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footXR": {
+          "samples": 120,
+          "minimum": {
+            "value": -17.237397846556608,
+            "frame": 83,
+            "seconds": 1.3833333333332547
+          },
+          "maximum": {
+            "value": 17.233355532668895,
+            "frame": 102,
+            "seconds": 1.6999999999999034
+          },
+          "span": 34.4707533792255,
+          "largestStep": {
+            "value": 9.45289539118613,
+            "fromFrame": 99,
+            "toFrame": 100,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 11,
+            "seconds": 0.1833333333333229
+          },
+          "maximum": {
+            "value": 14,
+            "frame": 79,
+            "seconds": 1.3166666666665918
+          },
+          "span": 14,
+          "largestStep": {
+            "value": 6.509483626660383,
+            "fromFrame": 104,
+            "toFrame": 105,
+            "dt": 0.016666666666666666
+          }
+        },
+        "footLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 14,
+            "frame": 72,
+            "seconds": 1.1999999999999318
+          },
+          "span": 14,
+          "largestStep": {
+            "value": 6.484420072944945,
+            "fromFrame": 70,
+            "toFrame": 71,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armL": {
+          "samples": 120,
+          "minimum": {
+            "value": -6.286020019457062,
+            "frame": 105,
+            "seconds": 1.7499999999999005
+          },
+          "maximum": {
+            "value": 27.895370037117864,
+            "frame": 111,
+            "seconds": 1.8499999999998948
+          },
+          "span": 34.18139005657493,
+          "largestStep": {
+            "value": 9.323365680454891,
+            "fromFrame": 80,
+            "toFrame": 81,
+            "dt": 0.016666666666666666
+          }
+        },
+        "armR": {
+          "samples": 120,
+          "minimum": {
+            "value": -29.986340763398328,
+            "frame": 98,
+            "seconds": 1.6333333333332405
+          },
+          "maximum": {
+            "value": 4.9605648105724525,
+            "frame": 18,
+            "seconds": 0.29999999999998295
+          },
+          "span": 34.94690557397078,
+          "largestStep": {
+            "value": 9.322424587305447,
+            "fromFrame": 87,
+            "toFrame": 88,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.08035433907881355,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.6369671914134676,
+            "frame": 13,
+            "seconds": 0.21666666666665435
+          },
+          "span": 0.5566128523346541,
+          "largestStep": {
+            "value": 0.1326521134424919,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earRaiseR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.06828054208350333,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.5626755814604363,
+            "frame": 24,
+            "seconds": 0.39999999999997726
+          },
+          "span": 0.49439503937693297,
+          "largestStep": {
+            "value": 0.11378593801025337,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadL": {
+          "samples": 120,
+          "minimum": {
+            "value": -0.021664257585026332,
+            "frame": 7,
+            "seconds": 0.11666666666666003
+          },
+          "maximum": {
+            "value": 0.29846275760783925,
+            "frame": 105,
+            "seconds": 1.7499999999999005
+          },
+          "span": 0.32012701519286557,
+          "largestStep": {
+            "value": 0.041776432057693325,
+            "fromFrame": 101,
+            "toFrame": 102,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earSpreadR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.04500763057867344,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 0.366846094283704,
+            "frame": 9,
+            "seconds": 0.14999999999999147
+          },
+          "span": 0.32183846370503055,
+          "largestStep": {
+            "value": 0.077725020250212,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftL": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.4032577051209689,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 6.483571547840875,
+            "frame": 101,
+            "seconds": 1.6833333333332376
+          },
+          "span": 6.080313842719907,
+          "largestStep": {
+            "value": 0.7424714971280615,
+            "fromFrame": 85,
+            "toFrame": 86,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earLiftR": {
+          "samples": 120,
+          "minimum": {
+            "value": 0.4387426892470406,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "maximum": {
+            "value": 6.481634409492581,
+            "frame": 108,
+            "seconds": 1.7999999999998977
+          },
+          "span": 6.0428917202455406,
+          "largestStep": {
+            "value": 0.7761343119406414,
+            "fromFrame": 1,
+            "toFrame": 2,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlL": {
+          "samples": 120,
+          "minimum": {
+            "value": -3.16606239436457,
+            "frame": 119,
+            "seconds": 1.9833333333332206
+          },
+          "maximum": {
+            "value": 4.7482790678936375,
+            "frame": 8,
+            "seconds": 0.13333333333332575
+          },
+          "span": 7.914341462258207,
+          "largestStep": {
+            "value": 1.5539557774224553,
+            "fromFrame": 94,
+            "toFrame": 95,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earCurlR": {
+          "samples": 120,
+          "minimum": {
+            "value": -5.3549781533036525,
+            "frame": 9,
+            "seconds": 0.14999999999999147
+          },
+          "maximum": {
+            "value": 2.668322870243763,
+            "frame": 105,
+            "seconds": 1.7499999999999005
+          },
+          "span": 8.023301023547415,
+          "largestStep": {
+            "value": 1.5592881060033896,
+            "fromFrame": 101,
+            "toFrame": 102,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipL": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.506811179060878,
+            "frame": 47,
+            "seconds": 0.7833333333332888
+          },
+          "maximum": {
+            "value": -0.15345051902807905,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.353360660032799,
+          "largestStep": {
+            "value": 0.1816536730895446,
+            "fromFrame": 30,
+            "toFrame": 31,
+            "dt": 0.016666666666666666
+          }
+        },
+        "earTipR": {
+          "samples": 120,
+          "minimum": {
+            "value": -2.413373726999461,
+            "frame": 22,
+            "seconds": 0.3666666666666458
+          },
+          "maximum": {
+            "value": -0.2158151294784414,
+            "frame": 1,
+            "seconds": 0.01666666666666572
+          },
+          "span": 2.1975585975210197,
+          "largestStep": {
+            "value": 0.1589954897732324,
+            "fromFrame": 10,
+            "toFrame": 11,
+            "dt": 0.016666666666666666
+          }
+        }
+      }
+    },
+    {
+      "id": "lively-run-right: alternating native feet and responding ears",
+      "passed": true,
+      "liftAlternations": 16,
+      "raiseSpan": [
+        0.5566128523346541,
+        0.49439503937693297
+      ]
+    },
+    {
+      "id": "lively-run-right: stable native gait has limb diagnostics",
+      "passed": true,
+      "stableFrames": 93,
+      "stableFrameRange": [
+        28,
+        120
+      ]
+    },
+    {
+      "id": "lively-run-right: actual foot meshes pass each other",
+      "passed": true,
+      "footSeparationX": {
+        "minimum": {
+          "value": -22.81634521484375,
+          "frame": 96,
+          "seconds": 1.599999999999909
+        },
+        "maximum": {
+          "value": 38.6951789855957,
+          "frame": 89,
+          "seconds": 1.483333333333249
+        }
+      },
+      "hipGap": {
+        "minimum": {
+          "value": 4,
+          "frame": 114,
+          "seconds": 1.899999999999892
+        },
+        "maximum": {
+          "value": 4.03171282222031,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      }
+    },
+    {
+      "id": "lively-run-right: arms alternate opposite their same-side feet",
+      "passed": true,
+      "angleCorrelation": -0.9699290046614031,
+      "actualArmCentreCorrelation": -0.9688312964056919,
+      "actualSameSideHandFootCentreCorrelation": {
+        "L": -0.644143871106496,
+        "R": -0.6472253917589582
+      },
+      "scope": "Phase/geometry relation only; does not claim that every arm pixel is visible."
+    },
+    {
+      "id": "lively-run-right: each stable step has a grounded support foot",
+      "passed": true,
+      "supportFailures": [],
+      "soleFailures": [],
+      "bothSupportedFrames": 5,
+      "scope": "Authored lift and model-space mesh floor, not world-space foot locking."
+    },
+    {
+      "id": "lively-run-right: heading and near-side mapping agree",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-run-right: near limbs submit foreground coverage over torso",
+      "passed": true,
+      "failures": [],
+      "nearArmForegroundMean": {
+        "minimum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        },
+        "maximum": {
+          "value": 0.79581218957901,
+          "frame": 28,
+          "seconds": 0.46666666666664014
+        }
+      },
+      "scope": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+    },
+    {
+      "id": "lively-run-right: stop recovery records all 24 actual ticks",
+      "passed": true
+    },
+    {
+      "id": "lively-run-right: stop recovery geometry, extent and renderer stay valid",
+      "passed": true,
+      "negativeTriangleFrames": [],
+      "outsideViewFrames": [],
+      "errors": []
+    },
+    {
+      "id": "lively-run-right: native stop leaves the walking mode",
+      "passed": true,
+      "modes": [
+        "idle"
+      ]
+    },
+    {
+      "id": "lively-ear-wave: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-ear-wave: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-ear-wave: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-ear-wave: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-ear-wave: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "lively-ear-wave: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 86,
+          "seconds": 1.4333333333332519,
+          "mode": "idle",
+          "gesture": {
+            "kind": "ear-wave",
+            "k": 0.6515151515151144
+          }
+        }
+      ]
+    },
+    {
+      "id": "lively-ear-wave: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9999518724361357,
+          "frame": 96,
+          "seconds": 1.599999999999909
+        },
+        {
+          "value": 0.41399528309632294,
+          "frame": 31,
+          "seconds": 0.5166666666666373
+        }
+      ]
+    },
+    {
+      "id": "lively-flap: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-flap: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-flap: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-flap: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-flap: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "lively-flap: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 47,
+          "seconds": 0.7833333333332888,
+          "mode": "land",
+          "gesture": {
+            "kind": "flap",
+            "k": 0.5595238095237778
+          }
+        }
+      ]
+    },
+    {
+      "id": "lively-flap: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9861619937572865,
+          "frame": 49,
+          "seconds": 0.8166666666666202
+        },
+        {
+          "value": 0.9861619937572865,
+          "frame": 49,
+          "seconds": 0.8166666666666202
+        }
+      ]
+    },
+    {
+      "id": "lively-stretch: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-stretch: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-stretch: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-stretch: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-stretch: all requested actual PNGs written",
+      "passed": true,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "id": "lively-stretch: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 126,
+          "seconds": 2.0999999999998806,
+          "mode": "idle",
+          "gesture": {
+            "kind": "stretch",
+            "k": 0.6562499999999627
+          }
+        }
+      ]
+    },
+    {
+      "id": "lively-stretch: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9999999999081283,
+          "frame": 138,
+          "seconds": 2.2999999999998693
+        },
+        {
+          "value": 0.9999999999081283,
+          "frame": 138,
+          "seconds": 2.2999999999998693
+        }
+      ]
+    },
+    {
+      "id": "lively-celebrate: every requested native 60 Hz tick recorded",
+      "passed": true
+    },
+    {
+      "id": "lively-celebrate: sampled head/body/ears/limbs have no inverted triangles",
+      "passed": true,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-celebrate: actual extent stays inside renderer view",
+      "passed": true,
+      "minimumViewMargin": 25.08540039062501,
+      "failingFrames": []
+    },
+    {
+      "id": "lively-celebrate: renderer remains ready without recorded errors",
+      "passed": true,
+      "errors": [],
+      "failingFrames": []
+    },
+    {
+      "id": "lively-celebrate: all requested actual PNGs written",
+      "passed": true,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "id": "lively-celebrate: requested peak executes correct native gesture",
+      "passed": true,
+      "peaks": [
+        {
+          "frame": 119,
+          "seconds": 1.9833333333332206,
+          "mode": "idle",
+          "gesture": {
+            "kind": "celebrate",
+            "k": 0.6010101010100669
+          }
+        },
+        {
+          "frame": 152,
+          "seconds": 2.5333333333331893,
+          "mode": "idle",
+          "gesture": {
+            "kind": "celebrate",
+            "k": 0.7676767676767241
+          }
+        }
+      ]
+    },
+    {
+      "id": "lively-celebrate: whole-ear raise reaches requested strong range",
+      "passed": true,
+      "scope": "Parameter amplitude, not visual acceptance.",
+      "raise": [
+        {
+          "value": 0.9979314908850527,
+          "frame": 91,
+          "seconds": 1.5166666666665805
+        },
+        {
+          "value": 0.9987508035593986,
+          "frame": 58,
+          "seconds": 0.9666666666666117
+        }
+      ]
+    },
+    {
+      "id": "production and staged payload hashes unchanged",
+      "passed": true
+    },
+    {
+      "id": "native host and final renderer have no recorded errors",
+      "passed": true
+    },
+    {
+      "id": "no final GL error",
+      "passed": true,
+      "errors": [
+        0
+      ]
+    }
+  ],
+  "sourcesUnchanged": true,
+  "startedAt": "2026-10-20T05:48:33.034Z",
+  "completedAt": "2026-10-20T05:49:20.087Z",
+  "scriptSHA256": "65fb3d2c75a6cb73c8f8797ae4fa88f37e59afa0b699f45d4e6bcab7bad4b49b",
+  "sourceFiles": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "8fae4087714b4f8616a3a3581793bc7b02dd67b3e0876458f05863f7cc3ce51c"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 232541,
+      "sha256": "374944e022cb3da30ec3d14b1c03c38c363ae8e74defd5db582f9da2f2f89917"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 38532,
+      "sha256": "a1126067d31a4ecf42bd96030e094a64679974ab0780348b4774708006c7cf44"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 42671,
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 33205,
+      "sha256": "8147c0d9b576da8429a95e1a59c7ba2c3888c3fc067385e94fe316c379b62e73"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    }
+  ],
+  "originalReport": {
+    "file": "report.json",
+    "bytes": 21677962,
+    "sha256": "0ea0495ec3f57e46d1d5992fd5296a6919ad69d36a4a56d4f68f5adbe2ce0bd3"
+  },
+  "compressedReport": {
+    "file": "report.json.gz",
+    "bytes": 2302827,
+    "sha256": "8e2277fabea0ca0abb853dc83b3b4367581a2d866520195c91eefae44ed905c6",
+    "lossless": true
+  },
+  "phases": [
+    {
+      "id": "gentle-walk-left",
+      "scheme": "gentle",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -8.340812683105469,
+            "frame": 119,
+            "seconds": 1.9833333333333263
+          },
+          "maximum": {
+            "value": 31.62383270263672,
+            "frame": 104,
+            "seconds": 1.7333333333333272
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9280381046957455,
+        "armMeshCentreCorrelation": -0.9323618492472474,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.8734803876527467,
+          "R": -0.8726255139242287
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 5.85103235687561,
+            "frame": 120,
+            "seconds": 1.999999999999993
+          },
+          "maximum": {
+            "value": 6.268366744932537,
+            "frame": 28,
+            "seconds": 0.466666666666665
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 12,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.466666666666665
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.466666666666665
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "gentle-walk-right",
+      "scheme": "gentle",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -8.340747833251953,
+            "frame": 100,
+            "seconds": 1.6666666666667496
+          },
+          "maximum": {
+            "value": 31.623882293701172,
+            "frame": 115,
+            "seconds": 1.916666666666762
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9303375242054369,
+        "armMeshCentreCorrelation": -0.9298936978771607,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.8732794404360985,
+          "R": -0.8724675504145367
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 5.851032353501482,
+            "frame": 120,
+            "seconds": 2.0000000000000995
+          },
+          "maximum": {
+            "value": 6.175056161575297,
+            "frame": 28,
+            "seconds": 0.4666666666666899
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 13,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.4666666666666899
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.4666666666666899
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "gentle-run-left",
+      "scheme": "gentle",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -15.983467102050781,
+            "frame": 108,
+            "seconds": 1.7999999999998977
+          },
+          "maximum": {
+            "value": 31.868045806884766,
+            "frame": 115,
+            "seconds": 1.9166666666665577
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9689882057494473,
+        "armMeshCentreCorrelation": -0.9677621118930871,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.6358059486425668,
+          "R": -0.6355747369152907
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 4,
+            "frame": 114,
+            "seconds": 1.899999999999892
+          },
+          "maximum": {
+            "value": 4.031712742101547,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 4,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "gentle-run-right",
+      "scheme": "gentle",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -15.977310180664062,
+            "frame": 89,
+            "seconds": 1.483333333333249
+          },
+          "maximum": {
+            "value": 31.864986419677734,
+            "frame": 96,
+            "seconds": 1.599999999999909
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9699290615939881,
+        "armMeshCentreCorrelation": -0.9695499581064577,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.6565756125627602,
+          "R": -0.6581094082569455
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 4,
+            "frame": 114,
+            "seconds": 1.899999999999892
+          },
+          "maximum": {
+            "value": 4.031712757534448,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 5,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "gentle-ear-wave",
+      "scheme": "gentle",
+      "action": "ear-wave",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 169,
+      "recordedFrames": 169
+    },
+    {
+      "id": "gentle-flap",
+      "scheme": "gentle",
+      "action": "flap",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120
+    },
+    {
+      "id": "gentle-stretch",
+      "scheme": "gentle",
+      "action": "stretch",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 229,
+      "recordedFrames": 229
+    },
+    {
+      "id": "gentle-celebrate",
+      "scheme": "gentle",
+      "action": "celebrate",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 234,
+      "recordedFrames": 234
+    },
+    {
+      "id": "lively-walk-left",
+      "scheme": "lively",
+      "action": "walk-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -14.050045013427734,
+            "frame": 93,
+            "seconds": 1.549999999999912
+          },
+          "maximum": {
+            "value": 37.33955764770508,
+            "frame": 50,
+            "seconds": 0.833333333333286
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9251929369654159,
+        "armMeshCentreCorrelation": -0.9262565382042065,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.8647343312556716,
+          "R": -0.8574529800588881
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 5.851032355674128,
+            "frame": 120,
+            "seconds": 1.9999999999998863
+          },
+          "maximum": {
+            "value": 6.2348879882902395,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 10,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "lively-walk-right",
+      "scheme": "lively",
+      "action": "walk-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -14.050048828125,
+            "frame": 115,
+            "seconds": 1.9166666666665577
+          },
+          "maximum": {
+            "value": 37.33304214477539,
+            "frame": 100,
+            "seconds": 1.666666666666572
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.930337443941171,
+        "armMeshCentreCorrelation": -0.9324918043000597,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.8636177999424075,
+          "R": -0.8741536012356678
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 5.851032354154224,
+            "frame": 120,
+            "seconds": 1.9999999999998863
+          },
+          "maximum": {
+            "value": 6.192760764834244,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 13,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "lively-run-left",
+      "scheme": "lively",
+      "action": "run-left",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -22.820281982421875,
+            "frame": 115,
+            "seconds": 1.9166666666665577
+          },
+          "maximum": {
+            "value": 38.70309066772461,
+            "frame": 108,
+            "seconds": 1.7999999999998977
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9689882211254741,
+        "armMeshCentreCorrelation": -0.9682451851216078,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.6479823299996407,
+          "R": -0.6465704803580306
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 4,
+            "frame": 115,
+            "seconds": 1.9166666666665577
+          },
+          "maximum": {
+            "value": 4.043047631301945,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 4,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "lively-run-right",
+      "scheme": "lively",
+      "action": "run-right",
+      "kind": "gait",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120,
+      "recoveryFrames": 24,
+      "gait": {
+        "stableFrames": 93,
+        "stableFrameRange": [
+          28,
+          120
+        ],
+        "footSeparationX": {
+          "minimum": {
+            "value": -22.81634521484375,
+            "frame": 96,
+            "seconds": 1.599999999999909
+          },
+          "maximum": {
+            "value": 38.6951789855957,
+            "frame": 89,
+            "seconds": 1.483333333333249
+          }
+        },
+        "feetCross": true,
+        "armAngleCorrelation": -0.9699290046614031,
+        "armMeshCentreCorrelation": -0.9688312964056919,
+        "sameSideHandFootCentreCorrelation": {
+          "L": -0.644143871106496,
+          "R": -0.6472253917589582
+        },
+        "hipGap": {
+          "minimum": {
+            "value": 4,
+            "frame": 114,
+            "seconds": 1.899999999999892
+          },
+          "maximum": {
+            "value": 4.03171282222031,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "supportFailures": [],
+        "soleFailures": [],
+        "bothSupportedFrames": 5,
+        "mappingFailures": [],
+        "layerFailures": [],
+        "nearArmForegroundMean": {
+          "minimum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          },
+          "maximum": {
+            "value": 0.79581218957901,
+            "frame": 28,
+            "seconds": 0.46666666666664014
+          }
+        },
+        "visibilityPassed": null,
+        "visibilityLimitation": "Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs."
+      }
+    },
+    {
+      "id": "lively-ear-wave",
+      "scheme": "lively",
+      "action": "ear-wave",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 169,
+      "recordedFrames": 169
+    },
+    {
+      "id": "lively-flap",
+      "scheme": "lively",
+      "action": "flap",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 120,
+      "recordedFrames": 120
+    },
+    {
+      "id": "lively-stretch",
+      "scheme": "lively",
+      "action": "stretch",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 229,
+      "recordedFrames": 229
+    },
+    {
+      "id": "lively-celebrate",
+      "scheme": "lively",
+      "action": "celebrate",
+      "kind": "gesture",
+      "status": "complete",
+      "expectedFrames": 234,
+      "recordedFrames": 234
+    }
+  ],
+  "recordedFrames": 2464,
+  "recoveryFrames": 192,
+  "totalCapturedPNGs": 274,
+  "distributedPNGs": 42,
+  "visualPassed": null,
+  "smoothnessPassed": null,
+  "visualScope": "Automated reports retain unset visual judgments. Human sample observations are documented separately in acceptance.md; these flags are not rewritten."
+}

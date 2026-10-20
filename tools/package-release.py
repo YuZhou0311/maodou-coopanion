@@ -317,7 +317,7 @@ def main() -> int:
         payload = {"schemaVersion": 1, "kind": "source", "version": version, "createdAtUTC": utc_now(),
                    "scope": "Editable source, AI-painted originals and layers, public reference URL indices, host patch, and retained runtime evidence. This source ZIP is not the directly installable Coopanion ZIP.",
                    "omittedReferenceMedia": "Official, media, community and user original images/videos are not distributed. references/ contains public URLs and documented observations only.",
-                   "historyScope": "No old failed-rig image runs are included. v1.3.1 reports keep their original scope and hashes; large reports are losslessly compressed with summaries, and distributed-evidence.json lists the selected actual captures.",
+                   "historyScope": "Reports retain their original version, scope and hashes. Each version's distributed-evidence.json lists its selected actual captures; large reports are losslessly compressed with summaries. Historical v1.3.1 evidence and contact sheets are separate from the v1.3.2 reports and previews, and do not establish results for the later release.",
                    **inventory}
         if not args.build_source:
             report = {**payload, "status": "planned", "zipCreated": False}

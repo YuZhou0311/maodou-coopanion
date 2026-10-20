@@ -12,6 +12,7 @@ const HELP = `Usage: node tools/qa-motion-v131.mjs [options]
   --scale=0.9                   native display scale, not renderer resolution
   --seconds=2                   each straight walk/run: 1 to 2 simulation seconds
   --scheme=both                 both | gentle | lively
+  --gesture-yaw=0               fixed gesture yaw in degrees, from -75 to 75
   --only=walk-left,walk-right,run-left,run-right,ear-wave,flap,stretch,celebrate
   --out=docs/qa/motion-v131
 Starts its own ephemeral local preview server and owned Chrome only when run.
@@ -21,17 +22,22 @@ Each gait retains 30 consecutive 60 Hz transparent canvas PNGs, then records
 24 native stop/recovery ticks with three actual PNGs; complete
 gesture tracks retain requested peak PNGs and record geometry every frame.
 No real-time FPS, pixel-perfect art or subjective smoothness pass is inferred.
+Gait checks use actual limb mesh centres, submitted foreground weights and draw
+order. Foreground submission is not proof that a paw remains visible behind an
+ear; every gait retains a required manual review of the real captured PNGs.
 `;
 const options = {};
 for (const arg of process.argv.slice(2)) {
   if (arg === '--help') { console.log(HELP); process.exit(0); }
   if (arg === '--software-webgl') options.software = true;
-  else if (/^--(?:chromium|scale|seconds|scheme|only|out)=/.test(arg)) {
+  else if (/^--(?:chromium|scale|seconds|scheme|only|out|gesture-yaw)=/.test(arg)) {
     const at = arg.indexOf('='); options[arg.slice(2, at)] = arg.slice(at + 1);
   } else throw new Error(`Unknown option: ${arg}\n${HELP}`);
 }
 const scale = Number(options.scale ?? .9), seconds = Number(options.seconds ?? 2);
 if (!(scale > 0 && scale <= 1.5) || !(seconds >= 1 && seconds <= 2)) throw new Error('Invalid scale or seconds');
+const gestureYaw = Number(options['gesture-yaw'] ?? 0);
+if (!Number.isFinite(gestureYaw) || Math.abs(gestureYaw) > 75) throw new Error('Invalid gesture yaw');
 const schemeOption = options.scheme ?? 'both';
 if (!['both', 'gentle', 'lively'].includes(schemeOption)) throw new Error('Invalid scheme');
 const schemes = schemeOption === 'both' ? ['gentle', 'lively'] : [schemeOption];
@@ -43,16 +49,21 @@ if (relative(projectRoot, out).startsWith('..')) throw new Error('Output must re
 await mkdir(out, { recursive: true });
 const reportFile = resolve(out, 'report.json'), stepSeconds = 1 / 60;
 const report = {
-  schemaVersion: 1, status: 'in_progress', passed: false, startedAt: new Date().toISOString(),
+  schemaVersion: 2, status: 'in_progress', passed: false, startedAt: new Date().toISOString(),
   scope: 'Actual staged character in the unmodified native opaque iframe. Parent advance() submits and awaits each real tick; a temporary operator hook records the native body after that tick. Fixed-step captures are not real-time FPS evidence. Transparent PNGs exclude the outer SVG transform and particles.',
-  requestedScale: scale, requestedGaitSeconds: seconds, schemes, requestedIds: ids,
+  requestedScale: scale, requestedGaitSeconds: seconds, requestedGestureYawDegrees: gestureYaw, schemes, requestedIds: ids,
   viewport: { width: 1680, height: 1000 }, deviceScaleFactor: 1,
   browserFlags: ['--no-sandbox'], checks: [], phases: [], screenshots: [], errors: [], warnings: [],
   visualPassed: null, smoothnessPassed: null, sourcesUnchanged: false,
   onlyFilesListedBelongToThisRun: true,
-  geometryScope: { observedParts: ['head', 'body', 'earL', 'earR'], negativeAreaTolerance: 1e-5,
+  geometryScope: { observedParts: ['head', 'body', 'earL', 'earR', 'armL', 'armR', 'footL', 'footR'], negativeAreaTolerance: 1e-5,
     extentTolerance: 1e-4, extentIncludes: 'The figure-provided union of head/body/ears/arms/feet and visible tail, including its existing .7 logical-unit padding.',
-    limitation: 'meshHealth does not expose per-triangle limb or facial geometry. Positive triangles alone do not establish a pleasing silhouette or correct occlusion.' },
+    limitation: 'Facial triangles are not inspected. Positive triangles, foreground weights and draw order alone do not establish a pleasing silhouette or a visibly exposed near paw.' },
+  gaitScope: { stableAfterModeSeconds: .45, minimumStableAbsoluteYaw: .5,
+    footCrossing: 'Actual transformed footR bounding-box centre X minus footL centre X must take both signs, with .25 logical-unit clearance.',
+    armPhase: 'Angles must oppose, and each actual hand mesh centre must move oppositely to its same-side foot centre.',
+    support: 'A supported foot has zero authored lift and its mesh bottom lies at model Y=256; this is not a claim of world-space locking under the outer SVG transform.',
+    visibility: 'Actual PNG review is required. Submitted alpha/foreground order only proves that the near limb is eligible to appear in front of the torso; an ear can still cover it.' },
 };
 if (options.software) report.browserFlags.push('--use-gl=angle', '--use-angle=swiftshader-webgl', '--enable-unsafe-swiftshader');
 const save = () => atomicWrite(reportFile, JSON.stringify(report, null, 2) + '\n');
@@ -90,14 +101,69 @@ function trackSummary(rows) {
     rendererFailureFrames: rows.filter(r => !r.rendererOK).map(r => r.index) };
 }
 
+function correlation(pairs) {
+  const valid = pairs.filter(pair => pair.every(Number.isFinite));
+  if (valid.length < 3) return null;
+  const mean = [0, 1].map(i => valid.reduce((s, pair) => s + pair[i], 0) / valid.length);
+  let cross = 0, a = 0, b = 0;
+  for (const [x, y] of valid) { const dx = x - mean[0], dy = y - mean[1]; cross += dx * dy; a += dx * dx; b += dy * dy; }
+  return a > 1e-10 && b > 1e-10 ? cross / Math.sqrt(a * b) : null;
+}
+function recordedRange(rows, valueOf) {
+  let minimum = null, maximum = null;
+  for (const row of rows) {
+    const value = valueOf(row); if (!Number.isFinite(value)) continue;
+    const point = { value, frame: row.index, seconds: row.localSeconds };
+    if (!minimum || value < minimum.value) minimum = point;
+    if (!maximum || value > maximum.value) maximum = point;
+  }
+  return { minimum, maximum };
+}
+function gaitSummary(rows, expectedHeading) {
+  const stable = rows.filter(r => r.modeT >= .45 && Math.abs(r.viewYaw) >= .5 && r.gait?.kinematicBlend >= 1 - 1e-8);
+  const parts = r => r.limbs?.parts ?? {};
+  const centreX = (r, id) => parts(r)[id]?.center?.[0];
+  const separation = recordedRange(stable, r => r.limbs?.footSeparationX);
+  const supportFailures = [], soleFailures = [], mappingFailures = [], layerFailures = [];
+  let bothSupportedFrames = 0;
+  for (const r of stable) {
+    const near = r.viewYaw >= 0 ? 'L' : 'R', far = near === 'L' ? 'R' : 'L';
+    if (r.limbs?.nearSide !== near || r.heading !== expectedHeading || r.gait?.heading !== expectedHeading) mappingFailures.push(r.index);
+    if (!(r.gait?.supportL || r.gait?.supportR) || Math.min(r.pose.footLiftL, r.pose.footLiftR) > 1e-6) supportFailures.push(r.index);
+    if (r.gait?.supportL && r.gait?.supportR) bothSupportedFrames++;
+    for (const side of ['L', 'R']) if (r.gait?.['support' + side]) {
+      if (Math.abs(r.pose['footLift' + side]) > 1e-6 && !supportFailures.includes(r.index)) supportFailures.push(r.index);
+      if (!Number.isFinite(parts(r)['foot' + side]?.bounds?.[3]) || Math.abs(parts(r)['foot' + side].bounds[3] - 256) > .02) soleFailures.push({ frame: r.index, side, bottom: parts(r)['foot' + side]?.bounds?.[3] ?? null });
+    }
+    const order = r.limbDrawOrder ?? [], index = id => order.indexOf(id), body = index('body');
+    const nearArm = parts(r)['arm' + near], farArm = parts(r)['arm' + far], nearFoot = parts(r)['foot' + near], farFoot = parts(r)['foot' + far];
+    const armLayerOK = nearArm && farArm && nearArm.foregroundMean > .15 && nearArm.foregroundPeak > .5 && farArm.foregroundPeak < 1e-6
+      && index('arm' + near) >= 0 && index('arm' + far) >= 0 && index('arm' + near) < body && index('arm' + far) < body && index('arm' + near + 'Front') > body;
+    const footLayerOK = nearFoot && farFoot && nearFoot.foregroundMean > .15 && nearFoot.foregroundPeak > .5 && farFoot.foregroundPeak < 1e-6
+      && index('foot' + far) >= 0 && index('foot' + near) > index('foot' + far) && index('foot' + near) < body && index('foot' + near + 'Front') > body;
+    if (!armLayerOK || !footLayerOK) layerFailures.push({ frame: r.index, nearSide: near, armLayerOK: !!armLayerOK, footLayerOK: !!footLayerOK });
+  }
+  return { stableFrames: stable.length, stableFrameRange: stable.length ? [stable[0].index, stable.at(-1).index] : null,
+    footSeparationX: separation,
+    feetCross: !!(separation.minimum && separation.minimum.value < -.25 && separation.maximum.value > .25),
+    armAngleCorrelation: correlation(stable.map(r => [r.pose.armL, r.pose.armR])),
+    armMeshCentreCorrelation: correlation(stable.map(r => [centreX(r, 'armL'), centreX(r, 'armR')])),
+    sameSideHandFootCentreCorrelation: Object.fromEntries(['L', 'R'].map(side => [side, correlation(stable.map(r => [centreX(r, 'arm' + side), centreX(r, 'foot' + side)]))])),
+    hipGap: recordedRange(stable, r => r.limbs?.hipGap),
+    supportFailures, soleFailures, bothSupportedFrames, mappingFailures, layerFailures,
+    nearArmForegroundMean: recordedRange(stable, r => parts(r)['arm' + r.limbs?.nearSide]?.foregroundMean),
+    visibilityPassed: null,
+    visibilityLimitation: 'Positive foreground weights and correct draw order are submission diagnostics. The actual composite can still be covered by an ear and must be reviewed in the retained PNGs.' };
+}
+
 async function reset(scheme, autoYaw) {
-  await page.evaluate(async ({ scheme, autoYaw }) => {
-    const p = maodouPreview; p.setPaused(true); p.setSweep(false); p.setYaw(autoYaw ? null : 0, true);
+  await page.evaluate(async ({ scheme, autoYaw, gestureYaw }) => {
+    const p = maodouPreview; p.setPaused(true); p.setSweep(false); p.setYaw(autoYaw ? null : gestureYaw / 75, true);
     p.body.set({ roam: 'off', hold: 3600, listening: false, thinking: false });
     p.body.do('stand'); p.body.do('neutral'); await p.advance(60, .05);
     await p.body.setScheme(scheme);
     p.body.do('stand'); p.body.do('neutral'); await p.advance(60, 1 / 60);
-  }, { scheme, autoYaw });
+  }, { scheme, autoYaw, gestureYaw });
 }
 
 async function writeCapture(image, phase) {
@@ -109,6 +175,7 @@ async function writeCapture(image, phase) {
     width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20), frame: image.index,
     seconds: image.localSeconds, nativeTime: image.nativeTime, mode: image.mode, gesture: image.gesture,
     reason: image.reason, requestedTime: image.requestedTime ?? null,
+    ...(image.limbReview ? { limbReview: image.limbReview } : {}),
     scope: 'Actual transparent canvas after the recorded native tick. No resampling, interpolation or synthetic pose.' };
   report.screenshots.push(capture); phase.files.push(file);
 }
@@ -165,7 +232,7 @@ async function runTrack(scheme, id) {
     phase.monitor = await nativeFrame.evaluate(() => globalThis.__maodouMotionQA.stop());
     phase.summary = trackSummary(phase.rows);
     check(`${phase.id}: every requested native 60 Hz tick recorded`, phase.rows.length === totalFrames && phase.rows.every((r, i) => r.index === i + 1 && Math.abs(r.dt - stepSeconds) < 1e-9 && Math.abs(r.localSeconds - (i + 1) * stepSeconds) < 1e-6));
-    check(`${phase.id}: sampled head/body/ears have no inverted triangles`, phase.rows.every(r => r.geometryOK), { failingFrames: phase.summary.negativeTriangleFrames });
+    check(`${phase.id}: sampled head/body/ears/limbs have no inverted triangles`, phase.rows.every(r => r.geometryOK), { failingFrames: phase.summary.negativeTriangleFrames });
     check(`${phase.id}: actual extent stays inside renderer view`, phase.rows.every(r => r.extentOK), { minimumViewMargin: phase.summary.minimumViewMargin, failingFrames: phase.summary.outsideViewFrames });
     check(`${phase.id}: renderer remains ready without recorded errors`, phase.rows.every(r => r.rendererOK) && phase.errors.length === 0, { errors: phase.errors, failingFrames: phase.summary.rendererFailureFrames });
     const ownCaptures = report.screenshots.filter(s => s.phase === phase.id && s.reason === 'requested');
@@ -177,6 +244,26 @@ async function runTrack(scheme, id) {
         { scope: 'Numeric excursion threshold only; actual visibility under ears still requires image review.', fields: summary });
       check(`${phase.id}: alternating native feet and responding ears`, phase.summary.liftAlternations >= 2 && summary.earRaiseL.span > .05 && summary.earRaiseR.span > .05,
         { liftAlternations: phase.summary.liftAlternations, raiseSpan: [summary.earRaiseL.span, summary.earRaiseR.span] });
+      const g = phase.gait = gaitSummary(phase.rows, heading);
+      check(`${phase.id}: stable native gait has limb diagnostics`, g.stableFrames >= 20 && phase.rows.every(r => r.gait && r.limbs && ['armL','armR','footL','footR'].every(id => r.limbs.parts?.[id]?.center?.every(Number.isFinite))),
+        { stableFrames: g.stableFrames, stableFrameRange: g.stableFrameRange });
+      check(`${phase.id}: actual foot meshes pass each other`, g.feetCross, { footSeparationX: g.footSeparationX, hipGap: g.hipGap });
+      check(`${phase.id}: arms alternate opposite their same-side feet`, g.armAngleCorrelation !== null && g.armAngleCorrelation < -.55
+        && Object.values(g.sameSideHandFootCentreCorrelation).every(c => c !== null && c < -.15),
+        { angleCorrelation: g.armAngleCorrelation, actualArmCentreCorrelation: g.armMeshCentreCorrelation, actualSameSideHandFootCentreCorrelation: g.sameSideHandFootCentreCorrelation,
+          scope: 'Phase/geometry relation only; does not claim that every arm pixel is visible.' });
+      check(`${phase.id}: each stable step has a grounded support foot`, g.stableFrames >= 20 && g.supportFailures.length === 0 && g.soleFailures.length === 0,
+        { supportFailures: g.supportFailures, soleFailures: g.soleFailures, bothSupportedFrames: g.bothSupportedFrames, scope: 'Authored lift and model-space mesh floor, not world-space foot locking.' });
+      check(`${phase.id}: heading and near-side mapping agree`, g.stableFrames >= 20 && g.mappingFailures.length === 0, { failingFrames: g.mappingFailures });
+      check(`${phase.id}: near limbs submit foreground coverage over torso`, g.stableFrames >= 20 && g.layerFailures.length === 0,
+        { failures: g.layerFailures, nearArmForegroundMean: g.nearArmForegroundMean, scope: g.visibilityLimitation });
+      phase.visualReview = { status: 'required', passed: null,
+        requirements: ['At least one near arm is visibly exposed in the real composite during its forward and backward swing.',
+          'The far arm remains behind the torso and the near arm has a natural root connection.',
+          'Left/right feet visibly pass each other with a clear support/swing distinction.',
+          'Ear motion must not continuously conceal both paws.'],
+        evidenceFiles: ownCaptures.map(s => s.file),
+        note: 'This tool deliberately leaves the visual judgment unset. Foreground alpha and draw-order checks do not establish visible pixel coverage.' };
       // Observe the real native transition after the final larger gait-ear lift.
       // Do not invent a zero-ear endpoint: stand has its own authored ear motion.
       const recovery = phase.recovery = { id: `${phase.id}-stop`, files: [], expectedFrames: 24,
@@ -240,7 +327,7 @@ try {
         const finiteBounds = Array.isArray(extent) && extent.length === 4 && extent.every(Number.isFinite) && Array.isArray(view) && view.length === 4 && view.every(Number.isFinite);
         const margins = finiteBounds ? [extent[0]-view[0],extent[1]-view[1],view[2]-extent[2],view[3]-extent[3]] : null;
         const minimumViewMargin = margins ? Math.min(...margins) : null;
-        const geometryOK = ['head','body','earL','earR'].every(id => {
+        const geometryOK = ['head','body','earL','earR','armL','armR','footL','footR'].every(id => {
           const h = fig.meshHealth?.[id]; return h && Number.isFinite(h.minArea) && h.minArea >= -1e-5 && h.negativeTriangles === 0 && h.bounds.every(Number.isFinite);
         });
         const rendererOK = fig.renderer.ready && !fig.renderer.contextLost && !fig.errors.length && !fig.renderer.errors.length && !fig.renderer.lastInvalidParts.length;
@@ -248,6 +335,8 @@ try {
           mode: state.mode, modeT: state.frame?.modeT, heading: state.heading, viewYaw: state.viewYaw,
           gesture: state.frame?.gesture ?? null, legsScreen: state.frame?.legsScreen ?? null,
           pose: Object.fromEntries(poseKeys.map(k => [k, fig.pose?.[k] ?? null])),
+          gait: fig.pose?.gait ? { ...fig.pose.gait } : null, limbs: fig.limbs ?? null,
+          limbDrawOrder: (fig.renderer.batch?.mainOrder ?? []).filter(id => /^(?:body|head|arm[LR](?:Front)?|foot[LR](?:Front)?|earFront[LR])$/.test(id)),
           meshHealth: fig.meshHealth, extent, view, minimumViewMargin,
           geometryOK: !!geometryOK, extentOK: finiteBounds && minimumViewMargin >= -1e-4, rendererOK: !!rendererOK,
           renderCount: fig.renderCount, outerTransform: state.xf,
@@ -259,8 +348,17 @@ try {
           try {
             const canvas = document.querySelector('canvas');
             if (!canvas) throw new Error('Actual renderer canvas not found');
+            const limbReview = row.limbs ? { nearSide: row.limbs.nearSide, footSeparationX: row.limbs.footSeparationX,
+              modelView: view, imageSize: [canvas.width, canvas.height],
+              regions: Object.fromEntries(['armL','armR','footL','footR'].map(id => {
+                const b = row.limbs.parts?.[id]?.bounds;
+                const pixelBounds = b?.length === 4 ? [Math.floor((b[0]-view[0])/(view[2]-view[0])*canvas.width), Math.floor((b[1]-view[1])/(view[3]-view[1])*canvas.height),
+                  Math.ceil((b[2]-view[0])/(view[2]-view[0])*canvas.width), Math.ceil((b[3]-view[1])/(view[3]-view[1])*canvas.height)] : null;
+                return [id, { modelBounds: b ?? null, pixelBounds }];
+              })),
+              note: 'Regions identify geometry in the actual captured composite. Their opaque pixels are not segmented by part and do not prove limb visibility.' } : null;
             m.images.push({ index, localSeconds: row.localSeconds, nativeTime: row.nativeTime, mode: row.mode, gesture: row.gesture,
-              reason: requested ? 'requested' : 'failure', requestedTime: m.requestedTimes[index] ?? null, data: canvas.toDataURL('image/png') });
+              limbReview, reason: requested ? 'requested' : 'failure', requestedTime: m.requestedTimes[index] ?? null, data: canvas.toDataURL('image/png') });
           } catch (error) { m.errors.push({ frame: index, error: String(error) }); }
         }
         return result;
@@ -305,6 +403,10 @@ try {
   check('actual opaque native iframe', report.boundary.originNullObserved, report.boundary);
   check('renderer initialized without GL error', report.graphics.some(g => g.webgl) && report.graphics.every(g => !g.webgl || g.error === 0));
   check('new foot and whole-ear fields are actually staged', ['footXL','footXR','earRaiseL','earRaiseR','earSpreadL','earSpreadR'].every(k => Number.isFinite(report.initial.figure.pose?.[k])));
+  check('v1.3.2 limb geometry and depth diagnostics are actually staged', ['armL','armR','footL','footR'].every(id => {
+    const limb = report.initial.figure.limbs?.parts?.[id], health = report.initial.figure.meshHealth?.[id];
+    return limb && limb.center?.length === 2 && limb.center.every(Number.isFinite) && health && Number.isFinite(health.minArea);
+  }));
   await save();
   for (const scheme of schemes) for (const id of ids) await runTrack(scheme, id);
   report.sourcesAfter = await getSources();

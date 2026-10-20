@@ -1,0 +1,975 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-20T05:50:46.428027+00:00",
+  "script": {
+    "file": "tools/build-update-preview.py",
+    "sha256": "bc17e772921595a97f27370709dd1f07c1bf01e76629c4f8fea215cf958d1eeb"
+  },
+  "scope": "Technical layout of actual runtime captures. Source pixels are not resized, recolored, painted over or sharpened. All nonzero source alpha is included; only common transparent outer margins are cropped. No visual/performance acceptance is inferred.",
+  "reports": {
+    "angles": {
+      "file": "docs/qa/v1.3.2/release-verified/report.json",
+      "sha256": "258eebd7d2226653a2fac71e13d1428903fafda39c84721f315effdfaf7e7d73",
+      "status": "complete",
+      "passed": true,
+      "sourcesUnchanged": true
+    },
+    "motion": {
+      "file": "docs/qa/v1.3.2/motion-verified/report.json",
+      "sha256": "0ea0495ec3f57e46d1d5992fd5296a6919ad69d36a4a56d4f68f5adbe2ce0bd3",
+      "status": "complete",
+      "passed": true,
+      "sourcesUnchanged": true
+    }
+  },
+  "font": {
+    "file": "tools/fonts/NotoSansCJKsc-Regular.otf",
+    "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "language": "zh"
+  },
+  "animation": {
+    "gifGenerated": false,
+    "reason": "Only a short captured f0039..f0068 segment is available. Endpoint poses and ear spring state have not been verified as identical. No artificial seamless loop, frame reversal, duplication or interpolation is made.",
+    "sourceTickSeconds": 0.016666666666666666,
+    "candidateFrameRange": [
+      39,
+      68
+    ],
+    "candidateDurationSeconds": 0.5
+  },
+  "outputs": [
+    {
+      "file": "turning-five-views.png",
+      "sha256": "5597c1fe84cdf080ecb7c705d4ea8360f6732294d7f5751b8aaf48b3bbdbb66b",
+      "size": [
+        2286,
+        548
+      ],
+      "cards": [
+        {
+          "source": "docs/qa/v1.3.2/release-verified/angle-left-75-transparent.png",
+          "sourceSHA256": "22661e47e0ee43141ab633c7950f3290b2ad6f9041cca43ee8d90f5aa0f74f1a",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            204,
+            101,
+            429,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "-75°",
+          "frame": null,
+          "seconds": null,
+          "nativeTime": null,
+          "requestedAngle": -75,
+          "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+          "detail": "原始透明截图",
+          "commonCropBox": [
+            117,
+            89,
+            523,
+            375
+          ],
+          "destinationBox": [
+            48,
+            184,
+            406,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            -69,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/release-verified/angle-left-45-transparent.png",
+          "sourceSHA256": "cdb8b5a5bf631cdc737ff2ff4fea8b5ac24e3d0f818c3b2325833cf6d411e2c8",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            172,
+            100,
+            439,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "-45°",
+          "frame": null,
+          "seconds": null,
+          "nativeTime": null,
+          "requestedAngle": -45,
+          "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+          "detail": "原始透明截图",
+          "commonCropBox": [
+            117,
+            89,
+            523,
+            375
+          ],
+          "destinationBox": [
+            494,
+            184,
+            406,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            377,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/release-verified/angle-front-0-transparent.png",
+          "sourceSHA256": "f9923d8a246341a278253022d4e010506d45731ae779e0f7b5426e8eb3518926",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            127,
+            99,
+            513,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "正面 · 0°",
+          "frame": null,
+          "seconds": null,
+          "nativeTime": null,
+          "requestedAngle": 0,
+          "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+          "detail": "原始透明截图",
+          "commonCropBox": [
+            117,
+            89,
+            523,
+            375
+          ],
+          "destinationBox": [
+            940,
+            184,
+            406,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            823,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/release-verified/angle-right-45-transparent.png",
+          "sourceSHA256": "12029b13805cf10dbe29fab498a9ae0c4843156efd27cb831dd7bd9a6a85bf36",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            201,
+            100,
+            468,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "+45°",
+          "frame": null,
+          "seconds": null,
+          "nativeTime": null,
+          "requestedAngle": 45,
+          "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+          "detail": "原始透明截图",
+          "commonCropBox": [
+            117,
+            89,
+            523,
+            375
+          ],
+          "destinationBox": [
+            1386,
+            184,
+            406,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            1269,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/release-verified/angle-right-75-transparent.png",
+          "sourceSHA256": "ab10ca582170158dbed69fedcc782a1eda4a896d831fa8a31fad816ab8ae451c",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            211,
+            101,
+            436,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "+75°",
+          "frame": null,
+          "seconds": null,
+          "nativeTime": null,
+          "requestedAngle": 75,
+          "angleSourceSelection": "matching report file; recorded SHA256 checked when present",
+          "detail": "原始透明截图",
+          "commonCropBox": [
+            117,
+            89,
+            523,
+            375
+          ],
+          "destinationBox": [
+            1832,
+            184,
+            406,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            1715,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        }
+      ]
+    },
+    {
+      "file": "walking-gentle.png",
+      "sha256": "04b0ed91c8e8d54b1c188f12c01c6eafc6c7cb99dbe872732fea204db615ea17",
+      "size": [
+        1268,
+        928
+      ],
+      "cards": [
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-left-f0047.png",
+          "sourceSHA256": "081201dc13dd52b2a8254e903c9e271608c50b6259391f40b95b72dae118db33",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            151,
+            102,
+            464,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 1",
+          "frame": 47,
+          "seconds": 0.7833333333333306,
+          "nativeTime": 4.904033333332579,
+          "scheme": "gentle",
+          "direction": "left",
+          "selectionReasons": [
+            "maximum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            48,
+            184,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            -92,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-left-f0061.png",
+          "sourceSHA256": "36cdc9678d37f84ad2dfda4ceb03835df643c72c6659d66536d558ea9225b0b7",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            150,
+            102,
+            464,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 2",
+          "frame": 61,
+          "seconds": 1.016666666666663,
+          "nativeTime": 5.137366666665912,
+          "scheme": "gentle",
+          "direction": "left",
+          "selectionReasons": [
+            "minimum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            452,
+            184,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            312,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-left-f0068.png",
+          "sourceSHA256": "9226c51942b3420b536e4f39eab610063dfe3627e9565305b2921cd56a5955fc",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            154,
+            101,
+            477,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 3",
+          "frame": 68,
+          "seconds": 1.1333333333333293,
+          "nativeTime": 5.254033333332578,
+          "scheme": "gentle",
+          "direction": "left",
+          "selectionReasons": [
+            "highest actual sole lift among remaining captured frames"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            856,
+            184,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            716,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-right-f0043.png",
+          "sourceSHA256": "9f4342152cf3792957a60ec105d9d58bedb172f3abb2f5fa5d45334f82bec45e",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            181,
+            102,
+            494,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 1",
+          "frame": 43,
+          "seconds": 0.7166666666667023,
+          "nativeTime": 11.23736666666601,
+          "scheme": "gentle",
+          "direction": "right",
+          "selectionReasons": [
+            "minimum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            48,
+            566,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            -92,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-right-f0050.png",
+          "sourceSHA256": "1b2f5ddcb3436654e63a96c0b436e886d4c7888a6fad7d4dc40a22b418d94666",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            168,
+            101,
+            492,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 2",
+          "frame": 50,
+          "seconds": 0.8333333333333748,
+          "nativeTime": 11.354033333332682,
+          "scheme": "gentle",
+          "direction": "right",
+          "selectionReasons": [
+            "highest actual sole lift among remaining captured frames"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            452,
+            566,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            312,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-right-f0058.png",
+          "sourceSHA256": "8c086312c2d628a4d173298cc7faf74f8ca4d6a75c6771a1203f43a5d60153f6",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            172,
+            102,
+            482,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 3",
+          "frame": 58,
+          "seconds": 0.9666666666667147,
+          "nativeTime": 11.487366666666022,
+          "scheme": "gentle",
+          "direction": "right",
+          "selectionReasons": [
+            "maximum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            140,
+            91,
+            504,
+            375
+          ],
+          "destinationBox": [
+            856,
+            566,
+            364,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            716,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        }
+      ]
+    },
+    {
+      "file": "walking-lively.png",
+      "sha256": "056bff1a4a288464d274e1de269da91e7416d4a1c22b25a5134d89ea4c4f8473",
+      "size": [
+        1352,
+        928
+      ],
+      "cards": [
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-left-f0043.png",
+          "sourceSHA256": "f1a4f56b02ced7a7c3f23fd4b89054fb236085d83e784db7d0f4fc753e2cf844",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            141,
+            101,
+            491,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 1",
+          "frame": 43,
+          "seconds": 0.7166666666666259,
+          "nativeTime": 58.97069999999746,
+          "scheme": "lively",
+          "direction": "left",
+          "selectionReasons": [
+            "highest actual sole lift among remaining captured frames"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            48,
+            184,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            -81,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-left-f0050.png",
+          "sourceSHA256": "38051587d8ef5343d53064e76ffde4724a483273e6e6a7416ba688bca02863bb",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            139,
+            102,
+            478,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 2",
+          "frame": 50,
+          "seconds": 0.833333333333286,
+          "nativeTime": 59.08736666666412,
+          "scheme": "lively",
+          "direction": "left",
+          "selectionReasons": [
+            "maximum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            480,
+            184,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            351,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-left-f0065.png",
+          "sourceSHA256": "f6887305c862d2c9dc1c56e99c33ba61e7d1d7e1e9bc79144d35cc9c878030c9",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            140,
+            102,
+            476,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向左 · 相位 3",
+          "frame": 65,
+          "seconds": 1.0833333333332718,
+          "nativeTime": 59.3373666666641,
+          "scheme": "lively",
+          "direction": "left",
+          "selectionReasons": [
+            "minimum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            912,
+            184,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            783,
+            93
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-right-f0043.png",
+          "sourceSHA256": "faf973845879172f1e2b8c4608a7c3fc825f697a9156cf5e9bd545fe9e13b0db",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            158,
+            102,
+            494,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 1",
+          "frame": 43,
+          "seconds": 0.7166666666666259,
+          "nativeTime": 65.3706999999971,
+          "scheme": "lively",
+          "direction": "right",
+          "selectionReasons": [
+            "maximum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            48,
+            566,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            -81,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-right-f0050.png",
+          "sourceSHA256": "fee8c2da3188bdce9d637f014e44345199baeeade6e0273ae78ed88b28c90f7b",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            161,
+            101,
+            511,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 2",
+          "frame": 50,
+          "seconds": 0.833333333333286,
+          "nativeTime": 65.48736666666376,
+          "scheme": "lively",
+          "direction": "right",
+          "selectionReasons": [
+            "highest actual sole lift among remaining captured frames"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            480,
+            566,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            351,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-right-f0058.png",
+          "sourceSHA256": "3491879a01b415c3bf74a8d8e23b8c97e8f26f65e814315137d2a903975be10a",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            171,
+            102,
+            507,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "向右 · 相位 3",
+          "frame": 58,
+          "seconds": 0.9666666666666117,
+          "nativeTime": 65.62069999999709,
+          "scheme": "lively",
+          "direction": "right",
+          "selectionReasons": [
+            "minimum actual foot-centre separation"
+          ],
+          "commonCropBox": [
+            129,
+            91,
+            521,
+            375
+          ],
+          "destinationBox": [
+            912,
+            566,
+            392,
+            284
+          ],
+          "sourceToOutputPixelOffset": [
+            783,
+            475
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        }
+      ]
+    },
+    {
+      "file": "walking-stop.png",
+      "sha256": "ce9d63f0f43fb62c9222917de568306d8e795dd69ee2d9a62bca62023ece77ec",
+      "size": [
+        1008,
+        932
+      ],
+      "cards": [
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-left-stop-f0024.png",
+          "sourceSHA256": "249d249a2a600c132ef34d03b9f34fb12a82e468d702ad74a112658f6fafeb31",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            120,
+            99,
+            519,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "轻柔 · 向左停步",
+          "frame": 24,
+          "seconds": 0.3999999999999986,
+          "nativeTime": 6.52069999999924,
+          "scheme": "gentle",
+          "direction": "left",
+          "selectionReasons": [
+            "actual native stand recovery frame 24"
+          ],
+          "commonCropBox": [
+            102,
+            89,
+            538,
+            375
+          ],
+          "destinationBox": [
+            48,
+            184,
+            436,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            -54,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/gentle-walk-right-stop-f0024.png",
+          "sourceSHA256": "537f46ee134f08f3f0bfd147eb8b8ad0a5d35581861d99697974950e058ca5b3",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            119,
+            99,
+            520,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "轻柔 · 向右停步",
+          "frame": 24,
+          "seconds": 0.4000000000000199,
+          "nativeTime": 12.920699999999426,
+          "scheme": "gentle",
+          "direction": "right",
+          "selectionReasons": [
+            "actual native stand recovery frame 24"
+          ],
+          "commonCropBox": [
+            102,
+            89,
+            538,
+            375
+          ],
+          "destinationBox": [
+            524,
+            184,
+            436,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            422,
+            95
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-left-stop-f0024.png",
+          "sourceSHA256": "ff2cfbc5e50c49a3c167b2be1ca7e4e0a5cb7b915f0186c007b9d62b58f9f4b1",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            112,
+            99,
+            527,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "活泼 · 向左停步",
+          "frame": 24,
+          "seconds": 0.39999999999997726,
+          "nativeTime": 60.654033333330695,
+          "scheme": "lively",
+          "direction": "left",
+          "selectionReasons": [
+            "actual native stand recovery frame 24"
+          ],
+          "commonCropBox": [
+            102,
+            89,
+            538,
+            375
+          ],
+          "destinationBox": [
+            48,
+            568,
+            436,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            -54,
+            479
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        },
+        {
+          "source": "docs/qa/v1.3.2/motion-verified/lively-walk-right-stop-f0024.png",
+          "sourceSHA256": "4785ac5043c13bd110fc629a21801ffcbd41af30de971015f8b43b2edb027cc4",
+          "sourceSize": [
+            640,
+            394
+          ],
+          "nonzeroAlphaBox": [
+            112,
+            99,
+            528,
+            365
+          ],
+          "reportHashVerified": true,
+          "label": "活泼 · 向右停步",
+          "frame": 24,
+          "seconds": 0.39999999999997726,
+          "nativeTime": 67.05403333333034,
+          "scheme": "lively",
+          "direction": "right",
+          "selectionReasons": [
+            "actual native stand recovery frame 24"
+          ],
+          "commonCropBox": [
+            102,
+            89,
+            538,
+            375
+          ],
+          "destinationBox": [
+            524,
+            568,
+            436,
+            286
+          ],
+          "sourceToOutputPixelOffset": [
+            422,
+            479
+          ],
+          "scale": 1,
+          "resampling": "none",
+          "compositing": "original RGBA over uniform panel; no paint over character"
+        }
+      ]
+    }
+  ]
+}

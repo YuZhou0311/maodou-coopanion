@@ -139,6 +139,21 @@ const EAR_ACTIONS = {
   celebrate(p, k) { const e = envelope(k, .17, .84), w = Math.sin(TAU * 3 * k), left = Math.max(w, 0) * e, right = Math.max(-w, 0) * e; add(p, { earRaiseL: .43 * e + .72 * left, earRaiseR: .43 * e + .72 * right, earSpreadL: .28 * e + .5 * left, earSpreadR: .28 * e + .5 * right }); },
 };
 
+// Recover the host's single phase from its opposed, filtered endpoints. The
+// signed lift DIFFERENCE is cos(phase); the horizontal difference is sin(phase).
+// This keeps host acceleration, heading and pauses, without a second gait clock.
+// A cubic swing joins a constant-speed support stroke with matching velocity.
+// During support the sole is exactly on the floor; sin² gives zero vertical
+// velocity at takeoff/landing. A short double-support interval reads as walking
+// rather than two feet perpetually bobbing above the floor.
+function groundCycle(phase, swingFraction) {
+  const u = ((phase / TAU + .25) % 1 + 1) % 1;
+  if (u >= swingFraction) return { x: 1 - 2 * (u - swingFraction) / (1 - swingFraction), lift: 0, support: true };
+  const k = u / swingFraction, tangent = -2 * swingFraction / (1 - swingFraction);
+  return { x: -1 + 2 * smooth(k) + tangent * (2 * k * k * k - 3 * k * k + k),
+    lift: Math.sin(Math.PI * k) ** 2, support: false };
+}
+
 function modePose(p, frame, t) {
   const mode = typeof frame.mode === 'string' ? frame.mode : 'idle';
   const sit = unit(frame.sit), drowse = unit(frame.drowse), mt = Math.max(0, finite(frame.modeT));
@@ -161,20 +176,39 @@ function modePose(p, frame, t) {
     const left = legs[0] ?? [], right = legs[1] ?? [];
     // These are the actual native foot endpoints, already in screen direction.
     // Native full-speed stride/lift: walk 10/8, run 17/15, dance 5/10. Preserve
-    // their phase and acceleration ramp, rather than inventing a sine clock.
+    // their phase and acceleration ramp while authoring a grounded sole path.
     // FOOT_Y is 256 - native LEG_W/2 = 241, not the sprite's sole at 256.
     const run = mode === 'run', dance = mode === 'dance';
     const nominalStride = run ? 17 : dance ? 5 : 10, nominalLift = run ? 15 : dance ? 10 : 8;
     const dxL = clamp(finite(left[2], finite(left[0])) - finite(left[0]), -24, 24);
     const dxR = clamp(finite(right[2], finite(right[0])) - finite(right[0]), -24, 24);
     const liftL = clamp(241 - finite(left[3], 241), 0, 24), liftR = clamp(241 - finite(right[3], 241), 0, 24);
-    const strideL = clamp(dxL / nominalStride, -1, 1), strideR = clamp(dxR / nominalStride, -1, 1);
-    const stepL = unit(liftL / nominalLift), stepR = unit(liftR / nominalLift);
-    const liftGain = run ? 1.05 : dance ? 1.15 : 1.2, strideGain = run ? 1.12 : dance ? 1.8 : 1.3;
-    p.footLiftL += liftL * liftGain; p.footLiftR += liftR * liftGain;
-    p.footXL += dxL * strideGain; p.footXR += dxR * strideGain;
+    let strideL = clamp(dxL / nominalStride, -1, 1), strideR = clamp(dxR / nominalStride, -1, 1);
+    let stepL = unit(liftL / nominalLift), stepR = unit(liftR / nominalLift);
+    const liftGain = run ? 1.05 : dance ? 1.15 : 1.2, strideGain = run ? 1.05 : dance ? 1.8 : 1.4;
+    if (dance) {
+      p.footLiftL += liftL * liftGain; p.footLiftR += liftR * liftGain;
+      p.footXL += dxL * strideGain; p.footXR += dxR * strideGain;
+    } else {
+      const heading = finite(frame.heading, finite(frame.viewYaw) < 0 ? -1 : 1) < 0 ? -1 : 1;
+      const sine = (dxL - dxR) * heading / (2 * nominalStride), cosine = (liftL - liftR) / nominalLift;
+      const amplitude = clamp(Math.hypot(sine, cosine), 0, 1.05), phase = Math.atan2(sine, cosine);
+      const swingFraction = run ? .48 : .44;
+      const leftCycle = groundCycle(phase, swingFraction), rightCycle = groundCycle(phase + Math.PI, swingFraction);
+      strideL = clamp(leftCycle.x * amplitude * heading, -1.1, 1.1);
+      strideR = clamp(rightCycle.x * amplitude * heading, -1.1, 1.1);
+      stepL = leftCycle.lift * amplitude; stepR = rightCycle.lift * amplitude;
+      p.footXL += strideL * nominalStride * strideGain; p.footXR += strideR * nominalStride * strideGain;
+      p.footLiftL += stepL * nominalLift * liftGain; p.footLiftR += stepR * nominalLift * liftGain;
+      p._gait = { source: 'native endpoint phase', phase, amplitude, heading, swingFraction,
+        supportL: leftCycle.support, supportR: rightCycle.support, kinematicBlend: smooth(mt / .18) };
+    }
     const armGain = run ? 30 : dance ? 27 : 24, armOpen = dance ? 12 : 7;
-    p.armL += armOpen + armGain * strideR; p.armR -= armOpen + armGain * strideL;
+    // Both arm angles are ordinary screen rotations: a positive angle swings
+    // a hanging paw LEFT. The same-side forward foot therefore needs a positive
+    // arm angle. Mirroring the right arm's phase as well made both paws swing
+    // together; only the small outward rest angle is mirrored here.
+    p.armL += armOpen + armGain * strideL; p.armR += -armOpen + armGain * strideR;
     // A modest raised base reveals the alternating paws; the opposite foot
     // leads each ear, and the slower spread/tip responses arrive behind it.
     const baseRaise = run ? .37 : dance ? .24 : .30, beatRaise = run ? .34 : dance ? .43 : .27;
@@ -304,7 +338,11 @@ export const ANIMATION_CONTRACT = Object.freeze({
     earRaise: Object.freeze({ range: Object.freeze([0, 1]), unit: 'fixed-root whole-ear raised keyform, separate left/right' }),
     earSpread: Object.freeze({ range: Object.freeze([-1, 1]), unit: 'fixed-root opening; positive is outwards on either side' }),
   }),
-  gait: Object.freeze({ source: 'native legsScreen endpoints', footY: 241, nativeStride: Object.freeze({ walk: 10, run: 17, dance: 5 }), nativeLift: Object.freeze({ walk: 8, run: 15, dance: 10 }), noIndependentPhase: true }),
+  gait: Object.freeze({ source: 'native legsScreen endpoint phase and amplitude', footY: 241,
+    nativeStride: Object.freeze({ walk: 10, run: 17, dance: 5 }), nativeLift: Object.freeze({ walk: 8, run: 15, dance: 10 }),
+    swingFraction: Object.freeze({ walk: .44, run: .48 }), supportStroke: 'linear with zero sole lift',
+    swingStroke: 'C1 cubic horizontal / sin-squared vertical', armPhase: 'opposed screen rotation, contralateral to feet',
+    noIndependentPhase: true, worldSpaceFootLock: false }),
   noHeadScale: true, clock: 'native frame.t, frame.modeT, frame.gesture.k and legsScreen',
 });
 
@@ -339,7 +377,12 @@ export function createAnimator({ scheme = 'gentle' } = {}) {
       tips.L.x = target.earTipL; tips.R.x = target.earTipR;
     } else {
       for (const key of Object.keys(BASE)) if (!TIPS.has(key)) {
-        current[key] = clamp(follow(current[key], previous[key], target[key], rateFor(key), dt), ...LIMITS[key]);
+        let next = follow(current[key], previous[key], target[key], rateFor(key), dt);
+        // A second low-pass over an already continuous native gait leaves both
+        // soles hovering after touchdown. Keep start/stop blending, but use the
+        // continuous authored path directly once the host has entered the walk.
+        if (dt && key.startsWith('foot') && target._gait) next = mix(next, target[key], target._gait.kinematicBlend);
+        current[key] = clamp(next, ...LIMITS[key]);
       }
       for (const key of SHAPES) mouthMix[key] = clamp(follow(mouthMix[key], previous._mouthMix[key], target._mouthMix[key], 19, dt), 0, 1);
       spring(tips.L, target.earTipL, profile.tipOmega, dt);
@@ -352,7 +395,8 @@ export function createAnimator({ scheme = 'gentle' } = {}) {
     // Host blink and expression-swap closures already have their own continuous
     // timing. Apply them after style smoothing so a real blink can close fully.
     const closure = Math.max(unit(frame.blink), unit(frame.eyeClose));
-    const pose = { ...current, eyeL: current.eyeL * (1 - closure), eyeR: current.eyeR * (1 - closure), mouthShape, mouthMix: { ...mouthMix } };
+    const pose = { ...current, eyeL: current.eyeL * (1 - closure), eyeR: current.eyeR * (1 - closure), mouthShape, mouthMix: { ...mouthMix },
+      gait: target._gait ? { ...target._gait } : null };
     previous = target; lastT = t; counters.steps++;
     lastInput = { t, dt, suppliedDt: rawDt, face, mode: frame.mode ?? 'idle', modeT: finite(frame.modeT), gesture: frame.gesture ? { kind: frame.gesture.kind, k: unit(frame.gesture.k) } : null, viewYaw: clamp(finite(frame.viewYaw), -1, 1), blink: unit(frame.blink), eyeClose: unit(frame.eyeClose), talk: unit(frame.talk) };
     lastPose = pose;

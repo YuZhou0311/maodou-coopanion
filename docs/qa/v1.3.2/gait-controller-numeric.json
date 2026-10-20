@@ -1,0 +1,247 @@
+{
+  "sourceSHA256": "a1126067d31a4ecf42bd96030e094a64679974ab0780348b4774708006c7cf44",
+  "scope": "Focused numerical controller check driven by analytical native sin/cos endpoints with the native rate-40 endpoint filter. Not the live host, visual QA, or world-space foot-lock measurement.",
+  "passed": true,
+  "cases": [
+    {
+      "scheme": "gentle",
+      "mode": "walk",
+      "heading": -1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 22,
+      "armCorrelation": -0.9288509617708114,
+      "sameSideArmFootCorrelation": 0.8689224836945196,
+      "footXL": {
+        "min": -11.870482433977939,
+        "max": 11.858611371597245
+      },
+      "footXR": {
+        "min": -11.87048243397795,
+        "max": 11.870464461103792
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 7.673214915783491
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 7.663998204664156
+      },
+      "maximumOpposedDx": 19.98235131182487,
+      "minimumOpposedDx": -19.98235131182488,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "gentle",
+      "mode": "walk",
+      "heading": 1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 22,
+      "armCorrelation": -0.9288509617708116,
+      "sameSideArmFootCorrelation": 0.8689224836945195,
+      "footXL": {
+        "min": -11.858611371597245,
+        "max": 11.870482433977939
+      },
+      "footXR": {
+        "min": -11.870464461103792,
+        "max": 11.87048243397795
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 7.673214915783491
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 7.663998204664156
+      },
+      "maximumOpposedDx": 19.98235131182488,
+      "minimumOpposedDx": -19.98235131182487,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "gentle",
+      "mode": "run",
+      "heading": -1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 7,
+      "armCorrelation": -0.9697625728921593,
+      "sameSideArmFootCorrelation": 0.6435240043573399,
+      "footXL": {
+        "min": -13.41519849955141,
+        "max": 13.413863335899508
+      },
+      "footXR": {
+        "min": -13.415198499551414,
+        "max": 13.41386333589951
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 10.97818661158118
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 10.978186611581174
+      },
+      "maximumOpposedDx": 23.926914865243695,
+      "minimumOpposedDx": -23.926914865243702,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "gentle",
+      "mode": "run",
+      "heading": 1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 7,
+      "armCorrelation": -0.9697625728921593,
+      "sameSideArmFootCorrelation": 0.6435240043573397,
+      "footXL": {
+        "min": -13.413863335899508,
+        "max": 13.41519849955141
+      },
+      "footXR": {
+        "min": -13.41386333589951,
+        "max": 13.415198499551414
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 10.97818661158118
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 10.978186611581174
+      },
+      "maximumOpposedDx": 23.926914865243702,
+      "minimumOpposedDx": -23.926914865243695,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "lively",
+      "mode": "walk",
+      "heading": -1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 22,
+      "armCorrelation": -0.9288509617708108,
+      "sameSideArmFootCorrelation": 0.8689224836945199,
+      "footXL": {
+        "min": -15.262048843685923,
+        "max": 15.24678604919646
+      },
+      "footXR": {
+        "min": -15.262048843685937,
+        "max": 15.262025735704878
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 9.865562034578774
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 9.853711977425345
+      },
+      "maximumOpposedDx": 25.69159454377484,
+      "minimumOpposedDx": -25.69159454377484,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "lively",
+      "mode": "walk",
+      "heading": 1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 22,
+      "armCorrelation": -0.928850961770811,
+      "sameSideArmFootCorrelation": 0.8689224836945202,
+      "footXL": {
+        "min": -15.24678604919646,
+        "max": 15.262048843685923
+      },
+      "footXR": {
+        "min": -15.262025735704878,
+        "max": 15.262048843685937
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 9.865562034578774
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 9.853711977425345
+      },
+      "maximumOpposedDx": 25.69159454377484,
+      "minimumOpposedDx": -25.69159454377484,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "lively",
+      "mode": "run",
+      "heading": -1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 7,
+      "armCorrelation": -0.9697625728921587,
+      "sameSideArmFootCorrelation": 0.6435240043573388,
+      "footXL": {
+        "min": -17.2481123565661,
+        "max": 17.246395717585084
+      },
+      "footXR": {
+        "min": -17.248112356566104,
+        "max": 17.246395717585084
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 14
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 14
+      },
+      "maximumOpposedDx": 30.763176255313326,
+      "minimumOpposedDx": -30.763176255313333,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    },
+    {
+      "scheme": "lively",
+      "mode": "run",
+      "heading": 1,
+      "steadyFrames": 180,
+      "alwaysOneSoleDown": true,
+      "bothSolesDown": 7,
+      "armCorrelation": -0.9697625728921588,
+      "sameSideArmFootCorrelation": 0.6435240043573389,
+      "footXL": {
+        "min": -17.246395717585084,
+        "max": 17.2481123565661
+      },
+      "footXR": {
+        "min": -17.246395717585084,
+        "max": 17.248112356566104
+      },
+      "footLiftL": {
+        "min": 0,
+        "max": 14
+      },
+      "footLiftR": {
+        "min": 0,
+        "max": 14
+      },
+      "maximumOpposedDx": 30.763176255313333,
+      "minimumOpposedDx": -30.763176255313326,
+      "finite": true,
+      "settledFeetAfterOneSecond": true
+    }
+  ]
+}

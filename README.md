@@ -1,27 +1,27 @@
-# 异色大耳帽兜 · Coopanion v1.3.1
+# 异色大耳帽兜 · Coopanion v1.3.2
 
 为 Coopanion 制作的非官方第一阶段异色大耳帽兜角色。工程包含完整生成原图、分层 PNG、2048×2048 图集、网格与动画源码、本地预览，以及旧版 Coopanion 宿主的鼠标释放修复补丁。
 
 运行格式是 **Coopanion `manifest: 2 / api: 2`**。本项目采用绘画分层与网格动画，不包含 Cubism `moc3`、`model3.json` 或 Cubism Editor 工程。左右侧转覆盖约 **−75° 至 +75°**，不是完整 360° 模型。
 
-> v1.3.1 已完成最终导入、转向、走跑与停步、离线预览验证。实际范围、原始报告及源码哈希见 [验收入口](docs/qa/acceptance.md)。可直接使用的两个文件位于 `dist/`。
+> v1.3.2 调整耳根材质衔接、侧耳流线与走跑时的四肢交错。修改内容与适用范围见 [本次版本说明](docs/releases/v1.3.2.md)；发布验收、原始报告及源码哈希以 [验收入口](docs/qa/acceptance.md) 为准。可直接使用的两个文件位于 `dist/`。
 
-![大耳帽兜实际运行预览](preview/release/character-overview.png)
+![v1.3.2 五向实际运行预览](preview/release/v1.3.2/turning-five-views.png)
 
-图册由实际运行截图排版；动态走跑以最终预览与验收记录为准。
+图册来自 v1.3.2 最终代码的实际运行截图，保持角色原像素。连续动作可在下方离线预览中操作查看。
 
 ## 安装到 Coopanion
 
 可直接下载，无需安装开发环境：
 
-- [角色安装 ZIP](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Coopanion-v1.3.1.zip)
-- [离线预览 HTML](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Offline-Preview-v1.3.1.html)：保存为 `.html` 后双击打开。
+- [角色安装 ZIP](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Coopanion-v1.3.2.zip)
+- [离线预览 HTML](https://github.com/YuZhou0311/maodou-coopanion/raw/refs/heads/main/dist/Maodou-Offline-Preview-v1.3.2.html)：保存为 `.html` 后双击打开。
 
 仓内文件与 SHA-256 见 [dist/README.md](dist/README.md)。离线预览不用安装 Coopanion，也不依赖网络。
 
-1. 使用构建得到的 `Maodou-Coopanion-v1.3.1.zip`，保持 ZIP 格式。
+1. 使用构建得到的 `Maodou-Coopanion-v1.3.2.zip`，保持 ZIP 格式。
 2. 打开 Coopanion「装扮」页，在「形象」一行选择「导入」，选中 ZIP；支持的宿主也可将 ZIP 拖入装扮页。
-3. 确认角色名称「异色大耳帽兜」和版本 `1.3.1`，然后安装并选用。角色 ID 是 `maodou-shiny`，已有同 ID 版本时按导入器提示替换。
+3. 确认角色名称「异色大耳帽兜」和版本 `1.3.2`，然后安装并选用。角色 ID 是 `maodou-shiny`，已有同 ID 版本时按导入器提示替换。
 4. 选择「温柔」或「活泼」性格。两者共享配色，动作节奏与幅度不同。
 
 入口依据固定版本的 [Coopanion 原生导入说明](https://github.com/Pal-AI-Lab/Coopanion/blob/04ce022a8c1e96e6053d9cbbe8f6dc555aa93f33/packages/cortico-world-desktop-pet/README.md#导入)。未提供 `packDir` 的嵌入宿主需要自行实现形象包安装位置。
@@ -30,7 +30,7 @@
 
 ### 旧宿主的“松手后仍跟着鼠标”问题
 
-v1.3.1 包含角色端的指针恢复，并提供 [host-fix/pointer-release.patch](host-fix/pointer-release.patch)。旧宿主在漏掉释放事件后，不向角色转发 `buttons=0` 或取消消息，角色 ZIP 单独更新无法完整修复这条路径。
+本包继续包含角色端的指针恢复，并提供 [host-fix/pointer-release.patch](host-fix/pointer-release.patch)。旧宿主在漏掉释放事件后，不向角色转发 `buttons=0` 或取消消息，角色 ZIP 单独更新无法完整修复这条路径。
 
 使用受影响的旧宿主时，需要同时应用 [宿主补丁与安装说明](host-fix/README.md)，再按 Coopanion 自身流程构建、更新应用。补丁基于明确记录的 `pet-app.js` 版本；先执行 `git apply --check`，有冲突时合并差异，不覆盖其他版本的新功能。这个独立仓库的提交不会自动修改现有 Coopanion 安装。
 
@@ -56,24 +56,31 @@ npm run preview
 另开终端，在工程根目录构建可安装 ZIP 和双击打开的离线预览：
 
 ```sh
-node preview-host/validate-native.mjs --build-zip=exports/Maodou-Coopanion-v1.3.1.zip --report=docs/qa/native-import.json
+node preview-host/validate-native.mjs --build-zip=exports/Maodou-Coopanion-v1.3.2.zip --report=docs/qa/native-import.json
 node tools/build-standalone.mjs
 ```
 
-输出位于 `exports/`。原生验收器使用固定上游的导入器实际解包、检查 PNG，并在工程临时目录验证安装；不会安装到用户正在使用的桌宠。离线文件 `Maodou-Offline-Preview-v1.3.1.html` 内嵌角色、图集、原生身体与中文字体，方便双击查看。它是独立本地页面，原生 iframe 接入另由本地预览验证。
+输出位于 `exports/`。原生验收器使用固定上游的导入器实际解包、检查 PNG，并在工程临时目录验证安装；不会安装到用户正在使用的桌宠。离线文件 `Maodou-Offline-Preview-v1.3.2.html` 内嵌角色、图集、原生身体与中文字体，方便双击查看。它是独立本地页面，原生 iframe 接入另由本地预览验证。
 
-## v1.3.1 的修改
+## v1.3.2 的修改
 
 | 项目 | 修改内容 |
 | --- | --- |
-| 头部比例 | 在已选正面形体基础上，将冠顶至下颊的高度减少约 3.5%，下颊锚点保持；五官与耳根随同一注册关系调整 |
-| 行走与身体 | 四肢接入原生步态，短脚与小爪有相位和重心配合，避免只移动整个人偶 |
-| 耳动作 | 增加整耳 `raise / spread` 关键形状，保留固定、被头覆盖的宽耳根；耳尖延迟与整耳抬起分开处理 |
-| 躯干原图 | `torso-skins-10-clean.png` 由图像模型修去身体内部残留的手臂痕迹，保留三个方向的体积与配色 |
-| 耳部原图 | 清理外耳根部多余阴影；最终生产来源以 `pack/art-data.json` 和 `tools/build-art.py` 的登记为准 |
-| 指针生命周期 | 角色适配器与旧宿主补丁共同补齐释放、按键零、失去捕获、失焦和隐藏的取消路径，保留正常甩出行为 |
+| 耳根材质 | 耳根沿用当前头部方向的同源绘画颜色，并沿耳长逐渐回到原耳材质；前后耳层共享采样，保留各自的透明覆盖与遮挡 |
+| 侧耳流线 | 侧向耳中心线改用三次 Bézier 曲线，宽度使用独立的圆根、渐宽中段与圆润耳尖轮廓；耳肩与头部外缘之间补齐连续过渡 |
+| 大角度近耳 | 调整约 75° 侧转的近耳中心线，使耳身向后下方垂落，保留整耳抬起、展开及耳尖延迟动作 |
+| 四肢层级 | 增加近侧手臂与脚部在躯干前的覆盖，手臂根部借用躯干材质；侧向收拢两脚的投影间距，脚步交叉时保持稳定的近远层级 |
+| 支撑与摆动 | 从宿主 `legsScreen` 恢复步态相位，走跑采用交替的单脚支撑与摆动，并保留短暂双脚支撑；摆臂和耳动作跟随同一相位 |
+| 连续落地 | 摆动脚的水平轨迹与支撑段连续连接，抬脚采用落地速度归零的曲线；脚部转角随抬起高度连续收回，起步与停步保留过渡 |
+| 端点稳定性 | 头顶与下巴使用共同顶点构成扇形封口，避免接近正视时的极细网格受 Float32 精度影响而翻向 |
 
-这些修改对应的实际检查与画面来源见 [最终验收表](docs/qa/acceptance.md)，源码及图片均有 SHA 记录。
+此前的头部高度微调、已清理的躯干与外耳原图、整耳 `raise / spread` 动作，以及角色端和旧宿主的指针释放修复继续保留。生产素材来源以 `pack/art-data.json` 和 `tools/build-art.py` 的登记为准。
+
+本节记录已实施的修改。发布包对应的检查范围、运行画面与哈希见 [验收入口](docs/qa/acceptance.md)，详细说明见 [v1.3.2 版本说明](docs/releases/v1.3.2.md)。
+
+![v1.3.2 活泼方案左右行走的实际相位](preview/release/v1.3.2/walking-lively.png)
+
+[温柔方案行走](preview/release/v1.3.2/walking-gentle.png) · [停步恢复](preview/release/v1.3.2/walking-stop.png) · [截图来源与原始帧号](preview/release/v1.3.2/source-map.json)
 
 ## 内容与编辑入口
 
@@ -108,9 +115,10 @@ node runtime/host-adapter.contract.mjs
 node host-fix/pointer-lifecycle.contract.mjs
 node preview-host/words-contract.mjs
 node tools/check-animation.mjs
+node tools/check-root-material.mjs
 ```
 
-这些命令检查各自的代码契约和数值，不替代实际画面、真实指针或帧率验收。可选的浏览器检查与截图重建方式见 [接入与检查](docs/integration.md)。实时性能需要同时记录 GPU、画布尺寸、显示比例、完成帧间隔和测试窗口；不以离线视频帧率承诺实际稳定 60 FPS。
+这些命令检查各自的代码契约和数值，不替代实际画面、真实指针或帧率验收。可选的浏览器检查与截图重建方式见 [接入与检查](docs/integration.md)。实时性能需要同时记录 GPU、画布尺寸、显示比例、完成帧间隔和测试窗口，以对应环境的实测记录为准。
 
 日常预览使用已包含的中文 WOFF2 子集。只有重新生成字体或制作 PNG 图册时，才需要完整 Noto 字体，获取与 SHA 校验方法见 [字体说明](tools/fonts/README.md)。
 

@@ -1,0 +1,290 @@
+{
+  "version": "1.3.2",
+  "directory": "docs/qa/v1.3.2/release-verified",
+  "status": "complete",
+  "passed": true,
+  "scope": "Actual native opaque iframe, real trusted pointer input, completed-frame timings, and a separate direct local offline preview. No full-vocabulary rerun or automatic visual certification.",
+  "checks": [
+    {
+      "id": "actual opaque native iframe",
+      "passed": true,
+      "originNullObserved": true,
+      "sandbox": "allow-scripts"
+    },
+    {
+      "id": "native WebGL ready without initial error",
+      "passed": true
+    },
+    {
+      "id": "159 dense yaw observations",
+      "passed": true
+    },
+    {
+      "id": "head body and both ears have no inverted triangles",
+      "passed": true
+    },
+    {
+      "id": "dense head widths preserve the authored head volume",
+      "passed": true,
+      "minimum": 142.02721786499023,
+      "maximum": 151.9727668762207,
+      "reason": "Authored widths are approximately 142–152 model units; the former mirrored-column collapse produced about 74."
+    },
+    {
+      "id": "dense yaw renderer has no errors or invalid parts",
+      "passed": true
+    },
+    {
+      "id": "real click emits native poke",
+      "passed": true,
+      "events": [
+        {
+          "at": 3996.39999999851,
+          "kind": "touch",
+          "detail": {
+            "kind": "pet",
+            "asleep": false
+          }
+        },
+        {
+          "at": 4034.5,
+          "kind": "mode",
+          "detail": {
+            "mode": "crouch"
+          }
+        },
+        {
+          "at": 4034.5,
+          "kind": "touch",
+          "detail": {
+            "kind": "poke"
+          }
+        }
+      ]
+    },
+    {
+      "id": "real movement enters drag mode",
+      "passed": true,
+      "mode": "drag"
+    },
+    {
+      "id": "real pointer inputs are trusted",
+      "passed": true
+    },
+    {
+      "id": "real drag emits native grab",
+      "passed": true
+    },
+    {
+      "id": "real fast release emits native throw",
+      "passed": true
+    },
+    {
+      "id": "release enters air and reaches a native grounded landing state",
+      "passed": true,
+      "releaseMode": "air",
+      "landingMode": "land",
+      "footY": 461.15999999999997,
+      "floorY": 461.15999999999997,
+      "nativeRule": "Pinned kit/body.js land(): a throw impact >1000 enters dizzy and emits crash; other impacts enter land."
+    },
+    {
+      "id": "native talk changes actual mouth height",
+      "passed": true,
+      "before": 2.4000000000000004,
+      "peak": 4.58612710711229
+    },
+    {
+      "id": "mouth returns toward rest after input stops",
+      "passed": true,
+      "before": 2.4000000000000004,
+      "peak": 4.58612710711229,
+      "after": 2.400000000000001
+    },
+    {
+      "id": "both schemes are actually selected",
+      "passed": true
+    },
+    {
+      "id": "both personality samples execute the registered ear-wave gesture",
+      "passed": true
+    },
+    {
+      "id": "lively has greater actual movement gain and distinct pose",
+      "passed": true,
+      "gentle": 0.84,
+      "lively": 1.0797811483282669
+    },
+    {
+      "id": "timed sweep returns actual completed frame measurements",
+      "passed": true
+    },
+    {
+      "id": "native source hashes unchanged",
+      "passed": true
+    },
+    {
+      "id": "native host and final renderer report no errors",
+      "passed": true
+    },
+    {
+      "id": "offline file renders with 25 expression and 28 motion controls",
+      "passed": true,
+      "expressions": 25,
+      "motions": 28,
+      "renderedFrames": 41
+    },
+    {
+      "id": "offline makes zero HTTP or HTTPS requests",
+      "passed": true,
+      "requests": []
+    },
+    {
+      "id": "offline renderer has no errors",
+      "passed": true
+    },
+    {
+      "id": "offline embeds current staged figure and model",
+      "passed": true,
+      "embeddedFigure": "d881126ebe5ea8773f1ea80181b05f4f877ea67272cbfb1acb35d5b9e8cc6349",
+      "stagedFigure": "d881126ebe5ea8773f1ea80181b05f4f877ea67272cbfb1acb35d5b9e8cc6349",
+      "embeddedModel": "374944e022cb3da30ec3d14b1c03c38c363ae8e74defd5db582f9da2f2f89917",
+      "stagedModel": "374944e022cb3da30ec3d14b1c03c38c363ae8e74defd5db582f9da2f2f89917"
+    }
+  ],
+  "sourcesUnchanged": true,
+  "startedAt": "2026-10-20T05:47:42.605Z",
+  "completedAt": "2026-10-20T05:48:03.276Z",
+  "scriptSHA256": null,
+  "sourceFiles": [
+    {
+      "path": "pack/art-data.json",
+      "bytes": 332657,
+      "sha256": "997a0b4f7eb0cc532ba2be696ed6c93e99c5c67157ad8831e57dd0a3868858f7"
+    },
+    {
+      "path": "pack/assets/atlas.png",
+      "bytes": 2428978,
+      "sha256": "64dc4dcc002ce7857735fed59ee43837e24dec1df4d7d7e0255075f0c9987108"
+    },
+    {
+      "path": "pack/figure.js",
+      "bytes": 1032,
+      "sha256": "445afab221bb12ddba26850a2df804b066f79c4ed8b47449b66ffd099ed18b3f"
+    },
+    {
+      "path": "pack/figure.json",
+      "bytes": 18557,
+      "sha256": "8fae4087714b4f8616a3a3581793bc7b02dd67b3e0876458f05863f7cc3ce51c"
+    },
+    {
+      "path": "pack/LICENSE",
+      "bytes": 34524,
+      "sha256": "8d56b405468aad11f87ab5763f901e276e08d9646ff5c8481b1762b6b789e9ed"
+    },
+    {
+      "path": "pack/model.json",
+      "bytes": 232541,
+      "sha256": "374944e022cb3da30ec3d14b1c03c38c363ae8e74defd5db582f9da2f2f89917"
+    },
+    {
+      "path": "pack/THIRD_PARTY_NOTICES.md",
+      "bytes": 2204,
+      "sha256": "72cdaed6e3408a7a3e567f7514b26a2b1a9d1353732a5a4c73ed5f55b24755c5"
+    },
+    {
+      "path": "runtime/animation.js",
+      "bytes": 38532,
+      "sha256": "a1126067d31a4ecf42bd96030e094a64679974ab0780348b4774708006c7cf44"
+    },
+    {
+      "path": "runtime/atlas-renderer.js",
+      "bytes": 42671,
+      "sha256": "869ff6be6312be3657ef169670204200b0e387312ad7172c0f857250b89ccace"
+    },
+    {
+      "path": "runtime/host-adapter.js",
+      "bytes": 13795,
+      "sha256": "e1a46a0268b4debcc0c0bc0e3a00461118cb7624e8f31eb219166678cba48e5e"
+    },
+    {
+      "path": "runtime/painted-figure.js",
+      "bytes": 33205,
+      "sha256": "8147c0d9b576da8429a95e1a59c7ba2c3888c3fc067385e94fe316c379b62e73"
+    },
+    {
+      "path": "runtime/words.js",
+      "bytes": 11276,
+      "sha256": "dd132d6af2f5c50b3f806158d00d5edbb8340887f47c6331de58bd34fcde0af0"
+    }
+  ],
+  "originalReport": {
+    "file": "report.json",
+    "bytes": 824080,
+    "sha256": "258eebd7d2226653a2fac71e13d1428903fafda39c84721f315effdfaf7e7d73"
+  },
+  "compressedReport": {
+    "file": "report.json.gz",
+    "bytes": 100943,
+    "sha256": "134661c09ee82220c94bd0f47377f737606949959ca31c8b7ce9f2adaff14b64",
+    "lossless": true
+  },
+  "phases": [
+    {
+      "id": "dense-yaw-and-transparent-views",
+      "status": "complete"
+    },
+    {
+      "id": "trusted-pointer",
+      "status": "complete"
+    },
+    {
+      "id": "talk-and-personality",
+      "status": "complete"
+    },
+    {
+      "id": "eight-second-real-time-sweep",
+      "status": "complete"
+    },
+    {
+      "id": "offline-file",
+      "status": "complete"
+    }
+  ],
+  "recordedFrames": 0,
+  "recoveryFrames": 0,
+  "totalCapturedPNGs": 27,
+  "distributedPNGs": 27,
+  "visualPassed": null,
+  "smoothnessPassed": null,
+  "visualScope": "Automated reports retain unset visual judgments. Human sample observations are documented separately in acceptance.md; these flags are not rewritten.",
+  "denseYawSamples": 159,
+  "completedFramePerformance": {
+    "samples": 468,
+    "fps": 58.55505679964254,
+    "durationMs": 7975.400000002235,
+    "p95Ms": 21.600000001490116
+  },
+  "graphics": [
+    {
+      "width": 640,
+      "height": 394,
+      "webgl": true,
+      "error": 0,
+      "attributes": {
+        "alpha": true,
+        "antialias": false,
+        "depth": false,
+        "desynchronized": false,
+        "failIfMajorPerformanceCaveat": false,
+        "powerPreference": "low-power",
+        "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+        "stencil": false,
+        "xrCompatible": false
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+    }
+  ],
+  "performanceScope": "One fixed wall-clock window, not retried. Sweep phase uses simulation time; capped dt means a very slow renderer may cover less than a full simulated cycle. Completed body frames and page RAF are distinct. No stable-60-FPS claim."
+}
